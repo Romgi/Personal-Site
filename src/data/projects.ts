@@ -41,8 +41,8 @@ export const projects: Project[] = [
     longDescription:
       "A placeholder entry for FRC robot software. Replace this with a real season repository, technical notes, subsystem architecture, autonomous strategy, and field-tested lessons once team details are ready to publish.",
     techStack: ["Java", "WPILib", "CTRE Phoenix", "REVLib", "GitHub"],
-    image: "/images/robotics/placeholder-1.jpg",
-    imageAlt: "Competition robotics engineering placeholder",
+    image: "/images/robotics/9062REBUILT.png",
+    imageAlt: "9062 rebuilt FRC robot",
     status: "In Progress",
     featured: true,
     tags: ["Robotics", "Java", "Controls"],

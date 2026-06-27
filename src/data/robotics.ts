@@ -26,8 +26,8 @@ export const roboticsOverview = {
   title: "FIRST Robotics Competition Experience",
   description:
     "A structured robotics archive for programming roles, technical systems, season notes, leadership experience, and competition highlights.",
-  image: "/images/robotics/placeholder-1.jpg",
-  imageAlt: "Dark competition robot placeholder with blue technical lighting",
+  image: "/images/robotics/9062REBUILT.png",
+  imageAlt: "9062 rebuilt FRC robot",
 };
 
 export const roboticsSkills = [
@@ -107,8 +107,8 @@ export const robotProjects: RobotProject[] = [
       "Autonomous path planning placeholder",
       "Driver feedback and logging placeholder",
     ],
-    image: "/images/robotics/placeholder-1.jpg",
-    imageAlt: "Placeholder FRC robot thumbnail",
+    image: "/images/robotics/9062REBUILT.png",
+    imageAlt: "9062 rebuilt FRC robot thumbnail",
   },
   {
     title: "Controls / Vision Placeholder",
@@ -120,23 +120,23 @@ export const robotProjects: RobotProject[] = [
       "Calibration and testing notes placeholder",
       "Competition constraints placeholder",
     ],
-    image: "/images/robotics/placeholder-1.jpg",
-    imageAlt: "Placeholder robot controls thumbnail",
+    image: "/images/robotics/9062REBUILT.png",
+    imageAlt: "9062 rebuilt robot controls thumbnail",
   },
 ];
 
 export const roboticsGallery = [
   {
-    src: "/images/robotics/placeholder-1.jpg",
-    alt: "Placeholder robotics gallery image",
+    src: "/images/robotics/9062REBUILT.png",
+    alt: "9062 rebuilt robotics gallery image",
   },
   {
-    src: "/images/robotics/placeholder-1.jpg",
-    alt: "Placeholder robot workshop image",
+    src: "/images/robotics/9062REBUILT.png",
+    alt: "9062 rebuilt robot workshop image",
   },
   {
-    src: "/images/robotics/placeholder-1.jpg",
-    alt: "Placeholder competition field image",
+    src: "/images/robotics/9062REBUILT.png",
+    alt: "9062 rebuilt competition robot image",
   },
 ];
 
