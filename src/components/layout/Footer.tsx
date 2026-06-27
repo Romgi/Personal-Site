@@ -46,7 +46,6 @@ export function Footer() {
           <p>
             © {new Date().getFullYear()} Jonathan Graydon. Built with Next.js.
           </p>
-          <p>No contact form, no trackers, no exposed secrets.</p>
         </div>
       </Container>
     </footer>
