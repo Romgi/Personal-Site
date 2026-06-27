@@ -42,11 +42,6 @@ export const profile = {
         href: safeHref("mailto:jonathangraydon22@gmail.com"),
       },
     ],
-    phone: {
-      label: "Phone",
-      value: "6479980659",
-      href: safeHref("tel:+16479980659"),
-    },
   },
   resumePath: safeHref("/resume.pdf"),
   profileImage: {

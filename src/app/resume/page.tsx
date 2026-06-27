@@ -1,4 +1,4 @@
-import { Download, Mail, Phone } from "lucide-react";
+import { Download, Mail } from "lucide-react";
 
 import { ContactCard } from "@/components/sections/ContactCard";
 import { ResumeSection } from "@/components/sections/ResumeSection";
@@ -48,7 +48,7 @@ export default function ResumePage() {
 
       <section className="py-20 sm:py-24">
         <Container>
-          <div className="grid gap-5 md:grid-cols-3">
+          <div className="grid gap-5 md:grid-cols-2">
             {profile.contact.emails.map((email) => (
               <AnimatedSection key={email.value}>
                 <ContactCard
@@ -58,13 +58,6 @@ export default function ResumePage() {
                 />
               </AnimatedSection>
             ))}
-            <AnimatedSection>
-              <ContactCard
-                label={profile.contact.phone.label}
-                value={profile.contact.phone.value}
-                href={profile.contact.phone.href}
-              />
-            </AnimatedSection>
           </div>
         </Container>
       </section>
@@ -213,10 +206,10 @@ export default function ResumePage() {
             <ResumeSection title="Contact Preference">
               <div className="grid gap-5 md:grid-cols-[1fr_auto] md:items-center">
                 <p className="text-sm leading-6 text-slate-400">
-                  Contact is handled with mailto and phone links instead of a
-                  form. That avoids insecure form handling, exposed secrets, and
-                  spam-prone endpoints until a trusted backend or service is
-                  intentionally added.
+                  Contact is handled with mailto links instead of a form. That
+                  avoids insecure form handling, exposed secrets, and spam-prone
+                  endpoints until a trusted backend or service is intentionally
+                  added.
                 </p>
                 <div className="flex flex-wrap gap-3">
                   <ButtonLink
@@ -225,14 +218,6 @@ export default function ResumePage() {
                   >
                     <Mail aria-hidden="true" size={16} />
                     McMaster email
-                  </ButtonLink>
-                  <ButtonLink
-                    href={profile.contact.phone.href}
-                    variant="ghost"
-                    ariaLabel={`Call ${profile.name}`}
-                  >
-                    <Phone aria-hidden="true" size={16} />
-                    Call
                   </ButtonLink>
                 </div>
               </div>
