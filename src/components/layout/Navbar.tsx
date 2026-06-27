@@ -1,7 +1,6 @@
 "use client";
 
 import { Menu, X } from "lucide-react";
-import { motion } from "motion/react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
@@ -64,11 +63,7 @@ export function Navbar() {
                     >
                       {item.label}
                       {active ? (
-                        <motion.span
-                          layoutId="nav-active"
-                          className="absolute inset-x-3 -bottom-px h-px bg-cyan-300"
-                          transition={{ duration: 0.22 }}
-                        />
+                        <span className="absolute inset-x-3 -bottom-px h-px bg-cyan-300" />
                       ) : null}
                     </Link>
                   </li>
@@ -115,6 +110,7 @@ export function Navbar() {
                   <li key={item.href}>
                     <Link
                       href={item.href}
+                      onClick={() => setIsOpen(false)}
                       className={cn(
                         "block rounded-md px-3 py-3 text-sm font-medium transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-cyan-300",
                         active

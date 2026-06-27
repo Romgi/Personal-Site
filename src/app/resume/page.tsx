@@ -25,6 +25,12 @@ export const metadata = createPageMetadata({
   path: "/resume",
 });
 
+const contactCards = [
+  ...profile.contact.emails,
+  profile.contact.phone,
+  ...profile.contact.socials,
+];
+
 export default function ResumePage() {
   return (
     <>
@@ -48,13 +54,14 @@ export default function ResumePage() {
 
       <section className="py-20 sm:py-24">
         <Container>
-          <div className="grid gap-5 md:grid-cols-2">
-            {profile.contact.emails.map((email) => (
-              <AnimatedSection key={email.value}>
+          <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-3">
+            {contactCards.map((contact) => (
+              <AnimatedSection key={contact.href}>
                 <ContactCard
-                  label={email.label}
-                  value={email.value}
-                  href={email.href}
+                  label={contact.label}
+                  value={contact.value}
+                  href={contact.href}
+                  displayValue={contact.label}
                 />
               </AnimatedSection>
             ))}
@@ -206,10 +213,10 @@ export default function ResumePage() {
             <ResumeSection title="Contact Preference">
               <div className="grid gap-5 md:grid-cols-[1fr_auto] md:items-center">
                 <p className="text-sm leading-6 text-slate-400">
-                  Contact is handled with mailto links instead of a form. That
-                  avoids insecure form handling, exposed secrets, and spam-prone
-                  endpoints until a trusted backend or service is intentionally
-                  added.
+                  Contact is handled with direct email, phone, and social links
+                  instead of a form. That avoids insecure form handling, exposed
+                  secrets, and spam-prone endpoints until a trusted backend or
+                  service is intentionally added.
                 </p>
                 <div className="flex flex-wrap gap-3">
                   <ButtonLink

@@ -42,6 +42,25 @@ export const profile = {
         href: safeHref("mailto:jonathangraydon22@gmail.com"),
       },
     ],
+    phone: {
+      label: "Phone",
+      value: "6479980659",
+      href: safeHref("tel:+16479980659"),
+    },
+    socials: [
+      {
+        label: "LinkedIn",
+        value: "linkedin.com/in/jonathan-graydon-61258320a",
+        href: safeHref(
+          "https://www.linkedin.com/in/jonathan-graydon-61258320a/",
+        ),
+      },
+      {
+        label: "Instagram",
+        value: "instagram.com/jonathan.graydon22",
+        href: safeHref("https://www.instagram.com/jonathan.graydon22/"),
+      },
+    ],
   },
   resumePath: safeHref("/resume.pdf"),
   profileImage: {

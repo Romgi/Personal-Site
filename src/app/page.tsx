@@ -1,10 +1,10 @@
-import { ArrowRight, Cpu, FileText, Music2 } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import type { Metadata } from "next";
-import Image from "next/image";
 import Link from "next/link";
 
 import { ExpandableText } from "@/components/sections/ExpandableText";
 import { ExperienceCard } from "@/components/sections/ExperienceCard";
+import { HomeHero } from "@/components/sections/HomeHero";
 import { ProjectCard } from "@/components/sections/ProjectCard";
 import { ButtonLink } from "@/components/ui/ButtonLink";
 import { AnimatedSection } from "@/components/ui/AnimatedSection";
@@ -29,65 +29,14 @@ export default function Home() {
 
   return (
     <>
-      <section className="relative isolate min-h-[88svh] overflow-hidden border-b border-white/10">
-        <Image
-          src={profile.profileImage.src}
-          alt={profile.profileImage.alt}
-          fill
-          preload
-          sizes="100vw"
-          className="object-cover opacity-[0.48]"
-        />
-        <div
-          aria-hidden="true"
-          className="absolute inset-0 bg-[linear-gradient(90deg,rgba(2,6,23,0.98)_0%,rgba(2,6,23,0.82)_48%,rgba(2,6,23,0.48)_100%)]"
-        />
-        <div
-          aria-hidden="true"
-          className="absolute inset-0 opacity-[0.2] [background-image:linear-gradient(rgba(56,189,248,0.28)_1px,transparent_1px),linear-gradient(90deg,rgba(56,189,248,0.18)_1px,transparent_1px)] [background-size:56px_56px]"
-        />
-        <Container className="relative z-10 flex min-h-[88svh] items-end pb-16 pt-32">
-          <div className="max-w-4xl">
-            <p className="text-sm font-semibold uppercase tracking-[0.24em] text-cyan-300">
-              {profile.title}
-            </p>
-            <h1 className="mt-5 text-balance text-5xl font-semibold tracking-tight text-white sm:text-7xl">
-              {profile.name}
-            </h1>
-            <p className="mt-6 max-w-3xl text-xl leading-9 text-slate-200">
-              {profile.tagline}
-            </p>
-            <div className="mt-8 flex flex-wrap gap-3">
-              <ButtonLink href="/projects" variant="primary">
-                View Projects
-                <ArrowRight aria-hidden="true" size={18} />
-              </ButtonLink>
-              <ButtonLink href="/resume" variant="secondary">
-                View Resume
-                <FileText aria-hidden="true" size={18} />
-              </ButtonLink>
-            </div>
-            <div className="mt-6 flex flex-wrap gap-4 text-sm">
-              <Link
-                href="/robotics"
-                className="inline-flex items-center gap-2 text-slate-300 transition hover:text-cyan-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-cyan-300"
-              >
-                <Cpu aria-hidden="true" size={16} />
-                Robotics Experience
-              </Link>
-              <Link
-                href="/music"
-                className="inline-flex items-center gap-2 text-slate-300 transition hover:text-cyan-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-cyan-300"
-              >
-                <Music2 aria-hidden="true" size={16} />
-                Music
-              </Link>
-            </div>
-          </div>
-        </Container>
-      </section>
+      <HomeHero
+        name={profile.name}
+        title={profile.title}
+        tagline={profile.tagline}
+        image={profile.profileImage}
+      />
 
-      <section className="py-20 sm:py-24">
+      <section className="-mt-[1px] py-20 sm:py-24">
         <Container>
           <AnimatedSection>
             <SectionHeading

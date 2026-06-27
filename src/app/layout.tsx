@@ -4,6 +4,8 @@ import { Geist, Geist_Mono } from "next/font/google";
 
 import { Footer } from "@/components/layout/Footer";
 import { Navbar } from "@/components/layout/Navbar";
+import { RouteScrollReset } from "@/components/layout/RouteScrollReset";
+import { GsapScrollEffects } from "@/components/ui/GsapScrollEffects";
 import { profile, site } from "@/data/profile";
 
 import "./globals.css";
@@ -99,8 +101,9 @@ export default function RootLayout({
     >
       <body className="flex min-h-full flex-col">
         <Navbar />
+        <RouteScrollReset />
         <main id="main-content" className="flex-1">
-          {children}
+          <GsapScrollEffects>{children}</GsapScrollEffects>
         </main>
         <Footer />
       </body>
