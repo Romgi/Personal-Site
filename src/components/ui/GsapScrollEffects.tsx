@@ -69,10 +69,6 @@ export function GsapScrollEffects({ children }: GsapScrollEffectsProps) {
       const musicContextOrb = root.querySelector<HTMLElement>(
         "[data-music-context-orb]",
       );
-      const musicContextStats = gsap.utils.toArray<HTMLElement>(
-        "[data-music-context-stat]",
-        root,
-      );
 
       if (homeHero && homeHeroCard) {
         const getHeroZoomScale = () => {
@@ -184,10 +180,13 @@ export function GsapScrollEffects({ children }: GsapScrollEffectsProps) {
       }
 
       if (musicContexts && musicContextVisual) {
+        const getMusicOrbTravel = () =>
+          Math.max(0, musicContextVisual.clientHeight - 32);
+
         gsap.set(musicContextVisual, {
-          autoAlpha: 0.86,
-          y: 28,
-          willChange: "transform, opacity",
+          autoAlpha: 1,
+          y: 0,
+          willChange: "opacity",
           force3D: true,
         });
         gsap.set(musicContextMeter, {
@@ -201,33 +200,19 @@ export function GsapScrollEffects({ children }: GsapScrollEffectsProps) {
           willChange: "transform",
           force3D: true,
         });
-        gsap.set(musicContextStats, {
-          autoAlpha: 0.72,
-          y: 14,
-          force3D: true,
-        });
 
         const contextsTimeline = gsap.timeline({
           defaults: { ease: "none" },
           scrollTrigger: {
             trigger: musicContexts,
-            start: "top 72%",
-            end: "bottom 38%",
-            scrub: 0.55,
+            start: "top top",
+            end: "bottom bottom",
+            scrub: true,
             invalidateOnRefresh: true,
           },
         });
 
         contextsTimeline
-          .to(
-            musicContextVisual,
-            {
-              autoAlpha: 1,
-              y: -18,
-              duration: 1,
-            },
-            0,
-          )
           .to(
             musicContextMeter,
             {
@@ -239,21 +224,11 @@ export function GsapScrollEffects({ children }: GsapScrollEffectsProps) {
           .to(
             musicContextOrb,
             {
-              y: 112,
+              y: getMusicOrbTravel,
               scale: 1.18,
               duration: 1,
             },
             0,
-          )
-          .to(
-            musicContextStats,
-            {
-              autoAlpha: 1,
-              y: 0,
-              stagger: 0.08,
-              duration: 0.42,
-            },
-            0.08,
           );
       }
 
