@@ -5,7 +5,7 @@ export const site = {
   url:
     process.env.NEXT_PUBLIC_SITE_URL ?? "https://jonathan-graydon.vercel.app",
   description:
-    "Computer Science student at McMaster University with interests in software development, robotics, web development, and trumpet performance.",
+    "Computer Science student and software engineer at McMaster University with experience in software development, FRC robotics, web development, and trumpet performance.",
 };
 
 export const navItems = [
@@ -18,10 +18,10 @@ export const navItems = [
 
 export const profile = {
   name: "Jonathan Graydon",
-  title: "Computer Science Student at McMaster University",
+  title: "Computer Science Student at McMaster University | Software Engineer",
   location: "Hamilton, Ontario and the Greater Toronto Area",
   tagline:
-    "Computer Science student, robotics programmer, and trumpet performer building polished digital and technical projects.",
+    "Computer Science student, software engineer, FRC lead programmer, and trumpet performer building polished digital and technical projects.",
   interests: [
     "Software development",
     "Robotics",
@@ -60,6 +60,11 @@ export const profile = {
         value: "instagram.com/jonathan.graydon22",
         href: safeHref("https://www.instagram.com/jonathan.graydon22/"),
       },
+      {
+        label: "GitHub",
+        value: "github.com/Romgi",
+        href: safeHref("https://github.com/Romgi"),
+      },
     ],
   },
   resumePath: safeHref("/resume.pdf"),
@@ -69,10 +74,11 @@ export const profile = {
   },
   about: {
     short:
-      "I am a Computer Science student at McMaster University focused on building reliable, well-designed technical work across software, robotics, and creative performance.",
+      "I am a Computer Science student at McMaster University and software engineer focused on reliable, well-designed technical work across software, robotics, and creative performance.",
     expanded: [
       "My technical interests sit at the intersection of software engineering, robotics systems, and polished web experiences. I care about writing code that is understandable, testable, and useful beyond a demo.",
-      "Robotics has shaped how I approach engineering problems: start with the real constraints, communicate clearly with the team, iterate quickly, and keep reliability in view. That mindset carries into the projects I build for school, personal learning, and portfolio work.",
+      "As Lead Programmer for FRC Team 854, the Iron Bears, robotics has shaped how I approach engineering problems: start with the real constraints, communicate clearly with the team, iterate quickly, and keep reliability in view.",
+      "That engineering mindset carries into the projects I build for school, personal learning, team websites, robot code, and portfolio work.",
       "Outside of computer science, trumpet performance gives me a different kind of discipline: preparation, tone, listening, and precision under pressure. This site is structured so I can keep adding real projects, seasons, repertoire, awards, and experience as they grow.",
     ],
   },
@@ -80,21 +86,21 @@ export const profile = {
     {
       title: "Computer Science",
       description:
-        "Coursework and independent projects in software development, algorithms, data, and modern web applications.",
+        "McMaster coursework and independent projects in software development, algorithms, data, Java, Python, and modern web applications.",
       href: safeHref("/projects"),
       metric: "CS",
     },
     {
-      title: "FRC Robotics",
+      title: "Robotics Software",
       description:
-        "Programming and technical experience with robot code, controls, team workflows, and competition constraints.",
+        "Robotics programming, controls, and competition engineering with Java, WPILib, and robot systems design using Onshape.",
       href: safeHref("/robotics"),
       metric: "FRC",
     },
     {
       title: "Trumpet / Music",
       description:
-        "Trumpet repertoire, ensemble work, performance goals, and musical accomplishments in a structured archive.",
+        "Trumpet repertoire, ensemble performance, and musical accomplishments in a structured portfolio",
       href: safeHref("/music"),
       metric: "Music",
     },

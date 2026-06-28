@@ -54,6 +54,17 @@ export function ProjectCard({ project }: ProjectCardProps) {
         </details>
 
         <div className="mt-auto flex flex-wrap gap-3 pt-5">
+          {project.githubLinks?.map((link) => (
+            <ButtonLink
+              key={link.href}
+              href={link.href}
+              size="sm"
+              variant="ghost"
+            >
+              <Code2 aria-hidden="true" size={16} />
+              {link.label}
+            </ButtonLink>
+          ))}
           {project.githubUrl ? (
             <ButtonLink href={project.githubUrl} size="sm" variant="ghost">
               <Code2 aria-hidden="true" size={16} />
@@ -66,7 +77,9 @@ export function ProjectCard({ project }: ProjectCardProps) {
               Live demo
             </ButtonLink>
           ) : null}
-          {!project.githubUrl && !project.liveDemoUrl ? (
+          {!project.githubUrl &&
+          !project.githubLinks?.length &&
+          !project.liveDemoUrl ? (
             <span className="text-sm text-slate-500">Links ready to add</span>
           ) : null}
         </div>

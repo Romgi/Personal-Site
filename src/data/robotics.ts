@@ -25,7 +25,7 @@ export type RobotProject = {
 export const roboticsOverview = {
   title: "FIRST Robotics Competition Experience",
   description:
-    "A structured robotics archive for programming roles, technical systems, season notes, leadership experience, and competition highlights.",
+    "Lead programming and technical work with FRC Team 854, the Iron Bears, focused on command-based Java robot code, reliable controls, team workflows, and competition-ready engineering.",
   image: "/images/robotics/9062REBUILT.png",
   imageAlt: "9062 rebuilt FRC robot",
 };
@@ -45,18 +45,20 @@ export const roboticsSkills = [
 
 export const roboticsExperiences: RoboticsExperience[] = [
   {
-    id: "frc-programmer-placeholder",
-    teamName: "FRC Team Placeholder",
-    role: "Programming / Controls Contributor",
-    yearsActive: "Add years active",
-    seasonName: "Robot / Season Name Placeholder",
+    id: "frc-team-854-lead-programmer",
+    teamName: "FRC Team 854, Iron Bears",
+    role: "Lead Programmer",
+    yearsActive: "Current / recent",
+    seasonName: "Team 854 robot software",
     summary:
-      "Placeholder robotics experience focused on robot software, subsystem integration, testing, and competition readiness. Replace this with real team information, robot names, and season details when available.",
+      "Lead programming experience for Team 854 focused on robot software, subsystem integration, drivetrain behavior, autonomous preparation, testing, debugging, and competition readiness.",
     technologies: [
       "Java",
       "WPILib",
       "Command-based",
-      "Motor controllers",
+      "CTRE Phoenix",
+      "REVLib",
+      "PathPlanner",
       "Git/GitHub",
     ],
     responsibilities: [
@@ -65,10 +67,14 @@ export const roboticsExperiences: RoboticsExperience[] = [
       "Coordinated code changes with mechanical and electrical constraints during build and competition timelines.",
     ],
     achievements: [
-      "Prepared a reusable placeholder for season achievements, awards, playoff runs, or technical milestones.",
-      "Designed this section to capture credible engineering detail rather than generic team descriptions.",
+      "Maintained a public-facing technical profile as Lead Programmer for Team 854.",
+      "Built experience translating real robot constraints into practical software decisions under competition timelines.",
     ],
     links: [
+      {
+        label: "Team 854 Website",
+        href: safeHref("https://www.ironbears.ca/"),
+      },
       {
         label: "FIRST Robotics Competition",
         href: safeHref("https://www.firstinspires.org/robotics/frc"),
@@ -76,49 +82,57 @@ export const roboticsExperiences: RoboticsExperience[] = [
     ],
   },
   {
-    id: "leadership-placeholder",
-    teamName: "FRC Team Placeholder",
-    role: "Mentorship / Leadership Placeholder",
-    yearsActive: "Add years active",
-    seasonName: "Offseason / Training",
+    id: "team-854-technical-leadership",
+    teamName: "FRC Team 854, Iron Bears",
+    role: "Technical Contributor",
+    yearsActive: "Recent",
+    seasonName: "Team systems and web presence",
     summary:
-      "A slot for leadership, mentorship, documentation, onboarding, or strategy work connected to robotics. Use it for training students, code reviews, scouting tools, or technical presentations.",
-    technologies: ["Documentation", "Git workflows", "Code reviews", "Testing"],
+      "Technical contribution beyond robot code, including workflows, documentation habits, web presence, and team-facing software practices.",
+    technologies: [
+      "Documentation",
+      "Git workflows",
+      "Code reviews",
+      "Testing",
+      "Next.js",
+      "TypeScript",
+      "Tailwind CSS",
+    ],
     responsibilities: [
       "Helped establish repeatable workflows for programming tasks and robot testing.",
       "Documented decisions so future team members could understand system behavior.",
       "Supported communication between programming and other subteams.",
     ],
     achievements: [
-      "Ready for real leadership outcomes, mentorship examples, and team-facing contributions.",
+      "Contributed to professionalizing the team's technical footprint through software and web tooling.",
     ],
   },
 ];
 
 export const robotProjects: RobotProject[] = [
   {
-    title: "Competition Robot Placeholder",
-    season: "Season TBD",
+    title: "Team 854 Competition Robot Code",
+    season: "2025 season",
     description:
-      "A featured robot/project card for drivetrain, mechanism, autonomous, and reliability notes.",
+      "Competition robot software work for Team 854 covering drivetrain, mechanism commands, autonomous preparation, and reliability-focused testing.",
     technicalHighlights: [
       "Command-based subsystem structure",
-      "Closed-loop control tuning placeholder",
-      "Autonomous path planning placeholder",
-      "Driver feedback and logging placeholder",
+      "Closed-loop control tuning",
+      "Autonomous path planning",
+      "Driver feedback and debugging",
     ],
     image: "/images/robotics/9062REBUILT.png",
     imageAlt: "9062 rebuilt FRC robot thumbnail",
   },
   {
-    title: "Controls / Vision Placeholder",
+    title: "Swerve Drive and Autonomous Experiments",
     season: "Technical subsystem",
     description:
-      "A slot for a focused subsystem write-up such as swerve, vision alignment, shooter control, or autonomous reliability.",
+      "Focused drivetrain and autonomous work for testing swerve concepts, route following, and control behavior before applying ideas to a competition robot.",
     technicalHighlights: [
-      "Sensor integration placeholder",
-      "Calibration and testing notes placeholder",
-      "Competition constraints placeholder",
+      "Swerve drive experimentation",
+      "PathPlanner integration",
+      "Calibration and testing notes",
     ],
     image: "/images/robotics/9062REBUILT.png",
     imageAlt: "9062 rebuilt robot controls thumbnail",
@@ -141,7 +155,7 @@ export const roboticsGallery = [
 ];
 
 export const competitionHighlights = [
-  "Add competition awards, event rankings, playoff results, and team milestones here.",
-  "Add season-specific technical lessons, reliability improvements, and debugging stories here.",
-  "Add outreach, mentorship, or leadership accomplishments here when ready.",
+  "Lead Programmer experience with FRC Team 854, the Iron Bears.",
+  "Public Team 854 technical work includes robot code, swerve/autonomous experimentation, and a modern team web presence.",
+  "Add specific event awards, rankings, playoff results, and season milestones here when ready.",
 ];

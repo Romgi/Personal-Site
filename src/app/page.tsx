@@ -42,7 +42,7 @@ export default function Home() {
             <SectionHeading
               eyebrow="About"
               title="A technical portfolio with room for the full picture."
-              description="This site is set up to grow with real projects, robotics seasons, repertoire, accomplishments, and resume details."
+              description="This portfolio is built around structured data for software, robotics, and music work. Each section has room for technical notes, media, and accomplishments."
             />
             <div className="mt-8">
               <ExpandableText
@@ -89,7 +89,7 @@ export default function Home() {
             <SectionHeading
               eyebrow="Featured Projects"
               title="Current software and engineering work."
-              description="Placeholder projects are structured so each card can grow into a real case study with links, status, tags, and technical notes."
+              description="This section is designed for real project cards with links, technical notes, and media. Each card has a description, bullets, and badges for technologies."
             />
             <ButtonLink href="/projects" variant="ghost" className="self-start">
               All projects
@@ -113,7 +113,7 @@ export default function Home() {
               <SectionHeading
                 eyebrow="Robotics Preview"
                 title="Engineering-focused FRC experience."
-                description="The robotics section is built around credible technical artifacts: timeline entries, drivetrain and controls notes, competition highlights, and leadership placeholders."
+                description="This section is designed for robotics work with technical notes, media, and accomplishments. Each entry has a description, bullets, and badges for technologies."
               />
               <div className="mt-8">
                 <ButtonLink href="/robotics" variant="secondary">
@@ -149,7 +149,7 @@ export default function Home() {
               <SectionHeading
                 eyebrow="Music Preview"
                 title="Trumpet repertoire and performance discipline."
-                description="Music has its own dedicated area for repertoire, ensemble work, accomplishments, and performance media placeholders."
+                description="This section is designed for music work with technical notes, media, and accomplishments. Each entry has a description, bullets, and badges for instruments."
               />
               <div className="mt-7 rounded-lg border border-white/10 bg-white/[0.035] p-5">
                 <p className="text-xs font-semibold uppercase tracking-[0.2em] text-cyan-300">

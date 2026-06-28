@@ -25,10 +25,26 @@ export const metadata = createPageMetadata({
   path: "/resume",
 });
 
+const socialDisplayValues: Record<string, string> = {
+  GitHub: "Romgi",
+  Instagram: "@jonathan.graydon22",
+  LinkedIn: "Jonathan Graydon",
+};
+
 const contactCards = [
-  ...profile.contact.emails,
-  profile.contact.phone,
-  ...profile.contact.socials,
+  ...profile.contact.emails.map((email) => ({
+    ...email,
+    label: `${email.label} Email`,
+    displayValue:
+      email.value === "jonathangraydon22@gmail.com"
+        ? "JonathanGraydon22@gmail.com"
+        : email.value,
+  })),
+  { ...profile.contact.phone, displayValue: profile.contact.phone.value },
+  ...profile.contact.socials.map((social) => ({
+    ...social,
+    displayValue: socialDisplayValues[social.label] ?? social.label,
+  })),
 ];
 
 export default function ResumePage() {
@@ -61,7 +77,7 @@ export default function ResumePage() {
                   label={contact.label}
                   value={contact.value}
                   href={contact.href}
-                  displayValue={contact.label}
+                  displayValue={contact.displayValue}
                 />
               </AnimatedSection>
             ))}

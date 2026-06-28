@@ -1,4 +1,4 @@
-export type RepertoireStatus = "Performed" | "Learning" | "Planned";
+export type RepertoireStatus = "Performed" | "Ready" | "Learning" | "Planned";
 
 export type RepertoireItem = {
   id: string;
@@ -16,109 +16,369 @@ export type RepertoireItem = {
 export const musicOverview = {
   title: "Trumpet Performance and Music",
   description:
-    "A polished archive for trumpet repertoire, ensembles, performances, awards, and musical development.",
-  image: "/images/music/placeholder-1.jpg",
-  imageAlt: "Dark trumpet performance placeholder with blue stage lighting",
+    "Trumpet performer with 9 years of experience, 30+ concerts, 10+ ensembles, award-winning concert band work, honour band experience, orchestral performance, jazz lead trumpet, and program-ready solo repertoire.",
+  image: "/images/music/hero-stage.png",
+  imageAlt: "Trumpet soloist standing on stage beneath warm lights",
 };
 
 export const repertoire: RepertoireItem[] = [
   {
-    id: "concerto-placeholder",
-    title: "Solo Repertoire Placeholder",
-    composer: "Composer TBD",
-    difficulty: "Senior / University preparation",
+    id: "haydn-trumpet-concerto",
+    title: "Trumpet Concerto in E-flat Major",
+    composer: "Joseph Haydn",
+    difficulty: "Classical concerto",
     category: "Solo",
-    status: "Learning",
-    year: "2026",
+    status: "Ready",
+    year: "Program-ready",
     notes:
-      "Use this slot for a major solo work, audition piece, or recital selection with preparation notes.",
+      "Core classical trumpet concerto repertoire prepared for recital, audition, and concerto-style programming.",
     featured: true,
   },
   {
-    id: "orchestral-excerpt-placeholder",
-    title: "Orchestral Excerpt Placeholder",
-    composer: "Composer TBD",
-    difficulty: "Advanced excerpt study",
+    id: "hummel-trumpet-concerto",
+    title: "Trumpet Concerto in E Major",
+    composer: "Johann Nepomuk Hummel",
+    difficulty: "Classical concerto",
+    category: "Solo",
+    status: "Ready",
+    year: "Program-ready",
+    notes:
+      "A major classical concerto in active repertoire, requiring clean articulation, style, endurance, and upper-register control.",
+    featured: true,
+  },
+  {
+    id: "arban-carnival-of-venice",
+    title: "Fantaisie and Variations on The Carnival of Venice",
+    composer: "Jean-Baptiste Arban",
+    difficulty: "Advanced technical showpiece",
+    category: "Solo",
+    status: "Ready",
+    year: "Program-ready",
+    notes:
+      "Virtuosic variation work emphasizing articulation, flexibility, character, and technical command.",
+  },
+  {
+    id: "bohme-concerto",
+    title: "Trumpet Concerto in F Minor",
+    composer: "Oskar Böhme",
+    difficulty: "Advanced romantic concerto",
+    category: "Solo",
+    status: "Ready",
+    year: "Program-ready",
+    notes:
+      "Romantic-era concerto repertoire combining lyrical playing, stamina, range, and expressive phrasing.",
+    featured: true,
+  },
+  {
+    id: "balay-andante-allegro",
+    title: "Andante et Allegro",
+    composer: "Guillaume Balay",
+    difficulty: "Senior solo",
+    category: "Solo",
+    status: "Ready",
+    year: "Program-ready",
+    notes:
+      "Contrasting lyrical and technical material suited to recital or audition programming.",
+  },
+  {
+    id: "hansen-sonata-cornet",
+    title: "Sonata for Cornet and Piano",
+    composer: "Thorvald Hansen",
+    difficulty: "Senior solo sonata",
+    category: "Solo",
+    status: "Ready",
+    year: "Program-ready",
+    notes:
+      "Classic cornet sonata repertoire balancing lyrical control, articulation, and chamber-style collaboration.",
+  },
+  {
+    id: "balay-prelude-ballade",
+    title: "Prelude et Ballade",
+    composer: "Guillaume Balay",
+    difficulty: "Senior solo",
+    category: "Solo",
+    status: "Ready",
+    year: "Program-ready",
+    notes:
+      "French solo literature prepared for expressive contrast, tone control, and technical clarity.",
+  },
+  {
+    id: "goedicke-concert-etude",
+    title: "Concert Etude",
+    composer: "Alexander Goedicke",
+    difficulty: "Advanced etude",
+    category: "Solo",
+    status: "Ready",
+    year: "Program-ready",
+    notes:
+      "Fast, articulate solo literature used to demonstrate clarity, rhythmic precision, and facility.",
+  },
+  {
+    id: "honegger-intrada",
+    title: "Intrada",
+    composer: "Arthur Honegger",
+    difficulty: "Advanced modern solo",
+    category: "Solo",
+    status: "Ready",
+    year: "Program-ready",
+    notes:
+      "Modern recital work requiring precision, contrast, and confident musical direction.",
+  },
+  {
+    id: "hindemith-sonata",
+    title: "Sonata for Trumpet and Piano",
+    composer: "Paul Hindemith",
+    difficulty: "University-level sonata",
+    category: "Solo",
+    status: "Ready",
+    year: "Program-ready",
+    notes:
+      "Substantial twentieth-century trumpet sonata repertoire with serious musical and ensemble demands.",
+    featured: true,
+  },
+  {
+    id: "arutunian-concerto",
+    title: "Trumpet Concerto",
+    composer: "Alexander Arutunian",
+    difficulty: "Advanced concerto",
+    category: "Solo",
+    status: "Ready",
+    year: "Program-ready",
+    notes:
+      "Large-scale concerto repertoire with broad lyrical writing, technical passages, and dramatic contrast.",
+  },
+  {
+    id: "pakhmutova-concerto",
+    title: "Trumpet Concerto",
+    composer: "Alexandra Pakhmutova",
+    difficulty: "Advanced concerto",
+    category: "Solo",
+    status: "Ready",
+    year: "Program-ready",
+    notes:
+      "Modern concerto literature with lyrical breadth, rhythmic drive, and substantial technical demands.",
+  },
+  {
+    id: "ketting-intrada",
+    title: "Intrada",
+    composer: "Otto Ketting",
+    difficulty: "Unaccompanied solo",
+    category: "Solo",
+    status: "Ready",
+    year: "Program-ready",
+    notes:
+      "Concise unaccompanied solo work requiring control, projection, and confident musical pacing.",
+  },
+  {
+    id: "peaslee-nightsongs",
+    title: "Nightsongs",
+    composer: "Richard Peaslee",
+    difficulty: "Advanced lyrical solo",
+    category: "Solo",
+    status: "Ready",
+    year: "Program-ready",
+    notes:
+      "Expressive solo repertoire focused on color, atmosphere, and sustained lyrical phrasing.",
+  },
+  {
+    id: "ewazen-sonata",
+    title: "Sonata for Trumpet and Piano",
+    composer: "Eric Ewazen",
+    difficulty: "Advanced contemporary sonata",
+    category: "Solo",
+    status: "Ready",
+    year: "Program-ready",
+    notes:
+      "Contemporary recital repertoire requiring broad sound, stamina, ensemble sensitivity, and long-form phrasing.",
+  },
+  {
+    id: "nishimura-golden-hour",
+    title: "Golden Hour for Flugelhorn and Piano",
+    composer: "Yuki Nishimura",
+    difficulty: "Contemporary lyrical work",
+    category: "Solo",
+    status: "Ready",
+    year: "Program-ready",
+    notes:
+      "Flugelhorn feature emphasizing tone, lyrical pacing, color, and expressive control.",
+  },
+  {
+    id: "marlatt-blue-bells",
+    title: "Variations on The Blue Bells of Scotland",
+    composer: "David Marlatt",
+    difficulty: "Advanced variation set",
+    category: "Solo",
+    status: "Ready",
+    year: "Program-ready",
+    notes:
+      "Variation-style solo literature emphasizing flexibility, control, articulation, and character.",
+  },
+  {
+    id: "ost-clash-elements",
+    title: "Clash of the Elements for Solo Trumpet",
+    composer: "Jérôme Naulais / Ost",
+    difficulty: "Unaccompanied solo",
+    category: "Solo",
+    status: "Ready",
+    year: "Program-ready",
+    notes:
+      "Solo trumpet work focused on independence, pacing, contrast, and unaccompanied performance confidence.",
+  },
+  {
+    id: "gershwin-rhapsody-blue",
+    title: "Rhapsody in Blue",
+    composer: "George Gershwin",
+    difficulty: "Orchestral / feature excerpt",
     category: "Orchestral Excerpt",
-    status: "Planned",
-    year: "TBD",
+    status: "Ready",
+    year: "Program-ready",
     notes:
-      "Add excerpt name, movement, audition context, and specific technical focus when ready.",
-    featured: true,
+      "Iconic American repertoire prepared as part of broader solo and orchestral-style trumpet literature.",
   },
   {
-    id: "jazz-placeholder",
-    title: "Jazz / Lead Trumpet Placeholder",
-    composer: "Chart TBD",
-    difficulty: "Ensemble",
-    category: "Jazz",
-    status: "Planned",
-    year: "TBD",
+    id: "anderson-buglers-holiday",
+    title: "Bugler's Holiday",
+    composer: "Leroy Anderson",
+    difficulty: "Trumpet feature",
+    category: "Ensemble",
+    status: "Ready",
+    year: "Program-ready",
     notes:
-      "A flexible entry for jazz ensemble repertoire, improvisation work, or lead trumpet features.",
+      "Light concert feature requiring crisp ensemble playing, endurance, and coordinated articulation.",
   },
   {
-    id: "concert-band-placeholder",
-    title: "Concert Band Work Placeholder",
-    composer: "Composer TBD",
+    id: "anderson-trumpeters-lullaby",
+    title: "Trumpeter's Lullaby",
+    composer: "Leroy Anderson",
+    difficulty: "Lyrical feature",
+    category: "Solo",
+    status: "Ready",
+    year: "Program-ready",
+    notes:
+      "Lyrical solo feature emphasizing sound, control, musical line, and expressive phrasing.",
+  },
+  {
+    id: "el-camino-real",
+    title: "El Camino Real",
+    composer: "Alfred Reed",
     difficulty: "Ensemble",
     category: "Concert Band",
     status: "Performed",
-    year: "TBD",
+    year: "2025",
     notes:
-      "Replace with concert band repertoire, performance dates, and ensemble details.",
+      "Performed with the McMaster Concert Band as part of ongoing university ensemble work.",
   },
 ];
 
 export const musicAccomplishments = [
   {
-    title: "Featured Performance Placeholder",
-    period: "Year TBD",
+    title: "MusicFest Honour Award",
+    period: "2025",
     description:
-      "Add a recital, audition, festival, ensemble feature, or solo performance with a concise outcome.",
+      "Selected by MusicFest Canada as the individual honour award recipient from an ensemble performing at the festival.",
   },
   {
-    title: "Award / Ensemble Placeholder",
-    period: "Year TBD",
+    title: "Music Proficiency Award",
+    period: "2025",
     description:
-      "Use this for awards, selected ensembles, scholarships, festival results, or leadership in music.",
+      "Received Martingrove C.I.'s Music Proficiency Award, given to the student with the highest grade in Instrumental Music.",
   },
   {
-    title: "Ongoing Trumpet Study",
-    period: "Current",
+    title: "Ontario Provincial Honour Band",
+    period: "2024",
     description:
-      "A place to track current repertoire, practice goals, range, articulation, tone, and performance preparation.",
+      "Performed as first trumpet and soloist, touring Ontario high schools and performing at the Ontario Music Educators Association conference.",
+  },
+  {
+    title: "Conn-Selmer Centerstage Jazz Band",
+    period: "2024",
+    description:
+      "Performed lead trumpet in a national all-star youth jazz band at the University of Toronto's Walter Hall during MusicFest Canada 2024.",
+  },
+  {
+    title: "Martingrove C.I. Concert Band Awards",
+    period: "2021-2025",
+    description:
+      "Served as trumpet section leader in a band that earned Ontario Band Association Gold, a brass excellence award, and MusicFest Canada national Gold and Silver results.",
+  },
+  {
+    title: "York Symphony Orchestra Guest Soloist",
+    period: "2025",
+    description:
+      "Performed as a guest trumpet musician and soloist in York Symphony Orchestra's A Night at the Opera concert.",
   },
 ];
 
 export const ensembles = [
   {
-    name: "Ensemble Placeholder",
-    role: "Trumpet",
-    period: "Add years",
+    name: "McMaster Concert Band",
+    role: "Trumpet Section",
+    period: "2025-Present",
     notes:
-      "Add school, community, university, jazz, concert band, brass ensemble, or pit orchestra details.",
+      "Performs with a 70+ member university wind, brass, and percussion ensemble made up of students from multiple disciplines and degree programs.",
   },
   {
-    name: "Performance Placeholder",
-    role: "Solo / Section",
-    period: "Add date",
+    name: "Jack Long National Honour Band",
+    role: "First Trumpet",
+    period: "2025-2026",
     notes:
-      "Add performance venue, repertoire, collaborators, and a short reflection when ready.",
+      "Nationally auditioned honour band featuring high-level Canadian musicians aged 16 to 24.",
+  },
+  {
+    name: "McMaster Symphony Orchestra",
+    role: "Trumpet Section",
+    period: "2026",
+    notes:
+      "Preparing The Music of John Williams concert featuring selections from Harry Potter, Star Wars, Superman, and more.",
+  },
+  {
+    name: "York Symphony Orchestra",
+    role: "Guest Trumpet and Soloist",
+    period: "2025",
+    notes:
+      "Performed as a guest musician and soloist for A Night at the Opera, featuring operatic orchestral repertoire.",
+  },
+  {
+    name: "Ontario Provincial Honour Band",
+    role: "First Trumpet and Soloist",
+    period: "2024",
+    notes:
+      "Toured Ontario performing at high schools, appeared as a feature concert at OMEA in London, Ontario, and performed in multiple clinics.",
+  },
+  {
+    name: "Conn-Selmer Centerstage Jazz Band",
+    role: "Lead Trumpet",
+    period: "2024",
+    notes:
+      "All-star jazz band featuring leading young Canadian jazz musicians, performing at Walter Hall at the University of Toronto.",
+  },
+  {
+    name: "Martingrove C.I. Concert Band",
+    role: "Trumpet Section Leader",
+    period: "2021-2025",
+    notes:
+      "Performed advanced concert band repertoire and contributed to OBA Gold, brass excellence recognition, and MusicFest Canada national results.",
+  },
+  {
+    name: "Etobicoke Youth Band",
+    role: "Trumpet Section Leader",
+    period: "2021-2025",
+    notes:
+      "Performed with a community band of 100+ students at local venues and international performance opportunities.",
   },
 ];
 
 export const musicGallery = [
   {
-    src: "/images/music/placeholder-1.jpg",
-    alt: "Placeholder trumpet image",
+    src: "/images/music/elcamino.png",
+    alt: "Jonathan Graydon performing El Camino Real with the McMaster Concert Band",
   },
   {
-    src: "/images/music/placeholder-1.jpg",
-    alt: "Placeholder music performance image",
+    src: "/images/music/conn-selmer.jpg",
+    alt: "Jonathan Graydon performing lead trumpet with the Conn-Selmer Centerstage Jazz Band",
   },
   {
-    src: "/images/music/placeholder-1.jpg",
-    alt: "Placeholder concert stage image",
+    src: "/images/music/trumpetlake.jpg",
+    alt: "Jonathan Graydon with trumpet during an Etobicoke Youth Band trip",
   },
 ];

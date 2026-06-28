@@ -6,7 +6,17 @@ export const education = [
     location: "Hamilton, Ontario",
     details: [
       "Computer Science student building a foundation in software development, algorithms, systems thinking, and technical problem solving.",
-      "Add expected graduation date, GPA, relevant coursework, scholarships, or academic distinctions when ready.",
+      "Focused on software engineering, web development, robotics programming, data structures, and practical project work.",
+    ],
+  },
+  {
+    institution: "Columbia International College",
+    credential: "Secondary education",
+    period: "Completed",
+    location: "Hamilton, Ontario",
+    details: [
+      "Completed pre-university studies before entering McMaster University's Computer Science program.",
+      "Developed academic foundations that support current technical work in programming, robotics, and engineering projects.",
     ],
   },
 ];
@@ -14,7 +24,7 @@ export const education = [
 export const technicalSkillGroups = [
   {
     title: "Languages",
-    skills: ["TypeScript", "JavaScript", "Java", "Python", "C/C++ placeholder"],
+    skills: ["TypeScript", "JavaScript", "Java", "Python", "C/C++"],
   },
   {
     title: "Web",
@@ -29,7 +39,15 @@ export const technicalSkillGroups = [
   },
   {
     title: "Robotics",
-    skills: ["WPILib", "Command-based", "CTRE Phoenix", "REVLib", "GitHub"],
+    skills: [
+      "WPILib",
+      "Command-based",
+      "CTRE Phoenix",
+      "REVLib",
+      "Swerve drive",
+      "PathPlanner",
+      "GitHub",
+    ],
   },
   {
     title: "Tools",
@@ -41,37 +59,38 @@ export const resumeProjects = [
   {
     title: "Personal Portfolio Website",
     details:
-      "Built a modern, data-driven portfolio with Next.js, TypeScript, Tailwind CSS v4, Motion for React, metadata, sitemap, robots, and security headers.",
+      "Built a modern, data-driven portfolio with Next.js, TypeScript, Tailwind CSS v4, GSAP scroll animation, metadata, sitemap, robots, and security headers.",
   },
   {
-    title: "FRC Robot Code",
+    title: "FRC Team 854 Robot Code",
     details:
-      "Placeholder for command-based robot software, subsystem implementation, controls work, autonomous routines, and team collaboration.",
+      "Contributed to command-based robot software for FRC Team 854 with subsystem structure, controls work, autonomous routines, and team collaboration.",
   },
   {
-    title: "Coursework / Algorithm Project",
+    title: "Computer Science Coursework Projects",
     details:
-      "Placeholder for a technical course project with problem statement, implementation, testing, and results.",
+      "Maintained coursework repositories covering first-year computer science practice, Java programming, algorithms, and problem-solving exercises.",
   },
 ];
 
 export const resumeExperience = [
   {
-    title: "Robotics Experience Placeholder",
-    organization: "FRC Team Placeholder",
-    period: "Add years",
+    title: "Lead Programmer",
+    organization: "FRC Team 854, Iron Bears",
+    period: "Current / recent",
     details: [
-      "Implemented, tested, or documented robot software in a team engineering environment.",
-      "Worked within mechanical, electrical, schedule, and competition constraints.",
+      "Led or contributed to command-based FRC robot software in Java using WPILib and common vendor libraries.",
+      "Worked across drivetrain, mechanism, controls, autonomous, troubleshooting, and competition-readiness constraints.",
+      "Used GitHub and team workflows to coordinate code changes with mechanical and electrical requirements.",
     ],
   },
   {
-    title: "Work / Volunteer Experience Placeholder",
-    organization: "Organization TBD",
-    period: "Add years",
+    title: "Team Website / Technical Contributor",
+    organization: "Iron Bears Robotics",
+    period: "Recent",
     details: [
-      "Add part-time work, volunteering, tutoring, mentoring, event support, or leadership experience.",
-      "Focus on measurable responsibility, communication, reliability, and outcomes.",
+      "Supported public-facing technical work for the robotics team, including modern web tooling and deployment workflows.",
+      "Contributed to a professional team presence using Next.js, TypeScript, Tailwind CSS, and Vercel-style deployment practices.",
     ],
   },
 ];
@@ -80,11 +99,19 @@ export const musicExperience = [
   {
     title: "Trumpet Performance",
     details:
-      "Developing solo, ensemble, orchestral, jazz, and concert band repertoire with an emphasis on preparation, tone, listening, and performance discipline.",
+      "Trumpet performer with 9 years of experience, 30+ concerts, 10+ ensembles, first-trumpet honour band experience, lead trumpet jazz work, university concert band performance, and program-ready solo repertoire.",
+  },
+  {
+    title: "Music Leadership and Recognition",
+    details:
+      "MusicFest Honour Award recipient, Martingrove C.I. Music Proficiency Award recipient, trumpet section leader, and guest trumpet soloist with orchestral, honour band, jazz, and concert band experience.",
   },
 ];
 
 export const awards = [
-  "Awards and accomplishments placeholder - add academic, robotics, music, or community recognition.",
-  "Competition / ensemble / scholarship placeholder - replace when real details are ready.",
+  "Lead Programmer experience with FRC Team 854, Iron Bears.",
+  "2025 MusicFest Canada Honour Award recipient.",
+  "2025 Martingrove C.I. Music Proficiency Award recipient.",
+  "Ontario Provincial Honour Band first trumpet and soloist.",
+  "Conn-Selmer Centerstage Jazz Band lead trumpet.",
 ];

@@ -11,6 +11,7 @@ export type Project = {
   image: string;
   imageAlt: string;
   githubUrl?: string;
+  githubLinks?: Array<{ label: string; href: string }>;
   liveDemoUrl?: string;
   status: ProjectStatus;
   featured: boolean;
@@ -24,8 +25,8 @@ export const projects: Project[] = [
     shortDescription:
       "A production-ready Next.js portfolio for projects, robotics, music, and resume information.",
     longDescription:
-      "A data-driven portfolio built with the App Router, TypeScript, Tailwind CSS v4, Motion for React, strong metadata, and security headers. The structure is designed so content can be updated from clear TypeScript data files instead of scattered component markup.",
-    techStack: ["Next.js", "TypeScript", "Tailwind CSS", "Motion", "Vercel"],
+      "A data-driven portfolio built with the App Router, TypeScript, Tailwind CSS v4, GSAP scroll animation, strong metadata, and security headers. The structure is designed so content can be updated from clear TypeScript data files instead of scattered component markup.",
+    techStack: ["Next.js", "TypeScript", "Tailwind CSS", "GSAP", "Vercel"],
     image: "/images/projects/placeholder-1.jpg",
     imageAlt: "Abstract blue software workspace placeholder",
     liveDemoUrl: safeHref("/"),
@@ -35,59 +36,79 @@ export const projects: Project[] = [
   },
   {
     id: "frc-robot-code",
-    title: "FRC Robot Code",
+    title: "FRC Robotics Software",
     shortDescription:
-      "Command-based robot software placeholder for drivetrain, mechanisms, and autonomous routines.",
+      "Command-based robot software for FRC Team 854 and Team 9062 with drivetrain, mechanism, autonomous, and competition-readiness work.",
     longDescription:
-      "A placeholder entry for FRC robot software. Replace this with a real season repository, technical notes, subsystem architecture, autonomous strategy, and field-tested lessons once team details are ready to publish.",
-    techStack: ["Java", "WPILib", "CTRE Phoenix", "REVLib", "GitHub"],
+      "FRC robot code for Team 854 Iron Bears as Software Lead, and Team 9062 Critical Circuits as a Software Mentor. This entry is structured for season-specific subsystem notes, command architecture, controls tuning, autonomous strategy, debugging, and field-tested lessons.",
+    techStack: [
+      "Java",
+      "WPILib",
+      "CTRE Phoenix",
+      "REVLib",
+      "PathPlanner",
+      "GitHub",
+    ],
     image: "/images/robotics/9062REBUILT.png",
     imageAlt: "9062 rebuilt FRC robot",
+    githubLinks: [
+      {
+        label: "Team 854 GitHub",
+        href: safeHref("https://github.com/team854"),
+      },
+      {
+        label: "Team 9062 GitHub",
+        href: safeHref("https://github.com/FRCCriticalCircuits"),
+      },
+    ],
     status: "In Progress",
     featured: true,
-    tags: ["Robotics", "Java", "Controls"],
+    tags: ["Robotics", "Java", "Controls", "FRC"],
   },
   {
-    id: "web-coursework",
-    title: "Web Development Coursework Project",
+    id: "team-854-website",
+    title: "Iron Bears Team Website",
     shortDescription:
-      "A course project placeholder for full-stack or frontend web development work.",
+      "A modern public website for FRC Team 854 built with a production web stack.",
     longDescription:
-      "Use this entry for a future McMaster coursework project with screenshots, architecture notes, accessibility considerations, and a deployment link if the project can be shared publicly.",
-    techStack: ["React", "TypeScript", "CSS", "Testing"],
+      "A team-facing web project for the Iron Bears robotics program using Next.js, TypeScript, Tailwind CSS, and Vercel-style deployment. This project demonstrates frontend architecture, content organization, responsive design, and public communication for a technical team.",
+    techStack: ["Next.js", "TypeScript", "Tailwind CSS", "Vercel"],
     image: "/images/projects/placeholder-1.jpg",
     imageAlt: "Abstract project interface placeholder",
-    status: "Planned",
-    featured: false,
-    tags: ["Web", "Coursework"],
+    liveDemoUrl: safeHref("https://www.ironbears.ca/"),
+    status: "Completed",
+    featured: true,
+    tags: ["Web", "Frontend", "Robotics"],
   },
   {
-    id: "algorithm-project",
-    title: "Data / Algorithm Project",
+    id: "computer-science-coursework",
+    title: "Computer Science Coursework Projects",
     shortDescription:
-      "A placeholder for an algorithms, data structures, or analysis-focused project.",
+      "A collection of programming coursework and practice projects from first-year computer science.",
     longDescription:
-      "This slot is ready for a technical project involving algorithm design, performance analysis, data processing, or visualization. Add the problem statement, approach, complexity notes, and results when available.",
-    techStack: ["Python", "Algorithms", "Data Structures"],
+      "Coursework-oriented programming repositories covering foundations in problem solving, algorithms, data structures, Java, Python, and software design habits. This entry can be expanded with selected assignments, constraints, testing notes, and outcomes that are appropriate to publish.",
+    techStack: ["Python", "Java", "Algorithms", "Data Structures"],
     image: "/images/projects/placeholder-1.jpg",
     imageAlt: "Abstract data and algorithm visualization placeholder",
-    status: "Planned",
+    githubUrl: safeHref("https://github.com/Romgi/COMPSCI-YEAR-1"),
+    status: "In Progress",
     featured: false,
-    tags: ["Algorithms", "Data"],
+    tags: ["Algorithms", "Coursework", "Java", "Python"],
   },
   {
-    id: "other-placeholder",
-    title: "Other Project Placeholder",
+    id: "swerve-and-pathplanner",
+    title: "Swerve and PathPlanner Experiments",
     shortDescription:
-      "A flexible slot for a future tool, experiment, app, or research-inspired build.",
+      "FRC drivetrain and autonomous experiments focused on swerve control and path planning.",
     longDescription:
-      "Replace this with a project that shows initiative outside required coursework: a developer tool, robotics dashboard, music practice tracker, or another technical build with clear outcomes.",
-    techStack: ["TypeScript", "APIs", "UI Design"],
-    image: "/images/projects/placeholder-1.jpg",
-    imageAlt: "Abstract blue engineering project placeholder",
-    status: "Planned",
+      "A robotics-focused project area for testing swerve drive concepts, autonomous route following, PathPlanner integration, and control behavior before committing ideas to a competition robot.",
+    techStack: ["Java", "WPILib", "PathPlanner", "Swerve Drive"],
+    image: "/images/robotics/9062REBUILT.png",
+    imageAlt: "9062 rebuilt FRC robot used as a robotics project placeholder",
+    githubUrl: safeHref("https://github.com/Romgi/SwerveWithPathPlanner"),
+    status: "In Progress",
     featured: false,
-    tags: ["Experiment", "Tools"],
+    tags: ["Robotics", "Java", "Autonomous", "Controls"],
   },
 ];
 

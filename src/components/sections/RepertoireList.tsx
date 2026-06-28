@@ -3,6 +3,7 @@ import { cn } from "@/lib/utils";
 
 const statusStyles = {
   Performed: "border-emerald-300/20 bg-emerald-400/10 text-emerald-100",
+  Ready: "border-blue-300/25 bg-blue-400/10 text-blue-100",
   Learning: "border-cyan-300/25 bg-cyan-400/10 text-cyan-100",
   Planned: "border-slate-300/20 bg-slate-400/10 text-slate-200",
 };

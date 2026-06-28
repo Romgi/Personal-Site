@@ -46,17 +46,17 @@ export default function MusicPage() {
             <AnimatedSection>
               <SectionHeading
                 eyebrow="Overview"
-                title="A dedicated space for the performance side of the portfolio."
-                description="Use this page to track repertoire, performances, ensembles, solos, awards, and recordings as they become ready to share."
+                title="A serious performance profile alongside the technical portfolio."
+                description="This page highlights Jonathan's trumpet repertoire, honour band experience, ensemble leadership, festival awards, and ongoing university performance work."
               />
               <div className="mt-8 rounded-lg border border-dashed border-blue-300/20 bg-white/[0.035] p-5">
                 <p className="text-sm font-semibold text-white">
-                  Audio / video embed placeholder
+                  Recordings and media
                 </p>
                 <p className="mt-2 text-sm leading-6 text-slate-400">
-                  Add future recordings here only when you have final links and
-                  permissions. There are no real embeds or third-party scripts
-                  included now.
+                  Public recordings can be added here later as direct links or
+                  privacy-safe embeds. The current page avoids third-party media
+                  scripts until final recordings are ready to publish.
                 </p>
               </div>
             </AnimatedSection>
@@ -69,7 +69,7 @@ export default function MusicPage() {
           <SectionHeading
             eyebrow="Featured Repertoire"
             title="Pieces to highlight first."
-            description="Featured repertoire cards can point recruiters, teachers, or ensemble directors to the most representative work."
+            description="Representative solo and concerto literature prepared for recital, audition, and advanced performance settings."
           />
           <div className="mt-10 grid gap-5 md:grid-cols-2">
             {featuredRepertoire.map((item) => (
@@ -92,7 +92,7 @@ export default function MusicPage() {
             <SectionHeading
               eyebrow="Repertoire"
               title="Trumpet repertoire list."
-              description="Each entry supports title, composer, difficulty, category, status, year, and notes."
+              description="Program-ready solo literature, concert features, orchestral-style work, and concert band repertoire."
             />
             <div className="mt-10">
               <RepertoireList items={repertoire} />
@@ -106,7 +106,7 @@ export default function MusicPage() {
           <SectionHeading
             eyebrow="Accomplishments"
             title="Awards, solos, ensembles, and performance notes."
-            description="Replace the placeholder entries with real achievements, dates, venues, and outcomes."
+            description="Selected awards, honour ensembles, leadership roles, and performance milestones."
           />
           <div className="mt-10 grid gap-5 md:grid-cols-3">
             {musicAccomplishments.map((item) => (
@@ -124,7 +124,7 @@ export default function MusicPage() {
             <SectionHeading
               eyebrow="Ensembles"
               title="Performance contexts."
-              description="Use this section for concert band, jazz, brass ensembles, auditions, pits, festivals, and solo performances."
+              description="University, honour band, jazz, orchestral, school, and community ensembles."
             />
             <div className="grid gap-5">
               {ensembles.map((ensemble) => (
@@ -146,8 +146,8 @@ export default function MusicPage() {
         <Container>
           <SectionHeading
             eyebrow="Gallery"
-            title="Performance image placeholders."
-            description="Swap these files with real performance or instrument photos later."
+            title="Performance moments."
+            description="Selected concert, ensemble, and trumpet photos from Jonathan's music portfolio."
           />
           <div className="mt-10 grid gap-5 md:grid-cols-3">
             {musicGallery.map((image) => (
