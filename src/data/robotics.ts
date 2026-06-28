@@ -117,7 +117,7 @@ export const robotProjects: RobotProject[] = [
       "Competition robot software work for Team 854 covering drivetrain, mechanism commands, autonomous preparation, and reliability-focused testing.",
     technicalHighlights: [
       "Command-based subsystem structure",
-      "Closed-loop control tuning",
+      "Limelight 4 with Hailo-8 machine vision",
       "Autonomous path planning",
       "Driver feedback and debugging",
     ],

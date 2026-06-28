@@ -1,4 +1,4 @@
-import { ArrowUpRight, Code2 } from "lucide-react";
+import { ArrowUpRight, Code2, Download } from "lucide-react";
 
 import { ButtonLink } from "@/components/ui/ButtonLink";
 import { PlaceholderImage } from "@/components/ui/PlaceholderImage";
@@ -77,9 +77,21 @@ export function ProjectCard({ project }: ProjectCardProps) {
               Live demo
             </ButtonLink>
           ) : null}
+          {project.downloadUrl ? (
+            <ButtonLink
+              href={project.downloadUrl}
+              size="sm"
+              variant="ghost"
+              ariaLabel={`Open download page for ${project.title}`}
+            >
+              <Download aria-hidden="true" size={16} />
+              Download page
+            </ButtonLink>
+          ) : null}
           {!project.githubUrl &&
           !project.githubLinks?.length &&
-          !project.liveDemoUrl ? (
+          !project.liveDemoUrl &&
+          !project.downloadUrl ? (
             <span className="text-sm text-slate-500">Links ready to add</span>
           ) : null}
         </div>

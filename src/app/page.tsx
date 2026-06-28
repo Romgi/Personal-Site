@@ -41,7 +41,7 @@ export default function Home() {
           <AnimatedSection>
             <SectionHeading
               eyebrow="About"
-              title="A technical portfolio with room for the full picture."
+              title="A technical portfolio for software, robotics, and music."
               description="This portfolio is built around structured data for software, robotics, and music work. Each section has room for technical notes, media, and accomplishments."
             />
             <div className="mt-8">

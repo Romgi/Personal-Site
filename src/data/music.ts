@@ -32,7 +32,7 @@ export const repertoire: RepertoireItem[] = [
     year: "Program-ready",
     notes:
       "Core classical trumpet concerto repertoire prepared for recital, audition, and concerto-style programming.",
-    featured: true,
+    featured: false,
   },
   {
     id: "hummel-trumpet-concerto",
@@ -44,7 +44,7 @@ export const repertoire: RepertoireItem[] = [
     year: "Program-ready",
     notes:
       "A major classical concerto in active repertoire, requiring clean articulation, style, endurance, and upper-register control.",
-    featured: true,
+    featured: false,
   },
   {
     id: "arban-carnival-of-venice",
@@ -53,9 +53,10 @@ export const repertoire: RepertoireItem[] = [
     difficulty: "Advanced technical showpiece",
     category: "Solo",
     status: "Ready",
-    year: "Program-ready",
+    year: "Performed",
     notes:
       "Virtuosic variation work emphasizing articulation, flexibility, character, and technical command.",
+    featured: true,
   },
   {
     id: "bohme-concerto",
@@ -67,7 +68,7 @@ export const repertoire: RepertoireItem[] = [
     year: "Program-ready",
     notes:
       "Romantic-era concerto repertoire combining lyrical playing, stamina, range, and expressive phrasing.",
-    featured: true,
+    featured: false,
   },
   {
     id: "balay-andante-allegro",
@@ -79,6 +80,7 @@ export const repertoire: RepertoireItem[] = [
     year: "Program-ready",
     notes:
       "Contrasting lyrical and technical material suited to recital or audition programming.",
+    featured: false,
   },
   {
     id: "hansen-sonata-cornet",
@@ -87,9 +89,10 @@ export const repertoire: RepertoireItem[] = [
     difficulty: "Senior solo sonata",
     category: "Solo",
     status: "Ready",
-    year: "Program-ready",
+    year: "Performed",
     notes:
       "Classic cornet sonata repertoire balancing lyrical control, articulation, and chamber-style collaboration.",
+    featured: false,
   },
   {
     id: "balay-prelude-ballade",
@@ -101,6 +104,7 @@ export const repertoire: RepertoireItem[] = [
     year: "Program-ready",
     notes:
       "French solo literature prepared for expressive contrast, tone control, and technical clarity.",
+    featured: false,
   },
   {
     id: "goedicke-concert-etude",
@@ -112,6 +116,7 @@ export const repertoire: RepertoireItem[] = [
     year: "Program-ready",
     notes:
       "Fast, articulate solo literature used to demonstrate clarity, rhythmic precision, and facility.",
+    featured: false,
   },
   {
     id: "honegger-intrada",
@@ -123,6 +128,7 @@ export const repertoire: RepertoireItem[] = [
     year: "Program-ready",
     notes:
       "Modern recital work requiring precision, contrast, and confident musical direction.",
+    featured: false,
   },
   {
     id: "hindemith-sonata",
@@ -143,9 +149,10 @@ export const repertoire: RepertoireItem[] = [
     difficulty: "Advanced concerto",
     category: "Solo",
     status: "Ready",
-    year: "Program-ready",
+    year: "Performed",
     notes:
       "Large-scale concerto repertoire with broad lyrical writing, technical passages, and dramatic contrast.",
+    featured: false,
   },
   {
     id: "pakhmutova-concerto",
@@ -157,6 +164,7 @@ export const repertoire: RepertoireItem[] = [
     year: "Program-ready",
     notes:
       "Modern concerto literature with lyrical breadth, rhythmic drive, and substantial technical demands.",
+    featured: false,
   },
   {
     id: "ketting-intrada",
@@ -168,6 +176,7 @@ export const repertoire: RepertoireItem[] = [
     year: "Program-ready",
     notes:
       "Concise unaccompanied solo work requiring control, projection, and confident musical pacing.",
+    featured: false,
   },
   {
     id: "peaslee-nightsongs",
@@ -179,6 +188,7 @@ export const repertoire: RepertoireItem[] = [
     year: "Program-ready",
     notes:
       "Expressive solo repertoire focused on color, atmosphere, and sustained lyrical phrasing.",
+    featured: false,
   },
   {
     id: "ewazen-sonata",
@@ -190,6 +200,7 @@ export const repertoire: RepertoireItem[] = [
     year: "Program-ready",
     notes:
       "Contemporary recital repertoire requiring broad sound, stamina, ensemble sensitivity, and long-form phrasing.",
+    featured: false,
   },
   {
     id: "nishimura-golden-hour",
@@ -201,6 +212,7 @@ export const repertoire: RepertoireItem[] = [
     year: "Program-ready",
     notes:
       "Flugelhorn feature emphasizing tone, lyrical pacing, color, and expressive control.",
+    featured: false,
   },
   {
     id: "marlatt-blue-bells",
@@ -212,6 +224,7 @@ export const repertoire: RepertoireItem[] = [
     year: "Program-ready",
     notes:
       "Variation-style solo literature emphasizing flexibility, control, articulation, and character.",
+    featured: false,
   },
   {
     id: "ost-clash-elements",
@@ -223,6 +236,7 @@ export const repertoire: RepertoireItem[] = [
     year: "Program-ready",
     notes:
       "Solo trumpet work focused on independence, pacing, contrast, and unaccompanied performance confidence.",
+    featured: false,
   },
   {
     id: "gershwin-rhapsody-blue",
@@ -234,6 +248,7 @@ export const repertoire: RepertoireItem[] = [
     year: "Program-ready",
     notes:
       "Iconic American repertoire prepared as part of broader solo and orchestral-style trumpet literature.",
+    featured: false,
   },
   {
     id: "anderson-buglers-holiday",
@@ -242,9 +257,10 @@ export const repertoire: RepertoireItem[] = [
     difficulty: "Trumpet feature",
     category: "Ensemble",
     status: "Ready",
-    year: "Program-ready",
+    year: "Performed",
     notes:
       "Light concert feature requiring crisp ensemble playing, endurance, and coordinated articulation.",
+    featured: true,
   },
   {
     id: "anderson-trumpeters-lullaby",
@@ -256,17 +272,7 @@ export const repertoire: RepertoireItem[] = [
     year: "Program-ready",
     notes:
       "Lyrical solo feature emphasizing sound, control, musical line, and expressive phrasing.",
-  },
-  {
-    id: "el-camino-real",
-    title: "El Camino Real",
-    composer: "Alfred Reed",
-    difficulty: "Ensemble",
-    category: "Concert Band",
-    status: "Performed",
-    year: "2025",
-    notes:
-      "Performed with the McMaster Concert Band as part of ongoing university ensemble work.",
+    featured: false,
   },
 ];
 
