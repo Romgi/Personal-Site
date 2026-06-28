@@ -73,12 +73,14 @@ summary::-webkit-details-marker {
 [data-home-hero-veil],
 [data-home-hero-aperture],
 [data-home-hero-cue] {
+  backface-visibility: hidden;
+  transform: translateZ(0);
   will-change: transform, opacity;
 }
 
 .hero-background-image {
   animation: hero-image-drift 32s ease-in-out infinite alternate;
-  filter: blur(5px) saturate(1.18) contrast(1.08);
+  filter: blur(2px) saturate(1.12) contrast(1.04);
   opacity: 0.24;
   transform-origin: 76% 38%;
 }

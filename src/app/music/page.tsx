@@ -118,14 +118,69 @@ export default function MusicPage() {
         </Container>
       </section>
 
-      <section className="py-20 sm:py-24">
+      <section data-music-contexts className="py-20 sm:py-24">
         <Container>
           <div className="grid gap-10 lg:grid-cols-[0.9fr_1.1fr]">
-            <SectionHeading
-              eyebrow="Ensembles"
-              title="Performance contexts."
-              description="University, honour band, jazz, orchestral, school, and community ensembles."
-            />
+            <div className="self-start lg:sticky lg:top-28">
+              <SectionHeading
+                eyebrow="Ensembles"
+                title="Performance contexts."
+                description="University, honour band, jazz, orchestral, school, and community ensembles."
+              />
+              <div
+                data-music-context-visual
+                aria-hidden="true"
+                className="relative mt-8 overflow-hidden rounded-lg border border-blue-300/15 bg-slate-950/70 p-5 shadow-2xl shadow-blue-950/20"
+              >
+                <div className="absolute inset-0 bg-[radial-gradient(circle_at_78%_12%,rgba(56,189,248,0.18),transparent_34%),linear-gradient(135deg,rgba(37,99,235,0.12),transparent_44%)]" />
+                <div className="relative grid gap-5">
+                  <div className="flex items-center justify-between gap-4">
+                    <p className="text-xs font-semibold uppercase tracking-[0.2em] text-cyan-300">
+                      Stage Map
+                    </p>
+                    <p className="text-xs text-slate-500">Scroll linked</p>
+                  </div>
+                  <div className="relative h-44 overflow-hidden rounded-md border border-white/10 bg-white/[0.025]">
+                    <div className="absolute inset-x-6 top-8 space-y-7">
+                      <div className="h-px bg-cyan-200/20" />
+                      <div className="h-px bg-cyan-200/20" />
+                      <div className="h-px bg-cyan-200/20" />
+                      <div className="h-px bg-cyan-200/20" />
+                    </div>
+                    <div className="absolute left-1/2 top-8 h-28 w-px -translate-x-1/2 overflow-hidden bg-white/10">
+                      <div
+                        data-music-context-meter
+                        className="h-full origin-top bg-cyan-300"
+                      />
+                    </div>
+                    <div
+                      data-music-context-orb
+                      className="absolute left-1/2 top-7 size-4 -translate-x-1/2 rounded-full border border-cyan-100 bg-blue-500 shadow-[0_0_28px_rgba(56,189,248,0.65)]"
+                    />
+                  </div>
+                  <div className="grid gap-3 sm:grid-cols-3 lg:grid-cols-1 xl:grid-cols-3">
+                    {[
+                      ["9", "Years"],
+                      ["30+", "Concerts"],
+                      ["10+", "Ensembles"],
+                    ].map(([value, label]) => (
+                      <div
+                        key={label}
+                        data-music-context-stat
+                        className="rounded-md border border-white/10 bg-white/[0.035] px-3 py-2"
+                      >
+                        <p className="text-lg font-semibold text-white">
+                          {value}
+                        </p>
+                        <p className="text-xs uppercase tracking-[0.16em] text-slate-500">
+                          {label}
+                        </p>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </div>
             <div className="grid gap-5">
               {ensembles.map((ensemble) => (
                 <AnimatedSection key={ensemble.name}>

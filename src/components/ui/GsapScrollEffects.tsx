@@ -57,16 +57,56 @@ export function GsapScrollEffects({ children }: GsapScrollEffectsProps) {
       const homeHeroCue = root.querySelector<HTMLElement>(
         "[data-home-hero-cue]",
       );
+      const musicContexts = root.querySelector<HTMLElement>(
+        "[data-music-contexts]",
+      );
+      const musicContextVisual = root.querySelector<HTMLElement>(
+        "[data-music-context-visual]",
+      );
+      const musicContextMeter = root.querySelector<HTMLElement>(
+        "[data-music-context-meter]",
+      );
+      const musicContextOrb = root.querySelector<HTMLElement>(
+        "[data-music-context-orb]",
+      );
+      const musicContextStats = gsap.utils.toArray<HTMLElement>(
+        "[data-music-context-stat]",
+        root,
+      );
 
       if (homeHero && homeHeroCard) {
+        const getHeroZoomScale = () => {
+          const rect = homeHeroCard.getBoundingClientRect();
+          const coverScale = Math.max(
+            window.innerWidth / Math.max(rect.width, 1),
+            window.innerHeight / Math.max(rect.height, 1),
+          );
+
+          return Math.min(2.4, Math.max(1.85, coverScale * 2.1));
+        };
+
         gsap.set(homeHeroCard, {
+          autoAlpha: 1,
+          scale: 1,
           transformOrigin: "50% 50%",
           willChange: "transform, border-radius, opacity",
+          force3D: true,
         });
+        gsap.set(homeHeroContent, {
+          autoAlpha: 1,
+          yPercent: 0,
+          scale: 1,
+          force3D: true,
+        });
+        gsap.set(homeHeroVeil, { autoAlpha: 0 });
         gsap.set(homeHeroAperture, {
+          autoAlpha: 0,
+          scale: 0.4,
           transformOrigin: "50% 50%",
           willChange: "transform, opacity",
+          force3D: true,
         });
+        gsap.set(homeHeroCue, { autoAlpha: 1, y: 0 });
 
         const heroTimeline = gsap.timeline({
           defaults: { ease: "none" },
@@ -74,16 +114,27 @@ export function GsapScrollEffects({ children }: GsapScrollEffectsProps) {
             trigger: homeHero,
             start: "top top",
             end: "bottom top",
-            scrub: 0.85,
+            scrub: 0.18,
+            invalidateOnRefresh: true,
           },
         });
 
         heroTimeline
           .to(
+            homeHeroCard,
+            {
+              scale: getHeroZoomScale,
+              borderRadius: 0,
+              duration: 1,
+            },
+            0,
+          )
+          .to(
             homeHeroCue,
             {
               autoAlpha: 0,
               y: 18,
+              duration: 0.14,
             },
             0,
           )
@@ -91,65 +142,118 @@ export function GsapScrollEffects({ children }: GsapScrollEffectsProps) {
             homeHeroContent,
             {
               autoAlpha: 0,
-              y: -64,
-              scale: 0.96,
+              yPercent: -12,
+              scale: 0.95,
+              duration: 0.32,
             },
-            0.06,
-          )
-          .to(
-            homeHeroCard,
-            {
-              scale: 1.08,
-              borderRadius: 18,
-              duration: 0.18,
-              ease: "power1.out",
-            },
-            0,
+            0.04,
           )
           .to(
             homeHeroVeil,
             {
-              autoAlpha: 0.78,
+              autoAlpha: 0.9,
+              duration: 0.78,
             },
-            0.14,
+            0.12,
           )
           .to(
             homeHeroAperture,
             {
               autoAlpha: 1,
-              scale: 1,
-              duration: 0.18,
-              ease: "power1.out",
+              scale: 5.5,
+              duration: 0.62,
             },
-            0.16,
-          )
-          .to(
-            homeHeroCard,
-            {
-              scale: 9.5,
-              borderRadius: 0,
-              duration: 0.68,
-              ease: "power2.inOut",
-            },
-            0.2,
+            0.18,
           )
           .to(
             homeHeroAperture,
             {
-              scale: 20,
               autoAlpha: 0,
-              duration: 0.7,
-              ease: "power2.inOut",
+              duration: 0.22,
             },
-            0.2,
+            0.78,
           )
           .to(
             homeHeroCard,
             {
               autoAlpha: 0,
-              duration: 0.08,
+              duration: 0.16,
             },
-            0.94,
+            0.84,
+          );
+      }
+
+      if (musicContexts && musicContextVisual) {
+        gsap.set(musicContextVisual, {
+          autoAlpha: 0.86,
+          y: 28,
+          willChange: "transform, opacity",
+          force3D: true,
+        });
+        gsap.set(musicContextMeter, {
+          scaleY: 0,
+          transformOrigin: "50% 0%",
+          willChange: "transform",
+        });
+        gsap.set(musicContextOrb, {
+          y: 0,
+          scale: 0.86,
+          willChange: "transform",
+          force3D: true,
+        });
+        gsap.set(musicContextStats, {
+          autoAlpha: 0.72,
+          y: 14,
+          force3D: true,
+        });
+
+        const contextsTimeline = gsap.timeline({
+          defaults: { ease: "none" },
+          scrollTrigger: {
+            trigger: musicContexts,
+            start: "top 72%",
+            end: "bottom 38%",
+            scrub: 0.55,
+            invalidateOnRefresh: true,
+          },
+        });
+
+        contextsTimeline
+          .to(
+            musicContextVisual,
+            {
+              autoAlpha: 1,
+              y: -18,
+              duration: 1,
+            },
+            0,
+          )
+          .to(
+            musicContextMeter,
+            {
+              scaleY: 1,
+              duration: 1,
+            },
+            0,
+          )
+          .to(
+            musicContextOrb,
+            {
+              y: 112,
+              scale: 1.18,
+              duration: 1,
+            },
+            0,
+          )
+          .to(
+            musicContextStats,
+            {
+              autoAlpha: 1,
+              y: 0,
+              stagger: 0.08,
+              duration: 0.42,
+            },
+            0.08,
           );
       }
 
@@ -175,7 +279,7 @@ export function GsapScrollEffects({ children }: GsapScrollEffectsProps) {
                 trigger: section,
                 start: "top 82%",
                 end: "top 48%",
-                toggleActions: "play none none reverse",
+                once: true,
               },
             },
           );
@@ -206,7 +310,7 @@ export function GsapScrollEffects({ children }: GsapScrollEffectsProps) {
               trigger: item,
               start: "top 86%",
               end: "top 58%",
-              toggleActions: "play none none reverse",
+              once: true,
             },
           },
         );
