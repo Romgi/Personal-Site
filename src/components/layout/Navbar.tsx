@@ -1,6 +1,7 @@
 "use client";
 
 import { Menu, X } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
@@ -35,8 +36,15 @@ export function Navbar() {
             className="group flex items-center gap-3 rounded-md focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-cyan-300"
             aria-label="Jonathan Graydon home"
           >
-            <span className="flex size-9 items-center justify-center rounded-md border border-blue-300/20 bg-blue-500/15 text-sm font-semibold text-blue-100 transition group-hover:border-blue-300/40 group-hover:bg-blue-500/25">
-              JG
+            <span className="flex size-9 items-center justify-center overflow-hidden rounded-md border border-blue-300/20 bg-blue-500/15 transition group-hover:border-blue-300/40 group-hover:bg-blue-500/25">
+              <Image
+                src="/images/JGLogo.png"
+                alt=""
+                width={36}
+                height={36}
+                className="size-full object-contain"
+                priority
+              />
             </span>
             <span className="hidden text-sm font-semibold tracking-tight text-white sm:block">
               {profile.name}
