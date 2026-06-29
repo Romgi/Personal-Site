@@ -14,6 +14,7 @@ export type Project = {
   githubLinks?: Array<{ label: string; href: string }>;
   liveDemoUrl?: string;
   downloadUrl?: string;
+  private?: boolean;
   status: ProjectStatus;
   featured: boolean;
   tags: string[];
@@ -65,7 +66,7 @@ export const projects: Project[] = [
     ],
     status: "Completed",
     featured: false,
-    tags: ["Robotics", "Java", "Controls", "FRC"],
+    tags: ["Robotics", "Java", "Controls", "FRC", "AI"],
   },
   {
     id: "team-854-website",
@@ -101,18 +102,24 @@ export const projects: Project[] = [
     id: "lightning-air-combat",
     title: "Lightning Air Combat",
     shortDescription:
-      "A full simulation of the 2024 FRC game: CRESCENDO, including robot and field physics, scoring, and multiple robots and drivetrains.",
+      "On-rails 3D flight combat game built with Unity and C# for PC.",
     longDescription:
-      "A full simulation of the 2024 FRC game: CRESCENDO, including robot and field physics, scoring, and multiple robots and drivetrains.",
-    techStack: ["HTML", "CSS", "JavaScript"],
-    image: "/images/projects/crescendo-simulator.png",
-    imageAlt: "Screenshot of the CRESCENDO Simulator web application",
+      "A 3D flight combat game built with Unity and C# for PC. Multiple aircraft, levels, and enemy types are implemented with a focus on visual effects, particle systems, and responsive controls. The project demonstrates game development principles, physics simulation, and interactive design.",
+    techStack: [
+      "Unity",
+      "C#",
+      "Game Development",
+      "Particle Simulation",
+      "World Generation",
+    ],
+    image: "/images/projects/lightning-air-combat.png",
+    imageAlt: "Screenshot of the Lightning Air Combat game application",
     downloadUrl: safeHref(
-      "https://romgi-productions.itch.io/crescendo-simulator",
+      "https://romgi-productions.itch.io/lightning-air-combat",
     ),
     status: "Completed",
     featured: false,
-    tags: ["Web", "Frontend", "Backend", "Project Management"],
+    tags: ["Game Development", "Unity", "C#", "Simulation"],
   },
   {
     id: "swerve-and-pathplanner",
@@ -147,6 +154,34 @@ export const projects: Project[] = [
     tags: ["Web", "Frontend", "Game Development"],
   },
   {
+    id: "pc-turf",
+    title: "PC Turf",
+    shortDescription:
+      "A web application to assign jobs and act as an information hub for a golf course maintenance team.",
+    longDescription:
+      "A web application to assign jobs and act as an information hub for a golf course maintenance team.",
+    techStack: [
+      "Next.js",
+      "React",
+      "TypeScript",
+      "Tailwind CSS",
+      "Prisma",
+      "SQLite",
+      "Zod",
+      "jose",
+      "bcryptjs",
+      "Lucide React",
+      "ESLint",
+      "Vercel",
+    ],
+    image: "/images/projects/pc-turf.png",
+    imageAlt: "Screenshot of the PC Turf web application",
+    private: true,
+    status: "In Progress",
+    featured: false,
+    tags: ["Web", "Frontend", "Backend", "Project Management"],
+  },
+  {
     id: "concert-helper",
     title: "Concert Helper",
     shortDescription:
@@ -168,15 +203,30 @@ export const projects: Project[] = [
       "A full simulation of the 2024 FRC game: CRESCENDO, including robot and field physics, scoring, and multiple robots and drivetrains.",
     longDescription:
       "A full simulation of the 2024 FRC game: CRESCENDO, including robot and field physics, scoring, and multiple robots and drivetrains.",
-    techStack: ["HTML", "CSS", "JavaScript"],
+    techStack: ["Unity", "C#", "Game Development", "Physics Simulation"],
     image: "/images/projects/crescendo-simulator.png",
-    imageAlt: "Screenshot of the CRESCENDO Simulator web application",
+    imageAlt: "Screenshot of the CRESCENDO Simulator game application",
     downloadUrl: safeHref(
       "https://romgi-productions.itch.io/crescendo-simulator",
     ),
     status: "Completed",
     featured: false,
-    tags: ["Web", "Frontend", "Backend", "Project Management"],
+    tags: ["Game Development", "Unity", "C#", "Simulation"],
+  },
+  {
+    id: "frc-icon-downloader",
+    title: "FRC Team Icon Downloader",
+    shortDescription:
+      "A web application to download team icons for the FIRST Robotics Competition.",
+    longDescription:
+      "A web application to download team icons for the FIRST Robotics Competition. Built with Python, it provides a simple command line tool to download team logos and icons.",
+    techStack: ["Python", "Command Line"],
+    image: "/images/projects/frc-icons.png",
+    imageAlt: "Screenshot of the FRC Team Icon Downloader web application",
+    githubUrl: safeHref("https://github.com/Romgi/FRC-Team-Icon-Downloader"),
+    status: "Completed",
+    featured: false,
+    tags: ["Python", "Command Line"],
   },
 ];
 

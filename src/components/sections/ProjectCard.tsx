@@ -1,4 +1,4 @@
-import { ArrowUpRight, Code2, Download } from "lucide-react";
+import { ArrowUpRight, Code2, Download, Lock } from "lucide-react";
 
 import { ButtonLink } from "@/components/ui/ButtonLink";
 import { PlaceholderImage } from "@/components/ui/PlaceholderImage";
@@ -10,6 +10,14 @@ type ProjectCardProps = {
 };
 
 export function ProjectCard({ project }: ProjectCardProps) {
+  const hasPublicLinks = Boolean(
+    !project.private &&
+    (project.githubUrl ||
+      project.githubLinks?.length ||
+      project.liveDemoUrl ||
+      project.downloadUrl),
+  );
+
   return (
     <article className="group flex h-full flex-col overflow-hidden rounded-lg border border-white/10 bg-slate-950/70 transition duration-200 hover:-translate-y-1 hover:border-blue-300/35 hover:bg-slate-900/80 hover:shadow-2xl hover:shadow-blue-950/30">
       <PlaceholderImage
@@ -54,30 +62,38 @@ export function ProjectCard({ project }: ProjectCardProps) {
         </details>
 
         <div className="mt-auto flex flex-wrap gap-3 pt-5">
-          {project.githubLinks?.map((link) => (
-            <ButtonLink
-              key={link.href}
-              href={link.href}
-              size="sm"
-              variant="ghost"
-            >
-              <Code2 aria-hidden="true" size={16} />
-              {link.label}
-            </ButtonLink>
-          ))}
-          {project.githubUrl ? (
+          {project.private ? (
+            <span className="inline-flex min-h-10 items-center gap-2 rounded-md border border-white/10 bg-white/[0.035] px-4 py-2 text-sm font-medium text-slate-400">
+              <Lock aria-hidden="true" size={16} />
+              Private project - no public links
+            </span>
+          ) : null}
+          {!project.private
+            ? project.githubLinks?.map((link) => (
+                <ButtonLink
+                  key={link.href}
+                  href={link.href}
+                  size="sm"
+                  variant="ghost"
+                >
+                  <Code2 aria-hidden="true" size={16} />
+                  {link.label}
+                </ButtonLink>
+              ))
+            : null}
+          {!project.private && project.githubUrl ? (
             <ButtonLink href={project.githubUrl} size="sm" variant="ghost">
               <Code2 aria-hidden="true" size={16} />
               GitHub
             </ButtonLink>
           ) : null}
-          {project.liveDemoUrl ? (
+          {!project.private && project.liveDemoUrl ? (
             <ButtonLink href={project.liveDemoUrl} size="sm" variant="ghost">
               <ArrowUpRight aria-hidden="true" size={16} />
               Live demo
             </ButtonLink>
           ) : null}
-          {project.downloadUrl ? (
+          {!project.private && project.downloadUrl ? (
             <ButtonLink
               href={project.downloadUrl}
               size="sm"
@@ -88,10 +104,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
               Download page
             </ButtonLink>
           ) : null}
-          {!project.githubUrl &&
-          !project.githubLinks?.length &&
-          !project.liveDemoUrl &&
-          !project.downloadUrl ? (
+          {!project.private && !hasPublicLinks ? (
             <span className="text-sm text-slate-500">Links ready to add</span>
           ) : null}
         </div>
