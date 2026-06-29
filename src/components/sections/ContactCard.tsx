@@ -23,7 +23,7 @@ export function ContactCard({
       href={href}
       target={isExternal ? "_blank" : undefined}
       rel={isExternal ? "noopener noreferrer" : undefined}
-      className="group block h-full rounded-lg border border-white/10 bg-slate-950/70 p-5 transition duration-200 hover:-translate-y-1 hover:border-blue-300/35 hover:bg-blue-500/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-cyan-300"
+      className="liquid-glass-surface group block h-full rounded-lg border border-white/10 p-5 transition duration-200 hover:-translate-y-1 hover:border-blue-300/35 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-cyan-300"
     >
       <span className="text-xs font-semibold uppercase tracking-[0.2em] text-cyan-300">
         {label}

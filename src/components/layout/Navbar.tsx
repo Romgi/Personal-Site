@@ -29,14 +29,14 @@ export function Navbar() {
       >
         Skip to main content
       </a>
-      <div className="mx-auto max-w-7xl rounded-lg border border-white/10 bg-slate-950/78 px-4 shadow-2xl shadow-black/30 backdrop-blur-xl">
+      <div className="liquid-glass-nav mx-auto max-w-7xl rounded-lg border px-4">
         <div className="flex h-16 items-center justify-between">
           <Link
             href="/"
             className="group flex items-center gap-3 rounded-md focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-cyan-300"
             aria-label="Jonathan Graydon home"
           >
-            <span className="flex size-9 items-center justify-center overflow-hidden rounded-md border border-blue-300/20 bg-blue-500/15 transition group-hover:border-blue-300/40 group-hover:bg-blue-500/25">
+            <span className="flex size-9 items-center justify-center overflow-hidden rounded-md border border-blue-200/25 bg-white/[0.08] shadow-[inset_0_1px_0_rgba(255,255,255,0.18)] transition group-hover:border-cyan-200/45 group-hover:bg-cyan-300/10">
               <Image
                 src="/images/JGLogo.png"
                 alt=""
@@ -82,7 +82,7 @@ export function Navbar() {
 
           <button
             type="button"
-            className="inline-flex size-10 items-center justify-center rounded-md border border-white/10 text-slate-200 transition hover:border-blue-300/40 hover:bg-blue-500/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-cyan-300 md:hidden"
+            className="inline-flex size-10 items-center justify-center rounded-md border border-white/15 bg-white/[0.04] text-slate-200 transition hover:border-blue-300/40 hover:bg-blue-500/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-cyan-300 md:hidden"
             aria-label={
               isOpen ? "Close navigation menu" : "Open navigation menu"
             }

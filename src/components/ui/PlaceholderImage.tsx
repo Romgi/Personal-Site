@@ -24,7 +24,7 @@ export function PlaceholderImage({
   return (
     <div
       className={cn(
-        "relative overflow-hidden rounded-lg border border-blue-300/10 bg-slate-950",
+        "liquid-glass-surface relative overflow-hidden rounded-lg border border-blue-300/10",
         aspect,
         className,
       )}

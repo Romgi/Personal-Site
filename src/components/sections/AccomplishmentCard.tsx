@@ -10,7 +10,7 @@ export function AccomplishmentCard({
   description,
 }: AccomplishmentCardProps) {
   return (
-    <article className="rounded-lg border border-white/10 bg-white/[0.035] p-5">
+    <article className="liquid-glass-surface rounded-lg border border-white/10 p-5">
       <p className="text-xs font-semibold uppercase tracking-[0.2em] text-cyan-300">
         {period}
       </p>

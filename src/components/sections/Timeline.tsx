@@ -22,7 +22,7 @@ export function Timeline({ items }: TimelineProps) {
             aria-hidden="true"
             className="absolute -left-[31px] top-2 size-3 rounded-full border border-cyan-200 bg-blue-500 shadow-[0_0_20px_rgba(56,189,248,0.45)]"
           />
-          <article className="rounded-lg border border-white/10 bg-white/[0.035] p-5">
+          <article className="liquid-glass-surface rounded-lg border border-white/10 p-5">
             <div className="flex flex-col gap-2 sm:flex-row sm:items-start sm:justify-between">
               <div>
                 <h3 className="text-lg font-semibold text-white">

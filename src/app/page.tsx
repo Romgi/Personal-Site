@@ -57,7 +57,7 @@ export default function Home() {
               <AnimatedSection key={item.title}>
                 <Link
                   href={item.href}
-                  className="group block h-full rounded-lg border border-white/10 bg-white/[0.035] p-6 transition duration-200 hover:-translate-y-1 hover:border-blue-300/35 hover:bg-blue-500/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-cyan-300"
+                  className="liquid-glass-surface group block h-full rounded-lg border border-white/10 p-6 transition duration-200 hover:-translate-y-1 hover:border-blue-300/35 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-cyan-300"
                 >
                   <p className="text-xs font-semibold uppercase tracking-[0.24em] text-cyan-300">
                     {item.metric}
@@ -151,7 +151,7 @@ export default function Home() {
                 title="Trumpet repertoire and performance discipline."
                 description="This section is designed for music work with technical notes, media, and accomplishments. Each entry has a description, bullets, and badges for instruments."
               />
-              <div className="mt-7 rounded-lg border border-white/10 bg-white/[0.035] p-5">
+              <div className="liquid-glass-surface mt-7 rounded-lg border border-white/10 p-5">
                 <p className="text-xs font-semibold uppercase tracking-[0.2em] text-cyan-300">
                   Featured repertoire
                 </p>
@@ -162,7 +162,7 @@ export default function Home() {
                   {featuredMusic.notes}
                 </p>
               </div>
-              <div className="mt-5 rounded-lg border border-white/10 bg-white/[0.035] p-5">
+              <div className="liquid-glass-surface mt-5 rounded-lg border border-white/10 p-5">
                 <p className="text-xs font-semibold uppercase tracking-[0.2em] text-cyan-300">
                   Featured accomplishment
                 </p>

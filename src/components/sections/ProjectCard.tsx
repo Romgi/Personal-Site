@@ -19,7 +19,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
   );
 
   return (
-    <article className="group flex h-full flex-col overflow-hidden rounded-lg border border-white/10 bg-slate-950/70 transition duration-200 hover:-translate-y-1 hover:border-blue-300/35 hover:bg-slate-900/80 hover:shadow-2xl hover:shadow-blue-950/30">
+    <article className="liquid-glass-surface group flex h-full flex-col overflow-hidden rounded-lg border border-white/10 transition duration-200 hover:-translate-y-1 hover:border-blue-300/35 hover:shadow-2xl hover:shadow-blue-950/30">
       <PlaceholderImage
         src={project.image}
         alt={project.imageAlt}
