@@ -19,7 +19,10 @@ export function ProjectCard({ project }: ProjectCardProps) {
   );
 
   return (
-    <article className="liquid-glass-surface group flex h-full flex-col overflow-hidden rounded-lg border border-white/10 transition duration-200 hover:-translate-y-1 hover:border-blue-300/35 hover:shadow-2xl hover:shadow-blue-950/30">
+    <article
+      data-tilt
+      className="liquid-glass-surface glass-card group flex h-full flex-col overflow-hidden rounded-lg border border-white/10"
+    >
       <PlaceholderImage
         src={project.image}
         alt={project.imageAlt}
@@ -31,7 +34,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
           <h3 className="text-xl font-semibold tracking-tight text-white">
             {project.title}
           </h3>
-          <span className="shrink-0 rounded-md border border-blue-300/15 bg-blue-500/10 px-2.5 py-1 text-xs font-medium text-cyan-100">
+          <span className="shrink-0 rounded-md border border-blue-300/20 bg-blue-500/10 px-2.5 py-1 font-mono text-[11px] font-medium tracking-wide text-blue-100">
             {project.status}
           </span>
         </div>
@@ -45,8 +48,8 @@ export function ProjectCard({ project }: ProjectCardProps) {
           ))}
         </div>
 
-        <details className="mt-5 rounded-md border border-white/10 bg-white/[0.03] p-4 text-sm text-slate-300 open:border-blue-300/20">
-          <summary className="cursor-pointer font-medium text-slate-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-cyan-300">
+        <details className="mt-5 rounded-md border border-white/10 bg-white/[0.03] p-4 text-sm text-slate-300 open:border-blue-300/25">
+          <summary className="cursor-pointer font-medium text-slate-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-blue-300">
             Technical details
           </summary>
           <p className="mt-3 leading-6 text-slate-400">
@@ -54,7 +57,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
           </p>
           <div className="mt-3 flex flex-wrap gap-2">
             {project.tags.map((tag) => (
-              <span key={tag} className="text-xs text-cyan-200/80">
+              <span key={tag} className="font-mono text-xs text-blue-200/80">
                 #{tag}
               </span>
             ))}

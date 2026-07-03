@@ -102,7 +102,7 @@ export default function ResumePage() {
                             {item.credential}
                           </p>
                         </div>
-                        <p className="text-sm text-cyan-200">{item.period}</p>
+                        <p className="text-sm text-blue-200">{item.period}</p>
                       </div>
                       <p className="mt-1 text-sm text-slate-500">
                         {item.location}
@@ -174,7 +174,7 @@ export default function ResumePage() {
                             {experience.organization}
                           </p>
                         </div>
-                        <p className="text-sm text-cyan-200">
+                        <p className="text-sm text-blue-200">
                           {experience.period}
                         </p>
                       </div>

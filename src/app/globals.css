@@ -1,12 +1,14 @@
 @import "tailwindcss";
 
 :root {
-  --background: #020617;
+  --background: #030409;
   --foreground: #f8fafc;
-  --surface: #07111f;
-  --surface-strong: #0b1424;
-  --accent: #2563eb;
+  --surface: #070b14;
+  --surface-strong: #0a101d;
+  --accent: #2f5fe0;
+  --accent-soft: #4d7cff;
   --accent-cyan: #38bdf8;
+  --hairline: rgba(148, 163, 184, 0.14);
 }
 
 @theme inline {
@@ -33,6 +35,7 @@ body {
   color: var(--foreground);
   font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
   text-rendering: optimizeLegibility;
+  overflow-x: clip;
 }
 
 body::before {
@@ -42,12 +45,33 @@ body::before {
   inset: 0;
   z-index: -1;
   background:
-    linear-gradient(135deg, rgba(37, 99, 235, 0.09), transparent 32rem),
-    linear-gradient(180deg, #020617 0%, #050b16 45%, #020617 100%);
+    radial-gradient(
+      52rem 34rem at 82% -12%,
+      rgba(47, 95, 224, 0.12),
+      transparent 62%
+    ),
+    radial-gradient(
+      44rem 30rem at 8% 108%,
+      rgba(47, 95, 224, 0.07),
+      transparent 60%
+    ),
+    linear-gradient(180deg, #030409 0%, #050810 46%, #030409 100%);
+}
+
+/* Fine film grain keeps large dark gradients from banding. */
+body::after {
+  pointer-events: none;
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 80;
+  opacity: 0.028;
+  mix-blend-mode: overlay;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)'/%3E%3C/svg%3E");
 }
 
 ::selection {
-  background: rgba(56, 189, 248, 0.35);
+  background: rgba(77, 124, 255, 0.4);
   color: #ffffff;
 }
 
@@ -57,89 +81,114 @@ a {
 }
 
 summary::-webkit-details-marker {
-  color: #38bdf8;
+  color: #7ba3ff;
 }
 
 .text-balance {
   text-wrap: balance;
 }
 
-.liquid-glass-nav {
+/* ---------------------------------------------------------------------------
+ * Cursor-following ambient light (driven by PointerEffects)
+ * ------------------------------------------------------------------------- */
+
+.cursor-glow {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 30;
+  width: 34rem;
+  height: 34rem;
+  margin-left: -17rem;
+  margin-top: -17rem;
+  border-radius: 9999px;
+  pointer-events: none;
+  opacity: 0;
+  mix-blend-mode: screen;
+  background: radial-gradient(
+    circle,
+    rgba(47, 95, 224, 0.1) 0%,
+    rgba(47, 95, 224, 0.05) 34%,
+    transparent 68%
+  );
+}
+
+/* ---------------------------------------------------------------------------
+ * Liquid glass
+ * Layered: base tint -> refraction gradient -> specular top edge ->
+ * pointer-tracked sheen (--mx/--my set by PointerEffects).
+ * ------------------------------------------------------------------------- */
+
+.liquid-glass-nav,
+.liquid-glass-surface {
+  --mx: 50%;
+  --my: 50%;
+  --glass-active: 0;
   position: relative;
   overflow: hidden;
-  border-color: rgba(226, 232, 240, 0.13);
+}
+
+.liquid-glass-nav {
+  border-color: var(--hairline);
   background:
     linear-gradient(
       135deg,
-      rgba(255, 255, 255, 0.045),
-      rgba(2, 6, 23, 0.035) 42%,
-      rgba(56, 189, 248, 0.035)
+      rgba(255, 255, 255, 0.055),
+      rgba(3, 4, 9, 0.04) 42%,
+      rgba(77, 124, 255, 0.04)
     ),
-    rgba(2, 6, 23, 0.025);
+    rgba(3, 4, 9, 0.32);
   box-shadow:
-    inset 0 1px 0 rgba(255, 255, 255, 0.16),
-    inset 0 -1px 0 rgba(56, 189, 248, 0.06),
-    0 18px 55px rgba(0, 0, 0, 0.18);
-  -webkit-backdrop-filter: blur(34px) saturate(190%) contrast(1.08);
-  backdrop-filter: blur(34px) saturate(190%) contrast(1.08);
+    inset 0 1px 0 rgba(255, 255, 255, 0.14),
+    inset 0 -1px 0 rgba(77, 124, 255, 0.07),
+    0 16px 48px rgba(0, 0, 0, 0.32);
+  -webkit-backdrop-filter: blur(28px) saturate(180%) contrast(1.06);
+  backdrop-filter: blur(28px) saturate(180%) contrast(1.06);
+  transition:
+    background-color 0.5s ease,
+    box-shadow 0.5s ease;
 }
 
-.liquid-glass-nav > * {
-  position: relative;
-  z-index: 1;
-}
-
-.liquid-glass-nav::before,
-.liquid-glass-nav::after {
-  pointer-events: none;
-  content: "";
-  position: absolute;
-  inset: 0;
-}
-
-.liquid-glass-nav::before {
+.liquid-glass-nav--scrolled {
   background:
     linear-gradient(
-      120deg,
-      rgba(255, 255, 255, 0.1),
-      transparent 28%,
-      rgba(56, 189, 248, 0.035) 54%,
-      transparent 78%
+      135deg,
+      rgba(255, 255, 255, 0.05),
+      rgba(3, 4, 9, 0.18) 42%,
+      rgba(77, 124, 255, 0.045)
     ),
-    linear-gradient(
-      180deg,
-      rgba(255, 255, 255, 0.045),
-      transparent 38%,
-      rgba(2, 6, 23, 0.07)
-    );
-  opacity: 0.55;
+    rgba(3, 4, 9, 0.6);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.12),
+    inset 0 -1px 0 rgba(77, 124, 255, 0.08),
+    0 20px 60px rgba(0, 0, 0, 0.5);
 }
 
 .liquid-glass-surface {
-  position: relative;
-  overflow: hidden;
-  border-color: rgba(226, 232, 240, 0.11);
+  border-color: rgba(148, 163, 184, 0.12);
   background:
     linear-gradient(
-      145deg,
-      rgba(255, 255, 255, 0.035),
-      rgba(2, 6, 23, 0.03) 46%,
-      rgba(56, 189, 248, 0.025)
+      150deg,
+      rgba(255, 255, 255, 0.04),
+      rgba(3, 4, 9, 0.05) 46%,
+      rgba(77, 124, 255, 0.03)
     ),
-    rgba(2, 6, 23, 0.025);
+    rgba(7, 11, 20, 0.42);
   box-shadow:
-    inset 0 1px 0 rgba(255, 255, 255, 0.1),
-    inset 0 -1px 0 rgba(56, 189, 248, 0.04),
-    0 18px 48px rgba(0, 0, 0, 0.14);
-  -webkit-backdrop-filter: blur(28px) saturate(175%);
-  backdrop-filter: blur(28px) saturate(175%);
+    inset 0 1px 0 rgba(255, 255, 255, 0.09),
+    inset 0 -1px 0 rgba(77, 124, 255, 0.05),
+    0 18px 48px rgba(0, 0, 0, 0.28);
+  -webkit-backdrop-filter: blur(22px) saturate(170%);
+  backdrop-filter: blur(22px) saturate(170%);
 }
 
+.liquid-glass-nav > *,
 .liquid-glass-surface > * {
   position: relative;
   z-index: 1;
 }
 
+.liquid-glass-nav::before,
 .liquid-glass-surface::before {
   pointer-events: none;
   content: "";
@@ -148,21 +197,62 @@ summary::-webkit-details-marker {
   z-index: 0;
   background:
     radial-gradient(
-      circle at 16% 0%,
-      rgba(255, 255, 255, 0.06),
-      transparent 28%
+      120% 60% at 18% 0%,
+      rgba(255, 255, 255, 0.07),
+      transparent 42%
     ),
     radial-gradient(
-      circle at 92% 8%,
-      rgba(56, 189, 248, 0.05),
-      transparent 30%
+      90% 50% at 94% 6%,
+      rgba(77, 124, 255, 0.06),
+      transparent 44%
     ),
     linear-gradient(
       180deg,
-      rgba(255, 255, 255, 0.025),
-      transparent 42%,
-      rgba(2, 6, 23, 0.055)
+      rgba(255, 255, 255, 0.03),
+      transparent 40%,
+      rgba(3, 4, 9, 0.08)
     );
+}
+
+/* Pointer-tracked specular sheen. Sits under content, above the tint. */
+.liquid-glass-nav::after,
+.liquid-glass-surface::after {
+  pointer-events: none;
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  opacity: var(--glass-active);
+  transition: opacity 0.4s ease;
+  background: radial-gradient(
+    16rem circle at var(--mx) var(--my),
+    rgba(148, 190, 255, 0.11),
+    rgba(77, 124, 255, 0.04) 42%,
+    transparent 68%
+  );
+}
+
+/* Interactive glass cards: lift + sharpened edge on hover. */
+.glass-card {
+  transition:
+    border-color 0.3s ease,
+    box-shadow 0.3s ease,
+    background-color 0.3s ease;
+}
+
+.glass-card:hover {
+  border-color: rgba(123, 163, 255, 0.38);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.12),
+    inset 0 -1px 0 rgba(77, 124, 255, 0.08),
+    0 24px 64px rgba(0, 0, 0, 0.42),
+    0 0 0 1px rgba(77, 124, 255, 0.08);
+}
+
+/* Tilt targets get their own perspective so rotation reads as depth. */
+[data-tilt] {
+  transform-style: preserve-3d;
+  will-change: transform;
 }
 
 .gsap-reveal {
@@ -181,7 +271,7 @@ summary::-webkit-details-marker {
 
 .hero-background-image {
   animation: hero-image-drift 32s ease-in-out infinite alternate;
-  filter: blur(2px) saturate(1.12) contrast(1.04);
+  filter: blur(2px) saturate(1.1) contrast(1.04);
   opacity: 0.24;
   transform-origin: 76% 38%;
 }
@@ -254,6 +344,10 @@ summary::-webkit-details-marker {
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
+  }
+
+  .cursor-glow {
+    display: none;
   }
 
   *,

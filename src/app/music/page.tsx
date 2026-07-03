@@ -49,7 +49,7 @@ export default function MusicPage() {
                 title="A serious performance profile alongside the technical portfolio."
                 description="This page highlights Jonathan's trumpet repertoire, honour band experience, ensemble leadership, festival awards, and ongoing university performance work."
               />
-              <div className="mt-8 rounded-lg border border-dashed border-blue-300/20 bg-white/[0.035] p-5">
+              <div className="mt-8 rounded-lg border border-dashed border-blue-300/25 bg-white/[0.035] p-5">
                 <p className="text-sm font-semibold text-white">
                   Recordings and media
                 </p>
@@ -135,12 +135,12 @@ export default function MusicPage() {
                 <div className="absolute bottom-2 left-3 top-2 w-px overflow-hidden rounded-full bg-white/10">
                   <div
                     data-music-context-meter
-                    className="h-full origin-top rounded-full bg-cyan-300 shadow-[0_0_24px_rgba(56,189,248,0.65)]"
+                    className="h-full origin-top rounded-full bg-blue-400 shadow-[0_0_24px_rgba(77,124,255,0.7)]"
                   />
                 </div>
                 <div
                   data-music-context-orb
-                  className="absolute left-3 top-2 size-4 -translate-x-1/2 rounded-full border border-cyan-100 bg-blue-500 shadow-[0_0_28px_rgba(56,189,248,0.72)]"
+                  className="absolute left-3 top-2 size-4 -translate-x-1/2 rounded-full border border-blue-100 bg-blue-500 shadow-[0_0_28px_rgba(77,124,255,0.75)]"
                 />
               </div>
             </div>
@@ -160,7 +160,7 @@ export default function MusicPage() {
         </Container>
       </section>
 
-      <section className="border-t border-white/10 bg-[linear-gradient(180deg,rgba(15,23,42,0.45),rgba(2,6,23,0.94))] py-20 sm:py-24">
+      <section className="border-t border-white/10 bg-[linear-gradient(180deg,rgba(13,20,38,0.5),rgba(3,4,9,0.94))] py-20 sm:py-24">
         <Container>
           <SectionHeading
             eyebrow="Gallery"

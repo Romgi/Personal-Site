@@ -6,6 +6,7 @@ import { Footer } from "@/components/layout/Footer";
 import { Navbar } from "@/components/layout/Navbar";
 import { RouteScrollReset } from "@/components/layout/RouteScrollReset";
 import { GsapScrollEffects } from "@/components/ui/GsapScrollEffects";
+import { PointerEffects } from "@/components/ui/PointerEffects";
 import { profile, site } from "@/data/profile";
 
 import "./globals.css";
@@ -100,6 +101,7 @@ export default function RootLayout({
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body className="flex min-h-full flex-col">
+        <PointerEffects />
         <Navbar />
         <RouteScrollReset />
         <main id="main-content" className="flex-1">

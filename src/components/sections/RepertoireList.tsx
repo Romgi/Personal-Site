@@ -15,7 +15,7 @@ type RepertoireListProps = {
 export function RepertoireList({ items }: RepertoireListProps) {
   return (
     <div className="liquid-glass-surface overflow-hidden rounded-lg border border-white/10">
-      <div className="hidden grid-cols-[1.2fr_1fr_0.8fr_0.7fr] gap-4 border-b border-white/10 bg-white/[0.04] px-5 py-3 text-xs font-semibold uppercase tracking-[0.18em] text-slate-400 md:grid">
+      <div className="hidden grid-cols-[1.2fr_1fr_0.8fr_0.7fr] gap-4 border-b border-white/10 bg-white/[0.04] px-5 py-3 font-mono text-[11px] font-medium uppercase tracking-[0.2em] text-slate-400 md:grid">
         <span>Repertoire</span>
         <span>Category</span>
         <span>Status</span>

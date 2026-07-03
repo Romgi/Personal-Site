@@ -16,11 +16,11 @@ type ButtonLinkProps = {
 
 const variants = {
   primary:
-    "border-blue-400/70 bg-blue-500 text-white shadow-[0_0_24px_rgba(37,99,235,0.24)] hover:border-cyan-300 hover:bg-blue-400",
+    "border-blue-400/60 bg-gradient-to-b from-blue-500 to-blue-600 text-white shadow-[inset_0_1px_0_rgba(255,255,255,0.22),0_8px_28px_rgba(37,99,235,0.32)] hover:border-blue-300 hover:from-blue-400 hover:to-blue-500 hover:shadow-[inset_0_1px_0_rgba(255,255,255,0.26),0_10px_36px_rgba(37,99,235,0.44)]",
   secondary:
-    "border-white/15 bg-white/[0.06] text-white hover:border-blue-300/60 hover:bg-blue-500/10",
+    "border-white/15 bg-white/[0.05] text-white shadow-[inset_0_1px_0_rgba(255,255,255,0.09)] hover:border-blue-300/50 hover:bg-blue-500/10",
   ghost:
-    "border-transparent bg-transparent text-slate-300 hover:border-white/10 hover:bg-white/[0.05] hover:text-white",
+    "border-transparent bg-transparent text-slate-400 hover:border-white/10 hover:bg-white/[0.05] hover:text-white",
 };
 
 const sizes = {
@@ -38,8 +38,9 @@ export function ButtonLink({
   ariaLabel,
 }: ButtonLinkProps) {
   const checkedHref = safeHref(href);
+  const magnetic = variant === "primary" || variant === "secondary";
   const linkClassName = cn(
-    "inline-flex items-center justify-center gap-2 rounded-md border font-medium transition duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-cyan-300",
+    "inline-flex items-center justify-center gap-2 rounded-md border font-medium transition duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-blue-300",
     variants[variant],
     sizes[size],
     className,
@@ -52,6 +53,7 @@ export function ButtonLink({
         className={linkClassName}
         download={download}
         aria-label={ariaLabel}
+        data-magnetic={magnetic || undefined}
       >
         {children}
       </Link>
@@ -66,6 +68,7 @@ export function ButtonLink({
       rel={isExternalHref(checkedHref) ? "noopener noreferrer" : undefined}
       download={download}
       aria-label={ariaLabel}
+      data-magnetic={magnetic || undefined}
     >
       {children}
     </a>

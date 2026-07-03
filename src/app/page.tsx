@@ -57,9 +57,10 @@ export default function Home() {
               <AnimatedSection key={item.title}>
                 <Link
                   href={item.href}
-                  className="liquid-glass-surface group block h-full rounded-lg border border-white/10 p-6 transition duration-200 hover:-translate-y-1 hover:border-blue-300/35 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-cyan-300"
+                  data-tilt
+                  className="liquid-glass-surface glass-card group block h-full rounded-lg border border-white/10 p-6 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-blue-300"
                 >
-                  <p className="text-xs font-semibold uppercase tracking-[0.24em] text-cyan-300">
+                  <p className="font-mono text-[11px] font-medium uppercase tracking-[0.26em] text-blue-300">
                     {item.metric}
                   </p>
                   <h3 className="mt-4 text-xl font-semibold text-white">
@@ -68,7 +69,7 @@ export default function Home() {
                   <p className="mt-3 text-sm leading-6 text-slate-300">
                     {item.description}
                   </p>
-                  <span className="mt-5 inline-flex items-center gap-2 text-sm font-medium text-blue-100">
+                  <span className="mt-5 inline-flex items-center gap-2 text-sm font-medium text-blue-200">
                     Explore
                     <ArrowRight
                       aria-hidden="true"
@@ -135,7 +136,7 @@ export default function Home() {
         </Container>
       </section>
 
-      <section className="border-t border-white/10 bg-[linear-gradient(180deg,rgba(15,23,42,0.48),rgba(2,6,23,0.95))] py-20 sm:py-24">
+      <section className="border-t border-white/10 bg-[linear-gradient(180deg,rgba(13,20,38,0.5),rgba(3,4,9,0.95))] py-20 sm:py-24">
         <Container>
           <div className="grid gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:items-center">
             <AnimatedSection>
@@ -151,8 +152,8 @@ export default function Home() {
                 title="Trumpet repertoire and performance discipline."
                 description="This section is designed for music work with technical notes, media, and accomplishments. Each entry has a description, bullets, and badges for instruments."
               />
-              <div className="liquid-glass-surface mt-7 rounded-lg border border-white/10 p-5">
-                <p className="text-xs font-semibold uppercase tracking-[0.2em] text-cyan-300">
+              <div className="liquid-glass-surface glass-card mt-7 rounded-lg border border-white/10 p-5">
+                <p className="font-mono text-[11px] font-medium uppercase tracking-[0.24em] text-blue-300">
                   Featured repertoire
                 </p>
                 <h3 className="mt-3 text-xl font-semibold text-white">
@@ -162,8 +163,8 @@ export default function Home() {
                   {featuredMusic.notes}
                 </p>
               </div>
-              <div className="liquid-glass-surface mt-5 rounded-lg border border-white/10 p-5">
-                <p className="text-xs font-semibold uppercase tracking-[0.2em] text-cyan-300">
+              <div className="liquid-glass-surface glass-card mt-5 rounded-lg border border-white/10 p-5">
+                <p className="font-mono text-[11px] font-medium uppercase tracking-[0.24em] text-blue-300">
                   Featured accomplishment
                 </p>
                 <h3 className="mt-3 text-xl font-semibold text-white">

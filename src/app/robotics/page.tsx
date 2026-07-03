@@ -163,7 +163,7 @@ export default function RoboticsPage() {
         </Container>
       </section>
 
-      <section className="border-t border-white/10 bg-[linear-gradient(180deg,rgba(15,23,42,0.42),rgba(2,6,23,0.92))] py-20 sm:py-24">
+      <section className="border-t border-white/10 bg-[linear-gradient(180deg,rgba(13,20,38,0.48),rgba(3,4,9,0.92))] py-20 sm:py-24">
         <Container>
           <SectionHeading
             eyebrow="Competition Highlights"
@@ -173,7 +173,7 @@ export default function RoboticsPage() {
           <div className="mt-10 grid gap-5 md:grid-cols-3">
             {competitionHighlights.map((highlight) => (
               <AnimatedSection key={highlight}>
-                <article className="h-full rounded-lg border border-white/10 bg-white/[0.035] p-5 text-sm leading-6 text-slate-300">
+                <article className="liquid-glass-surface glass-card h-full rounded-lg border border-white/10 p-5 text-sm leading-6 text-slate-300">
                   {highlight}
                 </article>
               </AnimatedSection>

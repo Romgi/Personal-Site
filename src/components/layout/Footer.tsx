@@ -24,8 +24,12 @@ const footerContactLinks: Array<{
 
 export function Footer() {
   return (
-    <footer className="border-t border-white/10 bg-slate-950">
-      <Container className="py-10">
+    <footer className="relative border-t border-white/10 bg-[#030409]">
+      <div
+        aria-hidden="true"
+        className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-blue-400/40 to-transparent"
+      />
+      <Container className="py-12">
         <div className="grid gap-8 md:grid-cols-[1.3fr_0.7fr] md:items-start">
           <div>
             <p className="text-lg font-semibold text-white">{profile.name}</p>
@@ -45,7 +49,7 @@ export function Footer() {
                       ? "noopener noreferrer"
                       : undefined
                   }
-                  className="inline-flex min-h-10 items-center gap-2 rounded-md border border-white/10 bg-white/[0.035] px-3 py-2 font-medium text-slate-300 transition hover:border-blue-300/35 hover:bg-blue-500/10 hover:text-cyan-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-cyan-300"
+                  className="inline-flex min-h-10 items-center gap-2 rounded-md border border-white/10 bg-white/[0.035] px-3 py-2 font-medium text-slate-300 transition hover:border-blue-300/40 hover:bg-blue-500/10 hover:text-blue-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-blue-300"
                 >
                   <ContactIcon label={link.label} className="size-4 shrink-0" />
                   {link.label}
@@ -59,7 +63,7 @@ export function Footer() {
                 <li key={item.href}>
                   <Link
                     href={item.href}
-                    className="block rounded-md px-3 py-2 text-slate-400 transition hover:bg-white/[0.04] hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-cyan-300"
+                    className="block rounded-md px-3 py-2 text-slate-400 transition hover:bg-white/[0.04] hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-blue-300"
                   >
                     {item.label}
                   </Link>

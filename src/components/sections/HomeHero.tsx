@@ -39,7 +39,7 @@ export function HomeHero({ name, title, tagline, image }: HomeHeroProps) {
           </div>
           <div
             aria-hidden="true"
-            className="hero-ambient absolute inset-0 bg-[radial-gradient(circle_at_76%_26%,rgba(37,99,235,0.34),transparent_34%),radial-gradient(circle_at_52%_74%,rgba(56,189,248,0.14),transparent_32%)]"
+            className="hero-ambient absolute inset-0 bg-[radial-gradient(circle_at_76%_26%,rgba(37,99,235,0.34),transparent_34%),radial-gradient(circle_at_52%_74%,rgba(77,124,255,0.14),transparent_32%)]"
           />
           <div
             aria-hidden="true"
@@ -51,11 +51,11 @@ export function HomeHero({ name, title, tagline, image }: HomeHeroProps) {
           />
           <div
             aria-hidden="true"
-            className="hero-grid absolute inset-0 opacity-[0.16] [background-image:linear-gradient(rgba(56,189,248,0.28)_1px,transparent_1px),linear-gradient(90deg,rgba(56,189,248,0.18)_1px,transparent_1px)] [background-size:64px_64px]"
+            className="hero-grid absolute inset-0 opacity-[0.14] [background-image:linear-gradient(rgba(96,141,255,0.26)_1px,transparent_1px),linear-gradient(90deg,rgba(96,141,255,0.16)_1px,transparent_1px)] [background-size:64px_64px]"
           />
           <div
             aria-hidden="true"
-            className="hero-scan absolute inset-y-0 left-[-24%] w-1/2 bg-[linear-gradient(90deg,transparent,rgba(56,189,248,0.09),transparent)]"
+            className="hero-scan absolute inset-y-0 left-[-24%] w-1/2 bg-[linear-gradient(90deg,transparent,rgba(96,141,255,0.09),transparent)]"
           />
           <div
             data-home-hero-veil
@@ -65,18 +65,22 @@ export function HomeHero({ name, title, tagline, image }: HomeHeroProps) {
           <div
             data-home-hero-aperture
             aria-hidden="true"
-            className="absolute left-1/2 top-1/2 size-36 -translate-x-1/2 -translate-y-1/2 rounded-full border border-cyan-200/35 opacity-0 shadow-[0_0_80px_rgba(56,189,248,0.26)]"
+            className="absolute left-1/2 top-1/2 size-36 -translate-x-1/2 -translate-y-1/2 rounded-full border border-blue-200/35 opacity-0 shadow-[0_0_80px_rgba(77,124,255,0.28)]"
           />
 
           <Container className="relative z-10 flex h-full items-center">
             <div data-home-hero-content className="max-w-4xl pt-10">
-              <p className="text-sm font-semibold uppercase tracking-[0.24em] text-cyan-300">
+              <p className="flex items-center gap-3 font-mono text-xs font-medium uppercase tracking-[0.3em] text-blue-300">
+                <span
+                  aria-hidden="true"
+                  className="h-px w-8 bg-gradient-to-r from-blue-400 to-transparent"
+                />
                 {title}
               </p>
-              <h1 className="mt-5 text-balance text-5xl font-semibold tracking-tight text-white sm:text-7xl">
+              <h1 className="mt-5 text-balance bg-gradient-to-br from-white via-white to-slate-400 bg-clip-text text-5xl font-semibold tracking-tight text-transparent sm:text-7xl">
                 {name}
               </h1>
-              <p className="mt-6 max-w-3xl text-xl leading-9 text-slate-200">
+              <p className="mt-6 max-w-3xl text-xl leading-9 text-slate-300">
                 {tagline}
               </p>
               <div className="mt-8 flex flex-wrap gap-3">
@@ -92,14 +96,14 @@ export function HomeHero({ name, title, tagline, image }: HomeHeroProps) {
               <div className="mt-6 flex flex-wrap gap-4 text-sm">
                 <Link
                   href="/robotics"
-                  className="inline-flex items-center gap-2 text-slate-300 transition hover:text-cyan-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-cyan-300"
+                  className="inline-flex items-center gap-2 text-slate-400 transition hover:text-blue-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-blue-300"
                 >
                   <Cpu aria-hidden="true" size={16} />
                   Robotics Experience
                 </Link>
                 <Link
                   href="/music"
-                  className="inline-flex items-center gap-2 text-slate-300 transition hover:text-cyan-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-cyan-300"
+                  className="inline-flex items-center gap-2 text-slate-400 transition hover:text-blue-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-blue-300"
                 >
                   <Music2 aria-hidden="true" size={16} />
                   Music
@@ -114,7 +118,7 @@ export function HomeHero({ name, title, tagline, image }: HomeHeroProps) {
           aria-hidden="true"
           className="pointer-events-none absolute inset-x-0 bottom-10 z-10 flex justify-center"
         >
-          <div className="rounded-full border border-cyan-300/20 bg-slate-950/70 px-4 py-2 text-xs font-semibold uppercase tracking-[0.2em] text-cyan-100 backdrop-blur">
+          <div className="rounded-full border border-blue-300/25 bg-slate-950/70 px-4 py-2 font-mono text-[11px] font-medium uppercase tracking-[0.24em] text-blue-100 backdrop-blur">
             Scroll to enter
           </div>
         </div>

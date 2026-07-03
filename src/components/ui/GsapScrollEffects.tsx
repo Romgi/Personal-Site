@@ -239,57 +239,64 @@ export function GsapScrollEffects({ children }: GsapScrollEffectsProps) {
             section,
             {
               autoAlpha: 0,
-              y: 54,
-              scale: 0.985,
-              filter: "blur(8px)",
+              y: 40,
             },
             {
               autoAlpha: 1,
               y: 0,
-              scale: 1,
-              filter: "blur(0px)",
               duration: 0.9,
               ease: "power3.out",
               scrollTrigger: {
                 trigger: section,
-                start: "top 82%",
-                end: "top 48%",
+                start: "top 84%",
                 once: true,
               },
             },
           );
         });
 
-      revealItems.forEach((item) => {
-        if (homeHero?.contains(item)) {
-          return;
-        }
+      // Batch sibling reveals so grids cascade instead of popping in at once.
+      const batchItems = revealItems.filter(
+        (item) => !homeHero?.contains(item),
+      );
 
-        const delay = Number(item.dataset.gsapDelay ?? 0);
+      gsap.set(batchItems, { autoAlpha: 0, y: 32 });
 
-        gsap.fromTo(
-          item,
-          {
-            autoAlpha: 0,
-            y: 28,
-            scale: 0.99,
-          },
-          {
+      ScrollTrigger.batch(batchItems, {
+        start: "top 88%",
+        once: true,
+        onEnter: (batch) => {
+          gsap.to(batch, {
             autoAlpha: 1,
             y: 0,
-            scale: 1,
-            delay,
-            duration: 0.75,
+            duration: 0.8,
             ease: "power3.out",
-            scrollTrigger: {
-              trigger: item,
-              start: "top 86%",
-              end: "top 58%",
-              once: true,
-            },
-          },
-        );
+            stagger: 0.09,
+            overwrite: true,
+          });
+        },
       });
+
+      // Slow vertical drift on media while it passes through the viewport.
+      gsap.utils
+        .toArray<HTMLElement>("[data-parallax]", root)
+        .forEach((element) => {
+          gsap.fromTo(
+            element,
+            { yPercent: -6 },
+            {
+              yPercent: 6,
+              ease: "none",
+              scrollTrigger: {
+                trigger: element.parentElement ?? element,
+                start: "top bottom",
+                end: "bottom top",
+                scrub: 0.4,
+                invalidateOnRefresh: true,
+              },
+            },
+          );
+        });
 
       ScrollTrigger.refresh();
     },

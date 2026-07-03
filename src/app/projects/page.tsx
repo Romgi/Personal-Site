@@ -26,20 +26,20 @@ export default function ProjectsPage() {
         description="Each project is driven by structured data with room for screenshots, technical decisions, links, status, tags, and future write-ups."
       >
         <div className="grid gap-3 sm:grid-cols-3">
-          <div className="rounded-lg border border-white/10 bg-white/[0.04] p-4">
-            <p className="text-2xl font-semibold text-white">
+          <div className="liquid-glass-surface glass-card rounded-lg border border-white/10 p-4">
+            <p className="text-2xl font-semibold tracking-tight text-white">
               {projects.length}
             </p>
             <p className="mt-1 text-sm text-slate-400">Project entries</p>
           </div>
-          <div className="rounded-lg border border-white/10 bg-white/[0.04] p-4">
-            <p className="text-2xl font-semibold text-white">
+          <div className="liquid-glass-surface glass-card rounded-lg border border-white/10 p-4">
+            <p className="text-2xl font-semibold tracking-tight text-white">
               {featuredProjects.length}
             </p>
             <p className="mt-1 text-sm text-slate-400">Featured projects</p>
           </div>
-          <div className="rounded-lg border border-white/10 bg-white/[0.04] p-4">
-            <p className="text-2xl font-semibold text-white">
+          <div className="liquid-glass-surface glass-card rounded-lg border border-white/10 p-4">
+            <p className="text-2xl font-semibold tracking-tight text-white">
               {projectTags.length}
             </p>
             <p className="mt-1 text-sm text-slate-400">Tags</p>

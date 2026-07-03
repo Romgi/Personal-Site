@@ -16,10 +16,17 @@ export function ExperienceCard({
   badges,
 }: ExperienceCardProps) {
   return (
-    <article className="liquid-glass-surface h-full rounded-lg border border-white/10 p-5 transition duration-200 hover:-translate-y-1 hover:border-blue-300/35">
+    <article
+      data-tilt
+      className="liquid-glass-surface glass-card h-full rounded-lg border border-white/10 p-5"
+    >
       <div className="flex flex-col gap-2 sm:flex-row sm:items-start sm:justify-between">
         <h3 className="text-lg font-semibold text-white">{title}</h3>
-        {meta ? <p className="text-sm text-cyan-200">{meta}</p> : null}
+        {meta ? (
+          <p className="font-mono text-xs font-medium tracking-wide text-blue-200">
+            {meta}
+          </p>
+        ) : null}
       </div>
       <p className="mt-3 text-sm leading-6 text-slate-300">{description}</p>
       {bullets ? (

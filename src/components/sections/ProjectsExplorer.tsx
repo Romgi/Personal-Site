@@ -32,10 +32,10 @@ export function ProjectsExplorer({ projects, tags }: ProjectsExplorerProps) {
             type="button"
             onClick={() => setActiveTag(tag)}
             className={cn(
-              "rounded-md border px-3 py-2 text-sm font-medium transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-cyan-300",
+              "rounded-md border px-3 py-2 text-sm font-medium transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-blue-300",
               activeTag === tag
-                ? "border-cyan-300 bg-blue-500/20 text-white"
-                : "border-white/10 bg-white/[0.03] text-slate-300 hover:border-blue-300/40 hover:text-white",
+                ? "border-blue-400/70 bg-blue-600/25 text-white shadow-[inset_0_1px_0_rgba(255,255,255,0.1),0_0_20px_rgba(37,99,235,0.2)]"
+                : "border-white/10 bg-white/[0.03] text-slate-400 hover:border-blue-300/40 hover:text-white",
             )}
             aria-pressed={activeTag === tag}
           >
