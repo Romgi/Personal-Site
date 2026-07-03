@@ -283,9 +283,9 @@ export function GsapScrollEffects({ children }: GsapScrollEffectsProps) {
         .forEach((element) => {
           gsap.fromTo(
             element,
-            { yPercent: -6 },
+            { yPercent: -3 },
             {
-              yPercent: 6,
+              yPercent: 3,
               ease: "none",
               scrollTrigger: {
                 trigger: element.parentElement ?? element,

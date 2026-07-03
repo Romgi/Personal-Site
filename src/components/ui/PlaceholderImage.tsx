@@ -36,7 +36,7 @@ export function PlaceholderImage({
         preload={preload}
         sizes={sizes}
         data-parallax
-        className={cn("scale-[1.12] object-cover", imageClassName)}
+        className={cn("scale-[1.0] object-cover", imageClassName)}
       />
       <div
         aria-hidden="true"
