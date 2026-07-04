@@ -51,6 +51,7 @@ export const projects: Project[] = [
       "REVLib",
       "PathPlanner",
       "GitHub",
+      "AdvantageScope"
     ],
     image: "/images/robotics/9062REBUILT.png",
     imageAlt: "9062 rebuilt FRC robot",
@@ -66,7 +67,7 @@ export const projects: Project[] = [
     ],
     status: "Completed",
     featured: false,
-    tags: ["Robotics", "Java", "Controls", "FRC", "AI"],
+    tags: ["Robotics", "Controls", "FRC", "AI"],
   },
   {
     id: "team-854-website",
@@ -81,7 +82,7 @@ export const projects: Project[] = [
     liveDemoUrl: safeHref("https://www.ironbears.ca/"),
     status: "Completed",
     featured: false,
-    tags: ["Web", "Frontend", "Robotics"],
+    tags: ["Web", "Frontend", "Robotics", "FRC"],
   },
   {
     id: "computer-science-coursework",
@@ -96,7 +97,7 @@ export const projects: Project[] = [
     githubUrl: safeHref("https://github.com/Romgi/COMPSCI-YEAR-1"),
     status: "In Progress",
     featured: true,
-    tags: ["Algorithms", "Coursework", "Java", "Python"],
+    tags: ["Algorithms", "Coursework", "OOP", "Linux"],
   },
   {
     id: "lightning-air-combat",
@@ -119,7 +120,7 @@ export const projects: Project[] = [
     ),
     status: "Completed",
     featured: false,
-    tags: ["Game Development", "Unity", "C#", "Simulation"],
+    tags: ["Game Development", "Unity", "Simulation"],
   },
   {
     id: "swerve-and-pathplanner",
@@ -134,7 +135,7 @@ export const projects: Project[] = [
     githubUrl: safeHref("https://github.com/Romgi/SwerveWithPathPlanner"),
     status: "Completed",
     featured: false,
-    tags: ["Robotics", "Java", "Autonomous", "Controls"],
+    tags: ["Robotics", "Autonomous", "Controls", "FRC"],
   },
   {
     id: "incremental-game",
@@ -211,7 +212,7 @@ export const projects: Project[] = [
     ),
     status: "Completed",
     featured: false,
-    tags: ["Game Development", "Unity", "C#", "Simulation"],
+    tags: ["Game Development", "Unity", "Simulation", "FRC"],
   },
   {
     id: "frc-icon-downloader",
@@ -226,7 +227,7 @@ export const projects: Project[] = [
     githubUrl: safeHref("https://github.com/Romgi/FRC-Team-Icon-Downloader"),
     status: "Completed",
     featured: false,
-    tags: ["Python", "Command Line"],
+    tags: ["Command Line", "FRC"],
   },
 ];
 

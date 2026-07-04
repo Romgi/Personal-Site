@@ -72,7 +72,7 @@ export default function ProjectsPage() {
             <SectionHeading
               eyebrow="Featured"
               title="Priority projects."
-              description="Use featured projects for the strongest work you want recruiters, professors, or teams to inspect first."
+              description="Featured projects are highlighted for their technical complexity, impact, or relevance to my current work."
             />
             <ButtonLink href="/resume" variant="ghost" className="self-start">
               Resume
@@ -95,7 +95,7 @@ export default function ProjectsPage() {
             <SectionHeading
               eyebrow="All Projects"
               title="Filter by tag."
-              description="The grid includes an empty-state path, so the page remains clean even if placeholder projects are removed later."
+              description="This section is for showcasing my software projects with technical notes and media. Each card has a description, bullets, and badges for technologies."
             />
             <div className="mt-10">
               <ProjectsExplorer projects={projects} tags={projectTags} />

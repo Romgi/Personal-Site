@@ -141,7 +141,7 @@ export default function Home() {
           <div className="grid gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:items-center">
             <AnimatedSection>
               <PlaceholderImage
-                src="/images/music/placeholder-1.jpg"
+                src="/images/music/jlhb.jpeg"
                 alt="Trumpet performance placeholder"
                 aspect="aspect-[4/3]"
               />
