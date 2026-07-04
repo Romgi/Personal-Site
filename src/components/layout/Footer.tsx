@@ -24,7 +24,7 @@ const footerContactLinks: Array<{
 
 export function Footer() {
   return (
-    <footer className="relative border-t border-white/10 bg-[#030409]">
+    <footer className="relative border-t border-white/10 bg-[#1a1d23]">
       <div
         aria-hidden="true"
         className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-blue-400/40 to-transparent"

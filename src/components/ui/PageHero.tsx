@@ -21,7 +21,7 @@ export function PageHero({
   return (
     <section
       className={cn(
-        "relative isolate overflow-hidden border-b border-white/10 bg-[linear-gradient(150deg,#030409_0%,#050a16_46%,#081a3e_100%)] pb-20 pt-36",
+        "relative isolate overflow-hidden border-b border-white/10 bg-[linear-gradient(150deg,#1a1d23_0%,#1c2330_46%,#081a3e_100%)] pb-20 pt-36",
         className,
       )}
     >

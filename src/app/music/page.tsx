@@ -160,7 +160,7 @@ export default function MusicPage() {
         </Container>
       </section>
 
-      <section className="border-t border-white/10 bg-[linear-gradient(180deg,rgba(13,20,38,0.5),rgba(3,4,9,0.94))] py-20 sm:py-24">
+      <section className="border-t border-white/10 bg-[linear-gradient(180deg,rgba(13,20,38,0.5),rgba(26,29,35,0.94))] py-20 sm:py-24">
         <Container>
           <SectionHeading
             eyebrow="Gallery"
