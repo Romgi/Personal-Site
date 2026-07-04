@@ -1,23 +1,42 @@
 import { ArrowRight } from "lucide-react";
 
+import { ExperienceCard } from "@/components/sections/ExperienceCard";
 import { ProjectCard } from "@/components/sections/ProjectCard";
 import { ProjectsExplorer } from "@/components/sections/ProjectsExplorer";
+import { Timeline } from "@/components/sections/Timeline";
 import { AnimatedSection } from "@/components/ui/AnimatedSection";
 import { ButtonLink } from "@/components/ui/ButtonLink";
 import { Container } from "@/components/ui/Container";
 import { PageHero } from "@/components/ui/PageHero";
+import { PlaceholderImage } from "@/components/ui/PlaceholderImage";
 import { SectionHeading } from "@/components/ui/SectionHeading";
+import { SkillBadge } from "@/components/ui/SkillBadge";
 import { featuredProjects, projects, projectTags } from "@/data/projects";
+import {
+  robotProjects,
+  roboticsExperiences,
+  roboticsOverview,
+  roboticsSkills,
+} from "@/data/robotics";
 import { createPageMetadata } from "@/lib/metadata";
 
 export const metadata = createPageMetadata({
   title: "Computer Science Projects",
   description:
-    "Software, web development, robotics code, data, and algorithm projects by Jonathan Graydon.",
+    "Software, web development, data, and algorithm projects, plus FRC robotics experience, by Jonathan Graydon.",
   path: "/projects",
 });
 
 export default function ProjectsPage() {
+  const roboticsTimelineItems = roboticsExperiences.map((experience) => ({
+    title: experience.role,
+    subtitle: `${experience.teamName} - ${experience.seasonName}`,
+    period: experience.yearsActive,
+    description: experience.summary,
+    bullets: experience.responsibilities,
+    badges: experience.technologies,
+  }));
+
   return (
     <>
       <PageHero
@@ -82,6 +101,66 @@ export default function ProjectsPage() {
               <ProjectsExplorer projects={projects} tags={projectTags} />
             </div>
           </AnimatedSection>
+        </Container>
+      </section>
+
+      <section
+        id="robotics"
+        className="scroll-mt-24 border-t border-white/10 py-20 sm:py-24"
+      >
+        <Container>
+          <div className="grid gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:items-center">
+            <AnimatedSection>
+              <SectionHeading
+                eyebrow="FRC Robotics"
+                title={roboticsOverview.title}
+                description={roboticsOverview.description}
+              />
+              <div className="mt-8 flex flex-wrap gap-2">
+                {roboticsSkills.map((skill) => (
+                  <SkillBadge key={skill}>{skill}</SkillBadge>
+                ))}
+              </div>
+            </AnimatedSection>
+            <AnimatedSection>
+              <PlaceholderImage
+                src={roboticsOverview.image}
+                alt={roboticsOverview.imageAlt}
+                aspect="aspect-[4/3]"
+              />
+            </AnimatedSection>
+          </div>
+
+          <AnimatedSection className="mt-16">
+            <SectionHeading
+              eyebrow="Experience Timeline"
+              title="Roles, seasons, and responsibilities."
+              description="Timeline entries are placeholders now, but they are structured for technical responsibilities, achievements, links, and technologies."
+            />
+            <div className="mt-10">
+              <Timeline items={roboticsTimelineItems} />
+            </div>
+          </AnimatedSection>
+
+          <div className="mt-16">
+            <SectionHeading
+              eyebrow="Robot Projects"
+              title="Featured robot and subsystem cards."
+              description="Add real drivetrain, vision, autonomous, mechanism, or controls write-ups here."
+            />
+            <div className="mt-10 grid gap-5 lg:grid-cols-2">
+              {robotProjects.map((project) => (
+                <AnimatedSection key={project.title}>
+                  <ExperienceCard
+                    title={project.title}
+                    meta={project.season}
+                    description={project.description}
+                    bullets={project.technicalHighlights}
+                  />
+                </AnimatedSection>
+              ))}
+            </div>
+          </div>
         </Container>
       </section>
     </>

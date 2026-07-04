@@ -95,7 +95,7 @@ export function HomeHero({ name, title, tagline, image }: HomeHeroProps) {
               </div>
               <div className="mt-6 flex flex-wrap gap-4 text-sm">
                 <Link
-                  href="/robotics"
+                  href="/projects#robotics"
                   className="inline-flex items-center gap-2 text-slate-400 transition hover:text-blue-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-blue-300"
                 >
                   <Cpu aria-hidden="true" size={16} />

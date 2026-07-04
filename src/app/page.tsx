@@ -117,7 +117,7 @@ export default function Home() {
                 description="This section is designed for robotics work with technical notes, media, and accomplishments. Each entry has a description, bullets, and badges for technologies."
               />
               <div className="mt-8">
-                <ButtonLink href="/robotics" variant="secondary">
+                <ButtonLink href="/projects#robotics" variant="secondary">
                   View robotics
                   <ArrowRight aria-hidden="true" size={16} />
                 </ButtonLink>

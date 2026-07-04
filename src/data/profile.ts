@@ -11,7 +11,6 @@ export const site = {
 export const navItems = [
   { label: "Home", href: safeHref("/") },
   { label: "Projects", href: safeHref("/projects") },
-  { label: "Robotics", href: safeHref("/robotics") },
   { label: "Music", href: safeHref("/music") },
   { label: "Resume", href: safeHref("/resume") },
 ] as const;
@@ -94,7 +93,7 @@ export const profile = {
       title: "Robotics Software",
       description:
         "Robotics programming, controls, and competition engineering with Java, WPILib, and robot systems design using Onshape.",
-      href: safeHref("/robotics"),
+      href: safeHref("/projects#robotics"),
       metric: "FRC",
     },
     {

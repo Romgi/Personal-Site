@@ -26,6 +26,15 @@ const nextConfig: NextConfig = {
       },
     ],
   },
+  async redirects() {
+    return [
+      {
+        source: "/robotics",
+        destination: "/projects#robotics",
+        permanent: true,
+      },
+    ];
+  },
   async headers() {
     return [
       {

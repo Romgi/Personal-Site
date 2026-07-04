@@ -2,7 +2,7 @@ import type { MetadataRoute } from "next";
 
 import { site } from "@/data/profile";
 
-const routes = ["/", "/projects", "/robotics", "/music", "/resume"];
+const routes = ["/", "/projects", "/music", "/resume"];
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = site.url.replace(/\/$/, "");
