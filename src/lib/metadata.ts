@@ -28,10 +28,10 @@ export function createPageMetadata({
       type: "website",
       images: [
         {
-          url: "/images/profile-placeholder.jpg",
-          width: 1200,
-          height: 1200,
-          alt: `${profile.name} portfolio visual`,
+          url: profile.profileImage.src,
+          width: 848,
+          height: 1171,
+          alt: profile.profileImage.alt,
         },
       ],
     },
@@ -39,7 +39,7 @@ export function createPageMetadata({
       card: "summary_large_image",
       title: `${title} | ${profile.name}`,
       description,
-      images: ["/images/profile-placeholder.jpg"],
+      images: [profile.profileImage.src],
     },
   };
 }

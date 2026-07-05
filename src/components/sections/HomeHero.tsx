@@ -19,7 +19,7 @@ export function HomeHero({ name, title, tagline, image }: HomeHeroProps) {
   return (
     <section
       data-home-hero
-      className="relative h-[240svh] overflow-visible bg-slate-950"
+      className="relative h-[240svh] overflow-visible"
       aria-label="Portfolio introduction"
     >
       <div className="sticky top-0 h-svh overflow-hidden">

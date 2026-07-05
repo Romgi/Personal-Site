@@ -68,8 +68,8 @@ export const profile = {
   },
   resumePath: safeHref("/resume.pdf"),
   profileImage: {
-    src: "/images/profile-placeholder.jpg",
-    alt: "Abstract blue and black portfolio portrait placeholder",
+    src: "/images/music/hero-stage.png",
+    alt: "Jonathan Graydon performing trumpet on stage with a concert band",
   },
   about: {
     short:

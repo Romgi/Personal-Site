@@ -70,7 +70,7 @@ export function Navbar() {
                 width={36}
                 height={36}
                 className="size-full object-contain"
-                priority
+                preload
               />
             </span>
             <span className="hidden text-sm font-semibold tracking-tight text-white sm:block">

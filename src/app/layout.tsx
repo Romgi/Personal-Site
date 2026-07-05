@@ -7,6 +7,7 @@ import { Navbar } from "@/components/layout/Navbar";
 import { RouteScrollReset } from "@/components/layout/RouteScrollReset";
 import { GsapScrollEffects } from "@/components/ui/GsapScrollEffects";
 import { PointerEffects } from "@/components/ui/PointerEffects";
+import { ScrollProgress } from "@/components/ui/ScrollProgress";
 import { profile, site } from "@/data/profile";
 
 import "./globals.css";
@@ -52,10 +53,10 @@ export const metadata: Metadata = {
     siteName: site.name,
     images: [
       {
-        url: "/images/profile-placeholder.jpg",
-        width: 1200,
-        height: 1200,
-        alt: `${profile.name} portfolio visual`,
+        url: profile.profileImage.src,
+        width: 848,
+        height: 1171,
+        alt: profile.profileImage.alt,
       },
     ],
     locale: "en_CA",
@@ -65,7 +66,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: `${profile.name} | Computer Science, Robotics, Trumpet`,
     description: site.description,
-    images: ["/images/profile-placeholder.jpg"],
+    images: [profile.profileImage.src],
   },
   robots: {
     index: true,
@@ -90,6 +91,21 @@ export const viewport: Viewport = {
   colorScheme: "dark",
 };
 
+const personJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: profile.name,
+  url: site.url,
+  image: new URL(profile.profileImage.src, site.url).toString(),
+  jobTitle: "Computer Science Student and Software Engineer",
+  affiliation: {
+    "@type": "CollegeOrUniversity",
+    name: "McMaster University",
+  },
+  sameAs: profile.contact.socials.map((social) => social.href),
+  knowsAbout: [...profile.interests],
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -101,6 +117,13 @@ export default function RootLayout({
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body className="flex min-h-full flex-col">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(personJsonLd).replace(/</g, "\\u003c"),
+          }}
+        />
+        <ScrollProgress />
         <PointerEffects />
         <Navbar />
         <RouteScrollReset />

@@ -3,11 +3,6 @@
 :root {
   --background: #101215;
   --foreground: #f8fafc;
-  --surface: #070b14;
-  --surface-strong: #0a101d;
-  --accent: #2f5fe0;
-  --accent-soft: #4d7cff;
-  --accent-cyan: #38bdf8;
   --hairline: rgba(148, 163, 184, 0.14);
 }
 
@@ -78,10 +73,6 @@ a {
 
 summary::-webkit-details-marker {
   color: #7ba3ff;
-}
-
-.text-balance {
-  text-wrap: balance;
 }
 
 /* ---------------------------------------------------------------------------
