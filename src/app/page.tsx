@@ -1,5 +1,6 @@
 import { ArrowRight } from "lucide-react";
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 
 import { ExpandableText } from "@/components/sections/ExpandableText";
@@ -122,6 +123,13 @@ export default function Home() {
                   <ArrowRight aria-hidden="true" size={16} />
                 </ButtonLink>
               </div>
+              <Image
+                src="/images/robotics/FIRSTCanada-logo.png"
+                alt="FIRST Robotics Canada"
+                width={1692}
+                height={471}
+                className="mt-10 h-12 w-auto opacity-80 transition duration-300 hover:opacity-100"
+              />
             </AnimatedSection>
             <AnimatedSection>
               <ExperienceCard

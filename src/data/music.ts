@@ -6,7 +6,7 @@ export type RepertoireItem = {
   composer: string;
   difficulty: string;
   category:
-    "Solo" | "Ensemble" | "Orchestral Excerpt" | "Jazz" | "Concert Band";
+  "Solo" | "Ensemble" | "Orchestral Excerpt" | "Jazz" | "Concert Band";
   status: RepertoireStatus;
   year: string;
   notes: string;
@@ -335,7 +335,7 @@ export const ensembles = [
     role: "Trumpet Section",
     period: "2026",
     notes:
-      "Preparing The Music of John Williams concert featuring selections from Harry Potter, Star Wars, Superman, and more.",
+      "Performed as a guest musician in The Music of John Williams concert featuring selections from Harry Potter, Star Wars, Superman, and more.",
   },
   {
     name: "York Symphony Orchestra",

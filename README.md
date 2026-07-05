@@ -44,7 +44,7 @@ Replace those files with real images using the same paths, or update the image p
 
 ## Resume PDF
 
-The resume download button points to `/resume.pdf`. Place the real PDF at:
+The resume download button points to `/resume.pdf`. My resume is currently not attached but will be added later at:
 
 ```txt
 public/resume.pdf

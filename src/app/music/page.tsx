@@ -130,7 +130,7 @@ export default function MusicPage() {
               <div
                 data-music-context-visual
                 aria-hidden="true"
-                className="relative mt-8 h-[46svh] min-h-72"
+                className="relative mt-8 hidden h-[46svh] min-h-72 lg:block"
               >
                 <div className="absolute bottom-2 left-3 top-2 w-px overflow-hidden rounded-full bg-white/10">
                   <div

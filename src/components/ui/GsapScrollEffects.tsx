@@ -69,6 +69,18 @@ export function GsapScrollEffects({ children }: GsapScrollEffectsProps) {
       const musicContextOrb = root.querySelector<HTMLElement>(
         "[data-music-context-orb]",
       );
+      const roboticsSection = root.querySelector<HTMLElement>(
+        "[data-robotics-experiences]",
+      );
+      const roboticsScanline = root.querySelector<HTMLElement>(
+        "[data-robotics-scanline]",
+      );
+      const roboticsYear = root.querySelector<HTMLElement>(
+        "[data-robotics-year]",
+      );
+      const roboticsHudLabel = root.querySelector<HTMLElement>(
+        "[data-robotics-hud-label]",
+      );
 
       if (homeHero && homeHeroCard) {
         const getHeroZoomScale = () => {
@@ -179,7 +191,11 @@ export function GsapScrollEffects({ children }: GsapScrollEffectsProps) {
           );
       }
 
-      if (musicContexts && musicContextVisual) {
+      if (
+        musicContexts &&
+        musicContextVisual &&
+        window.matchMedia("(min-width: 1024px)").matches
+      ) {
         const getMusicOrbTravel = () =>
           Math.max(0, musicContextVisual.clientHeight - 32);
 
@@ -230,6 +246,131 @@ export function GsapScrollEffects({ children }: GsapScrollEffectsProps) {
             },
             0,
           );
+      }
+
+      if (roboticsSection && roboticsYear && roboticsHudLabel) {
+        // Season HUD: as each experience card crosses the middle of the
+        // viewport, the game logo crossfades behind a scanline sweep and
+        // the year and team readout roll over with it.
+        const logoLayers = gsap.utils.toArray<HTMLElement>(
+          "[data-robotics-logo]",
+          root,
+        );
+        const hudElements = [roboticsYear, roboticsHudLabel];
+        let activeYear = roboticsYear.textContent?.trim() ?? "";
+
+        logoLayers.forEach((layer, index) => {
+          gsap.set(layer, {
+            autoAlpha: index === 0 ? 1 : 0,
+            scale: index === 0 ? 1 : 0.94,
+            transformOrigin: "50% 50%",
+            willChange: "transform, opacity, filter",
+          });
+        });
+
+        if (roboticsScanline) {
+          gsap.set(roboticsScanline, { autoAlpha: 0, top: "0%" });
+        }
+
+        const applySeason = (year: string, label: string) => {
+          if (!year || year === activeYear) {
+            return;
+          }
+
+          activeYear = year;
+
+          // Rapid scrolling can queue overlapping swaps; clear any tweens
+          // still in flight (including delayed ones) before starting.
+          gsap.killTweensOf(logoLayers);
+          gsap.killTweensOf(hudElements);
+
+          const incoming = logoLayers.find(
+            (layer) => layer.dataset.hudYear === year,
+          );
+          const outgoing = logoLayers.filter((layer) => layer !== incoming);
+
+          gsap.to(outgoing, {
+            autoAlpha: 0,
+            scale: 0.94,
+            filter: "blur(8px)",
+            duration: 0.3,
+            ease: "power2.in",
+            overwrite: "auto",
+          });
+
+          if (incoming) {
+            gsap.fromTo(
+              incoming,
+              { autoAlpha: 0, scale: 1.05, filter: "blur(10px)" },
+              {
+                autoAlpha: 1,
+                scale: 1,
+                filter: "blur(0px)",
+                duration: 0.55,
+                delay: 0.14,
+                ease: "power3.out",
+                overwrite: "auto",
+              },
+            );
+          }
+
+          if (roboticsScanline) {
+            gsap
+              .timeline({ defaults: { overwrite: "auto" } })
+              .set(roboticsScanline, { top: "0%" })
+              .to(roboticsScanline, { autoAlpha: 1, duration: 0.1 }, 0)
+              .to(
+                roboticsScanline,
+                { top: "100%", duration: 0.55, ease: "power2.inOut" },
+                0,
+              )
+              .to(roboticsScanline, { autoAlpha: 0, duration: 0.16 }, 0.42);
+          }
+
+          gsap
+            .timeline()
+            .to(hudElements, {
+              y: -14,
+              autoAlpha: 0,
+              filter: "blur(5px)",
+              duration: 0.16,
+              ease: "power2.in",
+              overwrite: "auto",
+            })
+            .add(() => {
+              roboticsYear.textContent = year;
+              roboticsHudLabel.textContent = label;
+            })
+            .fromTo(
+              hudElements,
+              { y: 16, filter: "blur(5px)" },
+              {
+                y: 0,
+                autoAlpha: 1,
+                filter: "blur(0px)",
+                duration: 0.3,
+                ease: "power3.out",
+              },
+            );
+        };
+
+        gsap.utils
+          .toArray<HTMLElement>("[data-robotics-entry]", root)
+          .forEach((entry) => {
+            const activate = () =>
+              applySeason(
+                entry.dataset.hudYear ?? "",
+                entry.dataset.hudLabel ?? "",
+              );
+
+            ScrollTrigger.create({
+              trigger: entry,
+              start: "top 55%",
+              end: "bottom 55%",
+              onEnter: activate,
+              onEnterBack: activate,
+            });
+          });
       }
 
       sections

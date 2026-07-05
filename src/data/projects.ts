@@ -90,7 +90,7 @@ export const projects: Project[] = [
     shortDescription:
       "A collection of programming coursework and practice projects from Computer Science at McMaster University.",
     longDescription:
-      "Coursework-oriented programming repositories covering foundations in problem solving, algorithms, data structures, Java, Python, and software design habits. This entry can be expanded with selected assignments, constraints, testing notes, and outcomes that are appropriate to publish.",
+      "Coursework-oriented programming repositories covering foundations in problem solving, algorithms, data structures, Java, Python, and software design habits. This entry will be updated with more coursework and practice projects as they are completed.",
     techStack: ["Python", "Java", "Algorithms", "Data Structures"],
     image: "/images/projects/mcmaster.jpg",
     imageAlt: "Abstract data and algorithm visualization placeholder",
@@ -169,7 +169,7 @@ export const projects: Project[] = [
       "Prisma",
       "SQLite",
       "Zod",
-      "jose",
+      "JOSE",
       "bcryptjs",
       "Lucide React",
       "ESLint",
@@ -192,7 +192,7 @@ export const projects: Project[] = [
     techStack: ["HTML", "CSS", "JavaScript"],
     image: "/images/projects/concert-helper.png",
     imageAlt: "Screenshot of the Concert Helper web application",
-    liveDemoUrl: safeHref("https://github.com/Romgi/1XD3-Group-31"),
+    githubUrl: safeHref("https://github.com/Romgi/1XD3-Group-31"),
     status: "Completed",
     featured: false,
     tags: ["Web", "Frontend", "Backend", "Project Management"],
@@ -203,7 +203,7 @@ export const projects: Project[] = [
     shortDescription:
       "A full simulation of the 2024 FRC game: CRESCENDO, including robot and field physics, scoring, and multiple robots and drivetrains.",
     longDescription:
-      "A full simulation of the 2024 FRC game: CRESCENDO, including robot and field physics, scoring, and multiple robots and drivetrains.",
+      "A full simulation of the 2024 FRC game: CRESCENDO, including robot and field physics, scoring, and multiple robots and drivetrains. Built using Unity and C#, this project demonstrates physics simulation, game development principles, and interactive design for robotics applications.",
     techStack: ["Unity", "C#", "Game Development", "Physics Simulation"],
     image: "/images/projects/crescendo-simulator.png",
     imageAlt: "Screenshot of the CRESCENDO Simulator game application",
@@ -218,9 +218,9 @@ export const projects: Project[] = [
     id: "frc-icon-downloader",
     title: "FRC Team Icon Downloader",
     shortDescription:
-      "A web application to download team icons for the FIRST Robotics Competition.",
+      "A command-line application to download team icons for the FIRST Robotics Competition.",
     longDescription:
-      "A web application to download team icons for the FIRST Robotics Competition. Built with Python, it provides a simple command line tool to download team logos and icons.",
+      "A command-line application to download team icons for the FIRST Robotics Competition. Built with Python, it provides a simple tool to download team logos and icons.",
     techStack: ["Python", "Command Line"],
     image: "/images/projects/frc-icons.png",
     imageAlt: "Screenshot of the FRC Team Icon Downloader web application",

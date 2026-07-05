@@ -19,6 +19,11 @@ const contentSecurityPolicy = [
 const nextConfig: NextConfig = {
   poweredByHeader: false,
   images: {
+    // Local SVG logos (e.g. FRC game marks) are served through next/image;
+    // the sandboxed CSP keeps SVG handling safe.
+    dangerouslyAllowSVG: true,
+    contentDispositionType: "attachment",
+    contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
     localPatterns: [
       {
         pathname: "/images/**",

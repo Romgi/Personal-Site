@@ -20,7 +20,7 @@ export const profile = {
   title: "Computer Science Student at McMaster University | Software Engineer",
   location: "Hamilton, Ontario and the Greater Toronto Area",
   tagline:
-    "Computer Science student, software engineer, FRC lead programmer, and trumpet performer building polished digital and technical projects.",
+    "Computer Science student, software engineer, robotics programmer, and trumpet performer building polished digital and technical projects.",
   interests: [
     "Software development",
     "Robotics",
@@ -73,7 +73,7 @@ export const profile = {
   },
   about: {
     short:
-      "I am a Computer Science student at McMaster University and software engineer focused on reliable, well-designed technical work across software, robotics, and creative performance.",
+      "I am a Computer Science student at McMaster University and software engineer focused on reliable, well-designed technical work across software, AI, robotics, and creative performance.",
     expanded: [
       "My technical interests sit at the intersection of software engineering, robotics systems, and polished web experiences. I care about writing code that is understandable, testable, and useful beyond a demo.",
       "My experience leading and mentoring FRC teams, as well as my involvement in software and game design, has shaped how I approach engineering problems: start with the real constraints, communicate clearly with the team, iterate quickly, and keep reliability in view.",
@@ -85,7 +85,7 @@ export const profile = {
     {
       title: "Computer Science",
       description:
-        "McMaster coursework and independent projects in software development, algorithms, data, Java, Python, and modern web applications.",
+        "Software engineering, web development, and programming experience in Java, TypeScript, React, Next.js, Python, and many more.",
       href: safeHref("/projects"),
       metric: "CS",
     },

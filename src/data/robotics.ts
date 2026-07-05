@@ -1,16 +1,18 @@
-import { safeHref } from "@/lib/links";
-
 export type RoboticsExperience = {
   id: string;
   teamName: string;
   role: string;
-  yearsActive: string;
+  year: string;
   seasonName: string;
   summary: string;
   technologies: string[];
   responsibilities: string[];
-  achievements: string[];
-  links?: Array<{ label: string; href: string }>;
+  achievements?: string[];
+  image: string;
+  imageAlt: string;
+  gameLogo: string;
+  /** Logo artwork is black; render it inverted so it reads on dark panels. */
+  gameLogoInvert?: boolean;
 };
 
 export type RobotProject = {
@@ -25,9 +27,9 @@ export type RobotProject = {
 export const roboticsOverview = {
   title: "FIRST Robotics Competition Experience",
   description:
-    "Lead programming and technical work with FRC Team 854, the Iron Bears, focused on command-based Java robot code, reliable controls, team workflows, and competition-ready engineering.",
-  image: "/images/robotics/9062REBUILT.png",
-  imageAlt: "9062 rebuilt FRC robot",
+    "Three seasons of FRC software work across two teams: programming subteam member and Software Lead with Team 854, the Iron Bears, and Software Mentor with Team 9062, Critical Circuits. Focused on command-based Java robot code, reliable controls, autonomous routines, and competition-ready engineering.",
+  image: "/images/robotics/Robotics-main-reefscape.JPG",
+  imageAlt: "Team 854 robot competing in the 2025 REEFSCAPE season",
 };
 
 export const roboticsSkills = [
@@ -45,67 +47,76 @@ export const roboticsSkills = [
 
 export const roboticsExperiences: RoboticsExperience[] = [
   {
-    id: "frc-team-854-lead-programmer",
+    id: "854-programming-2024",
     teamName: "FRC Team 854, Iron Bears",
-    role: "Lead Programmer",
-    yearsActive: "Current / recent",
-    seasonName: "Team 854 robot software",
+    role: "Programming Subteam Member",
+    year: "2024",
+    seasonName: "CRESCENDO",
     summary:
-      "Lead programming experience for Team 854 focused on robot software, subsystem integration, drivetrain behavior, autonomous preparation, testing, debugging, and competition readiness.",
+      "First FRC season on the Iron Bears programming subteam, contributing to command-based robot code for the 2024 CRESCENDO robot and learning how competition software comes together under real deadlines.",
+    technologies: ["Java", "WPILib", "Command-based", "Git/GitHub"],
+    responsibilities: [
+      "Contributed subsystem and command code in Java with WPILib alongside senior programmers.",
+      "Supported bench testing and pit debugging during build season and competition events.",
+      "Learned the team's Git workflow, command-based architecture, and code review habits.",
+    ],
+    image: "/images/robotics/854-2024.jpg",
+    imageAlt: "Team 854 robot from the 2024 CRESCENDO season",
+    gameLogo: "/images/robotics/Crescendo_FRC_Logo.svg",
+  },
+  {
+    id: "854-software-lead-2025",
+    teamName: "FRC Team 854, Iron Bears",
+    role: "Software Lead",
+    year: "2025",
+    seasonName: "REEFSCAPE",
+    summary:
+      "Led robot software for the 2025 REEFSCAPE season, owning drivetrain and mechanism code, autonomous preparation, and vision integration from kickoff through competition.",
+    technologies: [
+      "Java",
+      "WPILib",
+      "CTRE Phoenix",
+      "REVLib",
+      "PathPlanner",
+      "Limelight",
+    ],
+    responsibilities: [
+      "Architected command-based subsystems for the drivetrain and scoring mechanisms.",
+      "Built autonomous routines with PathPlanner and tuned drivetrain behavior for repeatability.",
+      "Integrated Limelight 4 machine vision with a Hailo-8 accelerator for targeting and alignment.",
+      "Coordinated software changes with mechanical and electrical constraints on competition timelines.",
+    ],
+    achievements: ["Qualified for the 2025 Ontario District Championship"],
+    image: "/images/robotics/854-2025.JPG",
+    imageAlt: "Team 854 robot from the 2025 REEFSCAPE season",
+    gameLogo: "/images/robotics/REEFSCAPE.png",
+    gameLogoInvert: true,
+  },
+  {
+    id: "9062-software-mentor-2026",
+    teamName: "FRC Team 9062, Critical Circuits",
+    role: "Software Mentor",
+    year: "2026",
+    seasonName: "REBUILT",
+    summary:
+      "Mentoring the Critical Circuits programming team for the 2026 REBUILT season, guiding software architecture decisions and building the team's debugging and testing culture.",
     technologies: [
       "Java",
       "WPILib",
       "Command-based",
-      "CTRE Phoenix",
-      "REVLib",
-      "PathPlanner",
+      "AdvantageScope",
       "Git/GitHub",
     ],
     responsibilities: [
-      "Implemented and tested robot subsystem code with clear command structure.",
-      "Supported driver practice and troubleshooting by reading logs, reproducing issues, and tuning behavior.",
-      "Coordinated code changes with mechanical and electrical constraints during build and competition timelines.",
+      "Led and contributed to a team of programmers developing command-based FRC robot software in Java using WPILib and common vendor libraries.",
+      "Taught programming concepts, command-based architecture, and software design principles to team members.",
+      "Mentored students in debugging, thorough testing, and using AdvantageScope for robot code analysis and performance tuning.",
     ],
-    achievements: [
-      "Maintained a public-facing technical profile as Lead Programmer for Team 854.",
-      "Built experience translating real robot constraints into practical software decisions under competition timelines.",
-    ],
-    links: [
-      {
-        label: "Team 854 Website",
-        href: safeHref("https://www.ironbears.ca/"),
-      },
-      {
-        label: "FIRST Robotics Competition",
-        href: safeHref("https://www.firstinspires.org/robotics/frc"),
-      },
-    ],
-  },
-  {
-    id: "team-854-technical-leadership",
-    teamName: "FRC Team 854, Iron Bears",
-    role: "Technical Contributor",
-    yearsActive: "Recent",
-    seasonName: "Team systems and web presence",
-    summary:
-      "Technical contribution beyond robot code, including workflows, documentation habits, web presence, and team-facing software practices.",
-    technologies: [
-      "Documentation",
-      "Git workflows",
-      "Code reviews",
-      "Testing",
-      "Next.js",
-      "TypeScript",
-      "Tailwind CSS",
-    ],
-    responsibilities: [
-      "Helped establish repeatable workflows for programming tasks and robot testing.",
-      "Documented decisions so future team members could understand system behavior.",
-      "Supported communication between programming and other subteams.",
-    ],
-    achievements: [
-      "Contributed to professionalizing the team's technical footprint through software and web tooling.",
-    ],
+    achievements: ["Won the 2026 McMaster University FRC Event", "Qualified for the 2026 Ontario District Championship"],
+    image: "/images/robotics/9062-2026.jpeg",
+    imageAlt: "Team 9062 robot from the 2026 REBUILT season",
+    gameLogo: "/images/robotics/REBUILT.png",
+    gameLogoInvert: true,
   },
 ];
 
@@ -121,8 +132,8 @@ export const robotProjects: RobotProject[] = [
       "Autonomous path planning",
       "Driver feedback and debugging",
     ],
-    image: "/images/robotics/9062REBUILT.png",
-    imageAlt: "9062 rebuilt FRC robot thumbnail",
+    image: "/images/robotics/854-2025.JPG",
+    imageAlt: "Team 854 robot from the 2025 REEFSCAPE season",
   },
   {
     title: "Swerve Drive and Autonomous Experiments",
@@ -135,27 +146,6 @@ export const robotProjects: RobotProject[] = [
       "Calibration and testing notes",
     ],
     image: "/images/robotics/9062REBUILT.png",
-    imageAlt: "9062 rebuilt robot controls thumbnail",
+    imageAlt: "Team 9062 robot controls thumbnail",
   },
-];
-
-export const roboticsGallery = [
-  {
-    src: "/images/robotics/9062REBUILT.png",
-    alt: "9062 rebuilt robotics gallery image",
-  },
-  {
-    src: "/images/robotics/9062REBUILT.png",
-    alt: "9062 rebuilt robot workshop image",
-  },
-  {
-    src: "/images/robotics/9062REBUILT.png",
-    alt: "9062 rebuilt competition robot image",
-  },
-];
-
-export const competitionHighlights = [
-  "Lead Programmer experience with FRC Team 854, the Iron Bears.",
-  "Public Team 854 technical work includes robot code, swerve/autonomous experimentation, and a modern team web presence.",
-  "Add specific event awards, rankings, playoff results, and season milestones here when ready.",
 ];

@@ -1,9 +1,8 @@
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Trophy } from "lucide-react";
+import Image from "next/image";
 
-import { ExperienceCard } from "@/components/sections/ExperienceCard";
 import { ProjectCard } from "@/components/sections/ProjectCard";
 import { ProjectsExplorer } from "@/components/sections/ProjectsExplorer";
-import { Timeline } from "@/components/sections/Timeline";
 import { AnimatedSection } from "@/components/ui/AnimatedSection";
 import { ButtonLink } from "@/components/ui/ButtonLink";
 import { Container } from "@/components/ui/Container";
@@ -13,12 +12,12 @@ import { SectionHeading } from "@/components/ui/SectionHeading";
 import { SkillBadge } from "@/components/ui/SkillBadge";
 import { featuredProjects, projects, projectTags } from "@/data/projects";
 import {
-  robotProjects,
   roboticsExperiences,
   roboticsOverview,
   roboticsSkills,
 } from "@/data/robotics";
 import { createPageMetadata } from "@/lib/metadata";
+import { cn } from "@/lib/utils";
 
 export const metadata = createPageMetadata({
   title: "Computer Science Projects",
@@ -28,20 +27,13 @@ export const metadata = createPageMetadata({
 });
 
 export default function ProjectsPage() {
-  const roboticsTimelineItems = roboticsExperiences.map((experience) => ({
-    title: experience.role,
-    subtitle: `${experience.teamName} - ${experience.seasonName}`,
-    period: experience.yearsActive,
-    description: experience.summary,
-    bullets: experience.responsibilities,
-    badges: experience.technologies,
-  }));
+  const firstExperience = roboticsExperiences[0];
 
   return (
     <>
       <PageHero
         eyebrow="Computer Science Projects"
-        title="Software work organized for real case studies."
+        title="Software work organized for technical notes, media, and accomplishments."
         description="Each project is driven by structured data with room for screenshots, technical decisions, links, status, tags, and future write-ups."
       >
         <div className="grid gap-3 sm:grid-cols-3">
@@ -93,8 +85,8 @@ export default function ProjectsPage() {
         <Container>
           <AnimatedSection>
             <SectionHeading
-              eyebrow="All Projects"
-              title="Filter by tag."
+              eyebrow="Filter by tag"
+              title="All Projects"
               description="This section is for showcasing my software projects with technical notes and media. Each card has a description, bullets, and badges for technologies."
             />
             <div className="mt-10">
@@ -131,34 +123,131 @@ export default function ProjectsPage() {
             </AnimatedSection>
           </div>
 
-          <AnimatedSection className="mt-16">
-            <SectionHeading
-              eyebrow="Experience Timeline"
-              title="Roles, seasons, and responsibilities."
-              description="Timeline entries are placeholders now, but they are structured for technical responsibilities, achievements, links, and technologies."
-            />
-            <div className="mt-10">
-              <Timeline items={roboticsTimelineItems} />
-            </div>
-          </AnimatedSection>
-
-          <div className="mt-16">
-            <SectionHeading
-              eyebrow="Robot Projects"
-              title="Featured robot and subsystem cards."
-              description="Add real drivetrain, vision, autonomous, mechanism, or controls write-ups here."
-            />
-            <div className="mt-10 grid gap-5 lg:grid-cols-2">
-              {robotProjects.map((project) => (
-                <AnimatedSection key={project.title}>
-                  <ExperienceCard
-                    title={project.title}
-                    meta={project.season}
-                    description={project.description}
-                    bullets={project.technicalHighlights}
+          <div data-robotics-experiences className="mt-16">
+            <div className="grid gap-10 lg:grid-cols-[0.9fr_1.1fr]">
+              <div className="self-start lg:sticky lg:top-28">
+                <SectionHeading
+                  eyebrow="Experience"
+                  title="Three seasons, two teams."
+                  description="From programming subteam member to Software Lead with the Iron Bears, to mentoring the next generation of programmers with Critical Circuits."
+                />
+                <div
+                  data-robotics-visual
+                  aria-hidden="true"
+                  className="relative mt-8 hidden overflow-hidden rounded-lg border border-white/10 bg-[radial-gradient(110%_80%_at_50%_0%,rgba(47,95,224,0.14),transparent_62%),linear-gradient(180deg,rgba(10,12,16,0.85),rgba(16,18,21,0.95))] lg:block lg:h-[calc(100svh-22rem)] lg:min-h-96"
+                >
+                  <div
+                    aria-hidden="true"
+                    className="absolute inset-0 opacity-[0.1] [background-image:linear-gradient(rgba(96,141,255,0.24)_1px,transparent_1px),linear-gradient(90deg,rgba(96,141,255,0.16)_1px,transparent_1px)] [background-size:40px_40px] [mask-image:radial-gradient(120%_100%_at_50%_0%,black_35%,transparent_85%)]"
                   />
-                </AnimatedSection>
-              ))}
+                  {roboticsExperiences.map((experience, index) => (
+                    <div
+                      key={experience.id}
+                      data-robotics-logo
+                      data-hud-year={experience.year}
+                      className={cn(
+                        "absolute inset-x-8 bottom-28 top-8",
+                        index > 0 && "opacity-0",
+                      )}
+                    >
+                      <Image
+                        src={experience.gameLogo}
+                        alt=""
+                        fill
+                        sizes="(max-width: 1024px) 0px, 40vw"
+                        className={cn(
+                          "object-contain drop-shadow-[0_0_28px_rgba(47,95,224,0.25)]",
+                          experience.gameLogoInvert && "invert",
+                        )}
+                      />
+                    </div>
+                  ))}
+                  <div
+                    data-robotics-scanline
+                    className="absolute inset-x-0 top-0 h-10 -translate-y-1/2 bg-[linear-gradient(180deg,transparent,rgba(96,141,255,0.4),transparent)] opacity-0"
+                  />
+                  <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-slate-950/85 via-slate-950/40 to-transparent p-5 pt-16">
+                    <p
+                      data-robotics-year
+                      className="font-mono text-5xl font-semibold tracking-tight text-white"
+                    >
+                      {firstExperience.year}
+                    </p>
+                    <p
+                      data-robotics-hud-label
+                      className="mt-2 font-mono text-[11px] font-medium uppercase tracking-[0.22em] text-blue-200"
+                    >
+                      {firstExperience.teamName} · {firstExperience.role}
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="grid gap-6">
+                {roboticsExperiences.map((experience) => (
+                  <AnimatedSection key={experience.id}>
+                    <article
+                      data-robotics-entry
+                      data-hud-year={experience.year}
+                      data-hud-label={`${experience.teamName} · ${experience.role}`}
+                      className="liquid-glass-surface glass-card overflow-hidden rounded-lg border border-white/10"
+                    >
+                      <div className="relative aspect-[3/2]">
+                        <Image
+                          src={experience.image}
+                          alt={experience.imageAlt}
+                          fill
+                          sizes="(max-width: 1024px) 100vw, 55vw"
+                          className="object-cover"
+                        />
+                        <div
+                          aria-hidden="true"
+                          className="absolute inset-0 bg-[linear-gradient(180deg,transparent_55%,rgba(16,18,21,0.6)_100%)]"
+                        />
+                        <span className="absolute left-4 top-4 rounded-md border border-blue-300/25 bg-slate-950/60 px-2.5 py-1 font-mono text-[11px] font-medium tracking-wide text-blue-100 backdrop-blur">
+                          {experience.year} · {experience.seasonName}
+                        </span>
+                      </div>
+                      <div className="p-5 sm:p-6">
+                        <div className="flex flex-col gap-1 sm:flex-row sm:items-start sm:justify-between sm:gap-4">
+                          <h3 className="text-lg font-semibold text-white">
+                            {experience.role}
+                          </h3>
+                          <p className="shrink-0 font-mono text-xs font-medium tracking-wide text-blue-200">
+                            {experience.teamName}
+                          </p>
+                        </div>
+                        <p className="mt-3 text-sm leading-6 text-slate-300">
+                          {experience.summary}
+                        </p>
+                        <ul className="mt-4 space-y-2 text-sm leading-6 text-slate-400">
+                          {experience.responsibilities.map((item) => (
+                            <li key={item}>{item}</li>
+                          ))}
+                        </ul>
+                        {experience.achievements?.map((achievement) => (
+                          <p
+                            key={achievement}
+                            className="mt-4 inline-flex items-center gap-2 rounded-md border border-blue-300/25 bg-blue-500/10 px-3 py-2 text-sm font-medium text-blue-100"
+                          >
+                            <Trophy
+                              aria-hidden="true"
+                              size={15}
+                              className="shrink-0 text-blue-300"
+                            />
+                            {achievement}
+                          </p>
+                        ))}
+                        <div className="mt-4 flex flex-wrap gap-2">
+                          {experience.technologies.map((tech) => (
+                            <SkillBadge key={tech}>{tech}</SkillBadge>
+                          ))}
+                        </div>
+                      </div>
+                    </article>
+                  </AnimatedSection>
+                ))}
+              </div>
             </div>
           </div>
         </Container>
