@@ -168,7 +168,7 @@ export default function Home() {
                   {featuredMusic.title}
                 </h3>
                 <p className="mt-3 text-sm leading-6 text-slate-300">
-                  {featuredMusic.notes}
+                  {featuredMusic.description}
                 </p>
               </div>
               <div className="liquid-glass-surface glass-card mt-5 rounded-lg border border-white/10 p-5">

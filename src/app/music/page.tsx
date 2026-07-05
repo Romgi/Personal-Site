@@ -51,13 +51,19 @@ export default function MusicPage() {
               />
               <div className="mt-8 rounded-lg border border-dashed border-blue-300/25 bg-white/[0.035] p-5">
                 <p className="text-sm font-semibold text-white">
-                  Recordings and media
+                  Bugler&apos;s Holiday with McMaster Concert Band
                 </p>
-                <p className="mt-2 text-sm leading-6 text-slate-400">
-                  Public recordings can be added here later as direct links or
-                  privacy-safe embeds. The current page avoids third-party media
-                  scripts until final recordings are ready to publish.
-                </p>
+                <div className="mt-4 aspect-video overflow-hidden rounded-md border border-white/10 bg-slate-950">
+                  <iframe
+                    className="size-full"
+                    src="https://www.youtube-nocookie.com/embed/f8E05xtGEq4"
+                    title="Jonathan Graydon performing Bugler's Holiday with the McMaster Concert Band"
+                    loading="lazy"
+                    referrerPolicy="strict-origin-when-cross-origin"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowFullScreen
+                  />
+                </div>
               </div>
             </AnimatedSection>
           </div>
@@ -69,16 +75,15 @@ export default function MusicPage() {
           <SectionHeading
             eyebrow="Featured Repertoire"
             title="Pieces to highlight first."
-            description="Representative solo and concerto literature prepared for recital, audition, and advanced performance settings."
+            description="Selected pieces from Jonathan's trumpet repertoire."
           />
           <div className="mt-10 grid gap-5 md:grid-cols-2">
             {featuredRepertoire.map((item) => (
               <AnimatedSection key={item.id}>
                 <ExperienceCard
-                  title={item.title}
-                  meta={item.status}
-                  description={item.notes}
-                  bullets={[item.composer, item.difficulty, item.category]}
+                  title={item.composer}
+                  meta={item.title}
+                  description={item.description}
                 />
               </AnimatedSection>
             ))}
@@ -92,7 +97,7 @@ export default function MusicPage() {
             <SectionHeading
               eyebrow="Repertoire"
               title="Trumpet repertoire list."
-              description="Program-ready solo literature, concert features, orchestral-style work, and concert band repertoire."
+              description="A concise list of pieces, composers, and brief musical context."
             />
             <div className="mt-10">
               <RepertoireList items={repertoire} />

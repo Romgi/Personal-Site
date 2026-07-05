@@ -1,22 +1,15 @@
-export type RepertoireStatus = "Performed" | "Ready" | "Learning" | "Planned";
-
 export type RepertoireItem = {
   id: string;
   title: string;
   composer: string;
-  difficulty: string;
-  category:
-  "Solo" | "Ensemble" | "Orchestral Excerpt" | "Jazz" | "Concert Band";
-  status: RepertoireStatus;
-  year: string;
-  notes: string;
+  description: string;
   featured?: boolean;
 };
 
 export const musicOverview = {
   title: "Trumpet Performance and Music",
   description:
-    "Trumpet performer with 9 years of experience, 30+ concerts, 10+ ensembles, award-winning concert band work, honour band experience, orchestral performance, jazz lead trumpet, and program-ready solo repertoire.",
+    "Trumpet performer with 10 years of experience, 30+ concerts, 10+ ensembles, award-winning concert band work, honour band experience, orchestral performance, jazz lead trumpet, and solo repertoire.",
   image: "/images/music/hero-stage.png",
   imageAlt: "Trumpet soloist standing on stage beneath warm lights",
 };
@@ -26,253 +19,142 @@ export const repertoire: RepertoireItem[] = [
     id: "haydn-trumpet-concerto",
     title: "Trumpet Concerto in E-flat Major",
     composer: "Joseph Haydn",
-    difficulty: "Classical concerto",
-    category: "Solo",
-    status: "Ready",
-    year: "Program-ready",
-    notes:
-      "Core classical trumpet concerto repertoire prepared for recital, audition, and concerto-style programming.",
-    featured: false,
+    description: "Classical concerto standard with elegant phrasing.",
   },
   {
     id: "hummel-trumpet-concerto",
     title: "Trumpet Concerto in E Major",
     composer: "Johann Nepomuk Hummel",
-    difficulty: "Classical concerto",
-    category: "Solo",
-    status: "Ready",
-    year: "Program-ready",
-    notes:
-      "A major classical concerto in active repertoire, requiring clean articulation, style, endurance, and upper-register control.",
-    featured: false,
+    description: "Bright classical concerto focused on style and articulation.",
   },
   {
     id: "arban-carnival-of-venice",
     title: "Fantaisie and Variations on The Carnival of Venice",
     composer: "Jean-Baptiste Arban",
-    difficulty: "Advanced technical showpiece",
-    category: "Solo",
-    status: "Ready",
-    year: "Performed",
-    notes:
-      "Virtuosic variation work emphasizing articulation, flexibility, character, and technical command.",
+    description: "Virtuosic theme-and-variations showpiece.",
     featured: true,
+  },
+  {
+    id: "arban-fantasie-brillante",
+    title: "Fantasie Brillante",
+    composer: "Jean-Baptiste Arban",
+    description: "Brilliant cornet showpiece with lyrical and technical flair.",
+  },
+  {
+    id: "arban-tyrolean-song",
+    title: "Variations on a Tyrolean Song",
+    composer: "Jean-Baptiste Arban",
+    description: "Classic variation solo with character and agility.",
   },
   {
     id: "bohme-concerto",
     title: "Trumpet Concerto in F Minor",
-    composer: "Oskar Böhme",
-    difficulty: "Advanced romantic concerto",
-    category: "Solo",
-    status: "Ready",
-    year: "Program-ready",
-    notes:
-      "Romantic-era concerto repertoire combining lyrical playing, stamina, range, and expressive phrasing.",
-    featured: false,
+    composer: "Oskar Boehme",
+    description: "Romantic concerto with lyrical and technical contrast.",
   },
   {
     id: "balay-andante-allegro",
     title: "Andante et Allegro",
     composer: "Guillaume Balay",
-    difficulty: "Senior solo",
-    category: "Solo",
-    status: "Ready",
-    year: "Program-ready",
-    notes:
-      "Contrasting lyrical and technical material suited to recital or audition programming.",
-    featured: false,
+    description: "French solo work with lyrical and agile sections.",
   },
   {
     id: "hansen-sonata-cornet",
     title: "Sonata for Cornet and Piano",
     composer: "Thorvald Hansen",
-    difficulty: "Senior solo sonata",
-    category: "Solo",
-    status: "Ready",
-    year: "Performed",
-    notes:
-      "Classic cornet sonata repertoire balancing lyrical control, articulation, and chamber-style collaboration.",
-    featured: false,
+    description: "Classic cornet sonata with chamber-style playing.",
   },
   {
     id: "balay-prelude-ballade",
     title: "Prelude et Ballade",
     composer: "Guillaume Balay",
-    difficulty: "Senior solo",
-    category: "Solo",
-    status: "Ready",
-    year: "Program-ready",
-    notes:
-      "French solo literature prepared for expressive contrast, tone control, and technical clarity.",
-    featured: false,
+    description: "Expressive French solo with broad musical contrast.",
   },
   {
     id: "goedicke-concert-etude",
     title: "Concert Etude",
     composer: "Alexander Goedicke",
-    difficulty: "Advanced etude",
-    category: "Solo",
-    status: "Ready",
-    year: "Program-ready",
-    notes:
-      "Fast, articulate solo literature used to demonstrate clarity, rhythmic precision, and facility.",
-    featured: false,
+    description: "Fast etude-style solo built on clarity and precision.",
   },
   {
     id: "honegger-intrada",
     title: "Intrada",
     composer: "Arthur Honegger",
-    difficulty: "Advanced modern solo",
-    category: "Solo",
-    status: "Ready",
-    year: "Program-ready",
-    notes:
-      "Modern recital work requiring precision, contrast, and confident musical direction.",
-    featured: false,
+    description: "Modern recital work with bold, precise writing.",
   },
   {
     id: "hindemith-sonata",
     title: "Sonata for Trumpet and Piano",
     composer: "Paul Hindemith",
-    difficulty: "University-level sonata",
-    category: "Solo",
-    status: "Ready",
-    year: "Program-ready",
-    notes:
-      "Substantial twentieth-century trumpet sonata repertoire with serious musical and ensemble demands.",
+    description: "Major twentieth-century sonata for trumpet and piano.",
     featured: true,
   },
   {
     id: "arutunian-concerto",
     title: "Trumpet Concerto",
     composer: "Alexander Arutunian",
-    difficulty: "Advanced concerto",
-    category: "Solo",
-    status: "Ready",
-    year: "Performed",
-    notes:
-      "Large-scale concerto repertoire with broad lyrical writing, technical passages, and dramatic contrast.",
-    featured: false,
+    description: "Dramatic concerto with lyrical and technical writing.",
   },
   {
     id: "pakhmutova-concerto",
     title: "Trumpet Concerto",
     composer: "Alexandra Pakhmutova",
-    difficulty: "Advanced concerto",
-    category: "Solo",
-    status: "Ready",
-    year: "Program-ready",
-    notes:
-      "Modern concerto literature with lyrical breadth, rhythmic drive, and substantial technical demands.",
-    featured: false,
+    description: "Modern concerto with rhythmic drive and lyrical breadth.",
   },
   {
     id: "ketting-intrada",
     title: "Intrada",
     composer: "Otto Ketting",
-    difficulty: "Unaccompanied solo",
-    category: "Solo",
-    status: "Ready",
-    year: "Program-ready",
-    notes:
-      "Concise unaccompanied solo work requiring control, projection, and confident musical pacing.",
-    featured: false,
+    description: "Concise unaccompanied solo with strong projection.",
   },
   {
     id: "peaslee-nightsongs",
     title: "Nightsongs",
     composer: "Richard Peaslee",
-    difficulty: "Advanced lyrical solo",
-    category: "Solo",
-    status: "Ready",
-    year: "Program-ready",
-    notes:
-      "Expressive solo repertoire focused on color, atmosphere, and sustained lyrical phrasing.",
-    featured: false,
+    description: "Atmospheric lyrical work focused on color and mood.",
   },
   {
     id: "ewazen-sonata",
     title: "Sonata for Trumpet and Piano",
     composer: "Eric Ewazen",
-    difficulty: "Advanced contemporary sonata",
-    category: "Solo",
-    status: "Ready",
-    year: "Program-ready",
-    notes:
-      "Contemporary recital repertoire requiring broad sound, stamina, ensemble sensitivity, and long-form phrasing.",
-    featured: false,
+    description: "Contemporary sonata with broad, singing lines.",
   },
   {
     id: "nishimura-golden-hour",
     title: "Golden Hour for Flugelhorn and Piano",
-    composer: "Yuki Nishimura",
-    difficulty: "Contemporary lyrical work",
-    category: "Solo",
-    status: "Ready",
-    year: "Program-ready",
-    notes:
-      "Flugelhorn feature emphasizing tone, lyrical pacing, color, and expressive control.",
-    featured: false,
+    composer: "Cait Nishimura",
+    description: "Lyrical flugelhorn feature centered on tone color.",
   },
   {
     id: "marlatt-blue-bells",
     title: "Variations on The Blue Bells of Scotland",
     composer: "David Marlatt",
-    difficulty: "Advanced variation set",
-    category: "Solo",
-    status: "Ready",
-    year: "Program-ready",
-    notes:
-      "Variation-style solo literature emphasizing flexibility, control, articulation, and character.",
-    featured: false,
+    description: "Variation set built on flexibility and character.",
   },
   {
     id: "ost-clash-elements",
     title: "Clash of the Elements for Solo Trumpet",
-    composer: "Jérôme Naulais / Ost",
-    difficulty: "Unaccompanied solo",
-    category: "Solo",
-    status: "Ready",
-    year: "Program-ready",
-    notes:
-      "Solo trumpet work focused on independence, pacing, contrast, and unaccompanied performance confidence.",
-    featured: false,
+    composer: "Nathan Ost",
+    description: "Unaccompanied solo with sharp contrast and pacing.",
   },
   {
     id: "gershwin-rhapsody-blue",
     title: "Rhapsody in Blue",
     composer: "George Gershwin",
-    difficulty: "Orchestral / feature excerpt",
-    category: "Orchestral Excerpt",
-    status: "Ready",
-    year: "Program-ready",
-    notes:
-      "Iconic American repertoire prepared as part of broader solo and orchestral-style trumpet literature.",
-    featured: false,
+    description: "Iconic American concert work with jazz influence.",
   },
   {
     id: "anderson-buglers-holiday",
     title: "Bugler's Holiday",
     composer: "Leroy Anderson",
-    difficulty: "Trumpet feature",
-    category: "Ensemble",
-    status: "Ready",
-    year: "Performed",
-    notes:
-      "Light concert feature requiring crisp ensemble playing, endurance, and coordinated articulation.",
+    description: "Light concert feature for three trumpets and band.",
     featured: true,
   },
   {
     id: "anderson-trumpeters-lullaby",
     title: "Trumpeter's Lullaby",
     composer: "Leroy Anderson",
-    difficulty: "Lyrical feature",
-    category: "Solo",
-    status: "Ready",
-    year: "Program-ready",
-    notes:
-      "Lyrical solo feature emphasizing sound, control, musical line, and expressive phrasing.",
-    featured: false,
+    description: "Gentle lyrical feature emphasizing sound and line.",
   },
 ];
 
@@ -386,5 +268,17 @@ export const musicGallery = [
   {
     src: "/images/music/trumpetlake.jpg",
     alt: "Jonathan Graydon with trumpet during an Etobicoke Youth Band trip",
+  },
+  {
+    src: "/images/music/msu-starwars.jpg",
+    alt: "McMaster Symphony Orchestra performing Star Wars",
+  },
+  {
+    src: "/images/music/ophb.jpg",
+    alt: "Ontario Provincial Honour Band at the Ontario Music Educators Association conference",
+  },
+  {
+    src: "/images/music/trumpets.jpeg",
+    alt: "Jonathan's trumpet collection",
   },
 ];

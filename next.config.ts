@@ -9,6 +9,7 @@ const contentSecurityPolicy = [
   "img-src 'self' data: blob:",
   "font-src 'self' data:",
   `connect-src 'self'${isDev ? " ws: http://localhost:* http://127.0.0.1:*" : ""}`,
+  "frame-src 'self' https://www.youtube-nocookie.com",
   "frame-ancestors 'none'",
   "base-uri 'self'",
   "form-action 'self'",
