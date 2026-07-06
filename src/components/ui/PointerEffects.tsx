@@ -78,8 +78,7 @@ export function PointerEffects() {
         gsap.to(glow, { opacity: 1, duration: 0.6, overwrite: "auto" });
       }
 
-      const target =
-        event.target instanceof Element ? event.target : null;
+      const target = event.target instanceof Element ? event.target : null;
 
       // Specular sheen follows the pointer inside glass surfaces.
       const glass = target?.closest<HTMLElement>(GLASS_SELECTOR) ?? null;
@@ -135,10 +134,10 @@ export function PointerEffects() {
 
       if (magnet) {
         const rect = magnet.getBoundingClientRect();
-        const pullX = (event.clientX - (rect.left + rect.width / 2)) *
-          MAGNET_STRENGTH;
-        const pullY = (event.clientY - (rect.top + rect.height / 2)) *
-          MAGNET_STRENGTH;
+        const pullX =
+          (event.clientX - (rect.left + rect.width / 2)) * MAGNET_STRENGTH;
+        const pullY =
+          (event.clientY - (rect.top + rect.height / 2)) * MAGNET_STRENGTH;
 
         gsap.to(magnet, {
           x: gsap.utils.clamp(-MAGNET_MAX_PX, MAGNET_MAX_PX, pullX),

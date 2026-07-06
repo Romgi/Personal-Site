@@ -2,7 +2,7 @@ import Image from "next/image";
 
 import { cn } from "@/lib/utils";
 
-type PlaceholderImageProps = {
+type PortfolioImageProps = {
   src: string;
   alt: string;
   className?: string;
@@ -12,7 +12,7 @@ type PlaceholderImageProps = {
   aspect?: string;
 };
 
-export function PlaceholderImage({
+export function PortfolioImage({
   src,
   alt,
   className,
@@ -20,7 +20,7 @@ export function PlaceholderImage({
   sizes = "(max-width: 768px) 100vw, 50vw",
   preload = false,
   aspect = "aspect-[16/10]",
-}: PlaceholderImageProps) {
+}: PortfolioImageProps) {
   return (
     <div
       className={cn(

@@ -74,7 +74,8 @@ export function Footer() {
         </div>
         <div className="mt-8 flex flex-col gap-2 border-t border-white/10 pt-6 text-xs text-slate-500 sm:flex-row sm:items-center sm:justify-between">
           <p>
-            © {new Date().getFullYear()} Jonathan Graydon. Built with Next.js.
+            Copyright {new Date().getFullYear()} Jonathan Graydon. Built with
+            Next.js.
           </p>
         </div>
       </Container>

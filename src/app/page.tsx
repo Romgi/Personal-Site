@@ -10,7 +10,7 @@ import { ProjectCard } from "@/components/sections/ProjectCard";
 import { ButtonLink } from "@/components/ui/ButtonLink";
 import { AnimatedSection } from "@/components/ui/AnimatedSection";
 import { Container } from "@/components/ui/Container";
-import { PlaceholderImage } from "@/components/ui/PlaceholderImage";
+import { PortfolioImage } from "@/components/ui/PortfolioImage";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { profile } from "@/data/profile";
 import { featuredProjects } from "@/data/projects";
@@ -43,7 +43,7 @@ export default function Home() {
             <SectionHeading
               eyebrow="About"
               title="A technical portfolio for software, robotics, and music."
-              description="This portfolio is built around structured data for software, robotics, and music work. Each section has room for technical notes, media, and accomplishments."
+              description="Jonathan's work connects practical software engineering, competition robotics, and trumpet performance, with projects that emphasize reliability, clarity, and disciplined execution."
             />
             <div className="mt-8">
               <ExpandableText
@@ -91,7 +91,7 @@ export default function Home() {
             <SectionHeading
               eyebrow="Featured Projects"
               title="Current software and engineering work."
-              description="This section is designed for real project cards with links, technical notes, and media. Each card has a description, bullets, and badges for technologies."
+              description="Selected work across production web apps, robotics software, coursework, and interactive Unity projects."
             />
             <ButtonLink href="/projects" variant="ghost" className="self-start">
               All projects
@@ -115,7 +115,7 @@ export default function Home() {
               <SectionHeading
                 eyebrow="Robotics Preview"
                 title="Engineering-focused FRC experience."
-                description="This section is designed for robotics work with technical notes, media, and accomplishments. Each entry has a description, bullets, and badges for technologies."
+                description="Competition robot software, autonomous path planning, vision integration, controls work, and mentoring across FRC Team 854 and Team 9062."
               />
               <div className="mt-8">
                 <ButtonLink href="/projects#robotics" variant="secondary">
@@ -148,9 +148,9 @@ export default function Home() {
         <Container>
           <div className="grid gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:items-center">
             <AnimatedSection>
-              <PlaceholderImage
+              <PortfolioImage
                 src="/images/music/jlhb.jpeg"
-                alt="Trumpet performance placeholder"
+                alt="Jonathan Graydon performing with the Jack Long National Honour Band"
                 aspect="aspect-[4/3]"
               />
             </AnimatedSection>
@@ -158,7 +158,7 @@ export default function Home() {
               <SectionHeading
                 eyebrow="Music Preview"
                 title="Trumpet repertoire and performance discipline."
-                description="This section is designed for music work with technical notes, media, and accomplishments. Each entry has a description, bullets, and badges for instruments."
+                description="Solo repertoire, honour band experience, university ensemble performance, jazz lead trumpet work, and festival recognition."
               />
               <div className="liquid-glass-surface glass-card mt-7 rounded-lg border border-white/10 p-5">
                 <p className="font-mono text-[11px] font-medium uppercase tracking-[0.24em] text-blue-300">

@@ -20,6 +20,7 @@ export const repertoire: RepertoireItem[] = [
     title: "Trumpet Concerto in E-flat Major",
     composer: "Joseph Haydn",
     description: "Classical concerto standard with elegant phrasing.",
+    featured: true,
   },
   {
     id: "hummel-trumpet-concerto",
@@ -87,13 +88,13 @@ export const repertoire: RepertoireItem[] = [
     title: "Sonata for Trumpet and Piano",
     composer: "Paul Hindemith",
     description: "Major twentieth-century sonata for trumpet and piano.",
-    featured: true,
   },
   {
     id: "arutunian-concerto",
     title: "Trumpet Concerto",
     composer: "Alexander Arutunian",
     description: "Dramatic concerto with lyrical and technical writing.",
+    featured: true,
   },
   {
     id: "pakhmutova-concerto",
@@ -136,6 +137,7 @@ export const repertoire: RepertoireItem[] = [
     title: "Clash of the Elements for Solo Trumpet",
     composer: "Nathan Ost",
     description: "Unaccompanied solo with sharp contrast and pacing.",
+    featured: true,
   },
   {
     id: "gershwin-rhapsody-blue",
@@ -148,7 +150,6 @@ export const repertoire: RepertoireItem[] = [
     title: "Bugler's Holiday",
     composer: "Leroy Anderson",
     description: "Light concert feature for three trumpets and band.",
-    featured: true,
   },
   {
     id: "anderson-trumpeters-lullaby",
@@ -178,22 +179,16 @@ export const musicAccomplishments = [
       "Performed as first trumpet and soloist, touring Ontario high schools and performing at the Ontario Music Educators Association conference.",
   },
   {
+    title: "Jack Long National Honour Band",
+    period: "2025-2026",
+    description:
+      "Selected for a nationally auditioned honour band featuring high-level Canadian musicians aged 16 to 24.",
+  },
+  {
     title: "Conn-Selmer Centerstage Jazz Band",
     period: "2024",
     description:
       "Performed lead trumpet in a national all-star youth jazz band at the University of Toronto's Walter Hall during MusicFest Canada 2024.",
-  },
-  {
-    title: "Martingrove C.I. Concert Band Awards",
-    period: "2021-2025",
-    description:
-      "Served as trumpet section leader in a band that earned Ontario Band Association Gold, a brass excellence award, and MusicFest Canada national Gold and Silver results.",
-  },
-  {
-    title: "York Symphony Orchestra Guest Soloist",
-    period: "2025",
-    description:
-      "Performed as a guest trumpet musician and soloist in York Symphony Orchestra's A Night at the Opera concert.",
   },
 ];
 
@@ -278,7 +273,7 @@ export const musicGallery = [
     alt: "Ontario Provincial Honour Band at the Ontario Music Educators Association conference",
   },
   {
-    src: "/images/music/trumpets.jpeg",
-    alt: "Jonathan's trumpet collection",
+    src: "/images/music/oba.png",
+    alt: "Ontario Band Association honour ensemble group photo on stage",
   },
 ];

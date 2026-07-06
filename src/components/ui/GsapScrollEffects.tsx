@@ -83,6 +83,14 @@ export function GsapScrollEffects({ children }: GsapScrollEffectsProps) {
       );
 
       if (homeHero && homeHeroCard) {
+        const homeHeroBackground = homeHeroCard.querySelector<HTMLElement>(
+          ".hero-background-image",
+        );
+        const homeHeroAmbient =
+          homeHeroCard.querySelector<HTMLElement>(".hero-ambient");
+        const homeHeroGrid =
+          homeHeroCard.querySelector<HTMLElement>(".hero-grid");
+
         const getHeroZoomScale = () => {
           const rect = homeHeroCard.getBoundingClientRect();
           const coverScale = Math.max(
@@ -98,13 +106,22 @@ export function GsapScrollEffects({ children }: GsapScrollEffectsProps) {
           scale: 1,
           transformOrigin: "50% 50%",
           willChange: "transform, border-radius, opacity",
-          force3D: true,
+          force3D: false,
         });
+        if (homeHeroBackground) {
+          gsap.set(homeHeroBackground, { autoAlpha: 0.28 });
+        }
+        if (homeHeroAmbient) {
+          gsap.set(homeHeroAmbient, { autoAlpha: 0.86 });
+        }
+        if (homeHeroGrid) {
+          gsap.set(homeHeroGrid, { autoAlpha: 0.14 });
+        }
         gsap.set(homeHeroContent, {
           autoAlpha: 1,
           yPercent: 0,
           scale: 1,
-          force3D: true,
+          force3D: false,
         });
         gsap.set(homeHeroVeil, { autoAlpha: 0 });
         gsap.set(homeHeroAperture, {
@@ -112,7 +129,7 @@ export function GsapScrollEffects({ children }: GsapScrollEffectsProps) {
           scale: 0.4,
           transformOrigin: "50% 50%",
           willChange: "transform, opacity",
-          force3D: true,
+          force3D: false,
         });
         gsap.set(homeHeroCue, { autoAlpha: 1, y: 0 });
 
@@ -121,7 +138,7 @@ export function GsapScrollEffects({ children }: GsapScrollEffectsProps) {
           scrollTrigger: {
             trigger: homeHero,
             start: "top top",
-            end: "bottom top",
+            end: "bottom bottom",
             scrub: 0.18,
             invalidateOnRefresh: true,
           },
@@ -157,12 +174,36 @@ export function GsapScrollEffects({ children }: GsapScrollEffectsProps) {
             0.04,
           )
           .to(
+            homeHeroBackground ?? [],
+            {
+              autoAlpha: 0.08,
+              duration: 0.52,
+            },
+            0.3,
+          )
+          .to(
+            homeHeroAmbient ?? [],
+            {
+              autoAlpha: 0,
+              duration: 0.48,
+            },
+            0.32,
+          )
+          .to(
+            homeHeroGrid ?? [],
+            {
+              autoAlpha: 0.04,
+              duration: 0.44,
+            },
+            0.36,
+          )
+          .to(
             homeHeroVeil,
             {
-              autoAlpha: 0.9,
-              duration: 0.78,
+              autoAlpha: 1,
+              duration: 0.58,
             },
-            0.12,
+            0.3,
           )
           .to(
             homeHeroAperture,
@@ -185,9 +226,9 @@ export function GsapScrollEffects({ children }: GsapScrollEffectsProps) {
             homeHeroCard,
             {
               autoAlpha: 0,
-              duration: 0.16,
+              duration: 0.24,
             },
-            0.84,
+            0.76,
           );
       }
 

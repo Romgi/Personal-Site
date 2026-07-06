@@ -4,7 +4,7 @@ import { RepertoireList } from "@/components/sections/RepertoireList";
 import { AnimatedSection } from "@/components/ui/AnimatedSection";
 import { Container } from "@/components/ui/Container";
 import { PageHero } from "@/components/ui/PageHero";
-import { PlaceholderImage } from "@/components/ui/PlaceholderImage";
+import { PortfolioImage } from "@/components/ui/PortfolioImage";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import {
   ensembles,
@@ -26,20 +26,22 @@ export default function MusicPage() {
   const featuredRepertoire = repertoire.filter((item) => item.featured);
 
   return (
-    <>
+    <div className="music-page">
       <PageHero
+        className="music-hero"
         eyebrow="Music / Trumpet"
         title="Trumpet repertoire, performance, and musical growth."
         description={musicOverview.description}
       />
 
-      <section className="py-20 sm:py-24">
+      <section className="music-section py-20 sm:py-24">
         <Container>
           <div className="grid gap-10 lg:grid-cols-[0.95fr_1.05fr] lg:items-center">
             <AnimatedSection>
-              <PlaceholderImage
+              <PortfolioImage
                 src={musicOverview.image}
                 alt={musicOverview.imageAlt}
+                className="music-image"
                 aspect="aspect-[4/3]"
               />
             </AnimatedSection>
@@ -49,11 +51,11 @@ export default function MusicPage() {
                 title="A serious performance profile alongside the technical portfolio."
                 description="This page highlights Jonathan's trumpet repertoire, honour band experience, ensemble leadership, festival awards, and ongoing university performance work."
               />
-              <div className="mt-8 rounded-lg border border-dashed border-blue-300/25 bg-white/[0.035] p-5">
+              <div className="music-media-card mt-8 rounded-lg border p-5">
                 <p className="text-sm font-semibold text-white">
                   Bugler&apos;s Holiday with McMaster Concert Band
                 </p>
-                <div className="mt-4 aspect-video overflow-hidden rounded-md border border-white/10 bg-slate-950">
+                <div className="mt-4 aspect-video overflow-hidden rounded-md border">
                   <iframe
                     className="size-full"
                     src="https://www.youtube-nocookie.com/embed/f8E05xtGEq4"
@@ -70,7 +72,7 @@ export default function MusicPage() {
         </Container>
       </section>
 
-      <section className="border-y border-white/10 bg-white/[0.025] py-20 sm:py-24">
+      <section className="music-section music-section-alt border-y py-20 sm:py-24">
         <Container>
           <SectionHeading
             eyebrow="Featured Repertoire"
@@ -91,22 +93,7 @@ export default function MusicPage() {
         </Container>
       </section>
 
-      <section className="py-20 sm:py-24">
-        <Container>
-          <AnimatedSection>
-            <SectionHeading
-              eyebrow="Repertoire"
-              title="Trumpet repertoire list."
-              description="A concise list of pieces, composers, and brief musical context."
-            />
-            <div className="mt-10">
-              <RepertoireList items={repertoire} />
-            </div>
-          </AnimatedSection>
-        </Container>
-      </section>
-
-      <section className="border-y border-white/10 bg-white/[0.025] py-20 sm:py-24">
+      <section className="music-section music-section-alt border-y py-20 sm:py-24">
         <Container>
           <SectionHeading
             eyebrow="Accomplishments"
@@ -123,7 +110,7 @@ export default function MusicPage() {
         </Container>
       </section>
 
-      <section data-music-contexts className="py-20 sm:py-24">
+      <section data-music-contexts className="music-section py-20 sm:py-24">
         <Container>
           <div className="grid gap-10 lg:grid-cols-[0.9fr_1.1fr]">
             <div className="self-start lg:sticky lg:top-28">
@@ -165,7 +152,22 @@ export default function MusicPage() {
         </Container>
       </section>
 
-      <section className="border-t border-white/10 bg-[linear-gradient(180deg,rgba(13,20,38,0.5),rgba(26,29,35,0.94))] py-20 sm:py-24">
+      <section className="music-section py-20 sm:py-24">
+        <Container>
+          <AnimatedSection>
+            <SectionHeading
+              eyebrow="Repertoire"
+              title="Trumpet repertoire list."
+              description="A concise list of pieces, composers, and brief musical context."
+            />
+            <div className="mt-10">
+              <RepertoireList items={repertoire} />
+            </div>
+          </AnimatedSection>
+        </Container>
+      </section>
+
+      <section className="music-section music-gallery-section border-t py-20 sm:py-24">
         <Container>
           <SectionHeading
             eyebrow="Gallery"
@@ -175,12 +177,16 @@ export default function MusicPage() {
           <div className="mt-10 grid gap-5 md:grid-cols-3">
             {musicGallery.map((image) => (
               <AnimatedSection key={image.alt}>
-                <PlaceholderImage src={image.src} alt={image.alt} />
+                <PortfolioImage
+                  src={image.src}
+                  alt={image.alt}
+                  className="music-image"
+                />
               </AnimatedSection>
             ))}
           </div>
         </Container>
       </section>
-    </>
+    </div>
   );
 }

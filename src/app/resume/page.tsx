@@ -1,4 +1,4 @@
-import { Download, Mail } from "lucide-react";
+import { ArrowUpRight, FileText } from "lucide-react";
 
 import { ContactCard } from "@/components/sections/ContactCard";
 import { ResumeSection } from "@/components/sections/ResumeSection";
@@ -57,14 +57,16 @@ export default function ResumePage() {
         description="A concise, employer-ready page for education, technical skills, work experience, projects, robotics, music, awards, and contact information."
       >
         <div className="flex flex-wrap gap-3">
-          {/* Place the real resume PDF at public/resume.pdf when it is ready. */}
-          <ButtonLink href={profile.resumePath} variant="primary" download>
-            Download resume
-            <Download aria-hidden="true" size={18} />
+          <ButtonLink href={profile.contact.emails[0].href} variant="primary">
+            Request resume PDF
+            <FileText aria-hidden="true" size={18} />
           </ButtonLink>
-          <ButtonLink href={profile.contact.emails[0].href} variant="secondary">
-            Email Jonathan
-            <Mail aria-hidden="true" size={18} />
+          <ButtonLink
+            href={profile.contact.socials[0].href}
+            variant="secondary"
+          >
+            LinkedIn
+            <ArrowUpRight aria-hidden="true" size={18} />
           </ButtonLink>
         </div>
       </PageHero>
@@ -256,7 +258,6 @@ export default function ResumePage() {
           </div>
         </Container>
       </section>
-
     </>
   );
 }

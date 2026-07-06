@@ -24,7 +24,21 @@ export const education = [
 export const technicalSkillGroups = [
   {
     title: "Languages",
-    skills: ["TypeScript", "JavaScript", "Java", "Python", "C#", "C/C++", "HTML", "CSS", "SQL", "Bash", "MATLAB", "LaTeX", "Haskell"],
+    skills: [
+      "TypeScript",
+      "JavaScript",
+      "Java",
+      "Python",
+      "C#",
+      "C/C++",
+      "HTML",
+      "CSS",
+      "SQL",
+      "Bash",
+      "MATLAB",
+      "LaTeX",
+      "Haskell",
+    ],
   },
   {
     title: "Web",
@@ -54,7 +68,21 @@ export const technicalSkillGroups = [
   },
   {
     title: "Tools",
-    skills: ["Git/GitHub", "VS Code", "Unity", "Vercel", "ESLint", "Prettier", "Figma", "Jira", "Confluence", "Claude Code", "Codex", "GitHub Copilot", "GitLens"],
+    skills: [
+      "Git/GitHub",
+      "VS Code",
+      "Unity",
+      "Vercel",
+      "ESLint",
+      "Prettier",
+      "Figma",
+      "Jira",
+      "Confluence",
+      "Claude Code",
+      "Codex",
+      "GitHub Copilot",
+      "GitLens",
+    ],
   },
 ];
 
@@ -62,7 +90,7 @@ export const resumeProjects = [
   {
     title: "Personal Portfolio Website",
     details:
-      "Built a modern, data-driven portfolio with Next.js, TypeScript, Tailwind CSS v4, GSAP scroll animation, metadata, sitemap, robots, and security headers.",
+      "Built a modern portfolio with Next.js, TypeScript, Tailwind CSS v4, GSAP scroll animation, metadata, sitemap, robots, structured content files, and security headers.",
   },
   {
     title: "FRC Robotics Software",
@@ -72,7 +100,7 @@ export const resumeProjects = [
   {
     title: "Iron Bears Team Website",
     details:
-      "Public website for FRC Team 854 built with Next.js, TypeScript, and Tailwind CSS, covering frontend architecture, content organization, and responsive design for a technical team.",
+      "Public website for FRC Team 854 built with Next.js, TypeScript, and Tailwind CSS, giving the team a modern presence for outreach, sponsors, recruitment, and competition information.",
   },
   {
     title: "Unity Games: Lightning Air Combat and CRESCENDO Simulator",
@@ -140,7 +168,7 @@ export const resumeExperience = [
     period: "Recent",
     details: [
       "Supported public-facing technical work for the robotics team, including modern web tooling and deployment workflows.",
-      "Contributed to a professional team presence using Next.js, TypeScript, Tailwind CSS, and Vercel-style deployment practices.",
+      "Contributed Next.js, TypeScript, Tailwind CSS, and Vercel-style deployment work for a public team website.",
     ],
   },
 ];

@@ -112,7 +112,10 @@ export const roboticsExperiences: RoboticsExperience[] = [
       "Taught programming concepts, command-based architecture, and software design principles to team members.",
       "Mentored students in debugging, thorough testing, and using AdvantageScope for robot code analysis and performance tuning.",
     ],
-    achievements: ["Won the 2026 McMaster University FRC Event", "Qualified for the 2026 Ontario District Championship"],
+    achievements: [
+      "Won the 2026 McMaster University FRC Event",
+      "Qualified for the 2026 Ontario District Championship",
+    ],
     image: "/images/robotics/9062-2026.jpeg",
     imageAlt: "Team 9062 robot from the 2026 REBUILT season",
     gameLogo: "/images/robotics/REBUILT.png",

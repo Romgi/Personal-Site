@@ -27,10 +27,11 @@ export const projects: Project[] = [
     shortDescription:
       "A production-ready Next.js portfolio for projects, robotics, music, and resume information.",
     longDescription:
-      "A data-driven portfolio built with the App Router, TypeScript, Tailwind CSS v4, GSAP scroll animation, strong metadata, and security headers. The structure is designed so content can be updated from clear TypeScript data files instead of scattered component markup.",
+      "A production-ready portfolio built with the App Router, TypeScript, Tailwind CSS v4, GSAP scroll animation, strong metadata, sitemap and robots routes, and security headers. The site presents software, FRC robotics, music, and contact information through responsive, accessible pages.",
     techStack: ["Next.js", "TypeScript", "Tailwind CSS", "GSAP", "Vercel"],
     image: "/images/projects/personal-site.png",
-    imageAlt: "Abstract blue software workspace placeholder",
+    imageAlt:
+      "Screenshot of the Jonathan Graydon portfolio home page with navigation and hero content",
     liveDemoUrl: safeHref("/"),
     githubUrl: safeHref("https://github.com/Romgi/Personal-Site"),
     status: "In Progress",
@@ -43,7 +44,7 @@ export const projects: Project[] = [
     shortDescription:
       "Command-based robot software for FRC Team 854 and Team 9062 with drivetrain, mechanism, autonomous, and competition-readiness work.",
     longDescription:
-      "FRC robot code for Team 854 Iron Bears as Software Lead, and Team 9062 Critical Circuits as a Software Mentor. This entry is structured for season-specific subsystem notes, command architecture, controls tuning, autonomous strategy, debugging, and field-tested lessons.",
+      "FRC robot software for Team 854 Iron Bears as Software Lead and Team 9062 Critical Circuits as a Software Mentor. Work spans command architecture, subsystem programming, controls tuning, autonomous strategy, debugging, and field-tested reliability improvements.",
     techStack: [
       "Java",
       "WPILib",
@@ -51,10 +52,10 @@ export const projects: Project[] = [
       "REVLib",
       "PathPlanner",
       "GitHub",
-      "AdvantageScope"
+      "AdvantageScope",
     ],
     image: "/images/robotics/9062REBUILT.png",
-    imageAlt: "9062 rebuilt FRC robot",
+    imageAlt: "Team 9062 REBUILT robot project image",
     githubLinks: [
       {
         label: "Team 854 GitHub",
@@ -75,10 +76,10 @@ export const projects: Project[] = [
     shortDescription:
       "A modern public website for FRC Team 854 built with a production web stack.",
     longDescription:
-      "A team-facing web project for the Iron Bears robotics program using Next.js, TypeScript, Tailwind CSS, and Vercel-style deployment. This project demonstrates frontend architecture, content organization, responsive design, and public communication for a technical team.",
+      "A public website for the Iron Bears robotics program using Next.js, TypeScript, Tailwind CSS, and Vercel-style deployment. The site gives the team a modern web presence for outreach, recruitment, sponsors, competition information, and technical communication.",
     techStack: ["Next.js", "TypeScript", "Tailwind CSS", "Vercel"],
     image: "/images/projects/iron-bears-site.png",
-    imageAlt: "Abstract project interface placeholder",
+    imageAlt: "Screenshot of the Iron Bears Team 854 website home page",
     liveDemoUrl: safeHref("https://www.ironbears.ca/"),
     status: "Completed",
     featured: false,
@@ -90,10 +91,11 @@ export const projects: Project[] = [
     shortDescription:
       "A collection of programming coursework and practice projects from Computer Science at McMaster University.",
     longDescription:
-      "Coursework-oriented programming repositories covering foundations in problem solving, algorithms, data structures, Java, Python, and software design habits. This entry will be updated with more coursework and practice projects as they are completed.",
+      "Coursework-oriented programming repositories covering problem solving, algorithms, data structures, Java, Python, recursion, object-oriented programming, and software design habits from McMaster Computer Science.",
     techStack: ["Python", "Java", "Algorithms", "Data Structures"],
     image: "/images/projects/mcmaster.jpg",
-    imageAlt: "Abstract data and algorithm visualization placeholder",
+    imageAlt:
+      "McMaster University logo for Computer Science coursework projects",
     githubUrl: safeHref("https://github.com/Romgi/COMPSCI-YEAR-1"),
     status: "In Progress",
     featured: true,
@@ -128,10 +130,10 @@ export const projects: Project[] = [
     shortDescription:
       "FRC drivetrain and autonomous templates focused on swerve control and path planning.",
     longDescription:
-      "A robotics-focused project area for testing swerve drive concepts, autonomous route following, PathPlanner integration, and control behavior before committing ideas to a competition robot.",
+      "A robotics-focused repository for testing swerve drive concepts, autonomous route following, PathPlanner integration, and control behavior before committing ideas to a competition robot.",
     techStack: ["Java", "WPILib", "PathPlanner", "Swerve Drive"],
     image: "/images/projects/pathplanner.png",
-    imageAlt: "9062 rebuilt FRC robot used as a robotics project placeholder",
+    imageAlt: "PathPlanner interface showing an example FRC autonomous path",
     githubUrl: safeHref("https://github.com/Romgi/SwerveWithPathPlanner"),
     status: "Completed",
     featured: false,
@@ -188,7 +190,7 @@ export const projects: Project[] = [
     shortDescription:
       "A web application to assist with concert planning and sheet music management.",
     longDescription:
-      "A web application to assist with concert planning and sheet music management. Designed in a developer team as a final project for Compsci 1XD3 at McMaster University.",
+      "A web application to assist with concert planning and sheet music management. Built with a developer team as a final project for Compsci 1XD3 at McMaster University.",
     techStack: ["HTML", "CSS", "JavaScript"],
     image: "/images/projects/concert-helper.png",
     imageAlt: "Screenshot of the Concert Helper web application",

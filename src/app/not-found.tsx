@@ -18,8 +18,8 @@ export default function NotFound() {
             Page not found
           </h1>
           <p className="mt-4 leading-7 text-slate-300">
-            The page may have moved, or the placeholder link has not been filled
-            in yet.
+            The page may have moved, or the address may not match a current
+            portfolio route.
           </p>
           <Link
             href="/"

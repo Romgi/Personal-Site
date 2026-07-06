@@ -1,7 +1,7 @@
 import { ArrowUpRight, Code2, Download, Lock } from "lucide-react";
 
 import { ButtonLink } from "@/components/ui/ButtonLink";
-import { PlaceholderImage } from "@/components/ui/PlaceholderImage";
+import { PortfolioImage } from "@/components/ui/PortfolioImage";
 import { SkillBadge } from "@/components/ui/SkillBadge";
 import type { Project } from "@/data/projects";
 
@@ -23,7 +23,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
       data-tilt
       className="liquid-glass-surface glass-card group flex h-full flex-col overflow-hidden rounded-lg border border-white/10"
     >
-      <PlaceholderImage
+      <PortfolioImage
         src={project.image}
         alt={project.imageAlt}
         className="rounded-none border-x-0 border-t-0"
@@ -108,7 +108,9 @@ export function ProjectCard({ project }: ProjectCardProps) {
             </ButtonLink>
           ) : null}
           {!project.private && !hasPublicLinks ? (
-            <span className="text-sm text-slate-500">Links ready to add</span>
+            <span className="text-sm text-slate-500">
+              Public links unavailable
+            </span>
           ) : null}
         </div>
       </div>

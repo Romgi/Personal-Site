@@ -66,10 +66,9 @@ export const profile = {
       },
     ],
   },
-  resumePath: safeHref("/resume.pdf"),
   profileImage: {
-    src: "/images/music/hero-stage.png",
-    alt: "Jonathan Graydon performing trumpet on stage with a concert band",
+    src: "/images/background.jpg",
+    alt: "Abstract blue geometric background for Jonathan Graydon's portfolio",
   },
   about: {
     short:
@@ -85,7 +84,7 @@ export const profile = {
     {
       title: "Computer Science",
       description:
-        "Software engineering, web development, and programming experience in Java, TypeScript, React, Next.js, Python, and many more.",
+        "Software engineering, web development, and programming experience across Java, TypeScript, React, Next.js, Python, C#, C/C++, SQL, and modern tooling.",
       href: safeHref("/projects"),
       metric: "CS",
     },
@@ -99,7 +98,7 @@ export const profile = {
     {
       title: "Trumpet / Music",
       description:
-        "Trumpet repertoire, ensemble performance, and musical accomplishments in a structured portfolio",
+        "Trumpet repertoire, ensemble performance, honour band work, jazz lead trumpet, and music awards.",
       href: safeHref("/music"),
       metric: "Music",
     },

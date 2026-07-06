@@ -7,7 +7,7 @@ import { AnimatedSection } from "@/components/ui/AnimatedSection";
 import { ButtonLink } from "@/components/ui/ButtonLink";
 import { Container } from "@/components/ui/Container";
 import { PageHero } from "@/components/ui/PageHero";
-import { PlaceholderImage } from "@/components/ui/PlaceholderImage";
+import { PortfolioImage } from "@/components/ui/PortfolioImage";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { SkillBadge } from "@/components/ui/SkillBadge";
 import { featuredProjects, projects, projectTags } from "@/data/projects";
@@ -34,7 +34,7 @@ export default function ProjectsPage() {
       <PageHero
         eyebrow="Computer Science Projects"
         title="Software work organized for technical notes, media, and accomplishments."
-        description="Each project is driven by structured data with room for screenshots, technical decisions, links, status, tags, and future write-ups."
+        description="A practical collection of web applications, robotics software, coursework repositories, game projects, and tools built with modern development workflows."
       >
         <div className="grid gap-3 sm:grid-cols-3">
           <div className="liquid-glass-surface glass-card rounded-lg border border-white/10 p-4">
@@ -87,7 +87,7 @@ export default function ProjectsPage() {
             <SectionHeading
               eyebrow="Filter by tag"
               title="All Projects"
-              description="This section is for showcasing my software projects with technical notes and media. Each card has a description, bullets, and badges for technologies."
+              description="Browse the full project set by technology area, from frontend and backend work to FRC controls, Unity simulation, and command-line tools."
             />
             <div className="mt-10">
               <ProjectsExplorer projects={projects} tags={projectTags} />
@@ -115,7 +115,7 @@ export default function ProjectsPage() {
               </div>
             </AnimatedSection>
             <AnimatedSection>
-              <PlaceholderImage
+              <PortfolioImage
                 src={roboticsOverview.image}
                 alt={roboticsOverview.imageAlt}
                 aspect="aspect-[4/3]"
@@ -177,7 +177,7 @@ export default function ProjectsPage() {
                       data-robotics-hud-label
                       className="mt-2 font-mono text-[11px] font-medium uppercase tracking-[0.22em] text-blue-200"
                     >
-                      {firstExperience.teamName} · {firstExperience.role}
+                      {firstExperience.teamName} - {firstExperience.role}
                     </p>
                   </div>
                 </div>
@@ -189,7 +189,7 @@ export default function ProjectsPage() {
                     <article
                       data-robotics-entry
                       data-hud-year={experience.year}
-                      data-hud-label={`${experience.teamName} · ${experience.role}`}
+                      data-hud-label={`${experience.teamName} - ${experience.role}`}
                       className="liquid-glass-surface glass-card overflow-hidden rounded-lg border border-white/10"
                     >
                       <div className="relative aspect-[3/2]">
@@ -205,7 +205,7 @@ export default function ProjectsPage() {
                           className="absolute inset-0 bg-[linear-gradient(180deg,transparent_55%,rgba(16,18,21,0.6)_100%)]"
                         />
                         <span className="absolute left-4 top-4 rounded-md border border-blue-300/25 bg-slate-950/60 px-2.5 py-1 font-mono text-[11px] font-medium tracking-wide text-blue-100 backdrop-blur">
-                          {experience.year} · {experience.seasonName}
+                          {experience.year} - {experience.seasonName}
                         </span>
                       </div>
                       <div className="p-5 sm:p-6">

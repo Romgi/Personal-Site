@@ -117,12 +117,9 @@ export default function RootLayout({
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body className="flex min-h-full flex-col">
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify(personJsonLd).replace(/</g, "\\u003c"),
-          }}
-        />
+        <script type="application/ld+json">
+          {JSON.stringify(personJsonLd).replace(/</g, "\\u003c")}
+        </script>
         <ScrollProgress />
         <PointerEffects />
         <Navbar />

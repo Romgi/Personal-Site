@@ -26,6 +26,7 @@ export function Navbar() {
   const pathname = usePathname();
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const isMusicPage = isActive(pathname, "/music");
 
   useGSAP(() => {
     const trigger = ScrollTrigger.create({
@@ -48,6 +49,7 @@ export function Navbar() {
       <div
         className={cn(
           "liquid-glass-nav mx-auto rounded-lg border px-4 transition-[max-width] duration-500 ease-out",
+          isMusicPage && "liquid-glass-nav--music",
           isScrolled ? "liquid-glass-nav--scrolled max-w-5xl" : "max-w-7xl",
         )}
       >
@@ -60,10 +62,22 @@ export function Navbar() {
           <Link
             href="/"
             data-magnetic
-            className="group flex items-center gap-3 rounded-md focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-blue-300"
+            className={cn(
+              "group flex items-center gap-3 rounded-md focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4",
+              isMusicPage
+                ? "focus-visible:outline-amber-700"
+                : "focus-visible:outline-blue-300",
+            )}
             aria-label="Jonathan Graydon home"
           >
-            <span className="flex size-9 items-center justify-center overflow-hidden rounded-md border border-blue-200/25 bg-white/[0.08] shadow-[inset_0_1px_0_rgba(255,255,255,0.18)] transition group-hover:border-blue-300/50 group-hover:bg-blue-500/15">
+            <span
+              className={cn(
+                "flex size-9 items-center justify-center overflow-hidden rounded-md border shadow-[inset_0_1px_0_rgba(255,255,255,0.18)] transition",
+                isMusicPage
+                  ? "border-amber-900/20 bg-white/50 group-hover:border-amber-700/40 group-hover:bg-amber-100/60"
+                  : "border-blue-200/25 bg-white/[0.08] group-hover:border-blue-300/50 group-hover:bg-blue-500/15",
+              )}
+            >
               <Image
                 src="/images/JGLogo.png"
                 alt=""
@@ -73,7 +87,12 @@ export function Navbar() {
                 preload
               />
             </span>
-            <span className="hidden text-sm font-semibold tracking-tight text-white sm:block">
+            <span
+              className={cn(
+                "hidden text-sm font-semibold tracking-tight sm:block",
+                isMusicPage ? "text-[#302316]" : "text-white",
+              )}
+            >
               {profile.name}
             </span>
           </Link>
@@ -89,16 +108,30 @@ export function Navbar() {
                       href={item.href}
                       onClick={() => setIsOpen(false)}
                       className={cn(
-                        "relative rounded-md px-3 py-2 text-sm font-medium transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-blue-300",
+                        "relative rounded-md px-3 py-2 text-sm font-medium transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4",
+                        isMusicPage
+                          ? "focus-visible:outline-amber-700"
+                          : "focus-visible:outline-blue-300",
                         active
-                          ? "text-white"
-                          : "text-slate-400 hover:bg-white/[0.05] hover:text-white",
+                          ? isMusicPage
+                            ? "text-[#302316]"
+                            : "text-white"
+                          : isMusicPage
+                            ? "text-[#705c48] hover:bg-amber-900/[0.06] hover:text-[#302316]"
+                            : "text-slate-400 hover:bg-white/[0.05] hover:text-white",
                       )}
                       aria-current={active ? "page" : undefined}
                     >
                       {item.label}
                       {active ? (
-                        <span className="absolute inset-x-3 -bottom-px h-px bg-gradient-to-r from-transparent via-blue-400 to-transparent" />
+                        <span
+                          className={cn(
+                            "absolute inset-x-3 -bottom-px h-px",
+                            isMusicPage
+                              ? "bg-amber-700/70"
+                              : "bg-gradient-to-r from-transparent via-blue-400 to-transparent",
+                          )}
+                        />
                       ) : null}
                     </Link>
                   </li>
@@ -109,7 +142,12 @@ export function Navbar() {
 
           <button
             type="button"
-            className="inline-flex size-10 items-center justify-center rounded-md border border-white/15 bg-white/[0.04] text-slate-200 transition hover:border-blue-300/40 hover:bg-blue-500/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-blue-300 md:hidden"
+            className={cn(
+              "inline-flex size-10 items-center justify-center rounded-md border transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 md:hidden",
+              isMusicPage
+                ? "border-amber-900/20 bg-white/50 text-[#302316] hover:border-amber-700/40 hover:bg-amber-100/60 focus-visible:outline-amber-700"
+                : "border-white/15 bg-white/[0.04] text-slate-200 hover:border-blue-300/40 hover:bg-blue-500/10 focus-visible:outline-blue-300",
+            )}
             aria-label={
               isOpen ? "Close navigation menu" : "Open navigation menu"
             }
@@ -137,7 +175,12 @@ export function Navbar() {
             className="overflow-hidden"
             hidden={!isOpen}
           >
-            <ul className="border-t border-white/10 py-3">
+            <ul
+              className={cn(
+                "border-t py-3",
+                isMusicPage ? "border-amber-900/15" : "border-white/10",
+              )}
+            >
               {navItems.map((item) => {
                 const active = isActive(pathname, item.href);
 
@@ -147,10 +190,17 @@ export function Navbar() {
                       href={item.href}
                       onClick={() => setIsOpen(false)}
                       className={cn(
-                        "block rounded-md px-3 py-3 text-sm font-medium transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-blue-300",
+                        "block rounded-md px-3 py-3 text-sm font-medium transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4",
+                        isMusicPage
+                          ? "focus-visible:outline-amber-700"
+                          : "focus-visible:outline-blue-300",
                         active
-                          ? "bg-blue-600/20 text-white"
-                          : "text-slate-400 hover:bg-white/[0.05] hover:text-white",
+                          ? isMusicPage
+                            ? "bg-amber-900/[0.08] text-[#302316]"
+                            : "bg-blue-600/20 text-white"
+                          : isMusicPage
+                            ? "text-[#705c48] hover:bg-amber-900/[0.06] hover:text-[#302316]"
+                            : "text-slate-400 hover:bg-white/[0.05] hover:text-white",
                       )}
                       aria-current={active ? "page" : undefined}
                     >

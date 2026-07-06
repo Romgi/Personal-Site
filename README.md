@@ -1,6 +1,6 @@
 # Jonathan Graydon Portfolio
 
-Production-ready personal portfolio for Jonathan Graydon, built for Vercel with Next.js App Router, TypeScript, Tailwind CSS v4, Motion for React, ESLint, and Prettier.
+Production-ready personal portfolio for Jonathan Graydon, built for Vercel with Next.js App Router, TypeScript, Tailwind CSS v4, GSAP scroll animations, ESLint, and Prettier.
 
 ## Run locally
 
@@ -25,30 +25,26 @@ Most editable information lives in:
 
 - `src/data/profile.ts` for name, tagline, contact info, navigation, and home highlights.
 - `src/data/projects.ts` for project cards, tags, links, status, and featured projects.
-- `src/data/robotics.ts` for FRC roles, skills, timeline entries, robot projects, gallery, and highlights.
+- `src/data/robotics.ts` for the FRC robotics section on the projects page, skills, timeline entries, robot projects, gallery, and highlights.
 - `src/data/music.ts` for trumpet repertoire, accomplishments, ensembles, and music gallery.
-- `src/data/resume.ts` for education, skills, resume projects, experience, awards, and placeholders.
+- `src/data/resume.ts` for education, skills, resume projects, experience, and awards.
 
 Links in data files are validated through `src/lib/links.ts` so unsafe protocols fail early.
 
-## Replace placeholder images
+## Update images
 
-Placeholder assets are in:
+Current site images are stored in:
 
-- `public/images/profile-placeholder.jpg`
-- `public/images/projects/placeholder-1.jpg`
-- `public/images/robotics/placeholder-1.jpg`
-- `public/images/music/placeholder-1.jpg`
+- `public/images/background.jpg`
+- `public/images/projects/`
+- `public/images/robotics/`
+- `public/images/music/`
 
-Replace those files with real images using the same paths, or update the image paths in the data files.
+Update image paths and alt text in the corresponding files in `src/data/`.
 
-## Resume PDF
+## Resume
 
-The resume download button points to `/resume.pdf`. My resume is currently not attached but will be added later at:
-
-```txt
-public/resume.pdf
-```
+The deployed resume page is rendered from `src/data/resume.ts`. The primary resume action uses email so the deployment does not depend on a missing PDF file.
 
 ## Deploy to Vercel
 
