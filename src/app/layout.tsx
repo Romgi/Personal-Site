@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import type { Viewport } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import { Analytics } from "@vercel/analytics/next";
 
 import { Footer } from "@/components/layout/Footer";
 import { Navbar } from "@/components/layout/Navbar";
@@ -128,6 +129,7 @@ export default function RootLayout({
           <GsapScrollEffects>{children}</GsapScrollEffects>
         </main>
         <Footer />
+        <Analytics />
       </body>
     </html>
   );
