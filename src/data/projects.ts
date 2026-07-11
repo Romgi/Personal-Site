@@ -22,6 +22,31 @@ export type Project = {
 
 export const projects: Project[] = [
   {
+    id: "RouteLab",
+    title: "RouteLab",
+    shortDescription:
+      "An interactive pathfinding studio for visualizing, inspecting, and comparing graph-search algorithms.",
+    longDescription:
+      "RouteLab transforms real graph-search executions into deterministic, interactive timelines. Users can play, pause, step, rewind, and scrub through each algorithm while inspecting nodes, frontier states, paths, and performance metrics. The application supports seven pathfinding algorithms, customizable graphs, multiple cost models, synchronized algorithm comparisons, and Dijkstra reference implementations in six programming languages.",
+    techStack: [
+      "Next.js",
+      "React",
+      "TypeScript",
+      "Tailwind CSS",
+      "Zod",
+      "Vite",
+      "Cloudflare Workers",
+    ],
+    image: "/images/projects/routelab.png",
+    imageAlt:
+      "RouteLab interface visualizing a pathfinding algorithm across a weighted graph",
+    liveDemoUrl: safeHref("https://routelab-algorithm-studio.jonathangraydon22.chatgpt.site"),
+    githubUrl: safeHref("https://github.com/Romgi/RouteLab"),
+    status: "In Progress",
+    featured: true,
+    tags: ["Web", "Algorithms", "Data Visualization", "Pathfinding"],
+  },
+  {
     id: "personal-portfolio",
     title: "Personal Portfolio Website",
     shortDescription:
@@ -32,7 +57,7 @@ export const projects: Project[] = [
     image: "/images/projects/personal-site.png",
     imageAlt:
       "Screenshot of the Jonathan Graydon portfolio home page with navigation and hero content",
-    liveDemoUrl: safeHref("/"),
+    liveDemoUrl: safeHref("https://jonathangraydon.com/"),
     githubUrl: safeHref("https://github.com/Romgi/Personal-Site"),
     status: "In Progress",
     featured: true,
@@ -98,7 +123,7 @@ export const projects: Project[] = [
       "McMaster University logo for Computer Science coursework projects",
     githubUrl: safeHref("https://github.com/Romgi/COMPSCI-YEAR-1"),
     status: "In Progress",
-    featured: true,
+    featured: false,
     tags: ["Algorithms", "Coursework", "OOP", "Linux"],
   },
   {
