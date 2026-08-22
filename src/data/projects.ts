@@ -187,7 +187,7 @@ export const projects: Project[] = [
     shortDescription:
       "A web application to assign jobs and act as an information hub for a golf course maintenance team.",
     longDescription:
-      "A web application to assign jobs and act as an information hub for a golf course maintenance team.",
+      "A web application to assign jobs and act as an information hub for a golf course maintenance team. Currently used by Port Carling Golf and Country Club to manage daily tasks, track progress, and communicate with team members. Built with Next.js, React, TypeScript, Tailwind CSS, Prisma, SQLite, Zod, JOSE, bcryptjs, and Lucide React.",
     techStack: [
       "Next.js",
       "React",
@@ -206,7 +206,7 @@ export const projects: Project[] = [
     imageAlt: "Screenshot of the PC Turf web application",
     private: true,
     status: "In Progress",
-    featured: false,
+    featured: true,
     tags: ["Web", "Frontend", "Backend", "Project Management"],
   },
   {
