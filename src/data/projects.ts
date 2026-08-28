@@ -40,7 +40,9 @@ export const projects: Project[] = [
     image: "/images/projects/routelab.png",
     imageAlt:
       "RouteLab interface visualizing a pathfinding algorithm across a weighted graph",
-    liveDemoUrl: safeHref("https://routelab-algorithm-studio.jonathangraydon22.chatgpt.site"),
+    liveDemoUrl: safeHref(
+      "https://routelab-algorithm-studio.jonathangraydon22.chatgpt.site",
+    ),
     githubUrl: safeHref("https://github.com/Romgi/RouteLab"),
     status: "In Progress",
     featured: true,
@@ -204,7 +206,7 @@ export const projects: Project[] = [
     ],
     image: "/images/projects/pc-turf.png",
     imageAlt: "Screenshot of the PC Turf web application",
-    private: true,
+    githubUrl: safeHref("https://github.com/Romgi/PCTurf"),
     status: "In Progress",
     featured: true,
     tags: ["Web", "Frontend", "Backend", "Project Management"],
