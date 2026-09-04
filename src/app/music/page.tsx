@@ -51,7 +51,7 @@ export default function MusicPage() {
                 title="A serious performance profile alongside the technical portfolio."
                 description="This page highlights Jonathan's trumpet repertoire, honour band experience, ensemble leadership, festival awards, and ongoing university performance work."
               />
-              <div className="music-media-card mt-8 rounded-lg border p-5">
+              <div className="liquid-glass-surface music-media-card mt-8 rounded-lg border p-5">
                 <p className="text-sm font-semibold text-white">
                   Bugler&apos;s Holiday with McMaster Concert Band
                 </p>
