@@ -24,7 +24,7 @@ export function PortfolioImage({
   return (
     <div
       className={cn(
-        "liquid-glass-surface relative overflow-hidden rounded-lg border border-blue-300/10",
+        "glass-media-frame relative overflow-hidden rounded-lg border border-blue-300/10",
         aspect,
         className,
       )}

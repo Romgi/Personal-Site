@@ -110,7 +110,7 @@ summary::-webkit-details-marker {
  * pointer-tracked sheen (--mx/--my set by PointerEffects). The first
  * backdrop-filter declaration is the cross-browser fallback; browsers that
  * support SVG backdrop filters use the second declaration to physically
- * displace the already softened pixels with #liquid-glass-refraction.
+ * displace the gently softened pixels with an edge-weighted lens map.
  * ------------------------------------------------------------------------- */
 
 .liquid-glass-filter-defs {
@@ -127,9 +127,16 @@ summary::-webkit-details-marker {
   --my: 50%;
   --glass-active: 0;
   --glass-blur: 11px;
+  --glass-optical-blur: 3px;
   --glass-saturation: 185%;
   --glass-contrast: 1.05;
   --glass-brightness: 1.06;
+  --glass-refraction-filter: url("#liquid-glass-surface-refraction");
+  --glass-rim-light: rgba(255, 255, 255, 0.18);
+  --glass-rim-shadow: rgba(2, 6, 23, 0.28);
+  --glass-edge-caustic: rgba(77, 124, 255, 0.1);
+  --glass-sheen-core: rgba(148, 190, 255, 0.14);
+  --glass-sheen-mid: rgba(77, 124, 255, 0.05);
   position: relative;
   isolation: isolate;
   overflow: hidden;
@@ -138,16 +145,18 @@ summary::-webkit-details-marker {
     brightness(var(--glass-brightness));
   backdrop-filter: blur(var(--glass-blur)) saturate(var(--glass-saturation))
     contrast(var(--glass-contrast)) brightness(var(--glass-brightness));
-  backdrop-filter: blur(var(--glass-blur)) saturate(var(--glass-saturation))
-    contrast(var(--glass-contrast)) brightness(var(--glass-brightness))
-    url("#liquid-glass-refraction");
+  backdrop-filter: blur(var(--glass-optical-blur))
+    saturate(var(--glass-saturation)) contrast(var(--glass-contrast))
+    brightness(var(--glass-brightness)) var(--glass-refraction-filter);
 }
 
 .liquid-glass-nav {
   --glass-blur: 14px;
+  --glass-optical-blur: 3px;
   --glass-saturation: 190%;
   --glass-contrast: 1.08;
   --glass-brightness: 1.08;
+  --glass-refraction-filter: url("#liquid-glass-nav-refraction");
   border-color: rgba(203, 213, 225, 0.16);
   background:
     linear-gradient(
@@ -188,6 +197,11 @@ summary::-webkit-details-marker {
   --glass-saturation: 160%;
   --glass-contrast: 1.03;
   --glass-brightness: 1.06;
+  --glass-rim-light: rgba(255, 255, 255, 0.58);
+  --glass-rim-shadow: rgba(97, 64, 25, 0.18);
+  --glass-edge-caustic: rgba(185, 130, 34, 0.14);
+  --glass-sheen-core: rgba(255, 246, 223, 0.24);
+  --glass-sheen-mid: rgba(185, 130, 34, 0.08);
   border-color: rgba(123, 78, 24, 0.18);
   background: rgba(255, 251, 243, 0.3);
   box-shadow:
@@ -217,18 +231,26 @@ summary::-webkit-details-marker {
     0 22px 70px rgba(0, 0, 0, 0.2);
 }
 
-.liquid-glass-nav > *,
-.liquid-glass-surface > * {
-  position: relative;
-  z-index: 1;
+.glass-media-frame {
+  background: rgba(8, 12, 22, 0.2);
+  box-shadow: 0 22px 70px rgba(0, 0, 0, 0.2);
 }
 
-.liquid-glass-nav::before {
+.liquid-glass-nav::before,
+.liquid-glass-surface::before {
   pointer-events: none;
   content: "";
   position: absolute;
   inset: 0;
-  z-index: 0;
+  z-index: -1;
+  border-radius: inherit;
+  box-shadow:
+    inset 1px 1px 0 var(--glass-rim-light),
+    inset -1px -1px 0 var(--glass-rim-shadow),
+    inset 0 -10px 24px var(--glass-edge-caustic);
+}
+
+.liquid-glass-nav::before {
   background:
     radial-gradient(
       120% 60% at 18% 0%,
@@ -244,33 +266,57 @@ summary::-webkit-details-marker {
       180deg,
       rgba(255, 255, 255, 0.03),
       transparent 40%,
-      rgba(26, 29, 35, 0.08)
+      var(--glass-edge-caustic)
     );
 }
 
-/* Pointer-tracked specular sheen. Sits under content, above the tint. */
-.liquid-glass-nav::after {
+.liquid-glass-surface::before {
+  background:
+    radial-gradient(
+      100% 55% at 10% 0%,
+      rgba(255, 255, 255, 0.055),
+      transparent 45%
+    ),
+    linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.025),
+      transparent 28% 72%,
+      var(--glass-edge-caustic)
+    );
+}
+
+/* Pointer-tracked specular sheen, kept behind foreground content. */
+.liquid-glass-nav::after,
+.liquid-glass-surface::after {
   pointer-events: none;
   content: "";
   position: absolute;
   inset: 0;
-  z-index: 0;
+  z-index: -1;
+  border-radius: inherit;
   opacity: var(--glass-active);
   transition: opacity 0.4s ease;
   background: radial-gradient(
     16rem circle at var(--mx) var(--my),
-    rgba(148, 190, 255, 0.11),
-    rgba(77, 124, 255, 0.04) 42%,
+    var(--glass-sheen-core),
+    var(--glass-sheen-mid) 42%,
     transparent 68%
   );
 }
 
 .liquid-glass-nav--music::before {
-  background: rgba(255, 255, 255, 0.12);
-}
-
-.liquid-glass-nav--music::after {
-  display: none;
+  background:
+    radial-gradient(
+      110% 70% at 16% 0%,
+      rgba(255, 255, 255, 0.2),
+      transparent 46%
+    ),
+    linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.12),
+      transparent 44%,
+      var(--glass-edge-caustic)
+    );
 }
 
 /* Interactive glass cards: lift + sharpened edge on hover. */
@@ -440,6 +486,11 @@ summary::-webkit-details-marker {
   --glass-saturation: 150%;
   --glass-contrast: 1.02;
   --glass-brightness: 1.05;
+  --glass-rim-light: rgba(255, 255, 255, 0.56);
+  --glass-rim-shadow: rgba(97, 64, 25, 0.16);
+  --glass-edge-caustic: rgba(185, 130, 34, 0.13);
+  --glass-sheen-core: rgba(255, 246, 223, 0.22);
+  --glass-sheen-mid: rgba(185, 130, 34, 0.07);
   border-color: rgba(123, 78, 24, 0.16);
   background: rgba(255, 251, 243, 0.24);
   box-shadow:
