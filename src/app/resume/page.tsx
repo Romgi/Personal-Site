@@ -45,17 +45,6 @@ const contactCards = [
   })),
 ];
 
-const resumeSections = [
-  { id: "contact", title: "Contact" },
-  { id: "education", title: "Education" },
-  { id: "technical-skills", title: "Technical skills" },
-  { id: "work-experience", title: "Work experience" },
-  { id: "projects", title: "Projects" },
-  { id: "robotics-experience", title: "Robotics experience" },
-  { id: "music-experience", title: "Music experience" },
-  { id: "awards-accomplishments", title: "Awards and accomplishments" },
-];
-
 export default function ResumePage() {
   return (
     <div className="resume-page">
@@ -78,21 +67,13 @@ export default function ResumePage() {
           </ButtonLink>
         </div>
       </PageHero>
-      <nav className="resume-index" aria-label="Resume sections">
-        {resumeSections.map(({ id, title }) => (
-          <a key={id} href={`#${id}`}>
-            {title}
-          </a>
-        ))}
-      </nav>
-
       <section
         id="contact"
         aria-label="Contact Jonathan Graydon"
-        className="scroll-mt-40 py-20 sm:py-24"
+        className="scroll-mt-24 py-20 sm:py-24"
       >
         <Container>
-          <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-3">
+          <div className="grid grid-cols-1 gap-5 md:grid-cols-2 xl:grid-cols-3">
             {contactCards.map((contact) => (
               <AnimatedSection key={contact.href}>
                 <ContactCard

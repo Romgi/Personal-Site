@@ -56,9 +56,15 @@ type RefractionFilterProps = {
   id: string;
   edgeMap: string;
   edgeScale: number;
+  noiseScale?: number;
 };
 
-function RefractionFilter({ id, edgeMap, edgeScale }: RefractionFilterProps) {
+function RefractionFilter({
+  id,
+  edgeMap,
+  edgeScale,
+  noiseScale = 7,
+}: RefractionFilterProps) {
   return (
     <filter
       id={id}
@@ -95,7 +101,7 @@ function RefractionFilter({ id, edgeMap, edgeScale }: RefractionFilterProps) {
       <feDisplacementMap
         in="SourceGraphic"
         in2="warpNoise"
-        scale={7}
+        scale={noiseScale}
         xChannelSelector="R"
         yChannelSelector="G"
         result="wavyBackdrop"
@@ -153,7 +159,8 @@ export function LiquidGlassFilters() {
         <RefractionFilter
           id="liquid-glass-nav-refraction"
           edgeMap={navEdgeMap}
-          edgeScale={-44}
+          edgeScale={-20}
+          noiseScale={3}
         />
       </defs>
     </svg>

@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-09-05T23:07:40.819415+00:00",
+  "generatedAt": "2026-09-05T23:32:29.057153+00:00",
   "title": "Design System: Jonathan Graydon Portfolio",
   "extensions": {
     "colorMeta": {
@@ -237,8 +237,8 @@
       },
       {
         "name": "navigation-edge",
-        "value": "inset 0 1px 0 #eef4ff25",
-        "purpose": "Fixed navigation upper edge."
+        "value": "inset 0 1px 0 rgba(255,255,255,.22), inset 0 0 0 1px rgba(255,255,255,.045), inset 0 -1px 0 rgba(147,197,253,.08), 0 18px 56px rgba(0,0,0,.22)",
+        "purpose": "Fixed navigation upper, perimeter and lower inset highlights with a diffuse drop shadow."
       }
     ],
     "motion": [
@@ -369,9 +369,9 @@
     {
       "name": "Primary Navigation",
       "kind": "nav",
-      "description": "Condensed route navigation with current-page underline; snippet shows desktop link states, not the SVG filter implementation.",
+      "description": "Fixed route navigation with a layered highlight over a 0.24-opacity black tint, inset highlights and a diffuse shadow. Supporting engines use a PNG normal map derived from the bar dimensions and rounded corners with a 16px rim, regenerated only on resize; the initial SVG map remains the fallback. Edge displacement is -20, warp noise 3, optical blur 0.45px, saturation 155%, contrast 1.04 and brightness 1.08, with unchanged fine grain. WebKit/Gecko retain 14px frosted blur. The snippet shows the layered material and frosted fallback without the SVG filter or map generator.",
       "html": "<nav class=\"ds-nav\" aria-label=\"Primary\"><a href=\"#home\" aria-current=\"page\">Home</a><a href=\"#projects\">Projects</a><a href=\"#music\">Music</a><a href=\"#resume\">Resume</a></nav>",
-      "css": ".ds-nav{display:flex;align-items:center;gap:32px;height:64px;padding:0 32px;border:1px solid #7996b8;border-radius:12px;background:#05070b4d;backdrop-filter:blur(14px);box-shadow:inset 0 1px 0 #eef4ff25}.ds-nav a{position:relative;display:flex;align-items:center;height:100%;color:var(--foreground,#eef4ff);font:18px var(--font-condensed,\"Barlow Condensed\"),sans-serif;letter-spacing:.13em;text-transform:uppercase;text-decoration:none}.ds-nav a:hover,.ds-nav a[aria-current]{color:var(--accent,#7dbbff)}.ds-nav a[aria-current]:after{content:\"\";position:absolute;bottom:0;left:0;right:0;height:3px;background:var(--accent,#7dbbff)}.ds-nav a:focus-visible{outline:2px solid var(--accent,#7dbbff);outline-offset:5px;}"
+      "css": ".ds-nav{display:flex;align-items:center;gap:32px;height:64px;padding:0 32px;border:1px solid #7996b8;border-radius:12px;background:linear-gradient(135deg,rgba(255,255,255,.09),rgba(255,255,255,.025) 42%,rgba(147,197,253,.035)),rgba(5,7,11,.24);backdrop-filter:blur(14px) saturate(155%) contrast(1.04) brightness(1.08);box-shadow:inset 0 1px 0 rgba(255,255,255,.22), inset 0 0 0 1px rgba(255,255,255,.045), inset 0 -1px 0 rgba(147,197,253,.08), 0 18px 56px rgba(0,0,0,.22)}.ds-nav a{position:relative;display:flex;align-items:center;height:100%;color:var(--foreground,#eef4ff);font:18px var(--font-condensed,\"Barlow Condensed\"),sans-serif;letter-spacing:.13em;text-transform:uppercase;text-decoration:none}.ds-nav a:hover,.ds-nav a[aria-current]{color:var(--accent,#7dbbff)}.ds-nav a[aria-current]:after{content:\"\";position:absolute;bottom:0;left:0;right:0;height:3px;background:var(--accent,#7dbbff)}.ds-nav a:focus-visible{outline:2px solid var(--accent,#7dbbff);outline-offset:5px;}"
     },
     {
       "name": "Ruled Project Record",

@@ -1,0 +1,272 @@
+[
+  {
+    "case": "1440-map",
+    "result": {
+      "backdrop": "url(\"#liquid-glass-nav-refraction\") blur(0.45px) saturate(1.55) contrast(1.04) brightness(1.08)",
+      "bar": {
+        "bottom": 74,
+        "height": 64,
+        "left": 10,
+        "right": 1430,
+        "top": 10,
+        "width": 1420,
+        "x": 10,
+        "y": 10
+      },
+      "center": [
+        128,
+        128
+      ],
+      "foregroundFilter": "none",
+      "overflow": false,
+      "rimAt16": [
+        128,
+        128
+      ],
+      "rimAt4": [
+        33,
+        128
+      ],
+      "texture": [
+        1420,
+        64
+      ],
+      "viewport": 1440
+    }
+  },
+  {
+    "case": "1440-scroll",
+    "result": {
+      "barTop": 10,
+      "sameMap": true
+    }
+  },
+  {
+    "case": "1440-resume",
+    "result": {
+      "anchors": true,
+      "contactLinks": 6,
+      "overflow": false,
+      "secondaryBars": 0,
+      "sections": 7
+    }
+  },
+  {
+    "case": "820-map",
+    "result": {
+      "backdrop": "url(\"#liquid-glass-nav-refraction\") blur(0.45px) saturate(1.55) contrast(1.04) brightness(1.08)",
+      "bar": {
+        "bottom": 74,
+        "height": 64,
+        "left": 10,
+        "right": 810,
+        "top": 10,
+        "width": 800,
+        "x": 10,
+        "y": 10
+      },
+      "center": [
+        128,
+        128
+      ],
+      "foregroundFilter": "none",
+      "overflow": false,
+      "rimAt16": [
+        128,
+        128
+      ],
+      "rimAt4": [
+        33,
+        128
+      ],
+      "texture": [
+        800,
+        64
+      ],
+      "viewport": 820
+    }
+  },
+  {
+    "case": "820-scroll",
+    "result": {
+      "barTop": 10,
+      "sameMap": true
+    }
+  },
+  {
+    "case": "820-resume",
+    "result": {
+      "anchors": true,
+      "contactLinks": 6,
+      "overflow": false,
+      "secondaryBars": 0,
+      "sections": 7
+    }
+  },
+  {
+    "case": "390-map",
+    "result": {
+      "backdrop": "url(\"#liquid-glass-nav-refraction\") blur(0.45px) saturate(1.55) contrast(1.04) brightness(1.08)",
+      "bar": {
+        "bottom": 70,
+        "height": 60,
+        "left": 10,
+        "right": 380,
+        "top": 10,
+        "width": 370,
+        "x": 10,
+        "y": 10
+      },
+      "center": [
+        128,
+        128
+      ],
+      "foregroundFilter": "none",
+      "overflow": false,
+      "rimAt16": [
+        128,
+        128
+      ],
+      "rimAt4": [
+        33,
+        128
+      ],
+      "texture": [
+        370,
+        60
+      ],
+      "viewport": 390
+    }
+  },
+  {
+    "case": "390-scroll",
+    "result": {
+      "barTop": 10,
+      "sameMap": true
+    }
+  },
+  {
+    "case": "390-resume",
+    "result": {
+      "anchors": true,
+      "contactLinks": 6,
+      "overflow": false,
+      "secondaryBars": 0,
+      "sections": 7
+    }
+  },
+  {
+    "case": "mobile-menu",
+    "result": {
+      "links": [
+        "Home",
+        "Projects",
+        "Music",
+        "Resume"
+      ],
+      "open": "true"
+    }
+  },
+  {
+    "case": "menu-dismissal",
+    "result": {
+      "closed": true,
+      "focusReturned": true
+    }
+  },
+  {
+    "case": "320-map",
+    "result": {
+      "backdrop": "url(\"#liquid-glass-nav-refraction\") blur(0.45px) saturate(1.55) contrast(1.04) brightness(1.08)",
+      "bar": {
+        "bottom": 70,
+        "height": 60,
+        "left": 10,
+        "right": 310,
+        "top": 10,
+        "width": 300,
+        "x": 10,
+        "y": 10
+      },
+      "center": [
+        128,
+        128
+      ],
+      "foregroundFilter": "none",
+      "overflow": false,
+      "rimAt16": [
+        128,
+        128
+      ],
+      "rimAt4": [
+        33,
+        128
+      ],
+      "texture": [
+        300,
+        60
+      ],
+      "viewport": 320
+    }
+  },
+  {
+    "case": "320-scroll",
+    "result": {
+      "barTop": 10,
+      "sameMap": true
+    }
+  },
+  {
+    "case": "320-resume",
+    "result": {
+      "anchors": true,
+      "contactLinks": 6,
+      "overflow": true,
+      "secondaryBars": 0,
+      "sections": 7
+    }
+  },
+  {
+    "case": "live-resize",
+    "result": {
+      "navWidth": 1420,
+      "texture": [
+        1420,
+        64
+      ]
+    }
+  },
+  {
+    "case": "reduced-motion",
+    "result": {
+      "backdrop": "url(\"#liquid-glass-nav-refraction\") blur(0.45px) saturate(1.55) contrast(1.04) brightness(1.08)",
+      "bar": {
+        "bottom": 74,
+        "height": 64,
+        "left": 10,
+        "right": 1430,
+        "top": 10,
+        "width": 1420,
+        "x": 10,
+        "y": 10
+      },
+      "pins": 0
+    }
+  },
+  {
+    "case": "errors",
+    "result": ""
+  },
+  {
+    "case": "320-resume-contact-after-grid-fix",
+    "result": {
+      "viewport": 320,
+      "scrollWidth": 320,
+      "contactCards": 6,
+      "cardWidth": 272,
+      "rightEdge": 296,
+      "secondaryBars": 0,
+      "overflow": false
+    }
+  }
+]

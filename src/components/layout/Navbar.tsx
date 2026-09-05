@@ -6,12 +6,15 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
 import { navItems } from "@/data/profile";
+import { observeNavRefraction } from "@/lib/nav-refraction";
 
 export function Navbar() {
   const pathname = usePathname();
   const [openPath, setOpenPath] = useState<string | null>(null);
   const isOpen = openPath === pathname;
   const toggle = useRef<HTMLButtonElement>(null);
+  const bar = useRef<HTMLDivElement>(null);
+  useEffect(() => observeNavRefraction(bar.current), []);
   useEffect(() => {
     if (!isOpen) return;
     const close = (event: KeyboardEvent) => {
@@ -28,7 +31,7 @@ export function Navbar() {
       <a href="#main-content" className="skip-link">
         Skip to main content
       </a>
-      <div className="site-nav liquid-glass-nav">
+      <div ref={bar} className="site-nav liquid-glass-nav">
         <Link
           href="/"
           className="brand"
