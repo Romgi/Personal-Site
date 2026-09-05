@@ -50,7 +50,7 @@ const contactCards = [
 
 export default function ResumePage() {
   return (
-    <>
+    <div className="resume-page">
       <PageHero
         eyebrow="Resume / Contact"
         title="Resume details and direct contact links."
@@ -70,6 +70,24 @@ export default function ResumePage() {
           </ButtonLink>
         </div>
       </PageHero>
+      <nav className="resume-index" aria-label="Resume sections">
+        {[
+          "Education",
+          "Technical Skills",
+          "Work Experience",
+          "Projects",
+          "Robotics Experience",
+          "Music Experience",
+          "Awards / Accomplishments",
+        ].map((title) => (
+          <a
+            key={title}
+            href={`#${title.toLowerCase().replace(/[^a-z0-9]+/g, "-")}`}
+          >
+            {title}
+          </a>
+        ))}
+      </nav>
 
       <section className="py-20 sm:py-24">
         <Container>
@@ -90,7 +108,7 @@ export default function ResumePage() {
 
       <section className="border-y border-white/10 bg-white/[0.025] py-20 sm:py-24">
         <Container>
-          <div className="grid gap-5 lg:grid-cols-[0.9fr_1.1fr]">
+          <div className="resume-group">
             <AnimatedSection>
               <ResumeSection title="Education">
                 <div className="space-y-6">
@@ -178,7 +196,7 @@ export default function ResumePage() {
 
       <section className="border-t border-white/10 bg-white/[0.025] py-20 sm:py-24">
         <Container>
-          <div className="grid gap-5 lg:grid-cols-2">
+          <div className="resume-group">
             <AnimatedSection>
               <ResumeSection title="Projects">
                 <div className="space-y-5">
@@ -230,7 +248,7 @@ export default function ResumePage() {
 
       <section className="border-t border-white/10 py-20 sm:py-24">
         <Container>
-          <div className="grid gap-5 lg:grid-cols-2">
+          <div className="resume-group">
             <AnimatedSection>
               <ResumeSection title="Music Experience">
                 <div className="space-y-5">
@@ -258,6 +276,6 @@ export default function ResumePage() {
           </div>
         </Container>
       </section>
-    </>
+    </div>
   );
 }

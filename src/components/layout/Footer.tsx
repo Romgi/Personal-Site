@@ -24,15 +24,11 @@ const footerContactLinks: Array<{
 
 export function Footer() {
   return (
-    <footer className="relative border-t border-white/10 bg-[#1a1d23]">
-      <div
-        aria-hidden="true"
-        className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-blue-400/40 to-transparent"
-      />
+    <footer className="site-footer">
       <Container className="py-12">
         <div className="grid gap-8 md:grid-cols-[1.3fr_0.7fr] md:items-start">
           <div>
-            <p className="text-lg font-semibold text-white">{profile.name}</p>
+            <p className="footer-name">{profile.name}</p>
             <p className="mt-3 max-w-2xl text-sm leading-6 text-slate-400">
               {profile.tagline}
             </p>

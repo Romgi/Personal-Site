@@ -1,0 +1,15 @@
+{
+  "mobileMenuOpen": "\"true\"\n",
+  "escapeClosesAndReturnsFocus": "{\n  \"closed\": true,\n  \"focus\": true\n}\n",
+  "aboutExpands": "\"true\"\n",
+  "emptySearch": "{\n  \"count\": 0,\n  \"empty\": true\n}\n",
+  "clearRestoresAll": "12\n",
+  "tagFilter": "{\n  \"active\": \"AI1\",\n  \"shown\": 1\n}\n",
+  "technicalDetails": "true\n",
+  "roboticsDeepLink": "{\n  \"hash\": \"#robotics\",\n  \"scrollY\": 4698,\n  \"top\": 217.71875\n}\n",
+  "resumeAnchor": "{\n  \"hash\": \"#technical-skills\",\n  \"top\": 246.421875\n}\n",
+  "videoFacade": "{\n  \"iframe\": false,\n  \"poster\": true\n}\n",
+  "videoStarts": "{\n  \"focused\": true,\n  \"src\": \"https://www.youtube-nocookie.com/embed/f8E05xtGEq4?autoplay=1\"\n}\n",
+  "reducedMotion": "{\n  \"content\": \"visible\",\n  \"filter\": \"url(\\\"#liquid-glass-nav-refraction\\\") blur(0.8px) saturate(1.9) contrast(1.08) brightness(1.08)\",\n  \"heading\": true,\n  \"reduced\": true\n}\n",
+  "errors": ""
+}

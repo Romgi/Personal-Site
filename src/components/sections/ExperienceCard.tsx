@@ -16,12 +16,9 @@ export function ExperienceCard({
   badges,
 }: ExperienceCardProps) {
   return (
-    <article
-      data-tilt
-      className="liquid-glass-surface glass-card h-full rounded-lg border border-white/10 p-5"
-    >
+    <article className="experience-entry">
       <div className="flex flex-col gap-2 sm:flex-row sm:items-start sm:justify-between">
-        <h3 className="text-lg font-semibold text-white">{title}</h3>
+        <h3 className="experience-title">{title}</h3>
         {meta ? (
           <p className="font-mono text-xs font-medium tracking-wide text-blue-200">
             {meta}

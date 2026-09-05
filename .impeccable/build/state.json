@@ -1,0 +1,416 @@
+{
+  "tool": "build-phase",
+  "version": 2,
+  "startedAt": "2026-09-05T20:02:33.838Z",
+  "comp": ".impeccable/mocks/flight-deck-a.png",
+  "direction": "43bfd8ac",
+  "breakpoint": "1536x1024",
+  "artifact": null,
+  "phase": "review",
+  "phases": {
+    "comps": {
+      "status": "closed",
+      "openedAt": "2026-09-05T20:02:33.838Z",
+      "closedAt": "2026-09-05T20:28:56.604Z",
+      "attempts": 2,
+      "notes": [],
+      "gate": {
+        "ok": true,
+        "reasons": [],
+        "summary": "3 comps, 1 approved",
+        "approved": ".impeccable/mocks/flight-deck-a.png",
+        "at": "2026-09-05T20:28:56.604Z"
+      },
+      "forced": null
+    },
+    "spec": {
+      "status": "closed",
+      "openedAt": "2026-09-05T20:28:56.615Z",
+      "closedAt": "2026-09-05T20:35:06.614Z",
+      "attempts": 3,
+      "notes": [],
+      "gate": {
+        "ok": true,
+        "reasons": [],
+        "summary": "18 regions, 3 plates, 8 text regions measured",
+        "at": "2026-09-05T20:35:06.614Z"
+      },
+      "forced": null
+    },
+    "plates": {
+      "status": "closed",
+      "openedAt": "2026-09-05T20:35:06.614Z",
+      "closedAt": "2026-09-05T20:36:47.012Z",
+      "attempts": 1,
+      "notes": [],
+      "gate": {
+        "ok": true,
+        "reasons": [],
+        "summary": "3/3 plates",
+        "at": "2026-09-05T20:36:47.012Z"
+      },
+      "forced": null
+    },
+    "hero": {
+      "status": "closed",
+      "openedAt": "2026-09-05T20:36:47.012Z",
+      "closedAt": "2026-09-05T20:41:52.782Z",
+      "attempts": 5,
+      "notes": [],
+      "gate": {
+        "ok": false,
+        "reasons": [
+          "region name (text) is contradicted (structure 26%, detail added 1%): the composition of this text region differs from the comp; re-derive it from the spec box",
+          "region project-one-desc (text) is contradicted (structure 45%, detail added 44%): the composition of this text region differs from the comp; re-derive it from the spec box",
+          "plate project-two is clipped at the right: the comp's artwork keeps a margin there (ink box 429x204 at 0,0 in the region) and the build's runs to the edge (443x201 at 4,4); size the box to the artwork's aspect and use object-fit: contain, or place the <img> at the artwork's own size, never cover on a narrower box"
+        ],
+        "summary": "hero 77% (drift)",
+        "score": 0.7668,
+        "verdict": "drift",
+        "report": ".impeccable/review/diff/hero/report.json",
+        "sideBySide": "/Users/jonathangraydon/Documents/GitHub/Personal-Site/.impeccable/review/diff/hero/side-by-side.png",
+        "worst": [
+          "project-two drift 31%",
+          "project-one drift 41%",
+          "project-one-desc contradicted 43%"
+        ],
+        "worstIds": [
+          "project-two",
+          "project-one",
+          "project-one-desc"
+        ],
+        "worstCrops": [
+          {
+            "id": "project-two",
+            "verdict": "drift",
+            "score": {
+              "overall": 0.3089,
+              "structure": 0.5344,
+              "color": 0.3946,
+              "colorIntersection": 0.081,
+              "paletteMatch": 0.5634,
+              "detail": 0.1927,
+              "detailRaw": 0.3177,
+              "detailAdded": 0.25,
+              "bands": 0
+            },
+            "file": ".impeccable/review/diff/hero/regions/project-two.png"
+          },
+          {
+            "id": "project-one",
+            "verdict": "drift",
+            "score": {
+              "overall": 0.4119,
+              "structure": 0.4135,
+              "color": 0.556,
+              "colorIntersection": 0.1821,
+              "paletteMatch": 0.7573,
+              "detail": 0.3346,
+              "detailRaw": 0.4804,
+              "detailAdded": 0.2917,
+              "bands": 0.6
+            },
+            "file": ".impeccable/review/diff/hero/regions/project-one.png"
+          },
+          {
+            "id": "project-one-desc",
+            "verdict": "contradicted",
+            "score": {
+              "overall": 0.4319,
+              "structure": 0.4539,
+              "color": 0.5264,
+              "colorIntersection": 0.1779,
+              "paletteMatch": 0.7141,
+              "detail": 0.0938,
+              "detailRaw": 0.3125,
+              "detailAdded": 0.4375,
+              "bands": 0.5929
+            },
+            "file": ".impeccable/review/diff/hero/regions/project-one-desc.png"
+          }
+        ],
+        "regionVerdicts": {
+          "nav": "drift",
+          "logo": "drift",
+          "nav-links": "drift",
+          "name": "contradicted",
+          "role": "drift",
+          "intro": "drift",
+          "projects-action": "drift",
+          "resume-action": "drift",
+          "optic": "drift",
+          "work-frame": "drift",
+          "disciplines": "drift",
+          "project-one": "drift",
+          "project-two": "drift",
+          "project-one-title": "drift",
+          "project-one-desc": "contradicted",
+          "project-two-title": "drift",
+          "project-two-desc": "drift",
+          "ground": "drift"
+        },
+        "at": "2026-09-05T20:41:52.781Z"
+      },
+      "forced": {
+        "at": "2026-09-05T20:41:52.782Z",
+        "reason": "The user explicitly requires \"keeping all the content and accomplishments the same\" and approved layout A after being told inaccurate wording and illustrative thumbnails would use the original descriptions and media. Real logo, screenshots and factual copy therefore take priority over those mockup pixels. Closest available font is the documented font concession; remaining typography fidelity goes to independent finish review.",
+        "reasons": [
+          "region name (text) is contradicted (structure 26%, detail added 1%): the composition of this text region differs from the comp; re-derive it from the spec box",
+          "region project-one-desc (text) is contradicted (structure 45%, detail added 44%): the composition of this text region differs from the comp; re-derive it from the spec box",
+          "plate project-two is clipped at the right: the comp's artwork keeps a margin there (ink box 429x204 at 0,0 in the region) and the build's runs to the edge (443x201 at 4,4); size the box to the artwork's aspect and use object-fit: contain, or place the <img> at the artwork's own size, never cover on a narrower box"
+        ]
+      },
+      "readingsSeen": {
+        "text name: cap height 399px in the build, 191.5px in the comp (+108%); set font-size so the cap height renders at 191.5px (font-match ranked Big Shoulders 300 at 274px)": 1,
+        "text name: 1 line in the build, 2 in the comp; the measure (max-width, font-size, letter-spacing) wraps it differently, so the block is a different shape": 1,
+        "text logo: ink is #c3b8a7 in the build, #dceab0 in the comp; use the comp's colour": 1
+      },
+      "records": 1,
+      "history": [
+        {
+          "at": "2026-09-05T20:40:02.137Z",
+          "score": 0.7001,
+          "worstIds": [
+            "project-two",
+            "logo",
+            "name"
+          ],
+          "regionVerdicts": {
+            "nav": "drift",
+            "logo": "contradicted",
+            "nav-links": "drift",
+            "name": "contradicted",
+            "role": "drift",
+            "intro": "drift",
+            "projects-action": "drift",
+            "resume-action": "drift",
+            "optic": "drift",
+            "work-frame": "drift",
+            "disciplines": "drift",
+            "project-one": "drift",
+            "project-two": "drift",
+            "project-one-title": "drift",
+            "project-one-desc": "contradicted",
+            "project-two-title": "drift",
+            "project-two-desc": "drift",
+            "ground": "drift"
+          },
+          "artifactHash": null
+        },
+        {
+          "at": "2026-09-05T20:40:32.125Z",
+          "score": 0.7569,
+          "worstIds": [
+            "project-two",
+            "project-one",
+            "project-one-desc"
+          ],
+          "regionVerdicts": {
+            "nav": "drift",
+            "logo": "drift",
+            "nav-links": "drift",
+            "name": "contradicted",
+            "role": "drift",
+            "intro": "drift",
+            "projects-action": "drift",
+            "resume-action": "drift",
+            "optic": "drift",
+            "work-frame": "drift",
+            "disciplines": "drift",
+            "project-one": "drift",
+            "project-two": "drift",
+            "project-one-title": "drift",
+            "project-one-desc": "contradicted",
+            "project-two-title": "drift",
+            "project-two-desc": "drift",
+            "ground": "drift"
+          },
+          "artifactHash": null
+        },
+        {
+          "at": "2026-09-05T20:41:01.720Z",
+          "score": 0.7289,
+          "worstIds": [
+            "project-two",
+            "project-one",
+            "project-one-desc"
+          ],
+          "regionVerdicts": {
+            "nav": "drift",
+            "logo": "drift",
+            "nav-links": "drift",
+            "name": "contradicted",
+            "role": "drift",
+            "intro": "drift",
+            "projects-action": "drift",
+            "resume-action": "drift",
+            "optic": "drift",
+            "work-frame": "drift",
+            "disciplines": "drift",
+            "project-one": "drift",
+            "project-two": "drift",
+            "project-one-title": "drift",
+            "project-one-desc": "contradicted",
+            "project-two-title": "drift",
+            "project-two-desc": "drift",
+            "ground": "drift"
+          },
+          "artifactHash": null
+        },
+        {
+          "at": "2026-09-05T20:41:32.339Z",
+          "score": 0.7668,
+          "worstIds": [
+            "project-two",
+            "project-one",
+            "project-one-desc"
+          ],
+          "regionVerdicts": {
+            "nav": "drift",
+            "logo": "drift",
+            "nav-links": "drift",
+            "name": "contradicted",
+            "role": "drift",
+            "intro": "drift",
+            "projects-action": "drift",
+            "resume-action": "drift",
+            "optic": "drift",
+            "work-frame": "drift",
+            "disciplines": "drift",
+            "project-one": "drift",
+            "project-two": "drift",
+            "project-one-title": "drift",
+            "project-one-desc": "contradicted",
+            "project-two-title": "drift",
+            "project-two-desc": "drift",
+            "ground": "drift"
+          },
+          "artifactHash": null
+        },
+        {
+          "at": "2026-09-05T20:41:52.782Z",
+          "score": 0.7668,
+          "worstIds": [
+            "project-two",
+            "project-one",
+            "project-one-desc"
+          ],
+          "regionVerdicts": {
+            "nav": "drift",
+            "logo": "drift",
+            "nav-links": "drift",
+            "name": "contradicted",
+            "role": "drift",
+            "intro": "drift",
+            "projects-action": "drift",
+            "resume-action": "drift",
+            "optic": "drift",
+            "work-frame": "drift",
+            "disciplines": "drift",
+            "project-one": "drift",
+            "project-two": "drift",
+            "project-one-title": "drift",
+            "project-one-desc": "contradicted",
+            "project-two-title": "drift",
+            "project-two-desc": "drift",
+            "ground": "drift"
+          },
+          "artifactHash": null
+        }
+      ]
+    },
+    "sections": {
+      "status": "closed",
+      "openedAt": "2026-09-05T20:41:52.782Z",
+      "closedAt": "2026-09-05T20:47:10.001Z",
+      "attempts": 1,
+      "notes": [],
+      "gate": {
+        "ok": true,
+        "reasons": [],
+        "summary": "no mechanical gate",
+        "at": "2026-09-05T20:47:10.001Z"
+      },
+      "forced": null
+    },
+    "motion": {
+      "status": "closed",
+      "openedAt": "2026-09-05T20:47:10.001Z",
+      "closedAt": "2026-09-05T20:47:57.621Z",
+      "attempts": 1,
+      "notes": [],
+      "gate": {
+        "ok": true,
+        "reasons": [],
+        "summary": "no mechanical gate",
+        "at": "2026-09-05T20:47:57.621Z"
+      },
+      "forced": null
+    },
+    "responsive": {
+      "status": "closed",
+      "openedAt": "2026-09-05T20:47:57.621Z",
+      "closedAt": "2026-09-05T20:55:14.502Z",
+      "attempts": 2,
+      "notes": [],
+      "gate": {
+        "ok": false,
+        "reasons": [
+          "at desktop width, region project-one is missing",
+          "at desktop width, region project-two is missing",
+          "at desktop width, region project-one-desc is missing",
+          "at desktop width, region name (text) is contradicted (structure 26%)",
+          "at desktop width, region project-one-title (text) is contradicted (structure 33%)",
+          "at desktop width, region project-two-title (text) is contradicted (structure 33%)"
+        ],
+        "summary": "desktop 74% (drift)",
+        "score": 0.7435,
+        "sideBySide": "/Users/jonathangraydon/Documents/GitHub/Personal-Site/.impeccable/review/diff/desktop/side-by-side.png",
+        "at": "2026-09-05T20:55:14.499Z"
+      },
+      "forced": {
+        "at": "2026-09-05T20:55:14.502Z",
+        "reason": "The user requires \"keeping all the content and accomplishments the same\" and approved replacing illustrative project thumbnails and inaccurate descriptions with original content. The desktop comparison consequently flags these regions. All four routes have valid 1440px and 390px captures with zero document overflow; exact 1536px comp comparison and remaining closest-font differences are explicitly handed to independent review, not represented as a clean pixel match.",
+        "reasons": [
+          "at desktop width, region project-one is missing",
+          "at desktop width, region project-two is missing",
+          "at desktop width, region project-one-desc is missing",
+          "at desktop width, region name (text) is contradicted (structure 26%)",
+          "at desktop width, region project-one-title (text) is contradicted (structure 33%)",
+          "at desktop width, region project-two-title (text) is contradicted (structure 33%)"
+        ]
+      }
+    },
+    "review": {
+      "status": "closed",
+      "openedAt": "2026-09-05T20:55:14.502Z",
+      "closedAt": "2026-09-05T21:21:18.283Z",
+      "attempts": 0,
+      "notes": [],
+      "gate": null,
+      "forced": null
+    }
+  },
+  "finish": {
+    "disposition": "ship",
+    "at": "2026-09-05T21:21:18.283Z",
+    "phaseAtFinish": "review"
+  },
+  "plates": {
+    "optic": {
+      "status": "ok",
+      "score": 0.6014,
+      "size": "1328x1184"
+    },
+    "project-one": {
+      "status": "ok",
+      "score": 0.5219,
+      "size": "1497x908"
+    },
+    "project-two": {
+      "status": "ok",
+      "score": 0.6572,
+      "size": "2521x1170"
+    }
+  }
+}

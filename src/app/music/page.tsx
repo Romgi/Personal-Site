@@ -1,3 +1,4 @@
+import { PerformanceVideo } from "@/components/sections/PerformanceVideo";
 import { AccomplishmentCard } from "@/components/sections/AccomplishmentCard";
 import { ExperienceCard } from "@/components/sections/ExperienceCard";
 import { RepertoireList } from "@/components/sections/RepertoireList";
@@ -55,17 +56,7 @@ export default function MusicPage() {
                 <p className="text-sm font-semibold text-white">
                   Bugler&apos;s Holiday with McMaster Concert Band
                 </p>
-                <div className="mt-4 aspect-video overflow-hidden rounded-md border">
-                  <iframe
-                    className="size-full"
-                    src="https://www.youtube-nocookie.com/embed/f8E05xtGEq4"
-                    title="Jonathan Graydon performing Bugler's Holiday with the McMaster Concert Band"
-                    loading="lazy"
-                    referrerPolicy="strict-origin-when-cross-origin"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    allowFullScreen
-                  />
-                </div>
+                <PerformanceVideo />
               </div>
             </AnimatedSection>
           </div>
@@ -100,7 +91,7 @@ export default function MusicPage() {
             title="Awards, solos, ensembles, and performance notes."
             description="Selected awards, honour ensembles, leadership roles, and performance milestones."
           />
-          <div className="mt-10 grid gap-5 md:grid-cols-3">
+          <div className="accomplishment-list">
             {musicAccomplishments.map((item) => (
               <AnimatedSection key={item.title}>
                 <AccomplishmentCard {...item} />
@@ -119,22 +110,6 @@ export default function MusicPage() {
                 title="Performance contexts."
                 description="University, honour band, jazz, orchestral, school, and community ensembles."
               />
-              <div
-                data-music-context-visual
-                aria-hidden="true"
-                className="relative mt-8 hidden h-[46svh] min-h-72 lg:block"
-              >
-                <div className="absolute bottom-2 left-3 top-2 w-px overflow-hidden rounded-full bg-white/10">
-                  <div
-                    data-music-context-meter
-                    className="h-full origin-top rounded-full bg-blue-400 shadow-[0_0_24px_rgba(77,124,255,0.7)]"
-                  />
-                </div>
-                <div
-                  data-music-context-orb
-                  className="absolute left-3 top-2 size-4 -translate-x-1/2 rounded-full border border-blue-100 bg-blue-500 shadow-[0_0_28px_rgba(77,124,255,0.75)]"
-                />
-              </div>
             </div>
             <div className="grid gap-5">
               {ensembles.map((ensemble) => (
@@ -174,7 +149,7 @@ export default function MusicPage() {
             title="Performance moments."
             description="Selected concert, ensemble, and trumpet photos from Jonathan's music portfolio."
           />
-          <div className="mt-10 grid gap-5 md:grid-cols-3">
+          <div className="music-gallery">
             {musicGallery.map((image) => (
               <AnimatedSection key={image.alt}>
                 <PortfolioImage

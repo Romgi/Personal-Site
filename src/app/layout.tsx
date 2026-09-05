@@ -1,6 +1,12 @@
 import type { Metadata } from "next";
 import type { Viewport } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import {
+  Geist,
+  Geist_Mono,
+  Big_Shoulders,
+  Barlow_Condensed,
+  Bebas_Neue,
+} from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
 
 import { Footer } from "@/components/layout/Footer";
@@ -13,6 +19,26 @@ import { ScrollProgress } from "@/components/ui/ScrollProgress";
 import { profile, site } from "@/data/profile";
 
 import "./globals.css";
+
+const heroDisplay = Bebas_Neue({
+  variable: "--font-hero",
+  subsets: ["latin"],
+  weight: "400",
+  display: "swap",
+});
+
+const display = Big_Shoulders({
+  variable: "--font-display",
+  adjustFontFallback: false,
+  subsets: ["latin"],
+  display: "swap",
+});
+const condensed = Barlow_Condensed({
+  variable: "--font-condensed",
+  subsets: ["latin"],
+  weight: ["400", "500", "600"],
+  display: "swap",
+});
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -89,7 +115,7 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  themeColor: "#1a1d23",
+  themeColor: "#05070b",
   colorScheme: "dark",
 };
 
@@ -116,7 +142,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      className={`${geistSans.variable} ${geistMono.variable} ${display.variable} ${condensed.variable} ${heroDisplay.variable} h-full antialiased`}
     >
       <body className="flex min-h-full flex-col">
         <script type="application/ld+json">

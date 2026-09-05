@@ -1,0 +1,99 @@
+{
+  "seed": "43bfd8ac",
+  "assigned": 3,
+  "candidates": [
+    "Optical metrology exhibition",
+    "Engineering annual report",
+    "Aerospace telemetry flight deck",
+    "Instrument workshop blueprint",
+    "Concert program",
+    "Interactive scientific atlas",
+    "Industrial parts catalogue"
+  ],
+  "challengers": [
+    [
+      "signals-instruments-phosphor-terminal-midnight",
+      "Phosphor transcript",
+      [
+        "#060b08",
+        "#76ff98",
+        "#d0fadc"
+      ],
+      "Green phosphor and continuous monospaced transcript",
+      "A keyboard-led chronological record of projects and accomplishments.",
+      "Technical recognition is strong, but long credentials and music evidence become harder to scan.",
+      "declined",
+      "A continuous, legible project index and disciplined keyboard interactions."
+    ],
+    [
+      "operate-c-depot-blind-courses",
+      "Destination index",
+      [
+        "#0b392b",
+        "#efcf4e",
+        "#f5eddb"
+      ],
+      "Dyed cloth and stepped typography",
+      "Project and music sections advance as large indexed courses.",
+      "Its transit metaphor competes with the actual engineering evidence.",
+      "declined",
+      "Unmistakable section indexing and deliberate state transitions."
+    ],
+    [
+      "posters-covers-sleeves-noir-one-sheet-duotone",
+      "Duotone performance bill",
+      [
+        "#111111",
+        "#c69b38",
+        "#f6f0e1"
+      ],
+      "Hard shadows and condensed display typography",
+      "A typographic nameplate leads into tightly ruled project credits.",
+      "The cinematic frame identifies performance better than technical work.",
+      "declined",
+      "One dominant first-viewport focal point with confident type scale."
+    ],
+    [
+      "digital-design-canon-monochrome-product-marketing",
+      "Evidence in monochrome",
+      [
+        "#f4f4ef",
+        "#161819",
+        "#5c6cff"
+      ],
+      "Neutral editorial surfaces and restrained clear glass",
+      "Large name and role beside actual project previews, followed by evidence-led sections.",
+      "Exceptionally clear to recruiters, but quieter than your stated frontend ambition.",
+      "competitive",
+      "Every claim has adjacent, inspectable project evidence."
+    ],
+    [
+      "reefs-bioluminescent-nocturnal-plankton-wake-stars",
+      "Living current",
+      [
+        "#030b12",
+        "#348dff",
+        "#77e8fb"
+      ],
+      "Black water and luminous motion trails",
+      "Jonathan’s name sits beside an interactive current field and project index.",
+      "The spectacle risks obscuring the specific technical work.",
+      "declined",
+      "Pointer motion must produce a visible, graceful response with a quiet resting state."
+    ],
+    [
+      "kinetic-sculpture-automata-crank-paper-menagerie",
+      "Mechanical folio",
+      [
+        "#eee8db",
+        "#9e8063",
+        "#ae393c"
+      ],
+      "Cut paper and linked mechanical motion",
+      "A linked progression reveals software, robotics, and music as distinct chapters.",
+      "A handcrafted paper metaphor does not express the requested optical glass.",
+      "declined",
+      "Animations share a coherent timeline and remain understandable when paused."
+    ]
+  ]
+}

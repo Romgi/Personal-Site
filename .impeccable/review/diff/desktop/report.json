@@ -1,0 +1,717 @@
+{
+  "tool": "comp-diff",
+  "version": 1,
+  "createdAt": "2026-09-05T20:55:14.498Z",
+  "label": "desktop",
+  "comp": ".impeccable/mocks/flight-deck-a.png",
+  "build": ".impeccable/review/desktop.png",
+  "spec": ".impeccable/build/spec.json",
+  "compSize": "1536x1024",
+  "buildSize": "1440x5274",
+  "align": "top",
+  "overall": 0.7435,
+  "verdict": "drift",
+  "scores": {
+    "overall": 0.7435,
+    "structure": 0.607,
+    "color": 0.8398,
+    "colorIntersection": 0.6988,
+    "paletteMatch": 0.9156,
+    "detail": 0.7583,
+    "detailRaw": 0.8156,
+    "detailAdded": 0.1146,
+    "bands": 0.8769
+  },
+  "palette": {
+    "comp": [
+      {
+        "hex": "#090e0f",
+        "coverage": 0.8498
+      },
+      {
+        "hex": "#dfddcf",
+        "coverage": 0.0757
+      },
+      {
+        "hex": "#313b34",
+        "coverage": 0.0394
+      },
+      {
+        "hex": "#5e675b",
+        "coverage": 0.0236
+      },
+      {
+        "hex": "#9ba091",
+        "coverage": 0.0095
+      },
+      {
+        "hex": "#798969",
+        "coverage": 0.0019
+      }
+    ],
+    "build": [
+      {
+        "hex": "#090a0b",
+        "coverage": 0.82
+      },
+      {
+        "hex": "#e8e8d8",
+        "coverage": 0.0873
+      },
+      {
+        "hex": "#242f27",
+        "coverage": 0.0425
+      },
+      {
+        "hex": "#4c554d",
+        "coverage": 0.0299
+      },
+      {
+        "hex": "#7e857a",
+        "coverage": 0.0128
+      },
+      {
+        "hex": "#b6b7ad",
+        "coverage": 0.0075
+      }
+    ]
+  },
+  "regions": [
+    {
+      "id": "nav",
+      "x": 0.0065,
+      "y": 0.0098,
+      "w": 0.9863,
+      "h": 0.0625,
+      "kind": "chrome",
+      "score": {
+        "overall": 0.6539,
+        "structure": 0.7421,
+        "color": 0.809,
+        "colorIntersection": 0.5964,
+        "paletteMatch": 0.9234,
+        "detail": 0.3478,
+        "detailRaw": 0.6134,
+        "detailAdded": 0.5313,
+        "bands": 0.7
+      },
+      "verdict": "drift",
+      "inkBox": {
+        "comp": {
+          "x": 0,
+          "y": 0,
+          "w": 1515,
+          "h": 64
+        },
+        "build": {
+          "x": 1,
+          "y": 1,
+          "w": 1514,
+          "h": 63
+        }
+      }
+    },
+    {
+      "id": "logo",
+      "x": 0.028,
+      "y": 0.0244,
+      "w": 0.0352,
+      "h": 0.0352,
+      "kind": "text",
+      "score": {
+        "overall": 0.5273,
+        "structure": 0.4648,
+        "color": 0.7294,
+        "colorIntersection": 0.5278,
+        "paletteMatch": 0.838,
+        "detail": 0.5293,
+        "detailRaw": 0.6022,
+        "detailAdded": 0.1458,
+        "bands": 0.3314
+      },
+      "verdict": "drift",
+      "inkBox": {
+        "comp": {
+          "x": 0,
+          "y": 6,
+          "w": 53,
+          "h": 35
+        },
+        "build": {
+          "x": 8,
+          "y": 9,
+          "w": 44,
+          "h": 35
+        }
+      }
+    },
+    {
+      "id": "nav-links",
+      "x": 0.3464,
+      "y": 0.0332,
+      "w": 0.291,
+      "h": 0.0391,
+      "kind": "control",
+      "score": {
+        "overall": 0.5973,
+        "structure": 0.5959,
+        "color": 0.7201,
+        "colorIntersection": 0.4196,
+        "paletteMatch": 0.8818,
+        "detail": 0.3857,
+        "detailRaw": 0.4326,
+        "detailAdded": 0.0938,
+        "bands": 0.2533
+      },
+      "verdict": "drift",
+      "inkBox": {
+        "comp": {
+          "x": 0,
+          "y": 5,
+          "w": 447,
+          "h": 39
+        },
+        "build": {
+          "x": 0,
+          "y": 8,
+          "w": 447,
+          "h": 40
+        }
+      }
+    },
+    {
+      "id": "name",
+      "x": 0.0586,
+      "y": 0.1455,
+      "w": 0.4297,
+      "h": 0.4014,
+      "kind": "text",
+      "score": {
+        "overall": 0.5457,
+        "structure": 0.2559,
+        "color": 0.7768,
+        "colorIntersection": 0.5521,
+        "paletteMatch": 0.8978,
+        "detail": 0.8236,
+        "detailRaw": 0.8288,
+        "detailAdded": 0.0104,
+        "bands": 1
+      },
+      "verdict": "contradicted",
+      "inkBox": {
+        "comp": {
+          "x": 1,
+          "y": 0,
+          "w": 659,
+          "h": 411
+        },
+        "build": {
+          "x": 0,
+          "y": 0,
+          "w": 660,
+          "h": 411
+        }
+      }
+    },
+    {
+      "id": "role",
+      "x": 0.0592,
+      "y": 0.5723,
+      "w": 0.4427,
+      "h": 0.0166,
+      "kind": "text",
+      "score": {
+        "overall": 0.6557,
+        "structure": 0.6705,
+        "color": 0.9167,
+        "colorIntersection": 0.8663,
+        "paletteMatch": 0.9439,
+        "detail": 0.6087,
+        "detailRaw": 0.6712,
+        "detailAdded": 0.125,
+        "bands": 0
+      },
+      "verdict": "drift",
+      "inkBox": {
+        "comp": {
+          "x": 1,
+          "y": 14,
+          "w": 677,
+          "h": 17
+        },
+        "build": {
+          "x": 0,
+          "y": 17,
+          "w": 668,
+          "h": 18
+        }
+      }
+    },
+    {
+      "id": "intro",
+      "x": 0.0592,
+      "y": 0.6074,
+      "w": 0.3613,
+      "h": 0.042,
+      "kind": "text",
+      "score": {
+        "overall": 0.6991,
+        "structure": 0.739,
+        "color": 0.8613,
+        "colorIntersection": 0.7966,
+        "paletteMatch": 0.8961,
+        "detail": 0.412,
+        "detailRaw": 0.4745,
+        "detailAdded": 0.125,
+        "bands": 0.525
+      },
+      "verdict": "drift",
+      "inkBox": {
+        "comp": {
+          "x": 1,
+          "y": 2,
+          "w": 549,
+          "h": 46
+        },
+        "build": {
+          "x": 1,
+          "y": 6,
+          "w": 552,
+          "h": 42
+        }
+      }
+    },
+    {
+      "id": "projects-action",
+      "x": 0.0592,
+      "y": 0.6758,
+      "w": 0.1634,
+      "h": 0.0508,
+      "kind": "control",
+      "score": {
+        "overall": 0.7317,
+        "structure": 0.7352,
+        "color": 0.9076,
+        "colorIntersection": 0.8544,
+        "paletteMatch": 0.9362,
+        "detail": 0.416,
+        "detailRaw": 0.4629,
+        "detailAdded": 0.0938,
+        "bands": 0.8
+      },
+      "verdict": "drift",
+      "inkBox": {
+        "comp": {
+          "x": 0,
+          "y": 0,
+          "w": 251,
+          "h": 52
+        },
+        "build": {
+          "x": 0,
+          "y": 0,
+          "w": 251,
+          "h": 52
+        }
+      }
+    },
+    {
+      "id": "resume-action",
+      "x": 0.2376,
+      "y": 0.6758,
+      "w": 0.1628,
+      "h": 0.0508,
+      "kind": "control",
+      "score": {
+        "overall": 0.7176,
+        "structure": 0.6999,
+        "color": 0.9212,
+        "colorIntersection": 0.8646,
+        "paletteMatch": 0.9517,
+        "detail": 0.4014,
+        "detailRaw": 0.4534,
+        "detailAdded": 0.1042,
+        "bands": 0.7
+      },
+      "verdict": "drift",
+      "inkBox": {
+        "comp": {
+          "x": 0,
+          "y": 0,
+          "w": 249,
+          "h": 51
+        },
+        "build": {
+          "x": 2,
+          "y": 0,
+          "w": 248,
+          "h": 52
+        }
+      }
+    },
+    {
+      "id": "optic",
+      "x": 0.5078,
+      "y": 0.0801,
+      "w": 0.4857,
+      "h": 0.6494,
+      "kind": "plate",
+      "score": {
+        "overall": 0.6857,
+        "structure": 0.5619,
+        "color": 0.8608,
+        "colorIntersection": 0.7252,
+        "paletteMatch": 0.9338,
+        "detail": 0.7061,
+        "detailRaw": 0.7113,
+        "detailAdded": 0.0104,
+        "bands": 0.4
+      },
+      "verdict": "drift",
+      "inkBox": {
+        "comp": {
+          "x": 0,
+          "y": 20,
+          "w": 730,
+          "h": 598
+        },
+        "build": {
+          "x": 62,
+          "y": 36,
+          "w": 616,
+          "h": 555
+        }
+      }
+    },
+    {
+      "id": "work-frame",
+      "x": 0.0065,
+      "y": 0.751,
+      "w": 0.9863,
+      "h": 0.249,
+      "kind": "chrome",
+      "score": {
+        "overall": 0.5435,
+        "structure": 0.6487,
+        "color": 0.6508,
+        "colorIntersection": 0.3514,
+        "paletteMatch": 0.812,
+        "detail": 0.4469,
+        "detailRaw": 0.5771,
+        "detailAdded": 0.2604,
+        "bands": 0.28
+      },
+      "verdict": "drift",
+      "inkBox": {
+        "comp": {
+          "x": 0,
+          "y": 0,
+          "w": 1515,
+          "h": 255
+        },
+        "build": {
+          "x": 0,
+          "y": 0,
+          "w": 1515,
+          "h": 255
+        }
+      }
+    },
+    {
+      "id": "disciplines",
+      "x": 0.0319,
+      "y": 0.7705,
+      "w": 0.5514,
+      "h": 0.0195,
+      "kind": "control",
+      "score": {
+        "overall": 0.7788,
+        "structure": 0.8772,
+        "color": 0.909,
+        "colorIntersection": 0.7989,
+        "paletteMatch": 0.9682,
+        "detail": 0.3294,
+        "detailRaw": 0.3658,
+        "detailAdded": 0.0729,
+        "bands": 0
+      },
+      "verdict": "drift",
+      "inkBox": {
+        "comp": {
+          "x": 0,
+          "y": 12,
+          "w": 847,
+          "h": 36
+        },
+        "build": {
+          "x": 1,
+          "y": 16,
+          "w": 820,
+          "h": 20
+        }
+      }
+    },
+    {
+      "id": "project-one",
+      "x": 0.0234,
+      "y": 0.7998,
+      "w": 0.2747,
+      "h": 0.2002,
+      "kind": "image",
+      "score": {
+        "overall": 0.3733,
+        "structure": 0.3777,
+        "color": 0.5668,
+        "colorIntersection": 0.2007,
+        "paletteMatch": 0.7639,
+        "detail": 0.2711,
+        "detailRaw": 0.4013,
+        "detailAdded": 0.2604,
+        "bands": 0.6
+      },
+      "verdict": "missing",
+      "inkBox": {
+        "comp": {
+          "x": 0,
+          "y": 0,
+          "w": 421,
+          "h": 205
+        },
+        "build": {
+          "x": 0,
+          "y": 8,
+          "w": 422,
+          "h": 197
+        }
+      }
+    },
+    {
+      "id": "project-two",
+      "x": 0.5046,
+      "y": 0.7998,
+      "w": 0.291,
+      "h": 0.2002,
+      "kind": "image",
+      "score": {
+        "overall": 0.3017,
+        "structure": 0.526,
+        "color": 0.4077,
+        "colorIntersection": 0.0921,
+        "paletteMatch": 0.5777,
+        "detail": 0.1773,
+        "detailRaw": 0.2867,
+        "detailAdded": 0.2188,
+        "bands": 0
+      },
+      "verdict": "missing",
+      "inkBox": {
+        "comp": {
+          "x": 0,
+          "y": 0,
+          "w": 429,
+          "h": 204
+        },
+        "build": {
+          "x": 5,
+          "y": 8,
+          "w": 442,
+          "h": 197
+        }
+      }
+    },
+    {
+      "id": "project-one-title",
+      "x": 0.3138,
+      "y": 0.8428,
+      "w": 0.069,
+      "h": 0.0303,
+      "kind": "text",
+      "score": {
+        "overall": 0.3837,
+        "structure": 0.3286,
+        "color": 0.605,
+        "colorIntersection": 0.2791,
+        "paletteMatch": 0.7805,
+        "detail": 0.2676,
+        "detailRaw": 0.3874,
+        "detailAdded": 0.2396,
+        "bands": 0.28
+      },
+      "verdict": "contradicted",
+      "inkBox": {
+        "comp": {
+          "x": 2,
+          "y": 9,
+          "w": 100,
+          "h": 27
+        },
+        "build": {
+          "x": 14,
+          "y": 17,
+          "w": 92,
+          "h": 28
+        }
+      }
+    },
+    {
+      "id": "project-one-desc",
+      "x": 0.3138,
+      "y": 0.8887,
+      "w": 0.14,
+      "h": 0.0439,
+      "kind": "text",
+      "score": {
+        "overall": 0.3929,
+        "structure": 0.4784,
+        "color": 0.5244,
+        "colorIntersection": 0.186,
+        "paletteMatch": 0.7066,
+        "detail": 0.04,
+        "detailRaw": 0.1859,
+        "detailAdded": 0.2917,
+        "bands": 0.1657
+      },
+      "verdict": "missing",
+      "inkBox": {
+        "comp": {
+          "x": 1,
+          "y": 0,
+          "w": 152,
+          "h": 40
+        },
+        "build": {
+          "x": 12,
+          "y": 18,
+          "w": 187,
+          "h": 30
+        }
+      }
+    },
+    {
+      "id": "project-two-title",
+      "x": 0.8125,
+      "y": 0.8428,
+      "w": 0.1484,
+      "h": 0.0625,
+      "kind": "text",
+      "score": {
+        "overall": 0.3702,
+        "structure": 0.3301,
+        "color": 0.6003,
+        "colorIntersection": 0.2689,
+        "paletteMatch": 0.7787,
+        "detail": 0.2215,
+        "detailRaw": 0.3152,
+        "detailAdded": 0.1875,
+        "bands": 0.2182
+      },
+      "verdict": "contradicted",
+      "inkBox": {
+        "comp": {
+          "x": 2,
+          "y": 1,
+          "w": 196,
+          "h": 63
+        },
+        "build": {
+          "x": 0,
+          "y": 9,
+          "w": 221,
+          "h": 55
+        }
+      }
+    },
+    {
+      "id": "project-two-desc",
+      "x": 0.8125,
+      "y": 0.9238,
+      "w": 0.1432,
+      "h": 0.0469,
+      "kind": "text",
+      "score": {
+        "overall": 0.4341,
+        "structure": 0.5642,
+        "color": 0.5089,
+        "colorIntersection": 0.1333,
+        "paletteMatch": 0.7111,
+        "detail": 0.1652,
+        "detailRaw": 0.285,
+        "detailAdded": 0.2396,
+        "bands": 0
+      },
+      "verdict": "drift",
+      "inkBox": {
+        "comp": {
+          "x": 2,
+          "y": 1,
+          "w": 129,
+          "h": 39
+        },
+        "build": {
+          "x": 3,
+          "y": 21,
+          "w": 178,
+          "h": 20
+        }
+      }
+    },
+    {
+      "id": "ground",
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1,
+      "kind": "chrome",
+      "score": {
+        "overall": 0.7435,
+        "structure": 0.607,
+        "color": 0.8398,
+        "colorIntersection": 0.6988,
+        "paletteMatch": 0.9156,
+        "detail": 0.7583,
+        "detailRaw": 0.8156,
+        "detailAdded": 0.1146,
+        "bands": 0.8769
+      },
+      "verdict": "drift",
+      "inkBox": {
+        "comp": {
+          "x": 10,
+          "y": 10,
+          "w": 1515,
+          "h": 1014
+        },
+        "build": {
+          "x": 10,
+          "y": 10,
+          "w": 1516,
+          "h": 1014
+        }
+      }
+    }
+  ],
+  "files": {
+    "sideBySide": "/Users/jonathangraydon/Documents/GitHub/Personal-Site/.impeccable/review/diff/desktop/side-by-side.png",
+    "heatmap": "/Users/jonathangraydon/Documents/GitHub/Personal-Site/.impeccable/review/diff/desktop/heatmap.png",
+    "regionFiles": [
+      "/Users/jonathangraydon/Documents/GitHub/Personal-Site/.impeccable/review/diff/desktop/regions/nav.png",
+      "/Users/jonathangraydon/Documents/GitHub/Personal-Site/.impeccable/review/diff/desktop/regions/logo.png",
+      "/Users/jonathangraydon/Documents/GitHub/Personal-Site/.impeccable/review/diff/desktop/regions/nav-links.png",
+      "/Users/jonathangraydon/Documents/GitHub/Personal-Site/.impeccable/review/diff/desktop/regions/name.png",
+      "/Users/jonathangraydon/Documents/GitHub/Personal-Site/.impeccable/review/diff/desktop/regions/role.png",
+      "/Users/jonathangraydon/Documents/GitHub/Personal-Site/.impeccable/review/diff/desktop/regions/intro.png",
+      "/Users/jonathangraydon/Documents/GitHub/Personal-Site/.impeccable/review/diff/desktop/regions/projects-action.png",
+      "/Users/jonathangraydon/Documents/GitHub/Personal-Site/.impeccable/review/diff/desktop/regions/resume-action.png",
+      "/Users/jonathangraydon/Documents/GitHub/Personal-Site/.impeccable/review/diff/desktop/regions/optic.png",
+      "/Users/jonathangraydon/Documents/GitHub/Personal-Site/.impeccable/review/diff/desktop/regions/work-frame.png",
+      "/Users/jonathangraydon/Documents/GitHub/Personal-Site/.impeccable/review/diff/desktop/regions/disciplines.png",
+      "/Users/jonathangraydon/Documents/GitHub/Personal-Site/.impeccable/review/diff/desktop/regions/project-one.png",
+      "/Users/jonathangraydon/Documents/GitHub/Personal-Site/.impeccable/review/diff/desktop/regions/project-two.png",
+      "/Users/jonathangraydon/Documents/GitHub/Personal-Site/.impeccable/review/diff/desktop/regions/project-one-title.png",
+      "/Users/jonathangraydon/Documents/GitHub/Personal-Site/.impeccable/review/diff/desktop/regions/project-one-desc.png",
+      "/Users/jonathangraydon/Documents/GitHub/Personal-Site/.impeccable/review/diff/desktop/regions/project-two-title.png",
+      "/Users/jonathangraydon/Documents/GitHub/Personal-Site/.impeccable/review/diff/desktop/regions/project-two-desc.png",
+      "/Users/jonathangraydon/Documents/GitHub/Personal-Site/.impeccable/review/diff/desktop/regions/ground.png"
+    ]
+  }
+}

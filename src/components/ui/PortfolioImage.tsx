@@ -24,7 +24,7 @@ export function PortfolioImage({
   return (
     <div
       className={cn(
-        "glass-media-frame relative overflow-hidden rounded-lg border border-blue-300/10",
+        "portfolio-image glass-media-frame relative overflow-hidden rounded-xl",
         aspect,
         className,
       )}
@@ -37,10 +37,6 @@ export function PortfolioImage({
         sizes={sizes}
         data-parallax
         className={cn("scale-[1.0] object-cover", imageClassName)}
-      />
-      <div
-        aria-hidden="true"
-        className="absolute inset-0 bg-[linear-gradient(180deg,transparent_35%,rgba(2,6,23,0.48)_100%)]"
       />
     </div>
   );

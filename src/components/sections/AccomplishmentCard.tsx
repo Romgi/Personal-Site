@@ -10,10 +10,7 @@ export function AccomplishmentCard({
   description,
 }: AccomplishmentCardProps) {
   return (
-    <article
-      data-tilt
-      className="liquid-glass-surface glass-card h-full rounded-lg border border-white/10 p-5"
-    >
+    <article className="accomplishment-entry">
       <p className="font-mono text-[11px] font-medium uppercase tracking-[0.24em] text-blue-300">
         {period}
       </p>

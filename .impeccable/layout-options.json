@@ -1,0 +1,58 @@
+{
+  "title": "Flight deck — final layout",
+  "question": "Approve a layout for the full frontend rebuild, or leave a note to combine or revise it. The implementation will retain all existing content and media; illustrative project thumbnails and inaccurate placeholder wording will use your real assets and descriptions.",
+  "options": [
+    {
+      "id": "a",
+      "label": "Split composition — recommended",
+      "thesis": "Large stacked name beside the optical instrument, with introduction and actions immediately readable.",
+      "palette": [
+        "#0b1012",
+        "#e7eddf",
+        "#c5e87a"
+      ],
+      "materials": [
+        "smoked optical glass",
+        "condensed typography"
+      ],
+      "viewport": "A clear left-hand introduction and a dominant right-hand glass instrument; work begins just below.",
+      "risk": "The optical instrument needs careful responsive sizing.",
+      "comp": ".impeccable/mocks/flight-deck-a.png"
+    },
+    {
+      "id": "b",
+      "label": "Full-width nameplate",
+      "thesis": "The name becomes the largest architectural element, with an overlapping optical form and compact work index.",
+      "palette": [
+        "#0b1012",
+        "#e7eddf",
+        "#c5e87a"
+      ],
+      "materials": [
+        "smoked optical glass",
+        "condensed typography"
+      ],
+      "viewport": "A single-line masthead followed by role and actions on the left, instrument on the right, and project rows below.",
+      "risk": "The name must transition to a stacked arrangement on smaller screens.",
+      "comp": ".impeccable/mocks/flight-deck-b.png"
+    },
+    {
+      "id": "c",
+      "label": "Instrument workspace",
+      "thesis": "The glass instrument leads the composition, with a dedicated information and navigation rail.",
+      "palette": [
+        "#0b1012",
+        "#e7eddf",
+        "#c5e87a"
+      ],
+      "materials": [
+        "smoked optical glass",
+        "condensed typography"
+      ],
+      "viewport": "A large optical field and overlaid name to the left; role, introduction, actions and disciplines in a right-hand column.",
+      "risk": "The narrower text column gives the introduction less breathing room.",
+      "comp": ".impeccable/mocks/flight-deck-c.png"
+    }
+  ],
+  "steer": true
+}

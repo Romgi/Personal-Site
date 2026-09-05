@@ -7,9 +7,15 @@ import type { Project } from "@/data/projects";
 
 type ProjectCardProps = {
   project: Project;
+  featured?: boolean;
+  id?: string;
 };
 
-export function ProjectCard({ project }: ProjectCardProps) {
+export function ProjectCard({
+  project,
+  featured = false,
+  id,
+}: ProjectCardProps) {
   const hasPublicLinks = Boolean(
     !project.private &&
     (project.githubUrl ||
@@ -20,20 +26,22 @@ export function ProjectCard({ project }: ProjectCardProps) {
 
   return (
     <article
-      data-tilt
-      className="liquid-glass-surface glass-card group flex h-full flex-col overflow-hidden rounded-lg border border-white/10"
+      id={id}
+      className={`project-card group ${featured ? "project-card-featured" : ""}`}
     >
       <PortfolioImage
         src={project.image}
         alt={project.imageAlt}
         className="rounded-none border-x-0 border-t-0"
-        sizes="(max-width: 768px) 100vw, 33vw"
+        sizes={
+          featured
+            ? "(max-width: 768px) 100vw, 45vw"
+            : "(max-width: 768px) 100vw, 35vw"
+        }
       />
-      <div className="flex flex-1 flex-col p-5">
+      <div className="project-card-body">
         <div className="flex items-start justify-between gap-4">
-          <h3 className="text-xl font-semibold tracking-tight text-white">
-            {project.title}
-          </h3>
+          <h3 className="project-title">{project.title}</h3>
           <span className="shrink-0 rounded-md border border-blue-300/20 bg-blue-500/10 px-2.5 py-1 font-mono text-[11px] font-medium tracking-wide text-blue-100">
             {project.status}
           </span>
@@ -48,7 +56,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
           ))}
         </div>
 
-        <details className="mt-5 rounded-md border border-white/10 bg-white/[0.03] p-4 text-sm text-slate-300 open:border-blue-300/25">
+        <details className="project-details">
           <summary className="cursor-pointer font-medium text-slate-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-blue-300">
             Technical details
           </summary>

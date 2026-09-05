@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Scaffold reference: flight-deck-a.png</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders:wght@300&display=swap">
+  <link rel="stylesheet" href="layout.css">
+  <style>html,body{margin:0}body{background:#090e0f}.region{box-sizing:border-box}.region.text p{white-space:pre-wrap}</style>
+</head>
+<body>
+<!-- Reference only. Every region sits at its measured box inside a comp-aspect frame. Take the boxes (layout.css), keep your own semantic structure. -->
+<main class="comp-frame" style="max-width:1536px">
+  <div class="r-nav region chrome" data-region="nav"><!-- Slim rounded navigation border --></div>
+  <div class="r-logo region text" data-region="logo"><!-- JG identity glyphs --><p style="line-height:1.05;margin:0">logo</p></div>
+  <div class="r-nav-links region control" data-region="nav-links"><!-- HOME PROJECTS MUSIC RESUME navigation and active underline: rebuild the control's chrome from the crop (comp-spec.mjs --crop nav-links); its ink box, border, fill, radius, and label size are the comp's --></div>
+  <div class="r-name region text" data-region="name"><!-- Two lines of condensed ivory uppercase text JONATHAN GRAYDON --><p style="font-size:var(--r-name-font);font-family:var(--r-name-family),sans-serif;font-weight:var(--r-name-weight);line-height:1.05;margin:0">name</p></div>
+  <div class="r-role region text" data-region="role"><!-- Chartreuse role line --><p style="font-size:var(--r-role-font);line-height:1.05;margin:0">role</p></div>
+  <div class="r-intro region text" data-region="intro"><!-- Two lines of introduction --><p style="font-size:var(--r-intro-font);line-height:1.05;margin:0">intro</p></div>
+  <div class="r-projects-action region control" data-region="projects-action"><!-- Outlined View Projects action and arrow: rebuild the control's chrome from the crop (comp-spec.mjs --crop projects-action); its ink box, border, fill, radius, and label size are the comp's --></div>
+  <div class="r-resume-action region control" data-region="resume-action"><!-- Outlined View Resume action and arrow: rebuild the control's chrome from the crop (comp-spec.mjs --crop resume-action); its ink box, border, fill, radius, and label size are the comp's --></div>
+  <figure class="r-optic region plate" data-region="optic"><img src="../../../public/images/design/optic.png" alt="" style="width:100%;height:100%;object-fit:contain;object-position:top left"></figure>
+  <div class="r-work-frame region chrome" data-region="work-frame"><!-- Rounded top outline of work preview tray; bottom continues below viewport --></div>
+  <div class="r-disciplines region control" data-region="disciplines"><!-- Software & Robotics and Music navigation links: rebuild the control's chrome from the crop (comp-spec.mjs --crop disciplines); its ink box, border, fill, radius, and label size are the comp's --></div>
+  <figure class="r-project-one region plate" data-region="project-one"><img src="../../../public/images/projects/routelab.png" alt="" style="width:100%;height:100%;object-fit:contain;object-position:center"></figure>
+  <figure class="r-project-two region plate" data-region="project-two"><img src="../../../public/images/projects/personal-site.png" alt="" style="width:100%;height:100%;object-fit:contain;object-position:center"></figure>
+  <div class="r-project-one-title region text" data-region="project-one-title"><!-- RouteLab title --><p style="font-size:var(--r-project-one-title-font);line-height:1.05;margin:0">project-one-title</p></div>
+  <div class="r-project-one-desc region text" data-region="project-one-desc"><!-- Project description; use the existing accurate RouteLab description in implementation --><p style="font-size:var(--r-project-one-desc-font);line-height:1.05;margin:0">project-one-desc</p></div>
+  <div class="r-project-two-title region text" data-region="project-two-title"><!-- Personal Portfolio Website title --><p style="font-size:var(--r-project-two-title-font);line-height:1.05;margin:0">project-two-title</p></div>
+  <div class="r-project-two-desc region text" data-region="project-two-desc"><!-- Project description from actual portfolio data --><p style="font-size:var(--r-project-two-desc-font);line-height:1.05;margin:0">project-two-desc</p></div>
+  <div class="r-ground region chrome" data-region="ground"><!-- One continuous flat graphite page background behind all named elements --></div>
+</main>
+</body>
+</html>

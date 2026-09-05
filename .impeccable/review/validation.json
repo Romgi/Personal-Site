@@ -1,0 +1,18 @@
+{
+  "checkedAt": "2026-09-05T21:20:55.989286+00:00",
+  "productionBuild": "passed; Next.js warns that Big Shoulders fallback metrics are unavailable",
+  "typescript": "passed",
+  "sourceEslint": "passed",
+  "sourcePrettier": "passed",
+  "gitDiffCheck": "passed",
+  "contentData": "all five src/data files unchanged",
+  "rasterOrigins": "33 rasters, 0 missing",
+  "browserInteractions": ".impeccable/review/interactions.json",
+  "tablet": {
+    "width": 820,
+    "horizontalOverflow": false,
+    "unloadedImages": 0,
+    "consoleErrors": 0
+  },
+  "captureNote": "A stalled development image optimization request was cleared by restarting the dev server; final tablet captures contain all media."
+}

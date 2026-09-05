@@ -1,0 +1,1097 @@
+[
+  {
+    "antipattern": "design-system-color",
+    "name": "Color outside DESIGN.md",
+    "description": "A literal color is outside the DESIGN.md palette and sidecar tonal ramps. This may be legitimate, but it should be an intentional design-system addition rather than drift.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "/Users/jonathangraydon/Documents/GitHub/Personal-Site/src/app/globals.css",
+    "line": 48,
+    "snippet": "Undocumented color #c5e87a is outside DESIGN.md colors",
+    "advisory": true,
+    "ignoreValue": "#c5e87a",
+    "importedBy": [
+      "layout.tsx"
+    ]
+  },
+  {
+    "antipattern": "design-system-color",
+    "name": "Color outside DESIGN.md",
+    "description": "A literal color is outside the DESIGN.md palette and sidecar tonal ramps. This may be legitimate, but it should be an intentional design-system addition rather than drift.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "/Users/jonathangraydon/Documents/GitHub/Personal-Site/src/app/globals.css",
+    "line": 49,
+    "snippet": "Undocumented color #090e0f is outside DESIGN.md colors",
+    "advisory": true,
+    "ignoreValue": "#090e0f",
+    "importedBy": [
+      "layout.tsx"
+    ]
+  },
+  {
+    "antipattern": "design-system-color",
+    "name": "Color outside DESIGN.md",
+    "description": "A literal color is outside the DESIGN.md palette and sidecar tonal ramps. This may be legitimate, but it should be an intentional design-system addition rather than drift.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "/Users/jonathangraydon/Documents/GitHub/Personal-Site/src/app/globals.css",
+    "line": 164,
+    "snippet": "Undocumented color rgba(9, 14, 15, 0.76) is outside DESIGN.md colors",
+    "advisory": true,
+    "ignoreValue": "rgba(9, 14, 15, 0.76)",
+    "importedBy": [
+      "layout.tsx"
+    ]
+  },
+  {
+    "antipattern": "design-system-color",
+    "name": "Color outside DESIGN.md",
+    "description": "A literal color is outside the DESIGN.md palette and sidecar tonal ramps. This may be legitimate, but it should be an intentional design-system addition rather than drift.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "/Users/jonathangraydon/Documents/GitHub/Personal-Site/src/app/globals.css",
+    "line": 168,
+    "snippet": "Undocumented color rgba(255, 251, 243, 0.82) is outside DESIGN.md colors",
+    "advisory": true,
+    "ignoreValue": "rgba(255, 251, 243, 0.82)",
+    "importedBy": [
+      "layout.tsx"
+    ]
+  },
+  {
+    "antipattern": "design-system-color",
+    "name": "Color outside DESIGN.md",
+    "description": "A literal color is outside the DESIGN.md palette and sidecar tonal ramps. This may be legitimate, but it should be an intentional design-system addition rather than drift.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "/Users/jonathangraydon/Documents/GitHub/Personal-Site/src/app/globals.css",
+    "line": 172,
+    "snippet": "Undocumented color rgba(226, 232, 240, 0.14) is outside DESIGN.md colors",
+    "advisory": true,
+    "ignoreValue": "rgba(226, 232, 240, 0.14)",
+    "importedBy": [
+      "layout.tsx"
+    ]
+  },
+  {
+    "antipattern": "design-system-color",
+    "name": "Color outside DESIGN.md",
+    "description": "A literal color is outside the DESIGN.md palette and sidecar tonal ramps. This may be legitimate, but it should be an intentional design-system addition rather than drift.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "/Users/jonathangraydon/Documents/GitHub/Personal-Site/src/app/globals.css",
+    "line": 173,
+    "snippet": "Undocumented color rgba(9, 14, 15, 0.2) is outside DESIGN.md colors",
+    "advisory": true,
+    "ignoreValue": "rgba(9, 14, 15, 0.2)",
+    "importedBy": [
+      "layout.tsx"
+    ]
+  },
+  {
+    "antipattern": "design-system-color",
+    "name": "Color outside DESIGN.md",
+    "description": "A literal color is outside the DESIGN.md palette and sidecar tonal ramps. This may be legitimate, but it should be an intentional design-system addition rather than drift.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "/Users/jonathangraydon/Documents/GitHub/Personal-Site/src/app/globals.css",
+    "line": 183,
+    "snippet": "Undocumented color rgba(9, 14, 15, 0.2) is outside DESIGN.md colors",
+    "advisory": true,
+    "ignoreValue": "rgba(9, 14, 15, 0.2)",
+    "importedBy": [
+      "layout.tsx"
+    ]
+  },
+  {
+    "antipattern": "design-system-color",
+    "name": "Color outside DESIGN.md",
+    "description": "A literal color is outside the DESIGN.md palette and sidecar tonal ramps. This may be legitimate, but it should be an intentional design-system addition rather than drift.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "/Users/jonathangraydon/Documents/GitHub/Personal-Site/src/app/globals.css",
+    "line": 279,
+    "snippet": "Undocumented color rgba(197, 232, 122, 0.38) is outside DESIGN.md colors",
+    "advisory": true,
+    "ignoreValue": "rgba(197, 232, 122, 0.38)",
+    "importedBy": [
+      "layout.tsx"
+    ]
+  },
+  {
+    "antipattern": "design-system-color",
+    "name": "Color outside DESIGN.md",
+    "description": "A literal color is outside the DESIGN.md palette and sidecar tonal ramps. This may be legitimate, but it should be an intentional design-system addition rather than drift.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "/Users/jonathangraydon/Documents/GitHub/Personal-Site/src/app/globals.css",
+    "line": 280,
+    "snippet": "Undocumented color rgba(9, 14, 15, 0.26) is outside DESIGN.md colors",
+    "advisory": true,
+    "ignoreValue": "rgba(9, 14, 15, 0.26)",
+    "importedBy": [
+      "layout.tsx"
+    ]
+  },
+  {
+    "antipattern": "design-system-color",
+    "name": "Color outside DESIGN.md",
+    "description": "A literal color is outside the DESIGN.md palette and sidecar tonal ramps. This may be legitimate, but it should be an intentional design-system addition rather than drift.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "/Users/jonathangraydon/Documents/GitHub/Personal-Site/src/app/globals.css",
+    "line": 298,
+    "snippet": "Undocumented color #9fa78a is outside DESIGN.md colors",
+    "advisory": true,
+    "ignoreValue": "#9fa78a",
+    "importedBy": [
+      "layout.tsx"
+    ]
+  },
+  {
+    "antipattern": "design-system-radius",
+    "name": "Radius outside DESIGN.md",
+    "description": "A border-radius value is outside the DESIGN.md rounded scale. Use a documented radius token or update the design system if the new shape is intentional.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "/Users/jonathangraydon/Documents/GitHub/Personal-Site/src/app/globals.css",
+    "line": 299,
+    "snippet": "border-radius: 12px is outside the DESIGN.md rounded scale",
+    "advisory": true,
+    "ignoreValue": "12px",
+    "importedBy": [
+      "layout.tsx"
+    ]
+  },
+  {
+    "antipattern": "design-system-font-size",
+    "name": "Font size outside DESIGN.md",
+    "description": "A literal font-size is off the type ramp documented in DESIGN.md typography. Use a documented size step or update the design system if the new step is intentional.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "/Users/jonathangraydon/Documents/GitHub/Personal-Site/src/app/globals.css",
+    "line": 332,
+    "snippet": "font-size: 18px is off the DESIGN.md type ramp",
+    "advisory": true,
+    "ignoreValue": "18px",
+    "importedBy": [
+      "layout.tsx"
+    ]
+  },
+  {
+    "antipattern": "design-system-color",
+    "name": "Color outside DESIGN.md",
+    "description": "A literal color is outside the DESIGN.md palette and sidecar tonal ramps. This may be legitimate, but it should be an intentional design-system addition rather than drift.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "/Users/jonathangraydon/Documents/GitHub/Personal-Site/src/app/globals.css",
+    "line": 378,
+    "snippet": "Undocumented color #090e0f is outside DESIGN.md colors",
+    "advisory": true,
+    "ignoreValue": "#090e0f",
+    "importedBy": [
+      "layout.tsx"
+    ]
+  },
+  {
+    "antipattern": "design-system-font-size",
+    "name": "Font size outside DESIGN.md",
+    "description": "A literal font-size is off the type ramp documented in DESIGN.md typography. Use a documented size step or update the design system if the new step is intentional.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "/Users/jonathangraydon/Documents/GitHub/Personal-Site/src/app/globals.css",
+    "line": 414,
+    "snippet": "font-size: clamp(15px, 1.302vw, 22px) has fluid endpoints 15px and 22px off the DESIGN.md type ramp",
+    "advisory": true,
+    "ignoreValue": "15px",
+    "importedBy": [
+      "layout.tsx"
+    ]
+  },
+  {
+    "antipattern": "design-system-font-size",
+    "name": "Font size outside DESIGN.md",
+    "description": "A literal font-size is off the type ramp documented in DESIGN.md typography. Use a documented size step or update the design system if the new step is intentional.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "/Users/jonathangraydon/Documents/GitHub/Personal-Site/src/app/globals.css",
+    "line": 427,
+    "snippet": "font-size: clamp(18px, 1.302vw, 24px) has fluid endpoints 18px and 24px off the DESIGN.md type ramp",
+    "advisory": true,
+    "ignoreValue": "18px",
+    "importedBy": [
+      "layout.tsx"
+    ]
+  },
+  {
+    "antipattern": "design-system-color",
+    "name": "Color outside DESIGN.md",
+    "description": "A literal color is outside the DESIGN.md palette and sidecar tonal ramps. This may be legitimate, but it should be an intentional design-system addition rather than drift.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "/Users/jonathangraydon/Documents/GitHub/Personal-Site/src/app/globals.css",
+    "line": 448,
+    "snippet": "Undocumented color #8a9982 is outside DESIGN.md colors",
+    "advisory": true,
+    "ignoreValue": "#8a9982",
+    "importedBy": [
+      "layout.tsx"
+    ]
+  },
+  {
+    "antipattern": "design-system-radius",
+    "name": "Radius outside DESIGN.md",
+    "description": "A border-radius value is outside the DESIGN.md rounded scale. Use a documented radius token or update the design system if the new shape is intentional.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "/Users/jonathangraydon/Documents/GitHub/Personal-Site/src/app/globals.css",
+    "line": 449,
+    "snippet": "border-radius: 3px is outside the DESIGN.md rounded scale",
+    "advisory": true,
+    "ignoreValue": "3px",
+    "importedBy": [
+      "layout.tsx"
+    ]
+  },
+  {
+    "antipattern": "design-system-font-size",
+    "name": "Font size outside DESIGN.md",
+    "description": "A literal font-size is off the type ramp documented in DESIGN.md typography. Use a documented size step or update the design system if the new step is intentional.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "/Users/jonathangraydon/Documents/GitHub/Personal-Site/src/app/globals.css",
+    "line": 451,
+    "snippet": "font-size: 18px is off the DESIGN.md type ramp",
+    "advisory": true,
+    "ignoreValue": "18px",
+    "importedBy": [
+      "layout.tsx"
+    ]
+  },
+  {
+    "antipattern": "design-system-color",
+    "name": "Color outside DESIGN.md",
+    "description": "A literal color is outside the DESIGN.md palette and sidecar tonal ramps. This may be legitimate, but it should be an intentional design-system addition rather than drift.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "/Users/jonathangraydon/Documents/GitHub/Personal-Site/src/app/globals.css",
+    "line": 492,
+    "snippet": "Undocumented color #707d64 is outside DESIGN.md colors",
+    "advisory": true,
+    "ignoreValue": "#707d64",
+    "importedBy": [
+      "layout.tsx"
+    ]
+  },
+  {
+    "antipattern": "design-system-radius",
+    "name": "Radius outside DESIGN.md",
+    "description": "A border-radius value is outside the DESIGN.md rounded scale. Use a documented radius token or update the design system if the new shape is intentional.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "/Users/jonathangraydon/Documents/GitHub/Personal-Site/src/app/globals.css",
+    "line": 493,
+    "snippet": "border-radius: 12px is outside the DESIGN.md rounded scale",
+    "advisory": true,
+    "ignoreValue": "12px",
+    "importedBy": [
+      "layout.tsx"
+    ]
+  },
+  {
+    "antipattern": "design-system-font-size",
+    "name": "Font size outside DESIGN.md",
+    "description": "A literal font-size is off the type ramp documented in DESIGN.md typography. Use a documented size step or update the design system if the new step is intentional.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "/Users/jonathangraydon/Documents/GitHub/Personal-Site/src/app/globals.css",
+    "line": 510,
+    "snippet": "font-size: 18px is off the DESIGN.md type ramp",
+    "advisory": true,
+    "ignoreValue": "18px",
+    "importedBy": [
+      "layout.tsx"
+    ]
+  },
+  {
+    "antipattern": "design-system-color",
+    "name": "Color outside DESIGN.md",
+    "description": "A literal color is outside the DESIGN.md palette and sidecar tonal ramps. This may be legitimate, but it should be an intentional design-system addition rather than drift.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "/Users/jonathangraydon/Documents/GitHub/Personal-Site/src/app/globals.css",
+    "line": 526,
+    "snippet": "Undocumented color #718167 is outside DESIGN.md colors",
+    "advisory": true,
+    "ignoreValue": "#718167",
+    "importedBy": [
+      "layout.tsx"
+    ]
+  },
+  {
+    "antipattern": "design-system-radius",
+    "name": "Radius outside DESIGN.md",
+    "description": "A border-radius value is outside the DESIGN.md rounded scale. Use a documented radius token or update the design system if the new shape is intentional.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "/Users/jonathangraydon/Documents/GitHub/Personal-Site/src/app/globals.css",
+    "line": 527,
+    "snippet": "border-radius: 12px is outside the DESIGN.md rounded scale",
+    "advisory": true,
+    "ignoreValue": "12px",
+    "importedBy": [
+      "layout.tsx"
+    ]
+  },
+  {
+    "antipattern": "design-system-color",
+    "name": "Color outside DESIGN.md",
+    "description": "A literal color is outside the DESIGN.md palette and sidecar tonal ramps. This may be legitimate, but it should be an intentional design-system addition rather than drift.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "/Users/jonathangraydon/Documents/GitHub/Personal-Site/src/app/globals.css",
+    "line": 593,
+    "snippet": "Undocumented color rgba(9, 14, 15, 0.3) is outside DESIGN.md colors",
+    "advisory": true,
+    "ignoreValue": "rgba(9, 14, 15, 0.3)",
+    "importedBy": [
+      "layout.tsx"
+    ]
+  },
+  {
+    "antipattern": "design-system-color",
+    "name": "Color outside DESIGN.md",
+    "description": "A literal color is outside the DESIGN.md palette and sidecar tonal ramps. This may be legitimate, but it should be an intentional design-system addition rather than drift.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "/Users/jonathangraydon/Documents/GitHub/Personal-Site/src/app/globals.css",
+    "line": 594,
+    "snippet": "Undocumented color #e7e5d825 is outside DESIGN.md colors",
+    "advisory": true,
+    "ignoreValue": "#e7e5d825",
+    "importedBy": [
+      "layout.tsx"
+    ]
+  },
+  {
+    "antipattern": "design-system-font-size",
+    "name": "Font size outside DESIGN.md",
+    "description": "A literal font-size is off the type ramp documented in DESIGN.md typography. Use a documented size step or update the design system if the new step is intentional.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "/Users/jonathangraydon/Documents/GitHub/Personal-Site/src/app/globals.css",
+    "line": 625,
+    "snippet": "font-size: clamp(38px, 4.15vw, 64px) has fluid endpoints 38px and 64px off the DESIGN.md type ramp",
+    "advisory": true,
+    "ignoreValue": "38px",
+    "importedBy": [
+      "layout.tsx"
+    ]
+  },
+  {
+    "antipattern": "design-system-font-size",
+    "name": "Font size outside DESIGN.md",
+    "description": "A literal font-size is off the type ramp documented in DESIGN.md typography. Use a documented size step or update the design system if the new step is intentional.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "/Users/jonathangraydon/Documents/GitHub/Personal-Site/src/app/globals.css",
+    "line": 643,
+    "snippet": "font-size: 17px is off the DESIGN.md type ramp",
+    "advisory": true,
+    "ignoreValue": "17px",
+    "importedBy": [
+      "layout.tsx"
+    ]
+  },
+  {
+    "antipattern": "design-system-font-size",
+    "name": "Font size outside DESIGN.md",
+    "description": "A literal font-size is off the type ramp documented in DESIGN.md typography. Use a documented size step or update the design system if the new step is intentional.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "/Users/jonathangraydon/Documents/GitHub/Personal-Site/src/app/globals.css",
+    "line": 664,
+    "snippet": "font-size: clamp(66px, 8.3vw, 128px) has fluid endpoints 66px and 128px off the DESIGN.md type ramp",
+    "advisory": true,
+    "ignoreValue": "66px",
+    "importedBy": [
+      "layout.tsx"
+    ]
+  },
+  {
+    "antipattern": "design-system-font-size",
+    "name": "Font size outside DESIGN.md",
+    "description": "A literal font-size is off the type ramp documented in DESIGN.md typography. Use a documented size step or update the design system if the new step is intentional.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "/Users/jonathangraydon/Documents/GitHub/Personal-Site/src/app/globals.css",
+    "line": 671,
+    "snippet": "font-size: 32px is off the DESIGN.md type ramp",
+    "advisory": true,
+    "ignoreValue": "32px",
+    "importedBy": [
+      "layout.tsx"
+    ]
+  },
+  {
+    "antipattern": "design-system-font-size",
+    "name": "Font size outside DESIGN.md",
+    "description": "A literal font-size is off the type ramp documented in DESIGN.md typography. Use a documented size step or update the design system if the new step is intentional.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "/Users/jonathangraydon/Documents/GitHub/Personal-Site/src/app/globals.css",
+    "line": 696,
+    "snippet": "font-size: 32px is off the DESIGN.md type ramp",
+    "advisory": true,
+    "ignoreValue": "32px",
+    "importedBy": [
+      "layout.tsx"
+    ]
+  },
+  {
+    "antipattern": "design-system-font-size",
+    "name": "Font size outside DESIGN.md",
+    "description": "A literal font-size is off the type ramp documented in DESIGN.md typography. Use a documented size step or update the design system if the new step is intentional.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "/Users/jonathangraydon/Documents/GitHub/Personal-Site/src/app/globals.css",
+    "line": 722,
+    "snippet": "font-size: 30px is off the DESIGN.md type ramp",
+    "advisory": true,
+    "ignoreValue": "30px",
+    "importedBy": [
+      "layout.tsx"
+    ]
+  },
+  {
+    "antipattern": "design-system-font-size",
+    "name": "Font size outside DESIGN.md",
+    "description": "A literal font-size is off the type ramp documented in DESIGN.md typography. Use a documented size step or update the design system if the new step is intentional.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "/Users/jonathangraydon/Documents/GitHub/Personal-Site/src/app/globals.css",
+    "line": 753,
+    "snippet": "font-size: 30px is off the DESIGN.md type ramp",
+    "advisory": true,
+    "ignoreValue": "30px",
+    "importedBy": [
+      "layout.tsx"
+    ]
+  },
+  {
+    "antipattern": "design-system-radius",
+    "name": "Radius outside DESIGN.md",
+    "description": "A border-radius value is outside the DESIGN.md rounded scale. Use a documented radius token or update the design system if the new shape is intentional.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "/Users/jonathangraydon/Documents/GitHub/Personal-Site/src/app/globals.css",
+    "line": 765,
+    "snippet": "border-radius: 12px is outside the DESIGN.md rounded scale",
+    "advisory": true,
+    "ignoreValue": "12px",
+    "importedBy": [
+      "layout.tsx"
+    ]
+  },
+  {
+    "antipattern": "design-system-font-size",
+    "name": "Font size outside DESIGN.md",
+    "description": "A literal font-size is off the type ramp documented in DESIGN.md typography. Use a documented size step or update the design system if the new step is intentional.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "/Users/jonathangraydon/Documents/GitHub/Personal-Site/src/app/globals.css",
+    "line": 772,
+    "snippet": "font-size: 40px is off the DESIGN.md type ramp",
+    "advisory": true,
+    "ignoreValue": "40px",
+    "importedBy": [
+      "layout.tsx"
+    ]
+  },
+  {
+    "antipattern": "design-system-radius",
+    "name": "Radius outside DESIGN.md",
+    "description": "A border-radius value is outside the DESIGN.md rounded scale. Use a documented radius token or update the design system if the new shape is intentional.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "/Users/jonathangraydon/Documents/GitHub/Personal-Site/src/app/globals.css",
+    "line": 809,
+    "snippet": "border-radius: 4px is outside the DESIGN.md rounded scale",
+    "advisory": true,
+    "ignoreValue": "4px",
+    "importedBy": [
+      "layout.tsx"
+    ]
+  },
+  {
+    "antipattern": "design-system-radius",
+    "name": "Radius outside DESIGN.md",
+    "description": "A border-radius value is outside the DESIGN.md rounded scale. Use a documented radius token or update the design system if the new shape is intentional.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "/Users/jonathangraydon/Documents/GitHub/Personal-Site/src/app/globals.css",
+    "line": 842,
+    "snippet": "border-radius: 3px is outside the DESIGN.md rounded scale",
+    "advisory": true,
+    "ignoreValue": "3px",
+    "importedBy": [
+      "layout.tsx"
+    ]
+  },
+  {
+    "antipattern": "design-system-font-size",
+    "name": "Font size outside DESIGN.md",
+    "description": "A literal font-size is off the type ramp documented in DESIGN.md typography. Use a documented size step or update the design system if the new step is intentional.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "/Users/jonathangraydon/Documents/GitHub/Personal-Site/src/app/globals.css",
+    "line": 869,
+    "snippet": "font-size: 13px is off the DESIGN.md type ramp",
+    "advisory": true,
+    "ignoreValue": "13px",
+    "importedBy": [
+      "layout.tsx"
+    ]
+  },
+  {
+    "antipattern": "design-system-font-size",
+    "name": "Font size outside DESIGN.md",
+    "description": "A literal font-size is off the type ramp documented in DESIGN.md typography. Use a documented size step or update the design system if the new step is intentional.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "/Users/jonathangraydon/Documents/GitHub/Personal-Site/src/app/globals.css",
+    "line": 882,
+    "snippet": "font-size: 28px is off the DESIGN.md type ramp",
+    "advisory": true,
+    "ignoreValue": "28px",
+    "importedBy": [
+      "layout.tsx"
+    ]
+  },
+  {
+    "antipattern": "design-system-font-size",
+    "name": "Font size outside DESIGN.md",
+    "description": "A literal font-size is off the type ramp documented in DESIGN.md typography. Use a documented size step or update the design system if the new step is intentional.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "/Users/jonathangraydon/Documents/GitHub/Personal-Site/src/app/globals.css",
+    "line": 895,
+    "snippet": "font-size: 32px is off the DESIGN.md type ramp",
+    "advisory": true,
+    "ignoreValue": "32px",
+    "importedBy": [
+      "layout.tsx"
+    ]
+  },
+  {
+    "antipattern": "design-system-radius",
+    "name": "Radius outside DESIGN.md",
+    "description": "A border-radius value is outside the DESIGN.md rounded scale. Use a documented radius token or update the design system if the new shape is intentional.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "/Users/jonathangraydon/Documents/GitHub/Personal-Site/src/app/globals.css",
+    "line": 907,
+    "snippet": "border-radius: 12px is outside the DESIGN.md rounded scale",
+    "advisory": true,
+    "ignoreValue": "12px",
+    "importedBy": [
+      "layout.tsx"
+    ]
+  },
+  {
+    "antipattern": "design-system-color",
+    "name": "Color outside DESIGN.md",
+    "description": "A literal color is outside the DESIGN.md palette and sidecar tonal ramps. This may be legitimate, but it should be an intentional design-system addition rather than drift.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "/Users/jonathangraydon/Documents/GitHub/Personal-Site/src/app/globals.css",
+    "line": 929,
+    "snippet": "Undocumented color #171c15 is outside DESIGN.md colors",
+    "advisory": true,
+    "ignoreValue": "#171c15",
+    "importedBy": [
+      "layout.tsx"
+    ]
+  },
+  {
+    "antipattern": "design-system-color",
+    "name": "Color outside DESIGN.md",
+    "description": "A literal color is outside the DESIGN.md palette and sidecar tonal ramps. This may be legitimate, but it should be an intentional design-system addition rather than drift.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "/Users/jonathangraydon/Documents/GitHub/Personal-Site/src/app/globals.css",
+    "line": 935,
+    "snippet": "Undocumented color #141a14 is outside DESIGN.md colors",
+    "advisory": true,
+    "ignoreValue": "#141a14",
+    "importedBy": [
+      "layout.tsx"
+    ]
+  },
+  {
+    "antipattern": "design-system-font-size",
+    "name": "Font size outside DESIGN.md",
+    "description": "A literal font-size is off the type ramp documented in DESIGN.md typography. Use a documented size step or update the design system if the new step is intentional.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "/Users/jonathangraydon/Documents/GitHub/Personal-Site/src/app/globals.css",
+    "line": 939,
+    "snippet": "font-size: 15px is off the DESIGN.md type ramp",
+    "advisory": true,
+    "ignoreValue": "15px",
+    "importedBy": [
+      "layout.tsx"
+    ]
+  },
+  {
+    "antipattern": "design-system-radius",
+    "name": "Radius outside DESIGN.md",
+    "description": "A border-radius value is outside the DESIGN.md rounded scale. Use a documented radius token or update the design system if the new shape is intentional.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "/Users/jonathangraydon/Documents/GitHub/Personal-Site/src/app/globals.css",
+    "line": 947,
+    "snippet": "border-radius: 12px is outside the DESIGN.md rounded scale",
+    "advisory": true,
+    "ignoreValue": "12px",
+    "importedBy": [
+      "layout.tsx"
+    ]
+  },
+  {
+    "antipattern": "design-system-color",
+    "name": "Color outside DESIGN.md",
+    "description": "A literal color is outside the DESIGN.md palette and sidecar tonal ramps. This may be legitimate, but it should be an intentional design-system addition rather than drift.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "/Users/jonathangraydon/Documents/GitHub/Personal-Site/src/app/globals.css",
+    "line": 948,
+    "snippet": "Undocumented color rgba(28, 34, 25, 0.4) is outside DESIGN.md colors",
+    "advisory": true,
+    "ignoreValue": "rgba(28, 34, 25, 0.4)",
+    "importedBy": [
+      "layout.tsx"
+    ]
+  },
+  {
+    "antipattern": "design-system-font-size",
+    "name": "Font size outside DESIGN.md",
+    "description": "A literal font-size is off the type ramp documented in DESIGN.md typography. Use a documented size step or update the design system if the new step is intentional.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "/Users/jonathangraydon/Documents/GitHub/Personal-Site/src/app/globals.css",
+    "line": 963,
+    "snippet": "font-size: 28px is off the DESIGN.md type ramp",
+    "advisory": true,
+    "ignoreValue": "28px",
+    "importedBy": [
+      "layout.tsx"
+    ]
+  },
+  {
+    "antipattern": "design-system-font-size",
+    "name": "Font size outside DESIGN.md",
+    "description": "A literal font-size is off the type ramp documented in DESIGN.md typography. Use a documented size step or update the design system if the new step is intentional.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "/Users/jonathangraydon/Documents/GitHub/Personal-Site/src/app/globals.css",
+    "line": 986,
+    "snippet": "font-size: 17px is off the DESIGN.md type ramp",
+    "advisory": true,
+    "ignoreValue": "17px",
+    "importedBy": [
+      "layout.tsx"
+    ]
+  },
+  {
+    "antipattern": "design-system-font-size",
+    "name": "Font size outside DESIGN.md",
+    "description": "A literal font-size is off the type ramp documented in DESIGN.md typography. Use a documented size step or update the design system if the new step is intentional.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "/Users/jonathangraydon/Documents/GitHub/Personal-Site/src/app/globals.css",
+    "line": 997,
+    "snippet": "font-size: 24px is off the DESIGN.md type ramp",
+    "advisory": true,
+    "ignoreValue": "24px",
+    "importedBy": [
+      "layout.tsx"
+    ]
+  },
+  {
+    "antipattern": "design-system-font-size",
+    "name": "Font size outside DESIGN.md",
+    "description": "A literal font-size is off the type ramp documented in DESIGN.md typography. Use a documented size step or update the design system if the new step is intentional.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "/Users/jonathangraydon/Documents/GitHub/Personal-Site/src/app/globals.css",
+    "line": 1034,
+    "snippet": "font-size: 17px is off the DESIGN.md type ramp",
+    "advisory": true,
+    "ignoreValue": "17px",
+    "importedBy": [
+      "layout.tsx"
+    ]
+  },
+  {
+    "antipattern": "design-system-font-size",
+    "name": "Font size outside DESIGN.md",
+    "description": "A literal font-size is off the type ramp documented in DESIGN.md typography. Use a documented size step or update the design system if the new step is intentional.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "/Users/jonathangraydon/Documents/GitHub/Personal-Site/src/app/globals.css",
+    "line": 1056,
+    "snippet": "font-size: 44px is off the DESIGN.md type ramp",
+    "advisory": true,
+    "ignoreValue": "44px",
+    "importedBy": [
+      "layout.tsx"
+    ]
+  },
+  {
+    "antipattern": "design-system-font-size",
+    "name": "Font size outside DESIGN.md",
+    "description": "A literal font-size is off the type ramp documented in DESIGN.md typography. Use a documented size step or update the design system if the new step is intentional.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "/Users/jonathangraydon/Documents/GitHub/Personal-Site/src/app/globals.css",
+    "line": 1064,
+    "snippet": "font-size: 18px is off the DESIGN.md type ramp",
+    "advisory": true,
+    "ignoreValue": "18px",
+    "importedBy": [
+      "layout.tsx"
+    ]
+  },
+  {
+    "antipattern": "design-system-color",
+    "name": "Color outside DESIGN.md",
+    "description": "A literal color is outside the DESIGN.md palette and sidecar tonal ramps. This may be legitimate, but it should be an intentional design-system addition rather than drift.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "/Users/jonathangraydon/Documents/GitHub/Personal-Site/src/app/globals.css",
+    "line": 1072,
+    "snippet": "Undocumented color #3b463d80 is outside DESIGN.md colors",
+    "advisory": true,
+    "ignoreValue": "#3b463d80",
+    "importedBy": [
+      "layout.tsx"
+    ]
+  },
+  {
+    "antipattern": "design-system-font-size",
+    "name": "Font size outside DESIGN.md",
+    "description": "A literal font-size is off the type ramp documented in DESIGN.md typography. Use a documented size step or update the design system if the new step is intentional.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "/Users/jonathangraydon/Documents/GitHub/Personal-Site/src/app/globals.css",
+    "line": 1084,
+    "snippet": "font-size: clamp(52px, 7vw, 108px) has fluid endpoints 52px and 108px off the DESIGN.md type ramp",
+    "advisory": true,
+    "ignoreValue": "52px",
+    "importedBy": [
+      "layout.tsx"
+    ]
+  },
+  {
+    "antipattern": "design-system-font-size",
+    "name": "Font size outside DESIGN.md",
+    "description": "A literal font-size is off the type ramp documented in DESIGN.md typography. Use a documented size step or update the design system if the new step is intentional.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "/Users/jonathangraydon/Documents/GitHub/Personal-Site/src/app/globals.css",
+    "line": 1109,
+    "snippet": "font-size: 249px is off the DESIGN.md type ramp",
+    "advisory": true,
+    "ignoreValue": "249px",
+    "importedBy": [
+      "layout.tsx"
+    ]
+  },
+  {
+    "antipattern": "design-system-font-size",
+    "name": "Font size outside DESIGN.md",
+    "description": "A literal font-size is off the type ramp documented in DESIGN.md typography. Use a documented size step or update the design system if the new step is intentional.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "/Users/jonathangraydon/Documents/GitHub/Personal-Site/src/app/globals.css",
+    "line": 1128,
+    "snippet": "font-size: 28px is off the DESIGN.md type ramp",
+    "advisory": true,
+    "ignoreValue": "28px",
+    "importedBy": [
+      "layout.tsx"
+    ]
+  },
+  {
+    "antipattern": "design-system-font-size",
+    "name": "Font size outside DESIGN.md",
+    "description": "A literal font-size is off the type ramp documented in DESIGN.md typography. Use a documented size step or update the design system if the new step is intentional.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "/Users/jonathangraydon/Documents/GitHub/Personal-Site/src/app/globals.css",
+    "line": 1131,
+    "snippet": "font-size: 18px is off the DESIGN.md type ramp",
+    "advisory": true,
+    "ignoreValue": "18px",
+    "importedBy": [
+      "layout.tsx"
+    ]
+  },
+  {
+    "antipattern": "design-system-font-size",
+    "name": "Font size outside DESIGN.md",
+    "description": "A literal font-size is off the type ramp documented in DESIGN.md typography. Use a documented size step or update the design system if the new step is intentional.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "/Users/jonathangraydon/Documents/GitHub/Personal-Site/src/app/globals.css",
+    "line": 1141,
+    "snippet": "font-size: 18px is off the DESIGN.md type ramp",
+    "advisory": true,
+    "ignoreValue": "18px",
+    "importedBy": [
+      "layout.tsx"
+    ]
+  },
+  {
+    "antipattern": "design-system-color",
+    "name": "Color outside DESIGN.md",
+    "description": "A literal color is outside the DESIGN.md palette and sidecar tonal ramps. This may be legitimate, but it should be an intentional design-system addition rather than drift.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "/Users/jonathangraydon/Documents/GitHub/Personal-Site/src/app/globals.css",
+    "line": 1187,
+    "snippet": "Undocumented color #8a9982 is outside DESIGN.md colors",
+    "advisory": true,
+    "ignoreValue": "#8a9982",
+    "importedBy": [
+      "layout.tsx"
+    ]
+  },
+  {
+    "antipattern": "design-system-radius",
+    "name": "Radius outside DESIGN.md",
+    "description": "A border-radius value is outside the DESIGN.md rounded scale. Use a documented radius token or update the design system if the new shape is intentional.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "/Users/jonathangraydon/Documents/GitHub/Personal-Site/src/app/globals.css",
+    "line": 1188,
+    "snippet": "border-radius: 12px is outside the DESIGN.md rounded scale",
+    "advisory": true,
+    "ignoreValue": "12px",
+    "importedBy": [
+      "layout.tsx"
+    ]
+  },
+  {
+    "antipattern": "design-system-font-size",
+    "name": "Font size outside DESIGN.md",
+    "description": "A literal font-size is off the type ramp documented in DESIGN.md typography. Use a documented size step or update the design system if the new step is intentional.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "/Users/jonathangraydon/Documents/GitHub/Personal-Site/src/app/globals.css",
+    "line": 1197,
+    "snippet": "font-size: 34px is off the DESIGN.md type ramp",
+    "advisory": true,
+    "ignoreValue": "34px",
+    "importedBy": [
+      "layout.tsx"
+    ]
+  },
+  {
+    "antipattern": "design-system-font-size",
+    "name": "Font size outside DESIGN.md",
+    "description": "A literal font-size is off the type ramp documented in DESIGN.md typography. Use a documented size step or update the design system if the new step is intentional.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "/Users/jonathangraydon/Documents/GitHub/Personal-Site/src/app/globals.css",
+    "line": 1243,
+    "snippet": "font-size: 17px is off the DESIGN.md type ramp",
+    "advisory": true,
+    "ignoreValue": "17px",
+    "importedBy": [
+      "layout.tsx"
+    ]
+  },
+  {
+    "antipattern": "design-system-font-size",
+    "name": "Font size outside DESIGN.md",
+    "description": "A literal font-size is off the type ramp documented in DESIGN.md typography. Use a documented size step or update the design system if the new step is intentional.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "/Users/jonathangraydon/Documents/GitHub/Personal-Site/src/app/globals.css",
+    "line": 1309,
+    "snippet": "font-size: 26px is off the DESIGN.md type ramp",
+    "advisory": true,
+    "ignoreValue": "26px",
+    "importedBy": [
+      "layout.tsx"
+    ]
+  },
+  {
+    "antipattern": "design-system-font-size",
+    "name": "Font size outside DESIGN.md",
+    "description": "A literal font-size is off the type ramp documented in DESIGN.md typography. Use a documented size step or update the design system if the new step is intentional.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "/Users/jonathangraydon/Documents/GitHub/Personal-Site/src/app/globals.css",
+    "line": 1313,
+    "snippet": "font-size: 17px is off the DESIGN.md type ramp",
+    "advisory": true,
+    "ignoreValue": "17px",
+    "importedBy": [
+      "layout.tsx"
+    ]
+  },
+  {
+    "antipattern": "design-system-font-size",
+    "name": "Font size outside DESIGN.md",
+    "description": "A literal font-size is off the type ramp documented in DESIGN.md typography. Use a documented size step or update the design system if the new step is intentional.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "/Users/jonathangraydon/Documents/GitHub/Personal-Site/src/app/globals.css",
+    "line": 1333,
+    "snippet": "font-size: 28px is off the DESIGN.md type ramp",
+    "advisory": true,
+    "ignoreValue": "28px",
+    "importedBy": [
+      "layout.tsx"
+    ]
+  },
+  {
+    "antipattern": "design-system-font-size",
+    "name": "Font size outside DESIGN.md",
+    "description": "A literal font-size is off the type ramp documented in DESIGN.md typography. Use a documented size step or update the design system if the new step is intentional.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "/Users/jonathangraydon/Documents/GitHub/Personal-Site/src/app/globals.css",
+    "line": 1348,
+    "snippet": "font-size: 28px is off the DESIGN.md type ramp",
+    "advisory": true,
+    "ignoreValue": "28px",
+    "importedBy": [
+      "layout.tsx"
+    ]
+  },
+  {
+    "antipattern": "design-system-font-size",
+    "name": "Font size outside DESIGN.md",
+    "description": "A literal font-size is off the type ramp documented in DESIGN.md typography. Use a documented size step or update the design system if the new step is intentional.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "/Users/jonathangraydon/Documents/GitHub/Personal-Site/src/app/globals.css",
+    "line": 1351,
+    "snippet": "font-size: 12px is off the DESIGN.md type ramp",
+    "advisory": true,
+    "ignoreValue": "12px",
+    "importedBy": [
+      "layout.tsx"
+    ]
+  },
+  {
+    "antipattern": "design-system-font-size",
+    "name": "Font size outside DESIGN.md",
+    "description": "A literal font-size is off the type ramp documented in DESIGN.md typography. Use a documented size step or update the design system if the new step is intentional.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "/Users/jonathangraydon/Documents/GitHub/Personal-Site/src/app/globals.css",
+    "line": 1354,
+    "snippet": "font-size: 42px is off the DESIGN.md type ramp",
+    "advisory": true,
+    "ignoreValue": "42px",
+    "importedBy": [
+      "layout.tsx"
+    ]
+  },
+  {
+    "antipattern": "design-system-font-size",
+    "name": "Font size outside DESIGN.md",
+    "description": "A literal font-size is off the type ramp documented in DESIGN.md typography. Use a documented size step or update the design system if the new step is intentional.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "/Users/jonathangraydon/Documents/GitHub/Personal-Site/src/app/globals.css",
+    "line": 1387,
+    "snippet": "font-size: 34px is off the DESIGN.md type ramp",
+    "advisory": true,
+    "ignoreValue": "34px",
+    "importedBy": [
+      "layout.tsx"
+    ]
+  },
+  {
+    "antipattern": "design-system-font-size",
+    "name": "Font size outside DESIGN.md",
+    "description": "A literal font-size is off the type ramp documented in DESIGN.md typography. Use a documented size step or update the design system if the new step is intentional.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "/Users/jonathangraydon/Documents/GitHub/Personal-Site/src/app/globals.css",
+    "line": 1409,
+    "snippet": "font-size: 13px is off the DESIGN.md type ramp",
+    "advisory": true,
+    "ignoreValue": "13px",
+    "importedBy": [
+      "layout.tsx"
+    ]
+  },
+  {
+    "antipattern": "design-system-font-size",
+    "name": "Font size outside DESIGN.md",
+    "description": "A literal font-size is off the type ramp documented in DESIGN.md typography. Use a documented size step or update the design system if the new step is intentional.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "/Users/jonathangraydon/Documents/GitHub/Personal-Site/src/app/globals.css",
+    "line": 1414,
+    "snippet": "font-size: 10px is off the DESIGN.md type ramp",
+    "advisory": true,
+    "ignoreValue": "10px",
+    "importedBy": [
+      "layout.tsx"
+    ]
+  },
+  {
+    "antipattern": "design-system-font-size",
+    "name": "Font size outside DESIGN.md",
+    "description": "A literal font-size is off the type ramp documented in DESIGN.md typography. Use a documented size step or update the design system if the new step is intentional.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "/Users/jonathangraydon/Documents/GitHub/Personal-Site/src/app/globals.css",
+    "line": 1424,
+    "snippet": "font-size: 30px is off the DESIGN.md type ramp",
+    "advisory": true,
+    "ignoreValue": "30px",
+    "importedBy": [
+      "layout.tsx"
+    ]
+  },
+  {
+    "antipattern": "design-system-font-size",
+    "name": "Font size outside DESIGN.md",
+    "description": "A literal font-size is off the type ramp documented in DESIGN.md typography. Use a documented size step or update the design system if the new step is intentional.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "/Users/jonathangraydon/Documents/GitHub/Personal-Site/src/app/globals.css",
+    "line": 1454,
+    "snippet": "font-size: 27px is off the DESIGN.md type ramp",
+    "advisory": true,
+    "ignoreValue": "27px",
+    "importedBy": [
+      "layout.tsx"
+    ]
+  },
+  {
+    "antipattern": "design-system-font-size",
+    "name": "Font size outside DESIGN.md",
+    "description": "A literal font-size is off the type ramp documented in DESIGN.md typography. Use a documented size step or update the design system if the new step is intentional.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "/Users/jonathangraydon/Documents/GitHub/Personal-Site/src/app/globals.css",
+    "line": 1478,
+    "snippet": "font-size: 38px is off the DESIGN.md type ramp",
+    "advisory": true,
+    "ignoreValue": "38px",
+    "importedBy": [
+      "layout.tsx"
+    ]
+  }
+]

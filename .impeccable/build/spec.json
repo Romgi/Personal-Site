@@ -1,0 +1,1112 @@
+{
+  "tool": "comp-spec",
+  "version": 1,
+  "createdAt": "2026-09-05T20:34:57.177Z",
+  "comp": ".impeccable/mocks/flight-deck-a.png",
+  "warnings": [
+    "region work-frame: \"container\": true set in the regions file (the region-size refusal is overridden: one undivided element)",
+    "region project-one: \"bleed\": true set in the regions file (the clipped-artwork refusal is overridden: the page crops it there)",
+    "region project-two: \"bleed\": true set in the regions file (the clipped-artwork refusal is overridden: the page crops it there)",
+    "region ground: \"container\": true set in the regions file (the region-size refusal is overridden: one undivided element)"
+  ],
+  "uncoveredInkCells": [],
+  "compSize": {
+    "width": 1536,
+    "height": 1024
+  },
+  "aspect": 1.5,
+  "orientation": "landscape",
+  "palette": [
+    {
+      "hex": "#090e0f",
+      "coverage": 0.8515
+    },
+    {
+      "hex": "#dfddcf",
+      "coverage": 0.0759
+    },
+    {
+      "hex": "#313b34",
+      "coverage": 0.0395
+    },
+    {
+      "hex": "#5e675b",
+      "coverage": 0.0236
+    },
+    {
+      "hex": "#9ba091",
+      "coverage": 0.0095
+    }
+  ],
+  "bands": [
+    {
+      "y": 0.1529,
+      "strength": 0.3332
+    },
+    {
+      "y": 0.3412,
+      "strength": 0.3742
+    },
+    {
+      "y": 0.3647,
+      "strength": 0.3251
+    },
+    {
+      "y": 0.5412,
+      "strength": 0.4155
+    },
+    {
+      "y": 0.5882,
+      "strength": 0.2636
+    },
+    {
+      "y": 0.6235,
+      "strength": 0.2809
+    },
+    {
+      "y": 0.6471,
+      "strength": 0.323
+    },
+    {
+      "y": 0.8706,
+      "strength": 0.2183
+    }
+  ],
+  "regions": [
+    {
+      "id": "nav",
+      "kind": "chrome",
+      "note": "Slim rounded navigation border",
+      "grid": "A0:J0",
+      "snap": false,
+      "box": {
+        "x": 0.0065,
+        "y": 0.0098,
+        "w": 0.9863,
+        "h": 0.0625
+      },
+      "px": {
+        "x": 10,
+        "y": 10,
+        "w": 1515,
+        "h": 64
+      },
+      "aspect": 23.6719,
+      "palette": [
+        {
+          "hex": "#090c0d",
+          "coverage": 0.9345
+        },
+        {
+          "hex": "#464c43",
+          "coverage": 0.0455
+        },
+        {
+          "hex": "#bbbfa5",
+          "coverage": 0.0074
+        },
+        {
+          "hex": "#878977",
+          "coverage": 0.0071
+        },
+        {
+          "hex": "#dcecb1",
+          "coverage": 0.0055
+        }
+      ],
+      "detail": {
+        "energy": 14.9592
+      },
+      "medium": "semantic",
+      "plate": null,
+      "text": null
+    },
+    {
+      "id": "logo",
+      "kind": "text",
+      "note": "JG identity glyphs",
+      "grid": "A0:A0",
+      "snap": false,
+      "box": {
+        "x": 0.028,
+        "y": 0.0244,
+        "w": 0.0352,
+        "h": 0.0352
+      },
+      "px": {
+        "x": 43,
+        "y": 25,
+        "w": 54,
+        "h": 36
+      },
+      "aspect": 1.5,
+      "palette": [
+        {
+          "hex": "#0f1819",
+          "coverage": 0.5561
+        },
+        {
+          "hex": "#dceab0",
+          "coverage": 0.3037
+        },
+        {
+          "hex": "#344032",
+          "coverage": 0.0981
+        },
+        {
+          "hex": "#68765d",
+          "coverage": 0.0327
+        },
+        {
+          "hex": "#a8b090",
+          "coverage": 0.0093
+        }
+      ],
+      "detail": {
+        "energy": 17.9542
+      },
+      "medium": "semantic",
+      "plate": null,
+      "text": null,
+      "type": {
+        "comp": null,
+        "measuredAt": "2026-09-05T20:35:06.556Z",
+        "note": "no separable lettering in the crop; size by the region box"
+      }
+    },
+    {
+      "id": "nav-links",
+      "kind": "control",
+      "note": "HOME PROJECTS MUSIC RESUME navigation and active underline",
+      "grid": "D0:G0",
+      "snap": false,
+      "box": {
+        "x": 0.3464,
+        "y": 0.0332,
+        "w": 0.291,
+        "h": 0.0391
+      },
+      "px": {
+        "x": 532,
+        "y": 34,
+        "w": 447,
+        "h": 40
+      },
+      "aspect": 11.175,
+      "palette": [
+        {
+          "hex": "#090a0b",
+          "coverage": 0.9482
+        },
+        {
+          "hex": "#e1dfd8",
+          "coverage": 0.0247
+        },
+        {
+          "hex": "#85856a",
+          "coverage": 0.0118
+        },
+        {
+          "hex": "#434543",
+          "coverage": 0.0094
+        },
+        {
+          "hex": "#d3e39d",
+          "coverage": 0.0059
+        }
+      ],
+      "detail": {
+        "energy": 34.9219
+      },
+      "medium": "semantic",
+      "plate": null,
+      "text": null
+    },
+    {
+      "id": "name",
+      "kind": "text",
+      "note": "Two lines of condensed ivory uppercase text JONATHAN GRAYDON",
+      "grid": "A1:E5",
+      "snap": false,
+      "box": {
+        "x": 0.0586,
+        "y": 0.1455,
+        "w": 0.4297,
+        "h": 0.4014
+      },
+      "px": {
+        "x": 90,
+        "y": 149,
+        "w": 660,
+        "h": 411
+      },
+      "aspect": 1.6058,
+      "palette": [
+        {
+          "hex": "#08090c",
+          "coverage": 0.5755
+        },
+        {
+          "hex": "#dedbce",
+          "coverage": 0.393
+        },
+        {
+          "hex": "#a5a59b",
+          "coverage": 0.0134
+        },
+        {
+          "hex": "#3c3c3c",
+          "coverage": 0.0092
+        },
+        {
+          "hex": "#6d6d69",
+          "coverage": 0.0088
+        }
+      ],
+      "detail": {
+        "energy": 50.273
+      },
+      "medium": "semantic",
+      "plate": null,
+      "text": null,
+      "type": {
+        "comp": {
+          "lines": 2,
+          "glyphs": 14,
+          "capHeightPx": 191.5,
+          "inkIsDark": false,
+          "allCaps": true,
+          "advance": 0.3316,
+          "advTall": 0.3316,
+          "advX": null,
+          "gap": 0.1175,
+          "xRatio": null,
+          "stemW": 0.0999,
+          "contrast": 1.0653,
+          "serif": 1.0587,
+          "densTall": 0.6082,
+          "densX": null,
+          "weight": 0.6082
+        },
+        "widthClass": "compressed",
+        "weightClass": "bold",
+        "chosen": {
+          "family": "Big Shoulders",
+          "weight": 300,
+          "fontSizePx": 274,
+          "source": "catalog",
+          "estimatedSize": true,
+          "stamp": "94b4a75ce7a3"
+        }
+      }
+    },
+    {
+      "id": "role",
+      "kind": "text",
+      "note": "Chartreuse role line",
+      "grid": "A5:F5",
+      "snap": false,
+      "box": {
+        "x": 0.0592,
+        "y": 0.5723,
+        "w": 0.4427,
+        "h": 0.0166
+      },
+      "px": {
+        "x": 91,
+        "y": 586,
+        "w": 680,
+        "h": 17
+      },
+      "aspect": 40,
+      "palette": [
+        {
+          "hex": "#080b0c",
+          "coverage": 0.6954
+        },
+        {
+          "hex": "#e5ee9e",
+          "coverage": 0.1425
+        },
+        {
+          "hex": "#67754a",
+          "coverage": 0.0587
+        },
+        {
+          "hex": "#94a46b",
+          "coverage": 0.0556
+        },
+        {
+          "hex": "#3c4a29",
+          "coverage": 0.0478
+        }
+      ],
+      "detail": {
+        "energy": 77.711
+      },
+      "medium": "semantic",
+      "plate": null,
+      "text": null,
+      "type": {
+        "comp": {
+          "lines": 1,
+          "glyphs": 59,
+          "capHeightPx": 13.9,
+          "inkIsDark": false,
+          "allCaps": true,
+          "advance": 0.5389,
+          "advTall": 0.5389,
+          "advX": null,
+          "gap": 0.2874,
+          "xRatio": null,
+          "stemW": 0.1523,
+          "contrast": 1.1074,
+          "serif": 0.7062,
+          "densTall": 0.5586,
+          "densX": null,
+          "weight": 0.5586
+        },
+        "widthClass": "condensed",
+        "weightClass": "medium"
+      }
+    },
+    {
+      "id": "intro",
+      "kind": "text",
+      "note": "Two lines of introduction",
+      "grid": "A6:E6",
+      "snap": false,
+      "box": {
+        "x": 0.0592,
+        "y": 0.6074,
+        "w": 0.3613,
+        "h": 0.042
+      },
+      "px": {
+        "x": 91,
+        "y": 622,
+        "w": 555,
+        "h": 43
+      },
+      "aspect": 12.907,
+      "palette": [
+        {
+          "hex": "#090b0d",
+          "coverage": 0.7613
+        },
+        {
+          "hex": "#f1f1e9",
+          "coverage": 0.0736
+        },
+        {
+          "hex": "#cac9c0",
+          "coverage": 0.0571
+        },
+        {
+          "hex": "#92918d",
+          "coverage": 0.0571
+        },
+        {
+          "hex": "#525350",
+          "coverage": 0.0509
+        }
+      ],
+      "detail": {
+        "energy": 81.6486
+      },
+      "medium": "semantic",
+      "plate": null,
+      "text": null,
+      "type": {
+        "comp": {
+          "lines": 2,
+          "glyphs": 116,
+          "capHeightPx": 14.1,
+          "inkIsDark": false,
+          "allCaps": false,
+          "advance": 0.5267,
+          "advTall": 0.3592,
+          "advX": 0.5387,
+          "gap": 0.1404,
+          "xRatio": 0.7363,
+          "stemW": 0.1416,
+          "contrast": 0.9969,
+          "serif": 0.9901,
+          "densTall": 0.5078,
+          "densX": 0.5311,
+          "weight": 0.5078
+        },
+        "widthClass": "condensed",
+        "weightClass": "medium"
+      }
+    },
+    {
+      "id": "projects-action",
+      "kind": "control",
+      "note": "Outlined View Projects action and arrow",
+      "grid": "A6:C7",
+      "snap": false,
+      "box": {
+        "x": 0.0592,
+        "y": 0.6758,
+        "w": 0.1634,
+        "h": 0.0508
+      },
+      "px": {
+        "x": 91,
+        "y": 692,
+        "w": 251,
+        "h": 52
+      },
+      "aspect": 4.8269,
+      "palette": [
+        {
+          "hex": "#080808",
+          "coverage": 0.8324
+        },
+        {
+          "hex": "#2b351c",
+          "coverage": 0.0666
+        },
+        {
+          "hex": "#adbb76",
+          "coverage": 0.0485
+        },
+        {
+          "hex": "#ecf3ac",
+          "coverage": 0.0296
+        },
+        {
+          "hex": "#8b915a",
+          "coverage": 0.0229
+        }
+      ],
+      "detail": {
+        "energy": 36.6853
+      },
+      "medium": "semantic",
+      "plate": null,
+      "text": null
+    },
+    {
+      "id": "resume-action",
+      "kind": "control",
+      "note": "Outlined View Resume action and arrow",
+      "grid": "C6:E7",
+      "snap": false,
+      "box": {
+        "x": 0.2376,
+        "y": 0.6758,
+        "w": 0.1628,
+        "h": 0.0508
+      },
+      "px": {
+        "x": 365,
+        "y": 692,
+        "w": 250,
+        "h": 52
+      },
+      "aspect": 4.8077,
+      "palette": [
+        {
+          "hex": "#080909",
+          "coverage": 0.8901
+        },
+        {
+          "hex": "#8e9b88",
+          "coverage": 0.0741
+        },
+        {
+          "hex": "#cacfbc",
+          "coverage": 0.0165
+        },
+        {
+          "hex": "#636f63",
+          "coverage": 0.0139
+        },
+        {
+          "hex": "#1e2e22",
+          "coverage": 0.0053
+        }
+      ],
+      "detail": {
+        "energy": 30.6802
+      },
+      "medium": "semantic",
+      "plate": null,
+      "text": null
+    },
+    {
+      "id": "optic",
+      "kind": "plate",
+      "note": "Tilted translucent concentric optical rings with fine meridian lines on dark graphite. Decorative labels have no factual meaning and will be omitted.",
+      "grid": "F0:J7",
+      "snap": false,
+      "box": {
+        "x": 0.5078,
+        "y": 0.0801,
+        "w": 0.4857,
+        "h": 0.6494
+      },
+      "px": {
+        "x": 780,
+        "y": 82,
+        "w": 746,
+        "h": 665
+      },
+      "aspect": 1.1218,
+      "palette": [
+        {
+          "hex": "#0b0f11",
+          "coverage": 0.8402
+        },
+        {
+          "hex": "#2f3b33",
+          "coverage": 0.079
+        },
+        {
+          "hex": "#576358",
+          "coverage": 0.0428
+        },
+        {
+          "hex": "#828a75",
+          "coverage": 0.0198
+        },
+        {
+          "hex": "#afb9a1",
+          "coverage": 0.0182
+        }
+      ],
+      "detail": {
+        "energy": 27.1403
+      },
+      "medium": "raster",
+      "plate": "public/images/design/optic.png",
+      "text": null
+    },
+    {
+      "id": "work-frame",
+      "kind": "chrome",
+      "note": "Rounded top outline of work preview tray; bottom continues below viewport",
+      "grid": "A7:J9",
+      "container": true,
+      "snap": false,
+      "box": {
+        "x": 0.0065,
+        "y": 0.751,
+        "w": 0.9863,
+        "h": 0.249
+      },
+      "px": {
+        "x": 10,
+        "y": 769,
+        "w": 1515,
+        "h": 255
+      },
+      "aspect": 5.9412,
+      "palette": [
+        {
+          "hex": "#091314",
+          "coverage": 0.9286
+        },
+        {
+          "hex": "#3d453d",
+          "coverage": 0.0405
+        },
+        {
+          "hex": "#666e5c",
+          "coverage": 0.0147
+        },
+        {
+          "hex": "#132313",
+          "coverage": 0.0087
+        },
+        {
+          "hex": "#e8e4d4",
+          "coverage": 0.0075
+        }
+      ],
+      "detail": {
+        "energy": 15.4241
+      },
+      "medium": "semantic",
+      "plate": null,
+      "text": null
+    },
+    {
+      "id": "disciplines",
+      "kind": "control",
+      "note": "Software & Robotics and Music navigation links",
+      "grid": "A7:F7",
+      "snap": false,
+      "box": {
+        "x": 0.0319,
+        "y": 0.7705,
+        "w": 0.5514,
+        "h": 0.0195
+      },
+      "px": {
+        "x": 49,
+        "y": 789,
+        "w": 847,
+        "h": 20
+      },
+      "aspect": 42.35,
+      "palette": [
+        {
+          "hex": "#080a0b",
+          "coverage": 0.8619
+        },
+        {
+          "hex": "#3a4239",
+          "coverage": 0.0693
+        },
+        {
+          "hex": "#dae49a",
+          "coverage": 0.0321
+        },
+        {
+          "hex": "#91a169",
+          "coverage": 0.0186
+        },
+        {
+          "hex": "#4d5d38",
+          "coverage": 0.0181
+        }
+      ],
+      "detail": {
+        "energy": 29.0313
+      },
+      "medium": "semantic",
+      "plate": null,
+      "text": null
+    },
+    {
+      "id": "project-one",
+      "kind": "image",
+      "note": "Illustrative project preview replaced by existing RouteLab screenshot to preserve real media",
+      "grid": "A7:C9",
+      "bleed": true,
+      "snap": false,
+      "box": {
+        "x": 0.0234,
+        "y": 0.7998,
+        "w": 0.2747,
+        "h": 0.2002
+      },
+      "px": {
+        "x": 36,
+        "y": 819,
+        "w": 422,
+        "h": 205
+      },
+      "aspect": 2.0585,
+      "palette": [
+        {
+          "hex": "#0a1517",
+          "coverage": 0.9202
+        },
+        {
+          "hex": "#313a33",
+          "coverage": 0.0521
+        },
+        {
+          "hex": "#585e52",
+          "coverage": 0.0265
+        },
+        {
+          "hex": "#e8e8a8",
+          "coverage": 0.0006
+        },
+        {
+          "hex": "#989888",
+          "coverage": 0.0005
+        }
+      ],
+      "detail": {
+        "energy": 22.0329
+      },
+      "medium": "raster",
+      "plate": "public/images/projects/routelab.png",
+      "text": null
+    },
+    {
+      "id": "project-two",
+      "kind": "image",
+      "note": "Illustrative project preview replaced by existing Personal Portfolio Website screenshot to preserve real media",
+      "grid": "F7:H9",
+      "bleed": true,
+      "snap": false,
+      "box": {
+        "x": 0.5046,
+        "y": 0.7998,
+        "w": 0.291,
+        "h": 0.2002
+      },
+      "px": {
+        "x": 775,
+        "y": 819,
+        "w": 447,
+        "h": 205
+      },
+      "aspect": 2.1805,
+      "palette": [
+        {
+          "hex": "#0a1818",
+          "coverage": 0.8951
+        },
+        {
+          "hex": "#293727",
+          "coverage": 0.0403
+        },
+        {
+          "hex": "#565d4d",
+          "coverage": 0.0289
+        },
+        {
+          "hex": "#363c3c",
+          "coverage": 0.0239
+        },
+        {
+          "hex": "#838c74",
+          "coverage": 0.0117
+        }
+      ],
+      "detail": {
+        "energy": 15.7632
+      },
+      "medium": "raster",
+      "plate": "public/images/projects/personal-site.png",
+      "text": null
+    },
+    {
+      "id": "project-one-title",
+      "kind": "text",
+      "note": "RouteLab title",
+      "grid": "D8:D8",
+      "snap": false,
+      "box": {
+        "x": 0.3138,
+        "y": 0.8428,
+        "w": 0.069,
+        "h": 0.0303
+      },
+      "px": {
+        "x": 482,
+        "y": 863,
+        "w": 106,
+        "h": 31
+      },
+      "aspect": 3.4194,
+      "palette": [
+        {
+          "hex": "#0a1515",
+          "coverage": 0.6203
+        },
+        {
+          "hex": "#e9e4d5",
+          "coverage": 0.2101
+        },
+        {
+          "hex": "#4d524d",
+          "coverage": 0.081
+        },
+        {
+          "hex": "#8c8e86",
+          "coverage": 0.0456
+        },
+        {
+          "hex": "#c1beb1",
+          "coverage": 0.043
+        }
+      ],
+      "detail": {
+        "energy": 46.4355
+      },
+      "medium": "semantic",
+      "plate": null,
+      "text": null,
+      "type": {
+        "comp": {
+          "lines": 1,
+          "glyphs": 8,
+          "capHeightPx": 26.5,
+          "inkIsDark": false,
+          "allCaps": false,
+          "advance": 0.4151,
+          "advTall": 0.3962,
+          "advX": 0.4151,
+          "gap": 0.0755,
+          "xRatio": 0.7193,
+          "stemW": 0.1245,
+          "contrast": 1.0874,
+          "serif": null,
+          "densTall": 0.5081,
+          "densX": 0.6056,
+          "weight": 0.5081
+        },
+        "widthClass": "compressed",
+        "weightClass": "medium"
+      }
+    },
+    {
+      "id": "project-one-desc",
+      "kind": "text",
+      "note": "Project description; use the existing accurate RouteLab description in implementation",
+      "grid": "D8:E9",
+      "snap": false,
+      "box": {
+        "x": 0.3138,
+        "y": 0.8887,
+        "w": 0.14,
+        "h": 0.0439
+      },
+      "px": {
+        "x": 482,
+        "y": 910,
+        "w": 215,
+        "h": 45
+      },
+      "aspect": 4.7778,
+      "palette": [
+        {
+          "hex": "#081515",
+          "coverage": 0.864
+        },
+        {
+          "hex": "#a9c294",
+          "coverage": 0.0422
+        },
+        {
+          "hex": "#7f9872",
+          "coverage": 0.0413
+        },
+        {
+          "hex": "#384836",
+          "coverage": 0.0338
+        },
+        {
+          "hex": "#62745c",
+          "coverage": 0.0188
+        }
+      ],
+      "detail": {
+        "energy": 39.1846
+      },
+      "medium": "semantic",
+      "plate": null,
+      "text": null,
+      "type": {
+        "comp": {
+          "lines": 2,
+          "glyphs": 37,
+          "capHeightPx": 13.4,
+          "inkIsDark": false,
+          "allCaps": false,
+          "advance": 0.5007,
+          "advTall": 0.3576,
+          "advX": 0.5089,
+          "gap": 0.1174,
+          "xRatio": 0.7577,
+          "stemW": 0.1392,
+          "contrast": 1.041,
+          "serif": 1.784,
+          "densTall": 0.564,
+          "densX": 0.5249,
+          "weight": 0.564
+        },
+        "widthClass": "condensed",
+        "weightClass": "bold"
+      }
+    },
+    {
+      "id": "project-two-title",
+      "kind": "text",
+      "note": "Personal Portfolio Website title",
+      "grid": "I8:J9",
+      "snap": false,
+      "box": {
+        "x": 0.8125,
+        "y": 0.8428,
+        "w": 0.1484,
+        "h": 0.0625
+      },
+      "px": {
+        "x": 1248,
+        "y": 863,
+        "w": 228,
+        "h": 64
+      },
+      "aspect": 3.5625,
+      "palette": [
+        {
+          "hex": "#091717",
+          "coverage": 0.7426
+        },
+        {
+          "hex": "#e1ddcc",
+          "coverage": 0.1525
+        },
+        {
+          "hex": "#4c504d",
+          "coverage": 0.0561
+        },
+        {
+          "hex": "#8d9087",
+          "coverage": 0.0386
+        },
+        {
+          "hex": "#c5bdb8",
+          "coverage": 0.0102
+        }
+      ],
+      "detail": {
+        "energy": 56.3503
+      },
+      "medium": "semantic",
+      "plate": null,
+      "text": null,
+      "type": {
+        "comp": {
+          "lines": 2,
+          "glyphs": 21,
+          "capHeightPx": 26.5,
+          "inkIsDark": false,
+          "allCaps": false,
+          "advance": 0.4151,
+          "advTall": 0.3585,
+          "advX": 0.4151,
+          "gap": 0.0755,
+          "xRatio": 0.7188,
+          "stemW": 0.1253,
+          "contrast": 1.0369,
+          "serif": 0.9581,
+          "densTall": 0.5389,
+          "densX": 0.6136,
+          "weight": 0.5389
+        },
+        "widthClass": "compressed",
+        "weightClass": "medium"
+      }
+    },
+    {
+      "id": "project-two-desc",
+      "kind": "text",
+      "note": "Project description from actual portfolio data",
+      "grid": "I9:J9",
+      "snap": false,
+      "box": {
+        "x": 0.8125,
+        "y": 0.9238,
+        "w": 0.1432,
+        "h": 0.0469
+      },
+      "px": {
+        "x": 1248,
+        "y": 946,
+        "w": 220,
+        "h": 48
+      },
+      "aspect": 4.5833,
+      "palette": [
+        {
+          "hex": "#081717",
+          "coverage": 0.8791
+        },
+        {
+          "hex": "#6a7b5d",
+          "coverage": 0.0465
+        },
+        {
+          "hex": "#3a4938",
+          "coverage": 0.044
+        },
+        {
+          "hex": "#122111",
+          "coverage": 0.0296
+        },
+        {
+          "hex": "#383838",
+          "coverage": 0.0008
+        }
+      ],
+      "detail": {
+        "energy": 18.872
+      },
+      "medium": "semantic",
+      "plate": null,
+      "text": null,
+      "type": {
+        "comp": {
+          "lines": 2,
+          "glyphs": 27,
+          "capHeightPx": 14.4,
+          "inkIsDark": false,
+          "allCaps": false,
+          "advance": 0.5026,
+          "advTall": 0.3624,
+          "advX": 0.5026,
+          "gap": 0.1005,
+          "xRatio": 0.6953,
+          "stemW": 0.1237,
+          "contrast": 1.0791,
+          "serif": 0.6909,
+          "densTall": 0.4516,
+          "densX": 0.5131,
+          "weight": 0.4516
+        },
+        "widthClass": "condensed",
+        "weightClass": "regular"
+      }
+    },
+    {
+      "id": "ground",
+      "kind": "chrome",
+      "note": "One continuous flat graphite page background behind all named elements",
+      "grid": "A0:J9",
+      "container": true,
+      "snap": false,
+      "box": {
+        "x": 0,
+        "y": 0,
+        "w": 1,
+        "h": 1
+      },
+      "px": {
+        "x": 0,
+        "y": 0,
+        "w": 1536,
+        "h": 1024
+      },
+      "aspect": 1.5,
+      "palette": [
+        {
+          "hex": "#090e0f",
+          "coverage": 0.8515
+        },
+        {
+          "hex": "#dfddcf",
+          "coverage": 0.0759
+        },
+        {
+          "hex": "#313b34",
+          "coverage": 0.0395
+        },
+        {
+          "hex": "#5e675b",
+          "coverage": 0.0236
+        },
+        {
+          "hex": "#9ba091",
+          "coverage": 0.0095
+        }
+      ],
+      "detail": {
+        "energy": 37.9478
+      },
+      "medium": "semantic",
+      "plate": null,
+      "text": null
+    }
+  ]
+}

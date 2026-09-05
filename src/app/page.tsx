@@ -29,7 +29,7 @@ export default function Home() {
     repertoire.find((item) => item.featured) ?? repertoire[0];
 
   return (
-    <>
+    <div className="home-page">
       <HomeHero
         name={profile.name}
         title={profile.title}
@@ -37,50 +37,58 @@ export default function Home() {
         image={profile.profileImage}
       />
 
-      <section className="-mt-[1px] py-20 sm:py-24">
+      <section className="home-about section-block">
         <Container>
-          <AnimatedSection>
-            <SectionHeading
-              eyebrow="About"
-              title="A technical portfolio for software, robotics, and music."
-              description="Jonathan's work connects practical software engineering, competition robotics, and trumpet performance, with projects that emphasize reliability, clarity, and disciplined execution."
-            />
-            <div className="mt-8">
-              <ExpandableText
-                shortText={profile.about.short}
-                expandedText={profile.about.expanded}
+          <div className="about-layout">
+            <AnimatedSection>
+              <SectionHeading
+                eyebrow="About"
+                title="A technical portfolio for software, robotics, and music."
+                description="Jonathan's work connects practical software engineering, competition robotics, and trumpet performance, with projects that emphasize reliability, clarity, and disciplined execution."
               />
-            </div>
-          </AnimatedSection>
+              <div className="mt-8">
+                <ExpandableText
+                  shortText={profile.about.short}
+                  expandedText={profile.about.expanded}
+                />
+              </div>
+            </AnimatedSection>
+            <div className="home-highlights">
+              {profile.highlights.map((item, index) => (
+                <AnimatedSection key={item.title}>
+                  <Link href={item.href} className="highlight-link group">
+                    {index === 0 ? (
+                      <Image
+                        src={profile.profileImage.src}
+                        alt=""
+                        fill
+                        sizes="(max-width: 768px) 100vw, 40vw"
+                        className="highlight-media"
+                        aria-hidden="true"
+                      />
+                    ) : null}
+                    <h3 className="mt-4 text-xl font-semibold text-white">
+                      {item.title}
+                    </h3>
+                    <p className="font-mono text-[11px] font-medium uppercase tracking-[0.26em] text-blue-300">
+                      {item.metric}
+                    </p>
 
-          <div className="mt-12 grid gap-5 md:grid-cols-3">
-            {profile.highlights.map((item) => (
-              <AnimatedSection key={item.title}>
-                <Link
-                  href={item.href}
-                  data-tilt
-                  className="liquid-glass-surface glass-card group block h-full rounded-lg border border-white/10 p-6 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-blue-300"
-                >
-                  <p className="font-mono text-[11px] font-medium uppercase tracking-[0.26em] text-blue-300">
-                    {item.metric}
-                  </p>
-                  <h3 className="mt-4 text-xl font-semibold text-white">
-                    {item.title}
-                  </h3>
-                  <p className="mt-3 text-sm leading-6 text-slate-300">
-                    {item.description}
-                  </p>
-                  <span className="mt-5 inline-flex items-center gap-2 text-sm font-medium text-blue-200">
-                    Explore
-                    <ArrowRight
-                      aria-hidden="true"
-                      size={16}
-                      className="transition group-hover:translate-x-1"
-                    />
-                  </span>
-                </Link>
-              </AnimatedSection>
-            ))}
+                    <p className="mt-3 text-sm leading-6 text-slate-300">
+                      {item.description}
+                    </p>
+                    <span className="mt-5 inline-flex items-center gap-2 text-sm font-medium text-blue-200">
+                      Explore
+                      <ArrowRight
+                        aria-hidden="true"
+                        size={16}
+                        className="transition group-hover:translate-x-1"
+                      />
+                    </span>
+                  </Link>
+                </AnimatedSection>
+              ))}
+            </div>
           </div>
         </Container>
       </section>
@@ -98,10 +106,10 @@ export default function Home() {
               <ArrowRight aria-hidden="true" size={16} />
             </ButtonLink>
           </div>
-          <div className="mt-10 grid gap-5 lg:grid-cols-2">
+          <div className="featured-projects">
             {featuredProjects.slice(0, 2).map((project) => (
               <AnimatedSection key={project.id}>
-                <ProjectCard project={project} />
+                <ProjectCard project={project} featured />
               </AnimatedSection>
             ))}
           </div>
@@ -144,7 +152,7 @@ export default function Home() {
         </Container>
       </section>
 
-      <section className="border-t border-white/10 bg-[linear-gradient(180deg,rgba(13,20,38,0.5),rgba(26,29,35,0.95))] py-20 sm:py-24">
+      <section className="home-music section-block">
         <Container>
           <div className="grid gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:items-center">
             <AnimatedSection>
@@ -161,23 +169,25 @@ export default function Home() {
                 description="Solo repertoire, honour band experience, university ensemble performance, jazz lead trumpet work, and festival recognition."
               />
               <div className="liquid-glass-surface glass-card mt-7 rounded-lg border border-white/10 p-5">
-                <p className="font-mono text-[11px] font-medium uppercase tracking-[0.24em] text-blue-300">
-                  Featured repertoire
-                </p>
                 <h3 className="mt-3 text-xl font-semibold text-white">
                   {featuredMusic.title}
                 </h3>
+                <p className="font-mono text-[11px] font-medium uppercase tracking-[0.24em] text-blue-300">
+                  Featured repertoire
+                </p>
+
                 <p className="mt-3 text-sm leading-6 text-slate-300">
                   {featuredMusic.description}
                 </p>
               </div>
               <div className="liquid-glass-surface glass-card mt-5 rounded-lg border border-white/10 p-5">
-                <p className="font-mono text-[11px] font-medium uppercase tracking-[0.24em] text-blue-300">
-                  Featured accomplishment
-                </p>
                 <h3 className="mt-3 text-xl font-semibold text-white">
                   {musicAccomplishments[0].title}
                 </h3>
+                <p className="font-mono text-[11px] font-medium uppercase tracking-[0.24em] text-blue-300">
+                  Featured accomplishment
+                </p>
+
                 <p className="mt-3 text-sm leading-6 text-slate-300">
                   {musicAccomplishments[0].description}
                 </p>
@@ -192,6 +202,6 @@ export default function Home() {
           </div>
         </Container>
       </section>
-    </>
+    </div>
   );
 }

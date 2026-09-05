@@ -1,7 +1,7 @@
 "use client";
 
 import { ChevronDown } from "lucide-react";
-import { useState } from "react";
+import { useId, useState } from "react";
 
 import { cn } from "@/lib/utils";
 
@@ -14,12 +14,16 @@ export function ExpandableText({
   shortText,
   expandedText,
 }: ExpandableTextProps) {
+  const contentId = useId();
   const [isExpanded, setIsExpanded] = useState(false);
 
   return (
     <div className="max-w-3xl">
       <p className="text-lg leading-8 text-slate-300">{shortText}</p>
       <div
+        id={contentId}
+        inert={!isExpanded}
+        aria-hidden={!isExpanded}
         className={cn(
           "grid transition-[grid-template-rows] duration-300",
           isExpanded ? "grid-rows-[1fr]" : "grid-rows-[0fr]",
@@ -40,6 +44,7 @@ export function ExpandableText({
         className="mt-5 inline-flex items-center gap-2 rounded-md border border-white/10 px-4 py-2 text-sm font-medium text-slate-200 transition hover:border-blue-300/40 hover:bg-blue-500/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-blue-300"
         onClick={() => setIsExpanded((value) => !value)}
         aria-expanded={isExpanded}
+        aria-controls={contentId}
       >
         {isExpanded ? "Show less" : "Read more"}
         <ChevronDown

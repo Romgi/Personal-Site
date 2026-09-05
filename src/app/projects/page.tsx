@@ -30,26 +30,26 @@ export default function ProjectsPage() {
   const firstExperience = roboticsExperiences[0];
 
   return (
-    <>
+    <div className="projects-page">
       <PageHero
         eyebrow="Computer Science Projects"
         title="Software work organized for technical notes, media, and accomplishments."
         description="A practical collection of web applications, robotics software, coursework repositories, game projects, and tools built with modern development workflows."
       >
-        <div className="grid gap-3 sm:grid-cols-3">
-          <div className="liquid-glass-surface glass-card rounded-lg border border-white/10 p-4">
+        <div className="project-census">
+          <div className="census-item">
             <p className="text-2xl font-semibold tracking-tight text-white">
               {projects.length}
             </p>
             <p className="mt-1 text-sm text-slate-400">Project entries</p>
           </div>
-          <div className="liquid-glass-surface glass-card rounded-lg border border-white/10 p-4">
+          <div className="census-item">
             <p className="text-2xl font-semibold tracking-tight text-white">
               {featuredProjects.length}
             </p>
             <p className="mt-1 text-sm text-slate-400">Featured projects</p>
           </div>
-          <div className="liquid-glass-surface glass-card rounded-lg border border-white/10 p-4">
+          <div className="census-item">
             <p className="text-2xl font-semibold tracking-tight text-white">
               {projectTags.length}
             </p>
@@ -71,10 +71,10 @@ export default function ProjectsPage() {
               <ArrowRight aria-hidden="true" size={16} />
             </ButtonLink>
           </div>
-          <div className="mt-10 grid gap-5 lg:grid-cols-2">
+          <div className="featured-projects">
             {featuredProjects.map((project) => (
               <AnimatedSection key={project.id}>
-                <ProjectCard project={project} />
+                <ProjectCard project={project} featured />
               </AnimatedSection>
             ))}
           </div>
@@ -134,7 +134,7 @@ export default function ProjectsPage() {
                 <div
                   data-robotics-visual
                   aria-hidden="true"
-                  className="relative mt-8 hidden overflow-hidden rounded-lg border border-white/10 bg-[radial-gradient(110%_80%_at_50%_0%,rgba(47,95,224,0.14),transparent_62%),linear-gradient(180deg,rgba(10,12,16,0.85),rgba(16,18,21,0.95))] lg:block lg:h-[calc(100svh-22rem)] lg:min-h-96"
+                  className="robotics-instrument relative mt-8 hidden overflow-hidden lg:block lg:h-[calc(100svh-22rem)] lg:min-h-96"
                 >
                   <div
                     aria-hidden="true"
@@ -190,7 +190,7 @@ export default function ProjectsPage() {
                       data-robotics-entry
                       data-hud-year={experience.year}
                       data-hud-label={`${experience.teamName} - ${experience.role}`}
-                      className="liquid-glass-surface glass-card overflow-hidden rounded-lg border border-white/10"
+                      className="robotics-entry"
                     >
                       <div className="relative aspect-[3/2]">
                         <Image
@@ -252,6 +252,6 @@ export default function ProjectsPage() {
           </div>
         </Container>
       </section>
-    </>
+    </div>
   );
 }

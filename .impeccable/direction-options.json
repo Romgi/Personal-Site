@@ -1,0 +1,220 @@
+{
+  "title": "Jonathan Graydon — frontend redesign",
+  "question": "Choose the direction to carry across Home, Projects, Music, and Resume. Every direction preserves your full content and real glass refraction.",
+  "options": [
+    {
+      "id": "assigned",
+      "label": "Flight deck",
+      "kicker": "THE ROLL",
+      "lineage": "Precision aerospace telemetry displays",
+      "thesis": "A spatial engineering portfolio with a live optical instrument and an impeccably organized body of work.",
+      "palette": [
+        "#0b1012",
+        "#e7eddf",
+        "#c5e87a",
+        "#738579"
+      ],
+      "materials": [
+        "smoked optical glass",
+        "fine instrument rules",
+        "restrained phosphor light"
+      ],
+      "viewport": "An oversized Jonathan Graydon nameplate, a three-dimensional interactive optical field, and a precise software–robotics–music index.",
+      "risk": "The instrument vocabulary must stay legible and avoid decorative fake telemetry.",
+      "comp": ".impeccable/mocks/decision/flight-deck.png",
+      "raised": [
+        {
+          "from": "Phosphor transcript",
+          "raise": "A continuous, legible project index and disciplined keyboard interactions."
+        },
+        {
+          "from": "Destination index",
+          "raise": "Unmistakable section indexing and deliberate state transitions."
+        },
+        {
+          "from": "Duotone performance bill",
+          "raise": "One dominant first-viewport focal point with confident type scale."
+        },
+        {
+          "from": "Living current",
+          "raise": "Pointer motion must produce a visible, graceful response with a quiet resting state."
+        },
+        {
+          "from": "Mechanical folio",
+          "raise": "Animations share a coherent timeline and remain understandable when paused."
+        }
+      ]
+    },
+    {
+      "id": "model-pick",
+      "label": "Optical studio",
+      "kicker": "IMPECCABLE’S PICK",
+      "lineage": "Optical engineering and contemporary design exhibitions",
+      "thesis": "A confident portfolio built around a sculptural lens that reacts to your pointer and reveals the work through glass.",
+      "palette": [
+        "#101113",
+        "#ededeb",
+        "#779cff",
+        "#a5afbe"
+      ],
+      "materials": [
+        "clear optical glass",
+        "graphite",
+        "silver highlights"
+      ],
+      "viewport": "Huge stacked Jonathan Graydon typography with a floating optical form, a quiet capsule nav, and a full-width project preview strip.",
+      "risk": "Dark glass portfolios are familiar; the interaction and typographic composition must carry the distinction.",
+      "comp": ".impeccable/mocks/decision/optical-studio.png"
+    },
+    {
+      "id": "signals-instruments-phosphor-terminal-midnight",
+      "label": "Phosphor transcript",
+      "verdict": "declined",
+      "thesis": "A keyboard-led chronological record of projects and accomplishments.",
+      "palette": [
+        "#060b08",
+        "#76ff98",
+        "#d0fadc"
+      ],
+      "materials": [
+        "Green phosphor and continuous monospaced transcript"
+      ],
+      "viewport": "A keyboard-led chronological record of projects and accomplishments.",
+      "risk": "Technical recognition is strong, but long credentials and music evidence become harder to scan.",
+      "case": "Weaker combined audience identification and product clarity than Flight deck.",
+      "kept": "A continuous, legible project index and disciplined keyboard interactions.",
+      "hero": "https://impeccable.style/worlds/cards/signals-instruments-phosphor-terminal-midnight-hero.webp",
+      "board": "https://impeccable.style/worlds/cards/signals-instruments-phosphor-terminal-midnight.webp"
+    },
+    {
+      "id": "operate-c-depot-blind-courses",
+      "label": "Destination index",
+      "verdict": "declined",
+      "thesis": "Project and music sections advance as large indexed courses.",
+      "palette": [
+        "#0b392b",
+        "#efcf4e",
+        "#f5eddb"
+      ],
+      "materials": [
+        "Dyed cloth and stepped typography"
+      ],
+      "viewport": "Project and music sections advance as large indexed courses.",
+      "risk": "Its transit metaphor competes with the actual engineering evidence.",
+      "case": "Weaker combined audience identification and product clarity than Flight deck.",
+      "kept": "Unmistakable section indexing and deliberate state transitions.",
+      "hero": "https://impeccable.style/worlds/cards/operate-c-depot-blind-courses-hero.webp",
+      "board": "https://impeccable.style/worlds/cards/operate-c-depot-blind-courses.webp"
+    },
+    {
+      "id": "posters-covers-sleeves-noir-one-sheet-duotone",
+      "label": "Duotone performance bill",
+      "verdict": "declined",
+      "thesis": "A typographic nameplate leads into tightly ruled project credits.",
+      "palette": [
+        "#111111",
+        "#c69b38",
+        "#f6f0e1"
+      ],
+      "materials": [
+        "Hard shadows and condensed display typography"
+      ],
+      "viewport": "A typographic nameplate leads into tightly ruled project credits.",
+      "risk": "The cinematic frame identifies performance better than technical work.",
+      "case": "Weaker combined audience identification and product clarity than Flight deck.",
+      "kept": "One dominant first-viewport focal point with confident type scale.",
+      "hero": "https://impeccable.style/worlds/cards/posters-covers-sleeves-noir-one-sheet-duotone-hero.webp",
+      "board": "https://impeccable.style/worlds/cards/posters-covers-sleeves-noir-one-sheet-duotone.webp"
+    },
+    {
+      "id": "digital-design-canon-monochrome-product-marketing",
+      "label": "Evidence in monochrome",
+      "verdict": "competitive",
+      "thesis": "Large name and role beside actual project previews, followed by evidence-led sections.",
+      "palette": [
+        "#f4f4ef",
+        "#161819",
+        "#5c6cff"
+      ],
+      "materials": [
+        "Neutral editorial surfaces and restrained clear glass"
+      ],
+      "viewport": "Large name and role beside actual project previews, followed by evidence-led sections.",
+      "risk": "Exceptionally clear to recruiters, but quieter than your stated frontend ambition.",
+      "case": "Stronger immediate content clarity; less identifying technical spectacle.",
+      "kept": "Every claim has adjacent, inspectable project evidence.",
+      "hero": "https://impeccable.style/worlds/cards/digital-design-canon-monochrome-product-marketing-hero.webp",
+      "board": "https://impeccable.style/worlds/cards/digital-design-canon-monochrome-product-marketing.webp",
+      "comp": ".impeccable/mocks/decision/monochrome.png"
+    },
+    {
+      "id": "reefs-bioluminescent-nocturnal-plankton-wake-stars",
+      "label": "Living current",
+      "verdict": "declined",
+      "thesis": "Jonathan’s name sits beside an interactive current field and project index.",
+      "palette": [
+        "#030b12",
+        "#348dff",
+        "#77e8fb"
+      ],
+      "materials": [
+        "Black water and luminous motion trails"
+      ],
+      "viewport": "Jonathan’s name sits beside an interactive current field and project index.",
+      "risk": "The spectacle risks obscuring the specific technical work.",
+      "case": "Weaker combined audience identification and product clarity than Flight deck.",
+      "kept": "Pointer motion must produce a visible, graceful response with a quiet resting state.",
+      "hero": "https://impeccable.style/worlds/cards/reefs-bioluminescent-nocturnal-plankton-wake-stars-hero.webp",
+      "board": "https://impeccable.style/worlds/cards/reefs-bioluminescent-nocturnal-plankton-wake-stars.webp"
+    },
+    {
+      "id": "kinetic-sculpture-automata-crank-paper-menagerie",
+      "label": "Mechanical folio",
+      "verdict": "declined",
+      "thesis": "A linked progression reveals software, robotics, and music as distinct chapters.",
+      "palette": [
+        "#eee8db",
+        "#9e8063",
+        "#ae393c"
+      ],
+      "materials": [
+        "Cut paper and linked mechanical motion"
+      ],
+      "viewport": "A linked progression reveals software, robotics, and music as distinct chapters.",
+      "risk": "A handcrafted paper metaphor does not express the requested optical glass.",
+      "case": "Weaker combined audience identification and product clarity than Flight deck.",
+      "kept": "Animations share a coherent timeline and remain understandable when paused.",
+      "hero": "https://impeccable.style/worlds/cards/kinetic-sculpture-automata-crank-paper-menagerie-hero.webp",
+      "board": "https://impeccable.style/worlds/cards/kinetic-sculpture-automata-crank-paper-menagerie.webp"
+    }
+  ],
+  "reroll": {
+    "registers": [
+      "safer",
+      "bolder"
+    ]
+  },
+  "steer": true,
+  "buildPath": {
+    "value": "comp",
+    "toggle": true
+  },
+  "canon": true,
+  "canonCard": {
+    "label": "Classic technical portfolio",
+    "thesis": "A conventional portfolio layout executed with precise typography, project imagery, and glass navigation.",
+    "palette": [
+      "#111827",
+      "#ffffff",
+      "#2563eb"
+    ],
+    "materials": [
+      "clean grid",
+      "project screenshots",
+      "subtle glass"
+    ],
+    "viewport": "A two-column introduction followed by a grid of featured projects.",
+    "risk": "Clear and familiar, with less compositional surprise.",
+    "comp": ".impeccable/mocks/decision/canon.png"
+  }
+}

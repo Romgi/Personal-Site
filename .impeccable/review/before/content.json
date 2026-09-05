@@ -1,0 +1,266 @@
+{
+  "data": [
+    {
+      "path": "src/data/music.ts",
+      "sha256": "fbcf57ca84d56f5fa9d63e614f19f809b263f5e062c13d2efa59c891f8bc5e6e"
+    },
+    {
+      "path": "src/data/profile.ts",
+      "sha256": "2252666fcaa4770bf760d9a58ef6430e847261ce33f9815b446912ac3baa24e8"
+    },
+    {
+      "path": "src/data/projects.ts",
+      "sha256": "a147ce7a36c731d16174228bacc89e3e402143152c82adc3872deef9bb143b5b"
+    },
+    {
+      "path": "src/data/resume.ts",
+      "sha256": "860e78a862c405d7b6a99440811418609dcf74db521f1460de9e7723e999f20a"
+    },
+    {
+      "path": "src/data/robotics.ts",
+      "sha256": "b27f6bd98b0b3677941d476cfb10411bd9f09c68aa1abe14e0d5fe888ab11758"
+    }
+  ],
+  "text": [
+    {
+      "file": "src/app/layout.tsx",
+      "text": []
+    },
+    {
+      "file": "src/app/music/page.tsx",
+      "text": [
+        "Music / Trumpet",
+        "Trumpet repertoire, performance, and musical growth.",
+        "Overview",
+        "A serious performance profile alongside the technical portfolio.",
+        "This page highlights Jonathan's trumpet repertoire, honour band experience, ensemble leadership, festival awards, and ongoing university performance work.",
+        "Bugler&apos;s Holiday with McMaster Concert Band",
+        "Jonathan Graydon performing Bugler's Holiday with the McMaster Concert Band",
+        "Featured Repertoire",
+        "Pieces to highlight first.",
+        "Selected pieces from Jonathan's trumpet repertoire.",
+        "Accomplishments",
+        "Awards, solos, ensembles, and performance notes.",
+        "Selected awards, honour ensembles, leadership roles, and performance milestones.",
+        "Ensembles",
+        "Performance contexts.",
+        "University, honour band, jazz, orchestral, school, and community ensembles.",
+        "Repertoire",
+        "Trumpet repertoire list.",
+        "A concise list of pieces, composers, and brief musical context.",
+        "Gallery",
+        "Performance moments.",
+        "Selected concert, ensemble, and trumpet photos from Jonathan's music portfolio."
+      ]
+    },
+    {
+      "file": "src/app/not-found.tsx",
+      "text": [
+        "404",
+        "Page not found",
+        "The page may have moved, or the address may not match a current portfolio route.",
+        "Back home"
+      ]
+    },
+    {
+      "file": "src/app/page.tsx",
+      "text": [
+        "About",
+        "A technical portfolio for software, robotics, and music.",
+        "Jonathan's work connects practical software engineering, competition robotics, and trumpet performance, with projects that emphasize reliability, clarity, and disciplined execution.",
+        "Explore",
+        "Featured Projects",
+        "Current software and engineering work.",
+        "Selected work across production web apps, robotics software, coursework, and interactive Unity projects.",
+        "All projects",
+        "Robotics Preview",
+        "Engineering-focused FRC experience.",
+        "Competition robot software, autonomous path planning, vision integration, controls work, and mentoring across FRC Team 854 and Team 9062.",
+        "View robotics",
+        "FIRST Robotics Canada",
+        "Jonathan Graydon performing with the Jack Long National Honour Band",
+        "Music Preview",
+        "Trumpet repertoire and performance discipline.",
+        "Solo repertoire, honour band experience, university ensemble performance, jazz lead trumpet work, and festival recognition.",
+        "Featured repertoire",
+        "Featured accomplishment",
+        "View music"
+      ]
+    },
+    {
+      "file": "src/app/projects/page.tsx",
+      "text": [
+        "Computer Science Projects",
+        "Software work organized for technical notes, media, and accomplishments.",
+        "A practical collection of web applications, robotics software, coursework repositories, game projects, and tools built with modern development workflows.",
+        "Project entries",
+        "Featured projects",
+        "Tags",
+        "Featured",
+        "Priority projects.",
+        "Featured projects are highlighted for their technical complexity, impact, or relevance to my current work.",
+        "Resume",
+        "Filter by tag",
+        "All Projects",
+        "Browse the full project set by technology area, from frontend and backend work to FRC controls, Unity simulation, and command-line tools.",
+        "FRC Robotics",
+        "Experience",
+        "Three seasons, two teams.",
+        "From programming subteam member to Software Lead with the Iron Bears, to mentoring the next generation of programmers with Critical Circuits.",
+        "",
+        "-",
+        "-"
+      ]
+    },
+    {
+      "file": "src/app/resume/page.tsx",
+      "text": [
+        "Resume / Contact",
+        "Resume details and direct contact links.",
+        "A concise, employer-ready page for education, technical skills, work experience, projects, robotics, music, awards, and contact information.",
+        "Request resume PDF",
+        "LinkedIn",
+        "Education",
+        "Technical Skills",
+        "Work Experience",
+        "Projects",
+        "Robotics Experience",
+        "Music Experience",
+        "Awards / Accomplishments"
+      ]
+    },
+    {
+      "file": "src/components/layout/Footer.tsx",
+      "text": [
+        "Footer navigation",
+        "Copyright",
+        "Jonathan Graydon. Built with Next.js."
+      ]
+    },
+    {
+      "file": "src/components/layout/Navbar.tsx",
+      "text": [
+        "Skip to main content",
+        "Jonathan Graydon home",
+        "",
+        "Primary navigation",
+        "Mobile navigation"
+      ]
+    },
+    {
+      "file": "src/components/layout/RouteScrollReset.tsx",
+      "text": []
+    },
+    {
+      "file": "src/components/sections/AccomplishmentCard.tsx",
+      "text": []
+    },
+    {
+      "file": "src/components/sections/ContactCard.tsx",
+      "text": []
+    },
+    {
+      "file": "src/components/sections/ExpandableText.tsx",
+      "text": []
+    },
+    {
+      "file": "src/components/sections/ExperienceCard.tsx",
+      "text": []
+    },
+    {
+      "file": "src/components/sections/HomeHero.tsx",
+      "text": [
+        "Portfolio introduction",
+        "View Projects",
+        "View Resume",
+        "Software & Robotics",
+        "Music",
+        "Scroll to enter"
+      ]
+    },
+    {
+      "file": "src/components/sections/ProjectCard.tsx",
+      "text": [
+        "Technical details",
+        "#",
+        "Private project - no public links",
+        "GitHub",
+        "Live demo",
+        "Download page",
+        "Public links unavailable"
+      ]
+    },
+    {
+      "file": "src/components/sections/ProjectsExplorer.tsx",
+      "text": [
+        "Project filters",
+        "No projects in this filter",
+        "Remove or edit project tags in src/data/projects.ts to control what appears here."
+      ]
+    },
+    {
+      "file": "src/components/sections/RepertoireList.tsx",
+      "text": [
+        "Composer",
+        "Piece",
+        "Description"
+      ]
+    },
+    {
+      "file": "src/components/sections/ResumeSection.tsx",
+      "text": []
+    },
+    {
+      "file": "src/components/ui/AnimatedSection.tsx",
+      "text": []
+    },
+    {
+      "file": "src/components/ui/ButtonLink.tsx",
+      "text": []
+    },
+    {
+      "file": "src/components/ui/ContactIcon.tsx",
+      "text": []
+    },
+    {
+      "file": "src/components/ui/Container.tsx",
+      "text": []
+    },
+    {
+      "file": "src/components/ui/EmptyState.tsx",
+      "text": []
+    },
+    {
+      "file": "src/components/ui/GsapScrollEffects.tsx",
+      "text": []
+    },
+    {
+      "file": "src/components/ui/LiquidGlassFilters.tsx",
+      "text": []
+    },
+    {
+      "file": "src/components/ui/PageHero.tsx",
+      "text": []
+    },
+    {
+      "file": "src/components/ui/PointerEffects.tsx",
+      "text": []
+    },
+    {
+      "file": "src/components/ui/PortfolioImage.tsx",
+      "text": []
+    },
+    {
+      "file": "src/components/ui/ScrollProgress.tsx",
+      "text": []
+    },
+    {
+      "file": "src/components/ui/SectionHeading.tsx",
+      "text": []
+    },
+    {
+      "file": "src/components/ui/SkillBadge.tsx",
+      "text": []
+    }
+  ]
+}

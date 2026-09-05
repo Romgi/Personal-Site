@@ -1,61 +1,112 @@
 "use client";
-
 import { useMemo, useState } from "react";
-
-import { EmptyState } from "@/components/ui/EmptyState";
+import { Search, X } from "lucide-react";
 import { ProjectCard } from "@/components/sections/ProjectCard";
 import type { Project } from "@/data/projects";
-import { cn } from "@/lib/utils";
-
-type ProjectsExplorerProps = {
+export function ProjectsExplorer({
+  projects,
+  tags,
+}: {
   projects: Project[];
   tags: string[];
-};
-
-export function ProjectsExplorer({ projects, tags }: ProjectsExplorerProps) {
+}) {
   const [activeTag, setActiveTag] = useState("All");
-
-  const filteredProjects = useMemo(() => {
-    if (activeTag === "All") {
-      return projects;
-    }
-
-    return projects.filter((project) => project.tags.includes(activeTag));
-  }, [activeTag, projects]);
-
+  const [query, setQuery] = useState("");
+  const filtered = useMemo(
+    () =>
+      projects.filter(
+        (project) =>
+          (activeTag === "All" || project.tags.includes(activeTag)) &&
+          [
+            project.title,
+            project.shortDescription,
+            project.longDescription,
+            ...project.techStack,
+            ...project.tags,
+          ]
+            .join(" ")
+            .toLowerCase()
+            .includes(query.trim().toLowerCase()),
+      ),
+    [activeTag, query, projects],
+  );
   return (
-    <div>
-      <div className="mb-8 flex flex-wrap gap-2" aria-label="Project filters">
-        {["All", ...tags].map((tag) => (
-          <button
-            key={tag}
-            type="button"
-            onClick={() => setActiveTag(tag)}
-            className={cn(
-              "rounded-md border px-3 py-2 text-sm font-medium transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-blue-300",
-              activeTag === tag
-                ? "border-blue-400/70 bg-blue-600/25 text-white shadow-[inset_0_1px_0_rgba(255,255,255,0.1),0_0_20px_rgba(37,99,235,0.2)]"
-                : "border-white/10 bg-white/[0.03] text-slate-400 hover:border-blue-300/40 hover:text-white",
-            )}
-            aria-pressed={activeTag === tag}
-          >
-            {tag}
-          </button>
-        ))}
-      </div>
-
-      {filteredProjects.length > 0 ? (
-        <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-3">
-          {filteredProjects.map((project) => (
-            <ProjectCard key={project.id} project={project} />
+    <div className="project-explorer">
+      <aside className="project-filters">
+        <label className="project-search">
+          <Search size={18} aria-hidden />
+          <span className="sr-only">Search projects</span>
+          <input
+            type="search"
+            value={query}
+            onChange={(event) => setQuery(event.target.value)}
+            placeholder="Search projects"
+          />
+        </label>
+        <div className="filter-tags" role="group" aria-label="Project filters">
+          {["All", ...tags].map((tag) => (
+            <button
+              key={tag}
+              type="button"
+              aria-pressed={activeTag === tag}
+              onClick={() => setActiveTag(tag)}
+            >
+              {tag}
+              <span>
+                {tag === "All"
+                  ? projects.length
+                  : projects.filter((project) => project.tags.includes(tag))
+                      .length}
+              </span>
+            </button>
           ))}
         </div>
-      ) : (
-        <EmptyState
-          title="No projects in this filter"
-          description="Remove or edit project tags in src/data/projects.ts to control what appears here."
-        />
-      )}
+      </aside>
+      <div className="project-results">
+        <div className="results-status">
+          <p role="status" aria-live="polite">
+            {filtered.length} {filtered.length === 1 ? "project" : "projects"}
+            {activeTag !== "All" ? ` / ${activeTag}` : " / All work"}
+          </p>
+          {(activeTag !== "All" || query) && (
+            <button
+              type="button"
+              onClick={() => {
+                setActiveTag("All");
+                setQuery("");
+              }}
+            >
+              Clear filters
+              <X size={14} aria-hidden />
+            </button>
+          )}
+        </div>
+        {filtered.length ? (
+          <div className="project-grid">
+            {filtered.map((project) => (
+              <ProjectCard key={project.id} project={project} id={project.id} />
+            ))}
+          </div>
+        ) : (
+          <div className="project-empty">
+            <h3>No projects in this filter</h3>
+            <p>
+              Try another technology or search term to explore the full
+              collection.
+            </p>
+            <button
+              className="button"
+              type="button"
+              onClick={() => {
+                setActiveTag("All");
+                setQuery("");
+              }}
+            >
+              Show all projects
+            </button>
+          </div>
+        )}
+      </div>
     </div>
   );
 }

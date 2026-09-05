@@ -1,0 +1,38 @@
+{
+  "data": [
+    {
+      "path": "src/data/music.ts",
+      "unchanged": true
+    },
+    {
+      "path": "src/data/profile.ts",
+      "unchanged": true
+    },
+    {
+      "path": "src/data/projects.ts",
+      "unchanged": true
+    },
+    {
+      "path": "src/data/resume.ts",
+      "unchanged": true
+    },
+    {
+      "path": "src/data/robotics.ts",
+      "unchanged": true
+    }
+  ],
+  "missingStaticStrings": [
+    {
+      "file": "src/components/sections/HomeHero.tsx",
+      "text": "Software & Robotics"
+    },
+    {
+      "file": "src/components/sections/HomeHero.tsx",
+      "text": "Scroll to enter"
+    },
+    {
+      "file": "src/components/sections/ProjectsExplorer.tsx",
+      "text": "Remove or edit project tags in src/data/projects.ts to control what appears here."
+    }
+  ]
+}
