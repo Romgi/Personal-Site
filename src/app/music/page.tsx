@@ -37,15 +37,18 @@ export default function MusicPage() {
 
       <section className="music-section py-20 sm:py-24">
         <Container>
-          <div className="grid gap-10 lg:grid-cols-[0.95fr_1.05fr] lg:items-center">
-            <AnimatedSection>
+          <div
+            data-music-scene
+            className="grid gap-10 lg:grid-cols-[0.95fr_1.05fr] lg:items-center"
+          >
+            <div data-music-scene-media>
               <PortfolioImage
                 src={musicOverview.image}
                 alt={musicOverview.imageAlt}
                 className="music-image"
                 aspect="aspect-[4/3]"
               />
-            </AnimatedSection>
+            </div>
             <AnimatedSection>
               <SectionHeading
                 eyebrow="Overview"

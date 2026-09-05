@@ -1,0 +1,9 @@
+{
+  "projects": "{\n  \"height\": 438,\n  \"overflow\": false,\n  \"pinCount\": 1,\n  \"progress\": \"\",\n  \"textVisible\": true,\n  \"top\": 111.90625\n}\n",
+  "music": "{\n  \"height\": 752,\n  \"overflow\": false,\n  \"pinCount\": 1,\n  \"progress\": \"\",\n  \"textVisible\": true,\n  \"top\": 112.0625\n}\n",
+  "resume": "{\n  \"height\": 448,\n  \"overflow\": false,\n  \"pinCount\": 0,\n  \"progress\": \"1\",\n  \"textVisible\": true,\n  \"top\": -162.42990112304688\n}\n",
+  "skip": "{\n  \"contentTop\": 158,\n  \"hash\": \"#home-content\",\n  \"heroTop\": -841.9990234375,\n  \"inert\": false,\n  \"progress\": \"1\"\n}\n",
+  "reverse": "{\n  \"inert\": true,\n  \"progress\": \"0.000001\",\n  \"wordOpacity\": \"1\"\n}\n",
+  "reduced": "{\n  \"bridgeInert\": false,\n  \"bridgeOpacity\": \"1\",\n  \"controls\": true,\n  \"enhanced\": false,\n  \"pins\": 0\n}\n",
+  "errors": ""
+}

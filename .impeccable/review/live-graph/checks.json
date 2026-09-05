@@ -1,0 +1,9 @@
+{
+  "1440": "{\n  \"buttons\": [\n    {\n      \"h\": 44,\n      \"w\": 106\n    },\n    {\n      \"h\": 44,\n      \"w\": 79\n    }\n  ],\n  \"canvas\": [\n    1440,\n    635\n  ],\n  \"controlsAbovePreviews\": true,\n  \"controlsBelowActions\": false,\n  \"overflow\": false,\n  \"ready\": \"true\"\n}\n",
+  "820": "{\n  \"buttons\": [\n    {\n      \"h\": 44,\n      \"w\": 106\n    },\n    {\n      \"h\": 44,\n      \"w\": 79\n    }\n  ],\n  \"canvas\": [\n    820,\n    550\n  ],\n  \"controlsAbovePreviews\": true,\n  \"controlsBelowActions\": true,\n  \"overflow\": false,\n  \"ready\": \"true\"\n}\n",
+  "390": "{\n  \"buttons\": [\n    {\n      \"h\": 44,\n      \"w\": 102\n    },\n    {\n      \"h\": 44,\n      \"w\": 75\n    }\n  ],\n  \"canvas\": [\n    390,\n    330\n  ],\n  \"controlsAbovePreviews\": true,\n  \"controlsBelowActions\": true,\n  \"overflow\": false,\n  \"ready\": \"true\"\n}\n",
+  "320": "{\n  \"buttons\": [\n    {\n      \"h\": 44,\n      \"w\": 102\n    },\n    {\n      \"h\": 44,\n      \"w\": 75\n    }\n  ],\n  \"canvas\": [\n    320,\n    330\n  ],\n  \"controlsAbovePreviews\": true,\n  \"controlsBelowActions\": true,\n  \"overflow\": false,\n  \"ready\": \"true\"\n}\n",
+  "lifecycle": "{\n  \"offscreen\": true,\n  \"pause\": true,\n  \"pausedSignalKeepsPaused\": true,\n  \"resumed\": true,\n  \"running\": true\n}\n",
+  "performance": "{\n  \"medianFrameMs\": 16.699999999999818,\n  \"p95FrameMs\": 16.700000000000728\n}\n",
+  "errors": ""
+}

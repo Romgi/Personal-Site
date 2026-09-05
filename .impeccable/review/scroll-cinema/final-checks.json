@@ -1,0 +1,7 @@
+{
+  "refreshAtEightyPercent": "{\n  \"after\": {\n    \"inert\": false,\n    \"opacity\": \"0.9507\"\n  },\n  \"before\": {\n    \"inert\": false,\n    \"opacity\": \"0.9507\"\n  },\n  \"progress\": \"0.8\"\n}\n",
+  "shortViewport": "{\n  \"controlsVisible\": true,\n  \"inert\": false,\n  \"overflow\": false,\n  \"pins\": 0\n}\n",
+  "roboticsAnchor": "{\n  \"hash\": \"#robotics\",\n  \"pins\": 1,\n  \"targetTop\": 205.90625\n}\n",
+  "resumeAnchor": "{\n  \"hash\": \"#technical-skills\",\n  \"pins\": 0,\n  \"targetTop\": 245.5625915527344\n}\n",
+  "errors": ""
+}

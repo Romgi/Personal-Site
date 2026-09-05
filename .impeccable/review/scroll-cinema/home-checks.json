@@ -1,0 +1,11 @@
+{
+  "1440-title": "{\n  \"bridgeInert\": true,\n  \"bridgeOpacity\": \"0\",\n  \"overflow\": false,\n  \"pinned\": 0,\n  \"progress\": \"0\",\n  \"y\": 0\n}\n",
+  "1440-split": "{\n  \"bridgeInert\": true,\n  \"bridgeOpacity\": \"0\",\n  \"overflow\": false,\n  \"pinned\": 0,\n  \"progress\": \"0.3\",\n  \"y\": 555\n}\n",
+  "1440-network": "{\n  \"bridgeInert\": true,\n  \"bridgeOpacity\": \"0\",\n  \"overflow\": false,\n  \"pinned\": 0,\n  \"progress\": \"0.58\",\n  \"y\": 1073\n}\n",
+  "1440-portfolio": "{\n  \"bridgeInert\": false,\n  \"bridgeOpacity\": \"1\",\n  \"overflow\": false,\n  \"pinned\": 0,\n  \"progress\": \"0.94\",\n  \"y\": 1739\n}\n",
+  "1440-released": "{\n  \"bridgeInert\": true,\n  \"bridgeOpacity\": \"1\",\n  \"overflow\": false,\n  \"pinned\": -1109.9990234375,\n  \"progress\": \"0\",\n  \"y\": 2960\n}\n",
+  "390-title": "{\n  \"bridgeInert\": true,\n  \"bridgeOpacity\": \"0\",\n  \"overflow\": false,\n  \"pinned\": 0,\n  \"progress\": \"0\",\n  \"y\": 0\n}\n",
+  "390-portfolio": "{\n  \"bridgeInert\": false,\n  \"bridgeOpacity\": \"1\",\n  \"overflow\": false,\n  \"pinned\": 0,\n  \"progress\": \"0.939238\",\n  \"y\": 912\n}\n",
+  "390-released": "{\n  \"bridgeInert\": false,\n  \"bridgeOpacity\": \"1\",\n  \"overflow\": false,\n  \"pinned\": -580.9990234375,\n  \"progress\": \"1\",\n  \"y\": 1552\n}\n",
+  "errors": ""
+}

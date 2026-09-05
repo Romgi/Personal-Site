@@ -27,8 +27,6 @@ export const metadata = createPageMetadata({
 });
 
 export default function ProjectsPage() {
-  const firstExperience = roboticsExperiences[0];
-
   return (
     <div className="projects-page">
       <PageHero
@@ -101,7 +99,10 @@ export default function ProjectsPage() {
         className="scroll-mt-24 border-t border-white/10 py-20 sm:py-24"
       >
         <Container>
-          <div className="grid gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:items-center">
+          <div
+            data-robotics-scene
+            className="grid gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:items-center"
+          >
             <AnimatedSection>
               <SectionHeading
                 eyebrow="FRC Robotics"
@@ -114,13 +115,18 @@ export default function ProjectsPage() {
                 ))}
               </div>
             </AnimatedSection>
-            <AnimatedSection>
+            <div data-robotics-scene-media className="relative">
               <PortfolioImage
                 src={roboticsOverview.image}
                 alt={roboticsOverview.imageAlt}
                 aspect="aspect-[4/3]"
               />
-            </AnimatedSection>
+              <span
+                data-robotics-field-scan
+                aria-hidden="true"
+                className="pointer-events-none absolute inset-y-0 left-0 w-px bg-blue-200 opacity-0"
+              />
+            </div>
           </div>
 
           <div data-robotics-experiences className="mt-16">
@@ -166,19 +172,25 @@ export default function ProjectsPage() {
                     data-robotics-scanline
                     className="absolute inset-x-0 top-0 h-10 -translate-y-1/2 bg-[linear-gradient(180deg,transparent,rgba(96,141,255,0.4),transparent)] opacity-0"
                   />
-                  <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-slate-950/85 via-slate-950/40 to-transparent p-5 pt-16">
-                    <p
-                      data-robotics-year
-                      className="font-mono text-5xl font-semibold tracking-tight text-white"
-                    >
-                      {firstExperience.year}
-                    </p>
-                    <p
-                      data-robotics-hud-label
-                      className="mt-2 font-mono text-[11px] font-medium uppercase tracking-[0.22em] text-blue-200"
-                    >
-                      {firstExperience.teamName} - {firstExperience.role}
-                    </p>
+                  <div className="absolute inset-x-0 bottom-0 grid bg-gradient-to-t from-slate-950/85 via-slate-950/40 to-transparent p-5 pt-16">
+                    {roboticsExperiences.map((experience, index) => (
+                      <div
+                        key={experience.id}
+                        data-robotics-caption
+                        data-hud-year={experience.year}
+                        className={cn(
+                          "[grid-area:1/1]",
+                          index > 0 && "opacity-0",
+                        )}
+                      >
+                        <p className="font-mono text-5xl font-semibold tracking-tight text-white">
+                          {experience.year}
+                        </p>
+                        <p className="mt-2 font-mono text-[11px] font-medium uppercase tracking-[0.22em] text-blue-200">
+                          {experience.teamName} - {experience.role}
+                        </p>
+                      </div>
+                    ))}
                   </div>
                 </div>
               </div>

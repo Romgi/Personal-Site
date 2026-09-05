@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-09-05T21:14:43.977140+00:00",
+  "generatedAt": "2026-09-05T22:26:08.504697+00:00",
   "title": "Design System: Jonathan Graydon Portfolio",
   "extensions": {
     "colorMeta": {
@@ -256,6 +256,26 @@
         "name": "sheen",
         "value": "400ms ease",
         "purpose": "Pointer sheen opacity."
+      },
+      {
+        "name": "computation-reveal",
+        "value": "800ms ease",
+        "purpose": "Reveal the successfully initialized live graph over its deterministic SVG fallback; global reduced-motion CSS suppresses the transition."
+      },
+      {
+        "name": "home-scroll-scrub",
+        "value": "350ms",
+        "purpose": "Scroll-follow smoothing for the centered title separation, live graph camera journey, bridge reveal and progress track. Home pin travel is 1.85 viewport heights at widths of at least 900px and 1.15 below; pinning requires at least 680px viewport height and no reduced-motion preference."
+      },
+      {
+        "name": "media-scroll-scrub",
+        "value": "450ms",
+        "purpose": "Desktop Robotics and Music image-aperture reveals and scale easing. Complete compositions that fit the viewport hold for 0.68 and 0.52 viewport heights respectively; oversized scenes remain unpinned. Disabled for reduced motion."
+      },
+      {
+        "name": "resume-scroll-progress",
+        "value": "continuous scroll scrub",
+        "purpose": "Desktop section rules extend and headings shift toward the accent as the document scrolls, without pinning the resume. Disabled for reduced motion."
       }
     ],
     "breakpoints": [
@@ -278,6 +298,14 @@
       {
         "name": "wide-min",
         "value": "1600px"
+      },
+      {
+        "name": "scroll-scenes-desktop-min",
+        "value": "900px"
+      },
+      {
+        "name": "home-pin-height-min",
+        "value": "680px"
       }
     ]
   },
@@ -343,15 +371,22 @@
       "description": "Open evidence record with native expandable technical details.",
       "html": "<article class=\"ds-record\"><h3>RouteLab</h3><p>An interactive pathfinding studio for visualizing, inspecting, and comparing graph-search algorithms.</p><details><summary>Technical details</summary><p>Next.js \u00b7 React \u00b7 TypeScript</p></details></article>",
       "css": ".ds-record{border-top:1px solid var(--hairline,#2b3b52);padding:24px 0 12px;color:var(--foreground,#eef4ff)}.ds-record h3{margin:0;font:600 30px/1.05 var(--font-condensed,\"Barlow Condensed\"),sans-serif}.ds-record p{color:var(--muted,#a5b5cc);font:14px/1.8 var(--font-geist-sans,Geist),sans-serif}.ds-record details{margin-top:20px;padding:16px 0;border-block:1px solid var(--hairline,#2b3b52);font:14px var(--font-geist-sans,Geist),sans-serif}.ds-record summary{padding:4px 0;cursor:pointer}.ds-record details[open] summary{color:var(--accent,#7dbbff)}.ds-record summary:hover{color:var(--accent,#7dbbff)}.ds-record summary:focus-visible{outline:2px solid var(--accent,#7dbbff);outline-offset:5px;}"
+    },
+    {
+      "name": "Computation Controls",
+      "kind": "custom",
+      "description": "Keyboard-accessible controls for the Home live WebGL graph: 493 nodes and 1,388 weighted edges, CPU projection and spring deformation, and Dijkstra-distance signals. The title-card scroll timeline drives its real camera and geometry; mouse drag rotates, and click, tap or Send signal triggers propagation. Pause freezes the renderer. Reduced motion disables all scene pins and starts the graph paused with static signal highlights; its controls remain available in the unpinned title card. Offscreen and hidden-tab rendering pause automatically; deterministic SVG replaces unavailable WebGL. The snippet shows control styling only, without the renderer.",
+      "html": "<div class=\"ds-computation\"><span>Explore the network</span><div class=\"ds-computation-actions\"><button type=\"button\" aria-label=\"Send a signal through the network\"><svg width=\"15\" height=\"15\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><circle cx=\"12\" cy=\"12\" r=\"2\"/><path d=\"M16.24 7.76a6 6 0 0 1 0 8.48M7.76 16.24a6 6 0 0 1 0-8.48M19.07 4.93a10 10 0 0 1 0 14.14M4.93 19.07a10 10 0 0 1 0-14.14\"/></svg>Send signal</button><button type=\"button\" aria-label=\"Pause background motion\"><svg width=\"15\" height=\"15\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><rect x=\"14\" y=\"3\" width=\"4\" height=\"18\" rx=\"1\"/><rect x=\"6\" y=\"3\" width=\"4\" height=\"18\" rx=\"1\"/></svg>Pause</button></div></div>",
+      "css": ".ds-computation{display:flex;align-items:center;justify-content:space-between;gap:16px;color:var(--foreground,#eef4ff);font:16px/1.2 var(--font-condensed,\"Barlow Condensed\"),sans-serif}.ds-computation-actions{display:flex;gap:8px;flex-shrink:0}.ds-computation button{display:inline-flex;align-items:center;justify-content:center;gap:7px;min-height:44px;padding:8px 12px;border:1px solid #526e91;border-radius:4px;background:#05070bcc;color:var(--accent,#7dbbff);font:15px/1 var(--font-condensed,\"Barlow Condensed\"),sans-serif;cursor:pointer;transition:background .2s,border-color .2s}.ds-computation button:hover{background:#122844;border-color:var(--accent,#7dbbff)}.ds-computation button:focus-visible{outline:2px solid var(--accent,#7dbbff);outline-offset:5px}"
     }
   ],
   "narrative": {
     "northStar": "Flight deck",
-    "overview": "Black grounds, ice-white lettering, blue controls and smoked refracting glass connect Home, Projects, Music and Resume. Oversized condensed typography establishes identity; real project images, performance photographs and ruled records carry the evidence. The interface is spacious around introductions and denser around project details, repertoire and resume entries.\n\nMusic shares the blue-and-black palette and condensed typography. The existing JG identity and portfolio media remain binding assets under `PRODUCT.md`. The blue Computer Science background and original project screenshots remain visible source imagery; their colors do not redefine the interface palette.\n\nThis record describes implemented CSS and components, supplemented by the refreshed Home desktop, mobile and tablet captures. It is not a shipping verdict: `.impeccable/build/state.json` records forced hero and responsive gates with original-content exceptions and historical typography drift; the independent finish review owns acceptance.",
+    "overview": "Black grounds, ice-white lettering, blue controls and smoked refracting glass connect Home, Projects, Music and Resume. Oversized condensed typography establishes identity; real project images, performance photographs and ruled records carry the evidence. The interface is spacious around introductions and denser around project details, repertoire and resume entries.\n\nMusic shares the blue-and-black palette and condensed typography. The existing JG identity and portfolio media remain binding assets under `PRODUCT.md`. The blue Computer Science background and original project screenshots remain visible source imagery; their colors do not redefine the interface palette.\n\nThis record describes the current implemented CSS and components. The user-authorized cinematic Home opening supersedes layout A\u2019s first viewport. Earlier layout A captures and the forced hero/responsive gates in `.impeccable/build/state.json` remain historical records of that earlier composition, including its original-content exceptions and typography drift. They are not reference captures or approval for the current title card; this document is not a shipping verdict.",
     "keyCharacteristics": [
       "Condensed display typography with readable sans-serif evidence text.",
       "Dark tonal surfaces, thin rules and restrained blue interaction states.",
-      "Refracting navigation and an image-backed interactive optical instrument.",
+      "Refracting navigation and a scroll-held title card over a live computation network.",
       "Original media and complete content across all four routes."
     ],
     "rules": [],
@@ -365,7 +400,7 @@
     "donts": [
       "Don't reintroduce the obsolete old green interface or light paper music theme.",
       "Don't recolor original portfolio media to force palette uniformity.",
-      "Don't turn decorative optical annotations into unsupported measurements or product claims.",
+      "Don't present the interactive graph as real performance data or a measured system.",
       "Don't promote leftover uppercase supporting labels into a required eyebrow or kicker system.",
       "Don't describe recorded review exceptions as clean pixel matches or shipping approval."
     ]

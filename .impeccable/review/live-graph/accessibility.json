@@ -1,0 +1,7 @@
+{
+  "reducedMotion": "{\n  \"contentVisible\": true,\n  \"frameStable\": true,\n  \"paused\": \"true\",\n  \"preference\": true,\n  \"ready\": \"true\"\n}\n",
+  "keyboardResume": "{\n  \"focused\": \"Pause background motion\",\n  \"paused\": \"false\"\n}\n",
+  "navigation": "{\n  \"canvases\": 0,\n  \"heading\": \"Computer Science Projects\",\n  \"path\": \"/projects\"\n}\n",
+  "contextLoss": "{\n  \"content\": true,\n  \"controlsHidden\": true,\n  \"fallbackVisible\": \"0.75\"\n}\n",
+  "errors": ""
+}

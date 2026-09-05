@@ -116,13 +116,13 @@ Black grounds, ice-white lettering, blue controls and smoked refracting glass co
 
 Music shares the blue-and-black palette and condensed typography. The existing JG identity and portfolio media remain binding assets under `PRODUCT.md`. The blue Computer Science background and original project screenshots remain visible source imagery; their colors do not redefine the interface palette.
 
-This record describes implemented CSS and components, supplemented by the refreshed Home desktop, mobile and tablet captures. It is not a shipping verdict: `.impeccable/build/state.json` records forced hero and responsive gates with original-content exceptions and historical typography drift; the independent finish review owns acceptance.
+This record describes the current implemented CSS and components. The user-authorized cinematic Home opening supersedes layout A’s first viewport. Earlier layout A captures and the forced hero/responsive gates in `.impeccable/build/state.json` remain historical records of that earlier composition, including its original-content exceptions and typography drift. They are not reference captures or approval for the current title card; this document is not a shipping verdict.
 
 **Key Characteristics:**
 
 - Condensed display typography with readable sans-serif evidence text.
 - Dark tonal surfaces, thin rules and restrained blue interaction states.
-- Refracting navigation and an image-backed interactive optical instrument.
+- Refracting navigation and a scroll-held title card over a live computation network.
 - Original media and complete content across all four routes.
 
 ## Colors
@@ -147,7 +147,7 @@ Graphite is the page ground; ice-white is the main text color. Muted blue-gray s
 
 Big Shoulders supplies page titles, section headings, resume headings and the footer identity. Barlow Condensed supplies project titles, navigation, actions, several supporting headings and Home introduction text. Geist supplies reading text and search/filter controls; Geist Mono supplies compact technology badges and counts. All are loaded through `next/font` in the root layout.
 
-The Home name is a deliberate signature exception: Bebas Neue at weight 400, two stacked uppercase lines, with final CSS horizontal scaling. It is not Big Shoulders and does not establish a reusable transform for other headings. Desktop uses 17.84vw type and 0.79 leading; the tablet override uses 22vw and 0.8 leading, while mobile uses 36.5vw and 0.9 leading. These are composition-specific observations, not added scale tokens.
+The Home name is a deliberate signature exception: Bebas Neue at weight 400, centered in two stacked uppercase lines without the former horizontal scaling. The title card uses clamp(96px, 15vw, 230px) with 0.83 leading and −0.015em tracking; below 1101px the name becomes 20vw, and below 768px it becomes 29vw with 0.88 leading. Its following Software / Robotics / Music heading uses Big Shoulders at weight 550. These sizes belong to this composition and do not extend the reusable type scale.
 
 The reusable hierarchy runs from the large page display to section headlines, condensed project titles, and calmer body text. Section descriptions use 17px/1.8 with a 68ch cap; page descriptions use the body role. Project details use 14px and cap prose at 70ch. Mobile page titles use 22vw; section headings use 42px. Featured project titles enlarge to 40px, reducing to 34px on mobile.
 
@@ -157,11 +157,15 @@ The reusable hierarchy runs from the large page display to section headlines, co
 
 The shared container caps at 1536px with 6% horizontal padding, switching to 24px below 768px. Major sections use 110px vertical padding on desktop and 72px on mobile. Thin rules and open space organize content without enclosing every record in glass.
 
-The Home desktop hero positions the identity left, optical instrument right and a two-column work preview tray beneath. Below 1101px the hero changes to normal content flow; tablet keeps an overlapping optical image and two previews, while mobile stacks the previews. The instrument stays decorative behind the reading order. The first viewport composition belongs to the surface contract, not every route.
+Home opens with a centered, full-viewport title card over the live computation network. Edge fading and a dark radial shade keep the identity legible. Scrolling separates the two name lines in opposing directions, opens the scene’s clipping frame, and moves the real graph camera through the network. A Software / Robotics / Music bridge then introduces the original tagline and View Projects / View Resume actions. The opening releases into the original work preview tray in normal flow, with two columns on larger screens and stacked previews on mobile. A visible Skip intro link targets that tray; portfolio content and accomplishments remain intact.
+
+With motion permitted and a viewport at least 680px high, the title card pins for additional scroll travel equal to 1.85 viewport heights at widths of 900px and above, or 1.15 viewport heights below 900px. Shorter viewports use an unpinned layout with the name, bridge and actions visible in document flow. Reduced motion also uses this unpinned layout at every size. Network controls remain available whenever WebGL initializes, including the unpinned and reduced-motion versions; their caption hides on smaller screens while the buttons stay visible.
 
 Projects uses a sticky 220px filter sidebar and two result columns. At 1200px the sidebar becomes 180px and results become one column; below 768px filters move into normal flow as wrapping buttons. Featured projects pair image and text on desktop and stack on mobile.
 
 Music uses ruled accomplishment rows, a repertoire table and a gallery whose lead image spans both columns. On mobile rows and table cells stack, the table header hides, and the gallery becomes one column. Resume uses a sticky section index and a 28% heading column beside the evidence; mobile gives the index horizontal scrolling and stacks section headings above content. Print CSS removes navigation and actions and uses dark text on white.
+
+At widths of 900px and above, the Robotics and Music media compositions briefly hold only when the entire composition fits below the navigation, with 112px at the top and 28px of bottom clearance. Their extra scroll travel is 0.68 and 0.52 viewport heights respectively; a composition that does not fit receives an unpinned media reveal. Resume remains continuous reading with scroll-linked rules and heading color. Reduced motion disables all scene pins and scroll-driven reveals, leaving the underlying content visible.
 
 ## Elevation & Depth
 
@@ -169,13 +173,15 @@ Most records are flat and separated by hairlines. Glass is reserved for navigati
 
 SVG backdrop displacement preserves the requested background refraction in supported engines. Surface and navigation optical blur are 0.65px and 0.8px; WebKit and Gecko take frosted blur fallbacks of 11px and 14px. Text remains outside the displaced pixels. Do not document the unused legacy light-music navigation modifier as a live theme.
 
-Hover transitions generally last 200–300ms; glass sheen uses 400ms. The optical hero samples a real image through WebGL for pointer distortion and subtle color separation, with a static image fallback. Reduced-motion preferences and offscreen state constrain animation. Global reduced-motion CSS removes smooth scrolling and nearly eliminates transitions.
+Hover transitions generally last 200–300ms; glass sheen uses 400ms. The computation background renders live blue points, links and traveling signals through WebGL. Perspective, depth fading, additive light and spring deformation give the network volume; it does not sample a raster image. Animation pauses offscreen, in hidden tabs and through the explicit Pause control. Reduced motion starts the scene paused, with an optional Resume action; a deterministic SVG network remains available before WebGL initializes or when it is unavailable. Global reduced-motion CSS removes smooth scrolling and nearly eliminates transitions.
+
+The Home sequence follows scroll position with 0.35-second smoothing; reversing scroll reverses the title separation, graph-camera journey and bridge reveal. The network’s Pause button freezes its renderer, while the operating-system reduced-motion preference disables the scroll choreography altogether. Supporting desktop media reveals use 0.45-second smoothing: Robotics opens horizontally with a brief scan across the photograph, and Music opens vertically like a stage aperture. Both ease their image scale from 1.12 to 1 while text and video controls remain available. Resume draws a thin blue rule along each section and shifts its heading toward the accent as the reader advances.
 
 **The Sharp Foreground Rule.** Refract the background while keeping text, focus and controls legible.
 
 ## Shapes
 
-Controls use nearly square corners, with slightly softer badges and rounded media frames. Navigation and the work tray share 12px corners and fine borders. Project records are ruled layouts; featured images use rounded corners while ordinary project media can remain square. The concentric optical silhouette is the Home signature, not a requirement to decorate every section with rings.
+Controls use nearly square corners, with slightly softer badges and rounded media frames. Navigation and the work tray share 12px corners and fine borders. Project records are ruled layouts; featured images use rounded corners while ordinary project media can remain square. A dimensional, triangulated network of luminous points and fine connections is the Home signature.
 
 ## Components
 
@@ -195,9 +201,19 @@ Technology badges use a faint blue tint, blue border, light ink, mono type and a
 
 A fixed refracting bar sits 10px from viewport edges. It contains the original JG mark and condensed uppercase route links; the current link has accent text and a bottom underline. The desktop bar is 64px high; below 768px it is 60px with a 44px menu target. The mobile menu is an opaque dark panel with large route links, visible current state, Escape dismissal and focus return. The header does not use the obsolete shrinking-on-scroll layout.
 
-### Optical instrument and performance media
+### Cinematic Home opening
 
-The Home instrument is an image-backed WebGL enhancement, not a live 3D scene or a data readout. Its angle annotations are decorative. The image remains available without WebGL. The performance video begins as the official YouTube poster with an explicit Play performance control; activation loads the privacy-enhanced YouTube iframe and moves focus to it. Keep that actionable facade and original performance attribution.
+The opening pairs a centered identity with a scroll cue, a fine progress track and a native Skip intro anchor. During the pinned sequence, the bridge becomes interactive as it is revealed; its hidden actions are inert before that point. Without the pin, all bridge content and actions remain visible and interactive in normal flow. The preview tray sits after the opening as ordinary document content. Reduced motion hides the animated cue and progress track while preserving Skip intro and available network controls.
+
+### Live computation network
+
+The Home background is a reproducible graph of 493 nodes and 1,388 weighted connections. CPU projection and damped springs position the network; WebGL renders its live vertices, links and signal particles. The title-card scroll timeline drives camera rotation, perspective, scale and graph deformation through the same renderer, alongside pointer interaction. Signals follow weighted Dijkstra distances through the actual graph rather than expanding as screen-space circles. This is an interactive illustration of computation, not portfolio telemetry or a claim about system performance.
+
+Mouse movement deforms nearby nodes; mouse dragging rotates the network, and a click or tap sends a signal from the nearest node. Touch dragging preserves page scrolling. Native Send signal and Pause/Resume buttons provide keyboard access to the main actions, with 44px minimum targets and the shared focus treatment. Paused or reduced-motion signal activation produces a static highlight rather than an animated pulse. The canvas and deterministic SVG fallback are hidden from assistive technology; the meaningful instructions and controls remain semantic HTML. Controls appear only when the live scene initializes. The renderer releases its resources on unmount and restores the SVG fallback after context loss.
+
+### Performance media
+
+The performance video begins as the official YouTube poster with an explicit Play performance control; activation loads the privacy-enhanced YouTube iframe and moves focus to it. Keep that actionable facade and original performance attribution.
 
 ## Do's and Don'ts
 
@@ -213,8 +229,8 @@ The Home instrument is an image-backed WebGL enhancement, not a live 3D scene or
 
 - Don't reintroduce the obsolete old green interface or light paper music theme.
 - Don't recolor original portfolio media to force palette uniformity.
-- Don't turn decorative optical annotations into unsupported measurements or product claims.
+- Don't present the interactive graph as real performance data or a measured system.
 - Don't promote leftover uppercase supporting labels into a required eyebrow or kicker system.
 - Don't describe recorded review exceptions as clean pixel matches or shipping approval.
 
-Not canonized: remaining uppercase supporting labels and the historical hero/comparison discrepancies are not rules for new surfaces. Labels are retained implementation details under finish review; the signature lettering adjustments are local composition work, not a global typography recipe.
+Not canonized: remaining uppercase supporting labels and historical layout A hero/comparison discrepancies are not rules for new surfaces. The former horizontal lettering adjustments and old first-viewport arrangement are superseded history. The current title-card timing and graph journey remain local composition choices, not a requirement to pin every section.
