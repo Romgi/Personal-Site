@@ -114,7 +114,7 @@ components:
 
 Black grounds, ice-white lettering, blue controls and smoked refracting glass connect Home, Projects, Music and Resume. Oversized condensed typography establishes identity; real project images, performance photographs and ruled records carry the evidence. The interface is spacious around introductions and denser around project details, repertoire and resume entries.
 
-Music shares the blue-and-black palette and condensed typography. The existing JG identity and portfolio media remain binding assets under `PRODUCT.md`. The blue Computer Science background and original project screenshots remain visible source imagery; their colors do not redefine the interface palette.
+Music shares the blue-and-black palette and condensed typography. The existing JG identity and portfolio media remain binding assets under `PRODUCT.md`. Original project screenshots and factual photographs retain their source colors without redefining the interface palette. The Computer Science highlight uses the same flat, ruled row as the Robotics and Music highlights; its former blue background was removed at the user’s request.
 
 This record describes the current implemented CSS and components. The user-authorized cinematic Home opening supersedes layout A’s first viewport. Earlier layout A captures and the forced hero/responsive gates in `.impeccable/build/state.json` remain historical records of that earlier composition, including its original-content exceptions and typography drift. They are not reference captures or approval for the current title card; this document is not a shipping verdict.
 
@@ -123,7 +123,7 @@ This record describes the current implemented CSS and components. The user-autho
 - Condensed display typography with readable sans-serif evidence text.
 - Dark tonal surfaces, thin rules and restrained blue interaction states.
 - Refracting navigation and a scroll-held title card over a live computation network.
-- Original media and complete content across all four routes.
+- Original project media and complete content across all four routes.
 
 ## Colors
 
@@ -147,7 +147,7 @@ Graphite is the page ground; ice-white is the main text color. Muted blue-gray s
 
 Big Shoulders supplies page titles, section headings, resume headings and the footer identity. Barlow Condensed supplies project titles, navigation, actions, several supporting headings and Home introduction text. Geist supplies reading text and search/filter controls; Geist Mono supplies compact technology badges and counts. All are loaded through `next/font` in the root layout.
 
-The Home name is a deliberate signature exception: Bebas Neue at weight 400, centered in two stacked uppercase lines without the former horizontal scaling. The title card uses clamp(96px, 15vw, 230px) with 0.83 leading and −0.015em tracking; below 1101px the name becomes 20vw, and below 768px it becomes 29vw with 0.88 leading. Its following Software / Robotics / Music heading uses Big Shoulders at weight 550. These sizes belong to this composition and do not extend the reusable type scale.
+The Home name is a deliberate signature exception: Bebas Neue at weight 400, centered in two stacked uppercase lines without the former horizontal scaling. The title card uses clamp(96px, 15vw, 230px) with 0.83 leading and −0.015em tracking; below 1101px the name becomes 20vw, and below 768px it becomes 29vw with 0.88 leading. Its following Software / Robotics / Music heading uses Big Shoulders at weight 550. In pinned viewports 540–679px high, the name uses min(29vw, 29svh), the bridge heading uses clamp(40px, 8svh, 54px), and introduction text becomes 16px with tighter spacing. These sizes belong to this composition and do not extend the reusable type scale.
 
 The reusable hierarchy runs from the large page display to section headlines, condensed project titles, and calmer body text. Section descriptions use 17px/1.8 with a 68ch cap; page descriptions use the body role. Project details use 14px and cap prose at 70ch. Mobile page titles use 22vw; section headings use 42px. Featured project titles enlarge to 40px, reducing to 34px on mobile.
 
@@ -157,15 +157,15 @@ The reusable hierarchy runs from the large page display to section headlines, co
 
 The shared container caps at 1536px with 6% horizontal padding, switching to 24px below 768px. Major sections use 110px vertical padding on desktop and 72px on mobile. Thin rules and open space organize content without enclosing every record in glass.
 
-Home opens with a centered, full-viewport title card over the live computation network. Edge fading and a dark radial shade keep the identity legible. Scrolling separates the two name lines in opposing directions, opens the scene’s clipping frame, and moves the real graph camera through the network. A Software / Robotics / Music bridge then introduces the original tagline and View Projects / View Resume actions. The opening releases into the original work preview tray in normal flow, with two columns on larger screens and stacked previews on mobile. A visible Skip intro link targets that tray; portfolio content and accomplishments remain intact.
+Home opens with a centered, full-viewport title card over the live computation network. Edge fading and a dark radial shade keep the identity legible. Scrolling separates the two name lines in opposing directions and moves the real graph camera through the network. The pinned version also opens the scene’s clipping frame. A Software / Robotics / Music bridge then introduces the original tagline and View Projects / View Resume actions. The opening releases into the original work preview tray in normal flow, with two columns on larger screens and stacked previews on mobile. A visible Skip intro link targets that tray; portfolio content and accomplishments remain intact.
 
-With motion permitted and a viewport at least 680px high, the title card pins for additional scroll travel equal to 1.85 viewport heights at widths of 900px and above, or 1.15 viewport heights below 900px. Shorter viewports use an unpinned layout with the name, bridge and actions visible in document flow. Reduced motion also uses this unpinned layout at every size. Network controls remain available whenever WebGL initializes, including the unpinned and reduced-motion versions; their caption hides on smaller screens while the buttons stay visible.
+With motion permitted, the Home scroll scene runs at every width. At viewport heights of at least 540px, the title card pins for additional scroll travel equal to 1.85 viewport heights at widths of 900px and above, or 1.15 viewport heights below 900px. Between 540px and 679px high, compact typography and spacing reserve room for the bridge actions, network controls and Skip intro. Below 540px high, the title separation and network camera still scrub over 0.85 viewport heights while the readable bridge and actions stay in normal document flow. Reduced motion disables this choreography at every size and keeps all introduction content visible in the unpinned layout. Network controls remain available whenever WebGL initializes, including the unpinned and reduced-motion versions; their caption hides on smaller or compact-height screens while the buttons stay visible.
 
 Projects uses a sticky 220px filter sidebar and two result columns. At 1200px the sidebar becomes 180px and results become one column; below 768px filters move into normal flow as wrapping buttons. Featured projects pair image and text on desktop and stack on mobile.
 
 Music uses ruled accomplishment rows, a repertoire table and a gallery whose lead image spans both columns. On mobile rows and table cells stack, the table header hides, and the gallery becomes one column. Resume uses a sticky section index and a 28% heading column beside the evidence; mobile gives the index horizontal scrolling and stacks section headings above content. Print CSS removes navigation and actions and uses dark text on white.
 
-At widths of 900px and above, the Robotics and Music media compositions briefly hold only when the entire composition fits below the navigation, with 112px at the top and 28px of bottom clearance. Their extra scroll travel is 0.68 and 0.52 viewport heights respectively; a composition that does not fit receives an unpinned media reveal. Resume remains continuous reading with scroll-linked rules and heading color. Reduced motion disables all scene pins and scroll-driven reveals, leaving the underlying content visible.
+Robotics and Music media reveals run at every width. A whole composition briefly holds when it fits beneath the navigation with 28px of bottom clearance. Below 1024px, if the stacked composition is too tall, only its photograph holds when that media area fits; the following copy and video remain in natural flow. Oversized media receives an unpinned scroll reveal. The top pin clearance is 86px below 768px wide, 96px from 768px to 1023px, and 112px from 1024px. Base scroll travel is 0.68 viewport heights for Robotics and 0.52 for Music, shortened to 65% of those distances below 1024px. Resume retains continuous reading with scroll-linked rules and heading color at every width. Reduced motion disables all scene pins and scroll-driven reveals, leaving the underlying content visible.
 
 ## Elevation & Depth
 
@@ -175,7 +175,7 @@ SVG backdrop displacement preserves the requested background refraction in suppo
 
 Hover transitions generally last 200–300ms; glass sheen uses 400ms. The computation background renders live blue points, links and traveling signals through WebGL. Perspective, depth fading, additive light and spring deformation give the network volume; it does not sample a raster image. Animation pauses offscreen, in hidden tabs and through the explicit Pause control. Reduced motion starts the scene paused, with an optional Resume action; a deterministic SVG network remains available before WebGL initializes or when it is unavailable. Global reduced-motion CSS removes smooth scrolling and nearly eliminates transitions.
 
-The Home sequence follows scroll position with 0.35-second smoothing; reversing scroll reverses the title separation, graph-camera journey and bridge reveal. The network’s Pause button freezes its renderer, while the operating-system reduced-motion preference disables the scroll choreography altogether. Supporting desktop media reveals use 0.45-second smoothing: Robotics opens horizontally with a brief scan across the photograph, and Music opens vertically like a stage aperture. Both ease their image scale from 1.12 to 1 while text and video controls remain available. Resume draws a thin blue rule along each section and shifts its heading toward the accent as the reader advances.
+The Home sequence follows scroll position with 0.35-second smoothing; reversing scroll reverses the title separation, graph-camera journey and bridge reveal. The network’s Pause button freezes its renderer, while the operating-system reduced-motion preference disables the scroll choreography altogether. Supporting media reveals at every width use 0.45-second smoothing: Robotics opens horizontally with a brief scan across the photograph, and Music opens vertically like a stage aperture. Both ease their image scale from 1.12 to 1 while text and video controls remain available. Resume draws a thin blue rule along each section and shifts its heading toward the accent as the reader advances.
 
 **The Sharp Foreground Rule.** Refract the background while keeping text, focus and controls legible.
 
@@ -195,7 +195,7 @@ Search is a transparent, bordered field with a 14px input and a focus-within acc
 
 ### Badges and records
 
-Technology badges use a faint blue tint, blue border, light ink, mono type and a subtle inset highlight. Project records combine original media, title/status, description, technology badges, expandable technical details and existing links. Detail disclosures use native summaries and an accent open state. Experience, accomplishment and resume entries use rules instead of generic raised cards.
+Technology badges use a faint blue tint, blue border, light ink, mono type and a subtle inset highlight. Project records combine original media, title/status, description, technology badges, expandable technical details and existing links. Detail disclosures use native summaries and an accent open state. Experience, accomplishment and resume entries use rules instead of generic raised cards. Home’s Computer Science, Robotics and Music highlights share one flat, ruled row treatment without a separate image background.
 
 ### Navigation
 

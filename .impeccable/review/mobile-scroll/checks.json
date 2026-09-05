@@ -1,0 +1,117 @@
+[
+  {
+    "case": "small-phone-hero",
+    "result": {
+      "actionsBottom": 403.515625,
+      "bridgeTop": 122.484375,
+      "buttonSizes": [
+        {
+          "height": 52,
+          "overflow": false,
+          "width": 131
+        },
+        {
+          "height": 52,
+          "overflow": false,
+          "width": 131
+        }
+      ],
+      "controlTop": 454,
+      "inert": false,
+      "overflow": false,
+      "pin": true,
+      "progress": "0.940276"
+    }
+  },
+  {
+    "case": "skip-intro",
+    "result": {
+      "contentTop": 158,
+      "hash": "#home-content",
+      "heroTop": -409.9990234375,
+      "progress": "1"
+    }
+  },
+  {
+    "case": "robotics-pin-release",
+    "result": {
+      "mid": {
+        "clip": "inset(0% 16.9424%)",
+        "pin": true,
+        "top": 86.203125
+      },
+      "releasedClip": "inset(0%)",
+      "releasedTop": -63.796875
+    }
+  },
+  {
+    "case": "robotics-rotate-landscape",
+    "result": {
+      "clip": "inset(0% 34%)",
+      "overflow": false,
+      "pins": 0
+    }
+  },
+  {
+    "case": "robotics-rotate-back",
+    "result": {
+      "mediaPinned": true,
+      "pins": 1
+    }
+  },
+  {
+    "case": "music-pin-release",
+    "result": {
+      "mid": {
+        "clip": "inset(13.44% 0%)",
+        "pin": true,
+        "top": 85.921875
+      },
+      "releasedClip": "inset(0%)",
+      "releasedTop": -64.078125
+    }
+  },
+  {
+    "case": "music-rotate-landscape",
+    "result": {
+      "clip": "inset(27% 0%)",
+      "overflow": false,
+      "pins": 0
+    }
+  },
+  {
+    "case": "music-rotate-back",
+    "result": {
+      "mediaPinned": true,
+      "pins": 1
+    }
+  },
+  {
+    "case": "mobile-resume-progress",
+    "result": {
+      "after": "1",
+      "before": "0",
+      "pins": 0
+    }
+  },
+  {
+    "case": "live-reduced-motion",
+    "result": {
+      "pins": 0,
+      "progress": "",
+      "reduced": true
+    }
+  },
+  {
+    "case": "reduced-home",
+    "result": {
+      "inert": false,
+      "opacity": "1",
+      "pins": 0
+    }
+  },
+  {
+    "case": "errors",
+    "result": ""
+  }
+]

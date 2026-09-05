@@ -54,19 +54,9 @@ export default function Home() {
               </div>
             </AnimatedSection>
             <div className="home-highlights">
-              {profile.highlights.map((item, index) => (
+              {profile.highlights.map((item) => (
                 <AnimatedSection key={item.title}>
                   <Link href={item.href} className="highlight-link group">
-                    {index === 0 ? (
-                      <Image
-                        src={profile.profileImage.src}
-                        alt=""
-                        fill
-                        sizes="(max-width: 768px) 100vw, 40vw"
-                        className="highlight-media"
-                        aria-hidden="true"
-                      />
-                    ) : null}
                     <h3 className="mt-4 text-xl font-semibold text-white">
                       {item.title}
                     </h3>

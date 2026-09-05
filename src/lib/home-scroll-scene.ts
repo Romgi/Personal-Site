@@ -1,6 +1,10 @@
 import gsap from "gsap";
 
-export function setupHomeScrollScene(root: HTMLElement, desktop: boolean) {
+export function setupHomeScrollScene(
+  root: HTMLElement,
+  desktop: boolean,
+  pin: boolean,
+) {
   const hero = root.querySelector<HTMLElement>(".title-card");
   if (!hero) return;
   const words = hero.querySelectorAll(".title-card-word");
@@ -8,8 +12,8 @@ export function setupHomeScrollScene(root: HTMLElement, desktop: boolean) {
   const bridge = hero.querySelector<HTMLElement>(".title-card-bridge")!;
   const progress = hero.querySelector(".title-card-progress");
   const visual = hero.querySelector(".computation-visual");
-  hero.classList.add("is-scroll-scene");
-  bridge.inert = true;
+  hero.classList.toggle("is-scroll-scene", pin);
+  bridge.inert = pin;
   const camera = { progress: 0 };
   const updateCamera = () => {
     hero.dataset.computationProgress = String(camera.progress);
@@ -25,8 +29,9 @@ export function setupHomeScrollScene(root: HTMLElement, desktop: boolean) {
       id: "home-title-card",
       trigger: hero,
       start: "top top",
-      end: () => `+=${window.innerHeight * (desktop ? 1.85 : 1.15)}`,
-      pin: true,
+      end: () =>
+        `+=${window.innerHeight * (pin ? (desktop ? 1.85 : 1.15) : 0.85)}`,
+      pin,
       pinSpacing: true,
       scrub: 0.35,
       anticipatePin: 1,
@@ -34,7 +39,7 @@ export function setupHomeScrollScene(root: HTMLElement, desktop: boolean) {
       onRefresh: (trigger) => {
         camera.progress = trigger.progress;
         updateCamera();
-        bridge.inert = Number(gsap.getProperty(bridge, "opacity")) < 0.9;
+        bridge.inert = pin && Number(gsap.getProperty(bridge, "opacity")) < 0.9;
       },
     },
   });
@@ -65,28 +70,33 @@ export function setupHomeScrollScene(root: HTMLElement, desktop: boolean) {
         ease: "power2.inOut",
       },
       0.1,
-    )
-    .fromTo(
-      visual,
-      { clipPath: "inset(7% 3% 7% 3% round 24px)" },
-      { clipPath: "inset(0% 0% 0% 0% round 0px)", duration: 0.5 },
-      0.12,
-    )
-    .fromTo(
-      bridge,
-      { opacity: 0, y: 60, clipPath: "inset(100% 0% 0% 0%)" },
-      {
-        opacity: 1,
-        y: 0,
-        clipPath: "inset(0% 0% 0% 0%)",
-        duration: 0.3,
-        ease: "power2.out",
-        onUpdate: () => {
-          bridge.inert = Number(gsap.getProperty(bridge, "opacity")) < 0.9;
-        },
-      },
-      0.61,
     );
+  // Short landscape viewports keep the reading content in document flow while
+  // the title separation and graph camera still follow the visitor's scroll.
+  if (pin) {
+    timeline
+      .fromTo(
+        visual,
+        { clipPath: "inset(7% 3% 7% 3% round 24px)" },
+        { clipPath: "inset(0% 0% 0% 0% round 0px)", duration: 0.5 },
+        0.12,
+      )
+      .fromTo(
+        bridge,
+        { opacity: 0, y: 60, clipPath: "inset(100% 0% 0% 0%)" },
+        {
+          opacity: 1,
+          y: 0,
+          clipPath: "inset(0% 0% 0% 0%)",
+          duration: 0.3,
+          ease: "power2.out",
+          onUpdate: () => {
+            bridge.inert = Number(gsap.getProperty(bridge, "opacity")) < 0.9;
+          },
+        },
+        0.61,
+      );
+  }
   const entry = root.querySelector(".home-entry");
   if (entry)
     gsap.from(entry, {

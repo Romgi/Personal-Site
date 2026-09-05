@@ -1568,22 +1568,6 @@ input {
   position: relative;
   isolation: isolate;
 }
-.highlight-link:has(.highlight-media) {
-  padding-inline: 24px;
-  border-radius: 12px;
-  overflow: hidden;
-}
-.highlight-media {
-  object-fit: cover;
-  z-index: -1;
-}
-.highlight-link:has(.highlight-media)::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: #061324a6;
-  z-index: -1;
-}
 .highlight-link p.font-mono {
   margin-top: 12px;
 }
@@ -2168,6 +2152,49 @@ input {
   }
   .home-entry .flight-preview {
     min-height: 0;
+  }
+}
+@media (max-width: 360px) {
+  .title-card .flight-actions .button {
+    flex: 1;
+    min-width: 0;
+    gap: 8px;
+    font-size: 14px;
+    letter-spacing: 0.06em;
+    white-space: nowrap;
+  }
+}
+/* Short portrait screens retain the full scene with room for its controls. */
+@media (min-height: 540px) and (max-height: 679px) {
+  .is-scroll-scene .title-card-heading {
+    inset: 88px 24px 130px;
+    gap: 20px;
+  }
+  .title-card.is-scroll-scene .flight-name {
+    font-size: min(29vw, 29svh);
+  }
+  .is-scroll-scene .title-card-bridge {
+    inset-block: 88px 130px;
+  }
+  .is-scroll-scene .title-card-bridge h2 {
+    font-size: clamp(40px, 8svh, 54px);
+  }
+  .title-card.is-scroll-scene .flight-intro {
+    margin-top: 14px;
+    font-size: 16px;
+    line-height: 1.45;
+  }
+  .title-card.is-scroll-scene .flight-actions {
+    margin-top: 16px;
+  }
+  .is-scroll-scene .computation-console {
+    bottom: 70px;
+  }
+  .is-scroll-scene .computation-caption {
+    display: none;
+  }
+  .is-scroll-scene .title-card-scroll {
+    bottom: 8px;
   }
 }
 @media (prefers-reduced-motion: reduce) {

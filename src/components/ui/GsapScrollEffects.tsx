@@ -24,15 +24,13 @@ export function GsapScrollEffects({ children }: { children: ReactNode }) {
         {
           motion: "screen and (prefers-reduced-motion: no-preference)",
           desktop: "(min-width: 900px)",
-          tall: "(min-height: 680px)",
+          tall: "(min-height: 540px)",
         },
         (context) => {
           const { motion, desktop, tall } = context.conditions!;
           if (!motion) return;
-          const cleanHome = tall
-            ? setupHomeScrollScene(root, desktop)
-            : undefined;
-          if (desktop) setupSectionScrollScenes(root);
+          const cleanHome = setupHomeScrollScene(root, desktop, tall);
+          setupSectionScrollScenes(root);
           const pageTitle = root.querySelector(".page-hero h1");
           if (pageTitle)
             gsap.from(pageTitle, {

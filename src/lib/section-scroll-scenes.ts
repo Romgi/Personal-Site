@@ -1,12 +1,17 @@
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-const PIN_TOP = 112;
 const PIN_BOTTOM_SPACE = 28;
+
+function pinTop() {
+  // The mobile bar ends at 70px and the tablet bar at 74px. Retain the
+  // original desktop breathing room while giving small screens more space.
+  return window.innerWidth < 768 ? 86 : window.innerWidth < 1024 ? 96 : 112;
+}
 
 /** Pin only a complete, readable composition that fits below the navigation. */
 function fitsViewport(scene: HTMLElement) {
-  return scene.offsetHeight <= window.innerHeight - PIN_TOP - PIN_BOTTOM_SPACE;
+  return scene.offsetHeight <= window.innerHeight - pinTop() - PIN_BOTTOM_SPACE;
 }
 
 function mediaScene(
@@ -16,21 +21,33 @@ function mediaScene(
   fromClip: string,
   travel: number,
 ) {
-  const pin = fitsViewport(scene);
+  const stacked = window.innerWidth < 1024;
+  const media = scene.querySelector<HTMLElement>(
+    "[data-robotics-scene-media], [data-music-scene-media]",
+  );
+  // A stacked story is often taller than a phone. Hold just its photograph in
+  // that case; the following copy and video retain their natural document flow.
+  const pinTarget = fitsViewport(scene)
+    ? scene
+    : stacked && media && fitsViewport(media)
+      ? media
+      : null;
+  const trigger = pinTarget ?? (stacked ? (media ?? scene) : scene);
+  const scrollTravel = stacked ? travel * 0.65 : travel;
 
   return gsap
     .timeline({
       defaults: { ease: "none" },
       scrollTrigger: {
-        trigger: scene,
-        start: pin ? `top ${PIN_TOP}px` : "top 78%",
+        trigger,
+        start: () => (pinTarget ? `top ${pinTop()}px` : "top 78%"),
         // If a shorter resize no longer fits, release immediately. The reading
         // area never remains pinned with content below the viewport.
         end: () =>
-          pin
-            ? `+=${fitsViewport(scene) ? Math.round(window.innerHeight * travel) : 1}`
+          pinTarget
+            ? `+=${fitsViewport(pinTarget) ? Math.round(window.innerHeight * scrollTravel) : 1}`
             : "top 24%",
-        pin: pin ? scene : false,
+        pin: pinTarget ?? false,
         pinSpacing: true,
         scrub: 0.45,
         anticipatePin: 1,
@@ -160,9 +177,21 @@ function setupResume(root: HTMLElement) {
   });
 }
 
-/** Call from a GSAP context for desktop with reduced motion opted out. */
+/** Call from a GSAP context when reduced motion is opted out. */
 export function setupSectionScrollScenes(root: HTMLElement): void {
-  setupRobotics(root);
-  setupMusic(root);
-  setupResume(root);
+  // Nested matchMedia is owned by the caller's context. Rebuild when the layout
+  // stacks, navigation changes size, or device rotation changes what can fit.
+  gsap.matchMedia().add(
+    {
+      all: "all",
+      stacked: "(max-width: 1023px)",
+      mobile: "(max-width: 767px)",
+      landscape: "(orientation: landscape)",
+    },
+    () => {
+      setupRobotics(root);
+      setupMusic(root);
+      setupResume(root);
+    },
+  );
 }

@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-09-05T22:26:08.504697+00:00",
+  "generatedAt": "2026-09-05T22:51:33.657561+00:00",
   "title": "Design System: Jonathan Graydon Portfolio",
   "extensions": {
     "colorMeta": {
@@ -265,17 +265,17 @@
       {
         "name": "home-scroll-scrub",
         "value": "350ms",
-        "purpose": "Scroll-follow smoothing for the centered title separation, live graph camera journey, bridge reveal and progress track. Home pin travel is 1.85 viewport heights at widths of at least 900px and 1.15 below; pinning requires at least 680px viewport height and no reduced-motion preference."
+        "purpose": "Scroll-follow smoothing for the title separation and live graph camera at every width. At viewport heights of at least 540px, Home pins for 1.85 viewport heights at widths of at least 900px and 1.15 below, with a bridge reveal and progress track. Heights of 540\u2013679px use compact typography and controls. Below 540px the title and camera scrub over 0.85 viewport heights while the bridge remains readable in normal flow. Disabled for reduced motion."
       },
       {
         "name": "media-scroll-scrub",
         "value": "450ms",
-        "purpose": "Desktop Robotics and Music image-aperture reveals and scale easing. Complete compositions that fit the viewport hold for 0.68 and 0.52 viewport heights respectively; oversized scenes remain unpinned. Disabled for reduced motion."
+        "purpose": "Robotics and Music image-aperture reveals and scale easing at every width. Fitting compositions hold for 0.68 and 0.52 viewport heights respectively. Below 1024px, travel is 65% of those distances and a fitting photograph can pin separately when the stacked composition is too tall; oversized media remains unpinned. Top clearance is 86px below 768px, 96px from 768px through 1023px and 112px at 1024px and above, with 28px of bottom clearance. Disabled for reduced motion."
       },
       {
         "name": "resume-scroll-progress",
         "value": "continuous scroll scrub",
-        "purpose": "Desktop section rules extend and headings shift toward the accent as the document scrolls, without pinning the resume. Disabled for reduced motion."
+        "purpose": "Section rules extend and headings shift toward the accent at every width as the document scrolls, without pinning the resume. Disabled for reduced motion."
       }
     ],
     "breakpoints": [
@@ -300,12 +300,20 @@
         "value": "1600px"
       },
       {
-        "name": "scroll-scenes-desktop-min",
+        "name": "home-scroll-long-travel-min",
         "value": "900px"
       },
       {
         "name": "home-pin-height-min",
-        "value": "680px"
+        "value": "540px"
+      },
+      {
+        "name": "media-scenes-stacked-max",
+        "value": "1023px"
+      },
+      {
+        "name": "home-compact-height-max",
+        "value": "679px"
       }
     ]
   },
@@ -382,12 +390,12 @@
   ],
   "narrative": {
     "northStar": "Flight deck",
-    "overview": "Black grounds, ice-white lettering, blue controls and smoked refracting glass connect Home, Projects, Music and Resume. Oversized condensed typography establishes identity; real project images, performance photographs and ruled records carry the evidence. The interface is spacious around introductions and denser around project details, repertoire and resume entries.\n\nMusic shares the blue-and-black palette and condensed typography. The existing JG identity and portfolio media remain binding assets under `PRODUCT.md`. The blue Computer Science background and original project screenshots remain visible source imagery; their colors do not redefine the interface palette.\n\nThis record describes the current implemented CSS and components. The user-authorized cinematic Home opening supersedes layout A\u2019s first viewport. Earlier layout A captures and the forced hero/responsive gates in `.impeccable/build/state.json` remain historical records of that earlier composition, including its original-content exceptions and typography drift. They are not reference captures or approval for the current title card; this document is not a shipping verdict.",
+    "overview": "Black grounds, ice-white lettering, blue controls and smoked refracting glass connect Home, Projects, Music and Resume. Oversized condensed typography establishes identity; real project images, performance photographs and ruled records carry the evidence. The interface is spacious around introductions and denser around project details, repertoire and resume entries.\n\nMusic shares the blue-and-black palette and condensed typography. The existing JG identity and portfolio media remain binding assets under `PRODUCT.md`. Original project screenshots and factual photographs retain their source colors without redefining the interface palette. The Computer Science highlight uses the same flat, ruled row as the Robotics and Music highlights; its former blue background was removed at the user\u2019s request.\n\nThis record describes the current implemented CSS and components. The user-authorized cinematic Home opening supersedes layout A\u2019s first viewport. Earlier layout A captures and the forced hero/responsive gates in `.impeccable/build/state.json` remain historical records of that earlier composition, including its original-content exceptions and typography drift. They are not reference captures or approval for the current title card; this document is not a shipping verdict.",
     "keyCharacteristics": [
       "Condensed display typography with readable sans-serif evidence text.",
       "Dark tonal surfaces, thin rules and restrained blue interaction states.",
       "Refracting navigation and a scroll-held title card over a live computation network.",
-      "Original media and complete content across all four routes."
+      "Original project media and complete content across all four routes."
     ],
     "rules": [],
     "dos": [
