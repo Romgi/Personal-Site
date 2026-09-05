@@ -107,10 +107,9 @@ summary::-webkit-details-marker {
 /* ---------------------------------------------------------------------------
  * Liquid glass
  * Layered: refracted backdrop -> base tint -> specular top edge ->
- * pointer-tracked sheen (--mx/--my set by PointerEffects). The first
- * backdrop-filter declaration is the cross-browser fallback; browsers that
- * support SVG backdrop filters use the second declaration to physically
- * displace the gently softened pixels with an edge-weighted lens map.
+ * pointer-tracked sheen (--mx/--my set by PointerEffects). Use a frosted
+ * fallback, then opt into SVG refraction where the browser renders it.
+ * Only the backdrop is displaced; foreground text and controls stay sharp.
  * ------------------------------------------------------------------------- */
 
 .liquid-glass-filter-defs {
@@ -127,7 +126,7 @@ summary::-webkit-details-marker {
   --my: 50%;
   --glass-active: 0;
   --glass-blur: 11px;
-  --glass-optical-blur: 3px;
+  --glass-optical-blur: 0.65px;
   --glass-saturation: 185%;
   --glass-contrast: 1.05;
   --glass-brightness: 1.06;
@@ -145,14 +144,26 @@ summary::-webkit-details-marker {
     brightness(var(--glass-brightness));
   backdrop-filter: blur(var(--glass-blur)) saturate(var(--glass-saturation))
     contrast(var(--glass-contrast)) brightness(var(--glass-brightness));
-  backdrop-filter: blur(var(--glass-optical-blur))
-    saturate(var(--glass-saturation)) contrast(var(--glass-contrast))
-    brightness(var(--glass-brightness)) var(--glass-refraction-filter);
+}
+
+/* A URL syntax check alone also passes in engines that cannot render SVG
+ * backdrop displacement. Keep WebKit/Gecko on the working frosted fallback.
+ * https://bugs.webkit.org/show_bug.cgi?id=245510
+ * https://bugzilla.mozilla.org/show_bug.cgi?id=2018607
+ */
+@supports (backdrop-filter: url("#liquid-glass-surface-refraction")) and
+  (not (-webkit-touch-callout: none)) and (not (-moz-appearance: none)) {
+  .liquid-glass-nav,
+  .liquid-glass-surface {
+    backdrop-filter: var(--glass-refraction-filter)
+      blur(var(--glass-optical-blur)) saturate(var(--glass-saturation))
+      contrast(var(--glass-contrast)) brightness(var(--glass-brightness));
+  }
 }
 
 .liquid-glass-nav {
   --glass-blur: 14px;
-  --glass-optical-blur: 3px;
+  --glass-optical-blur: 0.8px;
   --glass-saturation: 190%;
   --glass-contrast: 1.08;
   --glass-brightness: 1.08;
@@ -218,6 +229,15 @@ summary::-webkit-details-marker {
     inset 0 0 0 1px rgba(255, 255, 255, 0.24),
     inset 0 -1px 0 rgba(185, 130, 34, 0.1),
     0 20px 56px rgba(97, 64, 25, 0.16);
+}
+
+/* Expanded navigation needs enough tint to read over photos and page text. */
+.liquid-glass-nav:has(button[aria-expanded="true"]) {
+  background-color: rgba(8, 12, 22, 0.76);
+}
+
+.liquid-glass-nav--music:has(button[aria-expanded="true"]) {
+  background-color: rgba(255, 251, 243, 0.82);
 }
 
 .liquid-glass-surface {
@@ -591,7 +611,9 @@ summary::-webkit-details-marker {
 }
 
 .gsap-reveal {
-  will-change: transform, opacity;
+  /* Persistent will-change: opacity creates a backdrop root and prevents
+   * nested glass cards from refracting the page behind their reveal wrapper. */
+  will-change: transform;
 }
 
 [data-home-hero-card],

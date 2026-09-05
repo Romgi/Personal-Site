@@ -70,18 +70,13 @@ function RefractionFilter({ id, edgeMap, edgeScale }: RefractionFilterProps) {
       primitiveUnits="userSpaceOnUse"
       colorInterpolationFilters="sRGB"
     >
-      <feImage
-        href={edgeMap}
-        x="0"
-        y="0"
-        width="100%"
-        height="100%"
-        preserveAspectRatio="none"
-        result="edgeField"
-      />
+      {/* Inherit the filter subregion. Explicit percentage dimensions resolve
+          against the zero-sized definitions SVG in Chromium and lose the map. */}
+      <feImage href={edgeMap} preserveAspectRatio="none" result="edgeField" />
+      {/* Broad, low-amplitude irregularities in the glass, separate from grain. */}
       <feTurbulence
         type="fractalNoise"
-        baseFrequency="0.035 0.055"
+        baseFrequency="0.012 0.018"
         numOctaves={2}
         seed={17}
         stitchTiles="stitch"
@@ -89,18 +84,18 @@ function RefractionFilter({ id, edgeMap, edgeScale }: RefractionFilterProps) {
       />
       <feGaussianBlur
         in="rawNoise"
-        stdDeviation={0.5}
+        stdDeviation={0.8}
         edgeMode="duplicate"
         result="softNoise"
       />
       <feComponentTransfer in="softNoise" result="warpNoise">
-        <feFuncR type="linear" slope={0.9} intercept={0.05} />
-        <feFuncG type="linear" slope={0.9} intercept={0.05} />
+        <feFuncR type="linear" slope={0.7} intercept={0.15} />
+        <feFuncG type="linear" slope={0.7} intercept={0.15} />
       </feComponentTransfer>
       <feDisplacementMap
         in="SourceGraphic"
         in2="warpNoise"
-        scale={10}
+        scale={7}
         xChannelSelector="R"
         yChannelSelector="G"
         result="wavyBackdrop"
@@ -113,8 +108,17 @@ function RefractionFilter({ id, edgeMap, edgeScale }: RefractionFilterProps) {
         yChannelSelector="G"
         result="edgeRefracted"
       />
+      {/* Fine, static grain avoids the cloudy patches of the warp noise. */}
+      <feTurbulence
+        type="fractalNoise"
+        baseFrequency="0.72"
+        numOctaves={2}
+        seed={29}
+        stitchTiles="stitch"
+        result="fineNoise"
+      />
       <feColorMatrix
-        in="rawNoise"
+        in="fineNoise"
         type="saturate"
         values="0"
         result="grayNoise"
@@ -123,7 +127,7 @@ function RefractionFilter({ id, edgeMap, edgeScale }: RefractionFilterProps) {
         <feFuncR type="linear" slope={1.45} intercept={-0.225} />
         <feFuncG type="linear" slope={1.45} intercept={-0.225} />
         <feFuncB type="linear" slope={1.45} intercept={-0.225} />
-        <feFuncA type="linear" slope={0.08} />
+        <feFuncA type="linear" slope={0.035} />
       </feComponentTransfer>
       <feBlend in="surfaceNoise" in2="edgeRefracted" mode="soft-light" />
     </filter>
