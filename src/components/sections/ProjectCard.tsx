@@ -59,6 +59,7 @@ export function ProjectCard({
         <details className="project-details">
           <summary className="cursor-pointer font-medium text-slate-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-blue-300">
             Technical details
+            <span className="sr-only"> for {project.title}</span>
           </summary>
           <p className="mt-3 leading-6 text-slate-400">
             {project.longDescription}
@@ -76,7 +77,7 @@ export function ProjectCard({
           {project.private ? (
             <span className="inline-flex min-h-10 items-center gap-2 rounded-md border border-white/10 bg-white/[0.035] px-4 py-2 text-sm font-medium text-slate-400">
               <Lock aria-hidden="true" size={16} />
-              Private project - no public links
+              Private project. No public links.
             </span>
           ) : null}
           {!project.private
@@ -86,6 +87,7 @@ export function ProjectCard({
                   href={link.href}
                   size="sm"
                   variant="ghost"
+                  ariaLabel={`${link.label} for ${project.title}`}
                 >
                   <Code2 aria-hidden="true" size={16} />
                   {link.label}
@@ -93,15 +95,25 @@ export function ProjectCard({
               ))
             : null}
           {!project.private && project.githubUrl ? (
-            <ButtonLink href={project.githubUrl} size="sm" variant="ghost">
+            <ButtonLink
+              href={project.githubUrl}
+              size="sm"
+              variant="ghost"
+              ariaLabel={`GitHub repository for ${project.title}`}
+            >
               <Code2 aria-hidden="true" size={16} />
               GitHub
             </ButtonLink>
           ) : null}
           {!project.private && project.liveDemoUrl ? (
-            <ButtonLink href={project.liveDemoUrl} size="sm" variant="ghost">
+            <ButtonLink
+              href={project.liveDemoUrl}
+              size="sm"
+              variant="ghost"
+              ariaLabel={`Open demo of ${project.title}`}
+            >
               <ArrowUpRight aria-hidden="true" size={16} />
-              Live demo
+              Open demo
             </ButtonLink>
           ) : null}
           {!project.private && project.downloadUrl ? (
@@ -109,7 +121,7 @@ export function ProjectCard({
               href={project.downloadUrl}
               size="sm"
               variant="ghost"
-              ariaLabel={`Open download page for ${project.title}`}
+              ariaLabel={`Download page for ${project.title}`}
             >
               <Download aria-hidden="true" size={16} />
               Download page
@@ -117,7 +129,7 @@ export function ProjectCard({
           ) : null}
           {!project.private && !hasPublicLinks ? (
             <span className="text-sm text-slate-500">
-              Public links unavailable
+              No public links available.
             </span>
           ) : null}
         </div>

@@ -17,6 +17,13 @@ export function ContactCard({
   displayValue = value,
 }: ContactCardProps) {
   const isExternal = isExternalHref(href);
+  const actionDescription = href.startsWith("mailto:")
+    ? "Opens your email app"
+    : href.startsWith("tel:")
+      ? "Call Jonathan"
+      : isExternal
+        ? "Opens in a new tab"
+        : undefined;
 
   return (
     <a
@@ -45,6 +52,9 @@ export function ContactCard({
           className="shrink-0 text-slate-400 transition group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-blue-200"
         />
       </span>
+      {actionDescription ? (
+        <span className="sr-only"> ({actionDescription})</span>
+      ) : null}
     </a>
   );
 }

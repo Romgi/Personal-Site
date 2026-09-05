@@ -6,18 +6,26 @@ import { navItems, profile } from "@/data/profile";
 
 const footerContactLinks: Array<{
   label: string;
+  iconLabel: string;
+  ariaLabel: string;
   href: string;
 }> = [
   ...profile.contact.emails.map((email) => ({
-    label: email.label,
+    label: `${email.label} email`,
+    iconLabel: email.label,
+    ariaLabel: `${email.label} email: ${email.value} (opens your email app)`,
     href: email.href,
   })),
   {
-    label: profile.contact.phone.label,
+    label: "Call Jonathan",
+    iconLabel: profile.contact.phone.label,
+    ariaLabel: `Call Jonathan at ${profile.contact.phone.value}`,
     href: profile.contact.phone.href,
   },
   ...profile.contact.socials.map((social) => ({
     label: social.label,
+    iconLabel: social.label,
+    ariaLabel: `${social.label} profile (opens in a new tab)`,
     href: social.href,
   })),
 ];
@@ -37,6 +45,7 @@ export function Footer() {
                 <a
                   key={link.href}
                   href={link.href}
+                  aria-label={link.ariaLabel}
                   target={
                     link.href.startsWith("https://") ? "_blank" : undefined
                   }
@@ -47,7 +56,10 @@ export function Footer() {
                   }
                   className="inline-flex min-h-10 items-center gap-2 rounded-md border border-white/10 bg-white/[0.035] px-3 py-2 font-medium text-slate-300 transition hover:border-blue-300/40 hover:bg-blue-500/10 hover:text-blue-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-blue-300"
                 >
-                  <ContactIcon label={link.label} className="size-4 shrink-0" />
+                  <ContactIcon
+                    label={link.iconLabel}
+                    className="size-4 shrink-0"
+                  />
                   {link.label}
                 </a>
               ))}

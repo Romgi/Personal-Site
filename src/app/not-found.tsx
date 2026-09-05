@@ -18,14 +18,14 @@ export default function NotFound() {
             Page not found
           </h1>
           <p className="mt-4 leading-7 text-slate-300">
-            The page may have moved, or the address may not match a current
-            portfolio route.
+            There is no page at this address. Check the link or return to the
+            home page to browse Jonathan&apos;s work.
           </p>
           <Link
             href="/"
             className="mt-8 inline-flex min-h-12 items-center rounded-md border border-blue-400/60 bg-gradient-to-b from-blue-500 to-blue-600 px-5 py-3 text-sm font-medium text-white shadow-[inset_0_1px_0_rgba(255,255,255,0.22),0_8px_28px_rgba(37,99,235,0.32)] transition hover:from-blue-400 hover:to-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-blue-300"
           >
-            Back home
+            Go to home page
           </Link>
         </div>
       </Container>

@@ -30,8 +30,8 @@ export default function MusicPage() {
     <div className="music-page">
       <PageHero
         className="music-hero"
-        eyebrow="Music / Trumpet"
-        title="Trumpet repertoire, performance, and musical growth."
+        title="Music"
+        subtitle="Trumpet performance and repertoire"
         description={musicOverview.description}
       />
 
@@ -51,9 +51,8 @@ export default function MusicPage() {
             </div>
             <AnimatedSection>
               <SectionHeading
-                eyebrow="Overview"
-                title="A serious performance profile alongside the technical portfolio."
-                description="This page highlights Jonathan's trumpet repertoire, honour band experience, ensemble leadership, festival awards, and ongoing university performance work."
+                title="Trumpet performance"
+                description="Jonathan's trumpet work spans solo repertoire, honour bands, ensemble leadership, festival awards, and ongoing university performances."
               />
               <div className="liquid-glass-surface music-media-card mt-8 rounded-lg border p-5">
                 <p className="text-sm font-semibold text-white">
@@ -68,11 +67,7 @@ export default function MusicPage() {
 
       <section className="music-section music-section-alt border-y py-20 sm:py-24">
         <Container>
-          <SectionHeading
-            eyebrow="Featured Repertoire"
-            title="Pieces to highlight first."
-            description="Selected pieces from Jonathan's trumpet repertoire."
-          />
+          <SectionHeading title="Featured repertoire" />
           <div className="mt-10 grid gap-5 md:grid-cols-2">
             {featuredRepertoire.map((item) => (
               <AnimatedSection key={item.id}>
@@ -90,8 +85,7 @@ export default function MusicPage() {
       <section className="music-section music-section-alt border-y py-20 sm:py-24">
         <Container>
           <SectionHeading
-            eyebrow="Accomplishments"
-            title="Awards, solos, ensembles, and performance notes."
+            title="Music awards and milestones"
             description="Selected awards, honour ensembles, leadership roles, and performance milestones."
           />
           <div className="accomplishment-list">
@@ -109,8 +103,7 @@ export default function MusicPage() {
           <div className="grid gap-10 lg:grid-cols-[0.9fr_1.1fr]">
             <div className="self-start lg:sticky lg:top-28">
               <SectionHeading
-                eyebrow="Ensembles"
-                title="Performance contexts."
+                title="Ensemble experience"
                 description="University, honour band, jazz, orchestral, school, and community ensembles."
               />
             </div>
@@ -134,9 +127,8 @@ export default function MusicPage() {
         <Container>
           <AnimatedSection>
             <SectionHeading
-              eyebrow="Repertoire"
-              title="Trumpet repertoire list."
-              description="A concise list of pieces, composers, and brief musical context."
+              title="Full trumpet repertoire"
+              description={`${repertoire.length} pieces, with composers and brief descriptions.`}
             />
             <div className="mt-10">
               <RepertoireList items={repertoire} />
@@ -148,8 +140,7 @@ export default function MusicPage() {
       <section className="music-section music-gallery-section border-t py-20 sm:py-24">
         <Container>
           <SectionHeading
-            eyebrow="Gallery"
-            title="Performance moments."
+            title="Music gallery"
             description="Selected concert, ensemble, and trumpet photos from Jonathan's music portfolio."
           />
           <div className="music-gallery">

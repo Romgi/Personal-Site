@@ -1,4 +1,4 @@
-import { ArrowUpRight, FileText } from "lucide-react";
+import { ArrowUpRight, Mail } from "lucide-react";
 
 import { ContactCard } from "@/components/sections/ContactCard";
 import { ResumeSection } from "@/components/sections/ResumeSection";
@@ -20,7 +20,7 @@ import {
 import { createPageMetadata } from "@/lib/metadata";
 
 export const metadata = createPageMetadata({
-  title: "Resume and Contact",
+  title: "Resume and contact",
   description:
     "Resume, education, skills, work experience, projects, robotics experience, music experience, and contact information for Jonathan Graydon.",
   path: "/resume",
@@ -35,11 +35,8 @@ const socialDisplayValues: Record<string, string> = {
 const contactCards = [
   ...profile.contact.emails.map((email) => ({
     ...email,
-    label: `${email.label} Email`,
-    displayValue:
-      email.value === "jonathangraydon22@gmail.com"
-        ? "JonathanGraydon22@gmail.com"
-        : email.value,
+    label: `${email.label} email`,
+    displayValue: email.value,
   })),
   { ...profile.contact.phone, displayValue: profile.contact.phone.value },
   ...profile.contact.socials.map((social) => ({
@@ -48,48 +45,52 @@ const contactCards = [
   })),
 ];
 
+const resumeSections = [
+  { id: "contact", title: "Contact" },
+  { id: "education", title: "Education" },
+  { id: "technical-skills", title: "Technical skills" },
+  { id: "work-experience", title: "Work experience" },
+  { id: "projects", title: "Projects" },
+  { id: "robotics-experience", title: "Robotics experience" },
+  { id: "music-experience", title: "Music experience" },
+  { id: "awards-accomplishments", title: "Awards and accomplishments" },
+];
+
 export default function ResumePage() {
   return (
     <div className="resume-page">
       <PageHero
-        eyebrow="Resume / Contact"
-        title="Resume details and direct contact links."
-        description="A concise, employer-ready page for education, technical skills, work experience, projects, robotics, music, awards, and contact information."
+        title="Resume & contact"
+        subtitle="Education, experience, and accomplishments"
+        description="Read my resume below or use the contact links to get in touch."
       >
         <div className="flex flex-wrap gap-3">
           <ButtonLink href={profile.contact.emails[0].href} variant="primary">
-            Request resume PDF
-            <FileText aria-hidden="true" size={18} />
+            Email for a resume PDF
+            <Mail aria-hidden="true" size={18} />
           </ButtonLink>
           <ButtonLink
             href={profile.contact.socials[0].href}
             variant="secondary"
           >
-            LinkedIn
+            View LinkedIn profile
             <ArrowUpRight aria-hidden="true" size={18} />
           </ButtonLink>
         </div>
       </PageHero>
       <nav className="resume-index" aria-label="Resume sections">
-        {[
-          "Education",
-          "Technical Skills",
-          "Work Experience",
-          "Projects",
-          "Robotics Experience",
-          "Music Experience",
-          "Awards / Accomplishments",
-        ].map((title) => (
-          <a
-            key={title}
-            href={`#${title.toLowerCase().replace(/[^a-z0-9]+/g, "-")}`}
-          >
+        {resumeSections.map(({ id, title }) => (
+          <a key={id} href={`#${id}`}>
             {title}
           </a>
         ))}
       </nav>
 
-      <section className="py-20 sm:py-24">
+      <section
+        id="contact"
+        aria-label="Contact Jonathan Graydon"
+        className="scroll-mt-40 py-20 sm:py-24"
+      >
         <Container>
           <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-3">
             {contactCards.map((contact) => (
@@ -140,7 +141,7 @@ export default function ResumePage() {
             </AnimatedSection>
 
             <AnimatedSection>
-              <ResumeSection title="Technical Skills">
+              <ResumeSection title="Technical skills">
                 <div className="grid gap-5 sm:grid-cols-2">
                   {technicalSkillGroups.map((group) => (
                     <div key={group.title}>
@@ -164,7 +165,7 @@ export default function ResumePage() {
       <section className="py-20 sm:py-24">
         <Container>
           <AnimatedSection>
-            <ResumeSection title="Work Experience">
+            <ResumeSection title="Work experience">
               <div className="grid gap-8 sm:grid-cols-2">
                 {workExperience.map((job) => (
                   <article key={job.title}>
@@ -215,7 +216,7 @@ export default function ResumePage() {
             </AnimatedSection>
 
             <AnimatedSection>
-              <ResumeSection title="Robotics Experience">
+              <ResumeSection title="Robotics experience">
                 <div className="space-y-5">
                   {resumeExperience.map((experience) => (
                     <article key={experience.title}>
@@ -250,7 +251,7 @@ export default function ResumePage() {
         <Container>
           <div className="resume-group">
             <AnimatedSection>
-              <ResumeSection title="Music Experience">
+              <ResumeSection title="Music experience">
                 <div className="space-y-5">
                   {musicExperience.map((item) => (
                     <article key={item.title}>
@@ -265,7 +266,10 @@ export default function ResumePage() {
             </AnimatedSection>
 
             <AnimatedSection>
-              <ResumeSection title="Awards / Accomplishments">
+              <ResumeSection
+                id="awards-accomplishments"
+                title="Awards and accomplishments"
+              >
                 <ul className="space-y-3 text-sm leading-6 text-slate-400">
                   {awards.map((award) => (
                     <li key={award}>{award}</li>

@@ -30,16 +30,16 @@ export default function ProjectsPage() {
   return (
     <div className="projects-page">
       <PageHero
-        eyebrow="Computer Science Projects"
-        title="Software work organized for technical notes, media, and accomplishments."
-        description="A practical collection of web applications, robotics software, coursework repositories, game projects, and tools built with modern development workflows."
+        title="Projects"
+        subtitle="Software & robotics"
+        description="Web applications, robot software, games, coursework, and tools. Explore the technical details, technologies, and available code or demos for each project."
       >
         <div className="project-census">
           <div className="census-item">
             <p className="text-2xl font-semibold tracking-tight text-white">
               {projects.length}
             </p>
-            <p className="mt-1 text-sm text-slate-400">Project entries</p>
+            <p className="mt-1 text-sm text-slate-400">Projects</p>
           </div>
           <div className="census-item">
             <p className="text-2xl font-semibold tracking-tight text-white">
@@ -51,7 +51,7 @@ export default function ProjectsPage() {
             <p className="text-2xl font-semibold tracking-tight text-white">
               {projectTags.length}
             </p>
-            <p className="mt-1 text-sm text-slate-400">Tags</p>
+            <p className="mt-1 text-sm text-slate-400">Project categories</p>
           </div>
         </div>
       </PageHero>
@@ -59,13 +59,9 @@ export default function ProjectsPage() {
       <section className="py-20 sm:py-24">
         <Container>
           <div className="flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between">
-            <SectionHeading
-              eyebrow="Featured"
-              title="Priority projects."
-              description="Featured projects are highlighted for their technical complexity, impact, or relevance to my current work."
-            />
+            <SectionHeading title="Featured projects" />
             <ButtonLink href="/resume" variant="ghost" className="self-start">
-              Resume
+              View resume
               <ArrowRight aria-hidden="true" size={16} />
             </ButtonLink>
           </div>
@@ -83,9 +79,8 @@ export default function ProjectsPage() {
         <Container>
           <AnimatedSection>
             <SectionHeading
-              eyebrow="Filter by tag"
-              title="All Projects"
-              description="Browse the full project set by technology area, from frontend and backend work to FRC controls, Unity simulation, and command-line tools."
+              title="All projects"
+              description="Search by name, technology, or keyword, or choose a project category."
             />
             <div className="mt-10">
               <ProjectsExplorer projects={projects} tags={projectTags} />
@@ -105,7 +100,6 @@ export default function ProjectsPage() {
           >
             <AnimatedSection>
               <SectionHeading
-                eyebrow="FRC Robotics"
                 title={roboticsOverview.title}
                 description={roboticsOverview.description}
               />
@@ -133,8 +127,7 @@ export default function ProjectsPage() {
             <div className="grid gap-10 lg:grid-cols-[0.9fr_1.1fr]">
               <div className="self-start lg:sticky lg:top-28">
                 <SectionHeading
-                  eyebrow="Experience"
-                  title="Three seasons, two teams."
+                  title="Three seasons, two teams"
                   description="From programming subteam member to Software Lead with the Iron Bears, to mentoring the next generation of programmers with Critical Circuits."
                 />
                 <div

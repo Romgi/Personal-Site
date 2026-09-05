@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { ComputationField } from "@/components/ui/ComputationField";
 import { ButtonLink } from "@/components/ui/ButtonLink";
-import { featuredProjects } from "@/data/projects";
+import { homeFeaturedProjects } from "@/data/projects";
 
 type HomeHeroProps = {
   name: string;
@@ -42,11 +42,11 @@ export function HomeHero({ name, title, tagline }: HomeHeroProps) {
           <p className="flight-intro">{tagline}</p>
           <div className="flight-actions">
             <ButtonLink href="/projects" variant="primary">
-              View Projects
+              View projects
               <ArrowRight size={20} aria-hidden />
             </ButtonLink>
             <ButtonLink href="/resume">
-              View Resume
+              View resume
               <ArrowRight size={20} aria-hidden />
             </ButtonLink>
           </div>
@@ -76,7 +76,7 @@ export function HomeHero({ name, title, tagline }: HomeHeroProps) {
             </Link>
           </nav>
           <div className="flight-previews">
-            {featuredProjects.slice(0, 2).map((project) => (
+            {homeFeaturedProjects.map((project) => (
               <Link
                 className="flight-preview"
                 href={`/projects#${project.id}`}

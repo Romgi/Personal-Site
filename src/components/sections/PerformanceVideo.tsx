@@ -26,7 +26,7 @@ export function PerformanceVideo() {
         <button
           type="button"
           className="performance-poster"
-          aria-label="Play Bugler’s Holiday with the McMaster Concert Band"
+          aria-label="Play Bugler's Holiday with the McMaster Concert Band in the YouTube player"
           onClick={() => setPlaying(true)}
         >
           <Image
@@ -37,7 +37,7 @@ export function PerformanceVideo() {
           />
           <span className="performance-play">
             <Play size={22} fill="currentColor" aria-hidden />
-            <span>Play performance</span>
+            <span>Play Bugler&apos;s Holiday</span>
           </span>
         </button>
       )}

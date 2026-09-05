@@ -10,7 +10,7 @@ export function RepertoireList({ items }: { items: RepertoireItem[] }) {
           <tr>
             <th scope="col">Composer</th>
             <th scope="col">Piece</th>
-            <th scope="col">Description</th>
+            <th scope="col">About the piece</th>
           </tr>
         </thead>
         <tbody>
@@ -20,7 +20,7 @@ export function RepertoireList({ items }: { items: RepertoireItem[] }) {
               <th scope="row" data-label="Piece">
                 {item.title}
               </th>
-              <td data-label="Description">{item.description}</td>
+              <td data-label="About the piece">{item.description}</td>
             </tr>
           ))}
         </tbody>

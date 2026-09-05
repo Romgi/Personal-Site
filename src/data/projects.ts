@@ -252,7 +252,7 @@ export const projects: Project[] = [
       "A command-line application to download team icons for the FIRST Robotics Competition. Built with Python, it provides a simple tool to download team logos and icons.",
     techStack: ["Python", "Command Line"],
     image: "/images/projects/frc-icons.png",
-    imageAlt: "Screenshot of the FRC Team Icon Downloader web application",
+    imageAlt: "FRC team icons saved as PNG files named by team number",
     githubUrl: safeHref("https://github.com/Romgi/FRC-Team-Icon-Downloader"),
     status: "Completed",
     featured: false,
@@ -265,3 +265,7 @@ export const projectTags = Array.from(
 ).sort();
 
 export const featuredProjects = projects.filter((project) => project.featured);
+
+export const homeFeaturedProjects = projects.filter(
+  (project) => project.id === "RouteLab" || project.id === "pc-turf",
+);

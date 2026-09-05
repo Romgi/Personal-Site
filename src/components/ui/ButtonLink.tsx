@@ -31,6 +31,7 @@ export function ButtonLink({
   ariaLabel,
 }: ButtonLinkProps) {
   const checkedHref = safeHref(href);
+  const external = isExternalHref(checkedHref);
   const magnetic = variant === "primary" || variant === "secondary";
   const linkClassName = cn("button", variants[variant], sizes[size], className);
 
@@ -52,13 +53,18 @@ export function ButtonLink({
     <a
       href={checkedHref}
       className={linkClassName}
-      target={isExternalHref(checkedHref) ? "_blank" : undefined}
-      rel={isExternalHref(checkedHref) ? "noopener noreferrer" : undefined}
+      target={external ? "_blank" : undefined}
+      rel={external ? "noopener noreferrer" : undefined}
       download={download}
-      aria-label={ariaLabel}
+      aria-label={
+        ariaLabel && external ? `${ariaLabel} (opens in a new tab)` : ariaLabel
+      }
       data-magnetic={magnetic || undefined}
     >
       {children}
+      {external && !ariaLabel ? (
+        <span className="sr-only"> (opens in a new tab)</span>
+      ) : null}
     </a>
   );
 }

@@ -46,7 +46,7 @@ export function ExpandableText({
         aria-expanded={isExpanded}
         aria-controls={contentId}
       >
-        {isExpanded ? "Show less" : "Read more"}
+        {isExpanded ? "Show less about Jonathan" : "More about Jonathan"}
         <ChevronDown
           aria-hidden="true"
           size={16}

@@ -157,7 +157,7 @@ The reusable hierarchy runs from the large page display to section headlines, co
 
 The shared container caps at 1536px with 6% horizontal padding, switching to 24px below 768px. Major sections use 110px vertical padding on desktop and 72px on mobile. Thin rules and open space organize content without enclosing every record in glass.
 
-Home opens with a centered, full-viewport title card over the live computation network. Edge fading and a dark radial shade keep the identity legible. Scrolling separates the two name lines in opposing directions and moves the real graph camera through the network. The pinned version also opens the scene’s clipping frame. A Software / Robotics / Music bridge then introduces the original tagline and View Projects / View Resume actions. The opening releases into the original work preview tray in normal flow, with two columns on larger screens and stacked previews on mobile. A visible Skip intro link targets that tray; portfolio content and accomplishments remain intact.
+Home opens with a centered, full-viewport title card over the live computation network. Edge fading and a dark radial shade keep the identity legible. Scrolling separates the two name lines in opposing directions and moves the real graph camera through the network. The pinned version also opens the scene’s clipping frame. A Software / Robotics / Music bridge then introduces the original tagline and View projects / View resume actions. The opening releases into the work preview tray in normal flow, with two columns on larger screens and stacked previews on mobile. Home’s preview tray and Featured projects section both select RouteLab and PC Turf. A visible Skip intro link targets that tray; portfolio content and accomplishments remain intact.
 
 With motion permitted, the Home scroll scene runs at every width. At viewport heights of at least 540px, the title card pins for additional scroll travel equal to 1.85 viewport heights at widths of 900px and above, or 1.15 viewport heights below 900px. Between 540px and 679px high, compact typography and spacing reserve room for the bridge actions, network controls and Skip intro. Below 540px high, the title separation and network camera still scrub over 0.85 viewport heights while the readable bridge and actions stay in normal document flow. Reduced motion disables this choreography at every size and keeps all introduction content visible in the unpinned layout. Network controls remain available whenever WebGL initializes, including the unpinned and reduced-motion versions; their caption hides on smaller or compact-height screens while the buttons stay visible.
 
@@ -173,7 +173,7 @@ Most records are flat and separated by hairlines. Glass is reserved for navigati
 
 SVG backdrop displacement preserves the requested background refraction in supported engines. Surface and navigation optical blur are 0.65px and 0.8px; WebKit and Gecko take frosted blur fallbacks of 11px and 14px. Text remains outside the displaced pixels. Do not document the unused legacy light-music navigation modifier as a live theme.
 
-Hover transitions generally last 200–300ms; glass sheen uses 400ms. The computation background renders live blue points, links and traveling signals through WebGL. Perspective, depth fading, additive light and spring deformation give the network volume; it does not sample a raster image. Animation pauses offscreen, in hidden tabs and through the explicit Pause control. Reduced motion starts the scene paused, with an optional Resume action; a deterministic SVG network remains available before WebGL initializes or when it is unavailable. Global reduced-motion CSS removes smooth scrolling and nearly eliminates transitions.
+Hover transitions generally last 200–300ms; glass sheen uses 400ms. The computation background renders live blue points, links and traveling signals through WebGL. Perspective, depth fading, additive light and spring deformation give the network volume; it does not sample a raster image. Animation pauses offscreen, in hidden tabs and through the explicit Pause control. Reduced motion starts the scene paused, with an optional Play action; a deterministic SVG network remains available before WebGL initializes or when it is unavailable. Global reduced-motion CSS removes smooth scrolling and nearly eliminates transitions.
 
 The Home sequence follows scroll position with 0.35-second smoothing; reversing scroll reverses the title separation, graph-camera journey and bridge reveal. The network’s Pause button freezes its renderer, while the operating-system reduced-motion preference disables the scroll choreography altogether. Supporting media reveals at every width use 0.45-second smoothing: Robotics opens horizontally with a brief scan across the photograph, and Music opens vertically like a stage aperture. Both ease their image scale from 1.12 to 1 while text and video controls remain available. Resume draws a thin blue rule along each section and shifts its heading toward the accent as the reader advances.
 
@@ -184,6 +184,20 @@ The Home sequence follows scroll position with 0.35-second smoothing; reversing 
 Controls use nearly square corners, with slightly softer badges and rounded media frames. Navigation and the work tray share 12px corners and fine borders. Project records are ruled layouts; featured images use rounded corners while ordinary project media can remain square. A dimensional, triangulated network of luminous points and fine connections is the Home signature.
 
 ## Components
+
+### Headings and terminology
+
+Headings use direct sentence case, and descriptions state the work, roles and accomplishments supported by the portfolio. CSS may render short controls or identity text in uppercase. The shared `SectionHeading` renders an H2 and optional description, with no eyebrow. `PageHero` uses `title` for the short H1 and `subtitle` for its supporting H2, retaining the existing two-column composition.
+
+| Term                         | Meaning in the interface                                                          |
+| ---------------------------- | --------------------------------------------------------------------------------- |
+| Projects / Featured projects | The project collection and a selected subset; Home features RouteLab and PC Turf. |
+| GitHub                       | The project’s code repository.                                                    |
+| Open demo                    | Opens the project’s running demonstration.                                        |
+| Download page                | Opens the page hosting the download.                                              |
+| Email for a resume PDF       | Opens an email request for a PDF; no file download is promised.                   |
+
+Visible actions stay concise. Project links and Technical details disclosures include the project name in their accessible names; external links announce that they open in a new tab. Named media actions identify the piece or background animation they control.
 
 ### Buttons
 
@@ -209,11 +223,11 @@ The opening pairs a centered identity with a scroll cue, a fine progress track a
 
 The Home background is a reproducible graph of 493 nodes and 1,388 weighted connections. CPU projection and damped springs position the network; WebGL renders its live vertices, links and signal particles. The title-card scroll timeline drives camera rotation, perspective, scale and graph deformation through the same renderer, alongside pointer interaction. Signals follow weighted Dijkstra distances through the actual graph rather than expanding as screen-space circles. This is an interactive illustration of computation, not portfolio telemetry or a claim about system performance.
 
-Mouse movement deforms nearby nodes; mouse dragging rotates the network, and a click or tap sends a signal from the nearest node. Touch dragging preserves page scrolling. Native Send signal and Pause/Resume buttons provide keyboard access to the main actions, with 44px minimum targets and the shared focus treatment. Paused or reduced-motion signal activation produces a static highlight rather than an animated pulse. The canvas and deterministic SVG fallback are hidden from assistive technology; the meaningful instructions and controls remain semantic HTML. Controls appear only when the live scene initializes. The renderer releases its resources on unmount and restores the SVG fallback after context loss.
+Mouse movement deforms nearby nodes; mouse dragging rotates the network, and a click or tap sends a signal from the nearest node. Touch dragging preserves page scrolling. Native Send signal and Play/Pause buttons provide keyboard access to the main actions, with 44px minimum targets and the shared focus treatment. Paused or reduced-motion signal activation produces a static highlight rather than an animated pulse. The canvas and deterministic SVG fallback are hidden from assistive technology; the meaningful instructions and controls remain semantic HTML. The caption reads Interactive network; instructions describe dragging to rotate and clicking a node to send a signal. Accessible button names are Send signal through the background network and Play background animation / Pause background animation. Controls appear only when the live scene initializes. The renderer releases its resources on unmount and restores the SVG fallback after context loss.
 
 ### Performance media
 
-The performance video begins as the official YouTube poster with an explicit Play performance control; activation loads the privacy-enhanced YouTube iframe and moves focus to it. Keep that actionable facade and original performance attribution.
+The performance video begins as the official YouTube poster with a Play Bugler’s Holiday control. Its accessible name specifies Bugler’s Holiday with the McMaster Concert Band in the YouTube player. Activation loads the privacy-enhanced YouTube iframe and moves focus to it; the iframe title names Jonathan Graydon, the work and the ensemble. Keep that actionable facade and original performance attribution.
 
 ## Do's and Don'ts
 
@@ -221,6 +235,7 @@ The performance video begins as the official YouTube poster with an explicit Pla
 
 - Do preserve the existing identity, media, content and accomplishments required by PRODUCT.md.
 - Do use the condensed hierarchy and retain comfortable reading measures for evidence text.
+- Do use direct sentence-case headings, factual descriptions and action labels that state their destination or outcome.
 - Do keep music in the shared blue-and-black palette.
 - Do preserve real background refraction, static fallbacks, keyboard focus and reduced-motion behavior.
 - Do allow responsive content to flow rather than clipping text to the desktop composition.

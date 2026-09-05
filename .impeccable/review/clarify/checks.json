@@ -1,0 +1,411 @@
+[
+  {
+    "case": "1440-/",
+    "result": {
+      "h1": [
+        "JonathanGraydon"
+      ],
+      "h2": [
+        "Software.Robotics.Music.",
+        "RouteLab",
+        "PC Turf",
+        "About Jonathan",
+        "Featured projects",
+        "FRC robotics software",
+        "Trumpet performance"
+      ],
+      "overflow": false,
+      "unnamedControls": []
+    }
+  },
+  {
+    "case": "1440-home-previews",
+    "result": {
+      "featured": [
+        "RouteLab",
+        "PC Turf"
+      ],
+      "skipTarget": 158,
+      "titles": [
+        "RouteLab",
+        "PC Turf"
+      ]
+    }
+  },
+  {
+    "case": "1440-/projects",
+    "result": {
+      "h1": [
+        "Projects"
+      ],
+      "h2": [
+        "Software & robotics",
+        "Featured projects",
+        "All projects",
+        "FIRST Robotics Competition Experience",
+        "Three seasons, two teams"
+      ],
+      "overflow": false,
+      "unnamedControls": []
+    }
+  },
+  {
+    "case": "1440-search-match",
+    "result": {
+      "inputName": "Search projects",
+      "status": "1 project matching \u201cRouteLab\u201d",
+      "titles": [
+        "RouteLab"
+      ]
+    }
+  },
+  {
+    "case": "1440-search-empty",
+    "result": {
+      "help": "Try a different search or category, or show all projects to reset both.",
+      "recovery": "Show all projects",
+      "status": "0 projects matching \u201cRouteLab\u201d in Unity",
+      "title": "No matching projects"
+    }
+  },
+  {
+    "case": "1440-search-reset",
+    "result": {
+      "count": 12,
+      "pressed": "All projects12",
+      "query": ""
+    }
+  },
+  {
+    "case": "1440-project-details",
+    "result": {
+      "demoLabel": "Open demo of RouteLab (opens in a new tab)",
+      "githubLabel": "GitHub repository for RouteLab (opens in a new tab)",
+      "open": true
+    }
+  },
+  {
+    "case": "1440-/music",
+    "result": {
+      "h1": [
+        "Music"
+      ],
+      "h2": [
+        "Trumpet performance and repertoire",
+        "Trumpet performance",
+        "Featured repertoire",
+        "Music awards and milestones",
+        "Ensemble experience",
+        "Full trumpet repertoire",
+        "Music gallery"
+      ],
+      "overflow": false,
+      "unnamedControls": []
+    }
+  },
+  {
+    "case": "1440-music-content",
+    "result": {
+      "columns": [
+        "Composer",
+        "Piece",
+        "About the piece"
+      ],
+      "repertoire": 23,
+      "videoAction": "Play Bugler's Holiday with the McMaster Concert Band in the YouTube player"
+    }
+  },
+  {
+    "case": "1440-/resume",
+    "result": {
+      "h1": [
+        "Resume & contact"
+      ],
+      "h2": [
+        "Education, experience, and accomplishments",
+        "Education",
+        "Technical skills",
+        "Work experience",
+        "Projects",
+        "Robotics experience",
+        "Music experience",
+        "Awards and accomplishments"
+      ],
+      "overflow": false,
+      "unnamedControls": []
+    }
+  },
+  {
+    "case": "1440-resume-links",
+    "result": {
+      "actions": [
+        {
+          "href": "mailto:graydj1@mcmaster.ca",
+          "text": "Email for a resume PDF"
+        },
+        {
+          "href": "https://www.linkedin.com/in/jonathan-graydon-61258320a/",
+          "text": "View LinkedIn profile (opens in a new tab)"
+        }
+      ],
+      "anchors": [
+        {
+          "target": true,
+          "text": "Contact"
+        },
+        {
+          "target": true,
+          "text": "Education"
+        },
+        {
+          "target": true,
+          "text": "Technical skills"
+        },
+        {
+          "target": true,
+          "text": "Work experience"
+        },
+        {
+          "target": true,
+          "text": "Projects"
+        },
+        {
+          "target": true,
+          "text": "Robotics experience"
+        },
+        {
+          "target": true,
+          "text": "Music experience"
+        },
+        {
+          "target": true,
+          "text": "Awards and accomplishments"
+        }
+      ],
+      "contactCount": 6
+    }
+  },
+  {
+    "case": "390-/",
+    "result": {
+      "h1": [
+        "JonathanGraydon"
+      ],
+      "h2": [
+        "Software.Robotics.Music.",
+        "RouteLab",
+        "PC Turf",
+        "About Jonathan",
+        "Featured projects",
+        "FRC robotics software",
+        "Trumpet performance"
+      ],
+      "overflow": false,
+      "unnamedControls": []
+    }
+  },
+  {
+    "case": "390-home-previews",
+    "result": {
+      "featured": [
+        "RouteLab",
+        "PC Turf"
+      ],
+      "skipTarget": 158,
+      "titles": [
+        "RouteLab",
+        "PC Turf"
+      ]
+    }
+  },
+  {
+    "case": "390-/projects",
+    "result": {
+      "h1": [
+        "Projects"
+      ],
+      "h2": [
+        "Software & robotics",
+        "Featured projects",
+        "All projects",
+        "FIRST Robotics Competition Experience",
+        "Three seasons, two teams"
+      ],
+      "overflow": false,
+      "unnamedControls": []
+    }
+  },
+  {
+    "case": "390-search-match",
+    "result": {
+      "inputName": "Search projects",
+      "status": "1 project matching \u201cRouteLab\u201d",
+      "titles": [
+        "RouteLab"
+      ]
+    }
+  },
+  {
+    "case": "390-search-empty",
+    "result": {
+      "help": "Try a different search or category, or show all projects to reset both.",
+      "recovery": "Show all projects",
+      "status": "0 projects matching \u201cRouteLab\u201d in Unity",
+      "title": "No matching projects"
+    }
+  },
+  {
+    "case": "390-search-reset",
+    "result": {
+      "count": 12,
+      "pressed": "All projects12",
+      "query": ""
+    }
+  },
+  {
+    "case": "390-project-details",
+    "result": {
+      "demoLabel": "Open demo of RouteLab (opens in a new tab)",
+      "githubLabel": "GitHub repository for RouteLab (opens in a new tab)",
+      "open": true
+    }
+  },
+  {
+    "case": "390-/music",
+    "result": {
+      "h1": [
+        "Music"
+      ],
+      "h2": [
+        "Trumpet performance and repertoire",
+        "Trumpet performance",
+        "Featured repertoire",
+        "Music awards and milestones",
+        "Ensemble experience",
+        "Full trumpet repertoire",
+        "Music gallery"
+      ],
+      "overflow": false,
+      "unnamedControls": []
+    }
+  },
+  {
+    "case": "390-music-content",
+    "result": {
+      "columns": [
+        "Composer",
+        "Piece",
+        "About the piece"
+      ],
+      "repertoire": 23,
+      "videoAction": "Play Bugler's Holiday with the McMaster Concert Band in the YouTube player"
+    }
+  },
+  {
+    "case": "390-/resume",
+    "result": {
+      "h1": [
+        "Resume & contact"
+      ],
+      "h2": [
+        "Education, experience, and accomplishments",
+        "Education",
+        "Technical skills",
+        "Work experience",
+        "Projects",
+        "Robotics experience",
+        "Music experience",
+        "Awards and accomplishments"
+      ],
+      "overflow": false,
+      "unnamedControls": []
+    }
+  },
+  {
+    "case": "390-resume-links",
+    "result": {
+      "actions": [
+        {
+          "href": "mailto:graydj1@mcmaster.ca",
+          "text": "Email for a resume PDF"
+        },
+        {
+          "href": "https://www.linkedin.com/in/jonathan-graydon-61258320a/",
+          "text": "View LinkedIn profile (opens in a new tab)"
+        }
+      ],
+      "anchors": [
+        {
+          "target": true,
+          "text": "Contact"
+        },
+        {
+          "target": true,
+          "text": "Education"
+        },
+        {
+          "target": true,
+          "text": "Technical skills"
+        },
+        {
+          "target": true,
+          "text": "Work experience"
+        },
+        {
+          "target": true,
+          "text": "Projects"
+        },
+        {
+          "target": true,
+          "text": "Robotics experience"
+        },
+        {
+          "target": true,
+          "text": "Music experience"
+        },
+        {
+          "target": true,
+          "text": "Awards and accomplishments"
+        }
+      ],
+      "contactCount": 6
+    }
+  },
+  {
+    "case": "zoom-equivalent-reflow",
+    "result": {
+      "overflow": false,
+      "resultWidth": 672,
+      "viewport": 720
+    }
+  },
+  {
+    "case": "not-found",
+    "result": {
+      "heading": "Page not found",
+      "homeLink": true,
+      "message": "There is no page at this address. Check the link or return to the home page to browse Jonathan's work.",
+      "recoveryVerification": "Inspected href=/ inside main and activated Go to home page; returned to /."
+    }
+  },
+  {
+    "case": "errors",
+    "result": ""
+  },
+  {
+    "case": "background-controls",
+    "result": {
+      "pausedAfterPause": "true",
+      "pausedActionLabel": "Play",
+      "playActionActivated": true
+    }
+  },
+  {
+    "case": "performance-player",
+    "result": {
+      "src": "https://www.youtube-nocookie.com/embed/f8E05xtGEq4?autoplay=1",
+      "title": "Jonathan Graydon performing Bugler's Holiday with the McMaster Concert Band",
+      "focusedElement": "IFRAME"
+    }
+  }
+]

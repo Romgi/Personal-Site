@@ -3,15 +3,15 @@ import { Container } from "@/components/ui/Container";
 import { cn } from "@/lib/utils";
 
 type PageHeroProps = {
-  eyebrow: string;
   title: string;
+  subtitle: string;
   description: string;
   children?: ReactNode;
   className?: string;
 };
 export function PageHero({
-  eyebrow,
   title,
+  subtitle,
   description,
   children,
   className,
@@ -20,9 +20,9 @@ export function PageHero({
     <section className={cn("page-hero", className)}>
       <Container>
         <div className="page-hero-grid">
-          <h1>{eyebrow}</h1>
+          <h1>{title}</h1>
           <div className="page-hero-description">
-            <h2>{title}</h2>
+            <h2>{subtitle}</h2>
             <p>{description}</p>
           </div>
         </div>

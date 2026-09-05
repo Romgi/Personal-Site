@@ -100,16 +100,16 @@ export function ComputationField() {
       <div className="computation-console" data-paused={paused} hidden={!ready}>
         <div className="computation-caption">
           <span className="computation-indicator" aria-hidden="true" />
-          <span>Explore the network</span>
+          <span>Interactive network</span>
           <span className="computation-instruction">
-            Drag to turn · click to send a signal
+            Drag to rotate · click a node to send a signal
           </span>
         </div>
         <div className="computation-controls">
           <button
             type="button"
             onClick={() => sceneRef.current?.pulse()}
-            aria-label="Send a signal through the network"
+            aria-label="Send signal through the background network"
           >
             <Radio size={15} aria-hidden="true" />
             Send signal
@@ -118,7 +118,9 @@ export function ComputationField() {
             type="button"
             onClick={() => setMotionOverride(paused)}
             aria-label={
-              paused ? "Resume background motion" : "Pause background motion"
+              paused
+                ? "Play background animation"
+                : "Pause background animation"
             }
           >
             {paused ? (
@@ -126,7 +128,7 @@ export function ComputationField() {
             ) : (
               <Pause size={15} aria-hidden="true" />
             )}
-            {paused ? "Resume" : "Pause"}
+            {paused ? "Play" : "Pause"}
           </button>
         </div>
       </div>

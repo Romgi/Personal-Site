@@ -1,13 +1,11 @@
 import { cn } from "@/lib/utils";
 type SectionHeadingProps = {
-  eyebrow?: string;
   title: string;
   description?: string;
   align?: "left" | "center";
   className?: string;
 };
 export function SectionHeading({
-  eyebrow,
   title,
   description,
   align = "left",
@@ -22,7 +20,6 @@ export function SectionHeading({
       )}
     >
       <h2>{title}</h2>
-      {eyebrow ? <p className="section-label">{eyebrow}</p> : null}
       {description ? (
         <p className="section-description">{description}</p>
       ) : null}

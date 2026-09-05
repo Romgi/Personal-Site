@@ -13,7 +13,7 @@ import { Container } from "@/components/ui/Container";
 import { PortfolioImage } from "@/components/ui/PortfolioImage";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { profile } from "@/data/profile";
-import { featuredProjects } from "@/data/projects";
+import { homeFeaturedProjects } from "@/data/projects";
 import { robotProjects } from "@/data/robotics";
 import { musicAccomplishments, repertoire } from "@/data/music";
 
@@ -21,6 +21,12 @@ export const metadata: Metadata = {
   title: {
     absolute: `${profile.name} | Computer Science, Robotics, Trumpet`,
   },
+};
+
+const highlightActions: Record<string, string> = {
+  "/projects": "View projects",
+  "/projects#robotics": "View robotics",
+  "/music": "View music",
 };
 
 export default function Home() {
@@ -42,9 +48,8 @@ export default function Home() {
           <div className="about-layout">
             <AnimatedSection>
               <SectionHeading
-                eyebrow="About"
-                title="A technical portfolio for software, robotics, and music."
-                description="Jonathan's work connects practical software engineering, competition robotics, and trumpet performance, with projects that emphasize reliability, clarity, and disciplined execution."
+                title="About Jonathan"
+                description="Jonathan builds software, programs competition robots, and plays trumpet. His work emphasizes reliability, clear design, and disciplined execution."
               />
               <div className="mt-8">
                 <ExpandableText
@@ -68,7 +73,7 @@ export default function Home() {
                       {item.description}
                     </p>
                     <span className="mt-5 inline-flex items-center gap-2 text-sm font-medium text-blue-200">
-                      Explore
+                      {highlightActions[item.href] ?? `View ${item.title}`}
                       <ArrowRight
                         aria-hidden="true"
                         size={16}
@@ -87,17 +92,16 @@ export default function Home() {
         <Container>
           <div className="flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between">
             <SectionHeading
-              eyebrow="Featured Projects"
-              title="Current software and engineering work."
-              description="Selected work across production web apps, robotics software, coursework, and interactive Unity projects."
+              title="Featured projects"
+              description="RouteLab visualizes pathfinding algorithms. PC Turf helps a golf course maintenance team organize daily work."
             />
             <ButtonLink href="/projects" variant="ghost" className="self-start">
-              All projects
+              View all projects
               <ArrowRight aria-hidden="true" size={16} />
             </ButtonLink>
           </div>
           <div className="featured-projects">
-            {featuredProjects.slice(0, 2).map((project) => (
+            {homeFeaturedProjects.map((project) => (
               <AnimatedSection key={project.id}>
                 <ProjectCard project={project} featured />
               </AnimatedSection>
@@ -111,9 +115,8 @@ export default function Home() {
           <div className="grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
             <AnimatedSection>
               <SectionHeading
-                eyebrow="Robotics Preview"
-                title="Engineering-focused FRC experience."
-                description="Competition robot software, autonomous path planning, vision integration, controls work, and mentoring across FRC Team 854 and Team 9062."
+                title="FRC robotics software"
+                description="Robot programming, autonomous path planning, vision, controls, and mentoring with FIRST Robotics Competition (FRC) Teams 854 and 9062."
               />
               <div className="mt-8">
                 <ButtonLink href="/projects#robotics" variant="secondary">
@@ -154,16 +157,15 @@ export default function Home() {
             </AnimatedSection>
             <AnimatedSection>
               <SectionHeading
-                eyebrow="Music Preview"
-                title="Trumpet repertoire and performance discipline."
-                description="Solo repertoire, honour band experience, university ensemble performance, jazz lead trumpet work, and festival recognition."
+                title="Trumpet performance"
+                description="Solo repertoire, honour bands, university ensembles, lead trumpet in jazz, and festival awards."
               />
               <div className="liquid-glass-surface glass-card mt-7 rounded-lg border border-white/10 p-5">
                 <h3 className="mt-3 text-xl font-semibold text-white">
                   {featuredMusic.title}
                 </h3>
                 <p className="font-mono text-[11px] font-medium uppercase tracking-[0.24em] text-blue-300">
-                  Featured repertoire
+                  From the repertoire
                 </p>
 
                 <p className="mt-3 text-sm leading-6 text-slate-300">
@@ -175,7 +177,7 @@ export default function Home() {
                   {musicAccomplishments[0].title}
                 </h3>
                 <p className="font-mono text-[11px] font-medium uppercase tracking-[0.24em] text-blue-300">
-                  Featured accomplishment
+                  Performance accomplishment
                 </p>
 
                 <p className="mt-3 text-sm leading-6 text-slate-300">
