@@ -1,0 +1,169 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-09-05T01:50:05.233Z",
+  "title": "Design System: Jonathan Graydon Portfolio",
+  "extensions": {
+    "colorMeta": {
+      "primary": {
+        "role": "primary",
+        "displayName": "Technical blue",
+        "tonalRamp": [
+          "oklch(37.9% .146 265.522)",
+          "oklch(42.4% .199 265.638)",
+          "oklch(48.8% .243 264.376)",
+          "oklch(54.6% .245 262.881)",
+          "oklch(62.3% .214 259.815)",
+          "oklch(70.7% .165 254.624)",
+          "oklch(80.9% .105 251.813)",
+          "oklch(93.2% .032 255.585)"
+        ]
+      },
+      "background": {
+        "role": "neutral",
+        "displayName": "Technical background"
+      },
+      "music-brass": {
+        "role": "secondary",
+        "displayName": "Music brass"
+      },
+      "music-paper": {
+        "role": "neutral",
+        "displayName": "Music paper"
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Home display",
+        "purpose": "Desktop home heading; reduces to 48px on small screens."
+      },
+      "music-headline": {
+        "displayName": "Music heading",
+        "purpose": "Georgia heading override scoped to music."
+      }
+    },
+    "shadows": [
+      {
+        "name": "glass-card-external",
+        "value": "0 22px 70px rgba(0,0,0,0.2)",
+        "purpose": "Diffuse external card shadow; combined with inset highlights."
+      },
+      {
+        "name": "navigation-external",
+        "value": "0 18px 56px rgba(0,0,0,0.22)",
+        "purpose": "Navigation external shadow at rest."
+      }
+    ],
+    "motion": [
+      {
+        "name": "button-state",
+        "value": "200ms",
+        "purpose": "Button hover and focus transitions."
+      },
+      {
+        "name": "card-state",
+        "value": "300ms ease",
+        "purpose": "Card border, background and shadow changes."
+      },
+      {
+        "name": "navigation-contraction",
+        "value": "500ms ease-out",
+        "purpose": "Navigation height and max-width changes."
+      },
+      {
+        "name": "glass-sheen",
+        "value": "400ms ease",
+        "purpose": "Pointer sheen opacity."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "sm",
+        "value": "640px"
+      },
+      {
+        "name": "md",
+        "value": "768px"
+      },
+      {
+        "name": "lg",
+        "value": "1024px"
+      },
+      {
+        "name": "xl",
+        "value": "1280px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Button primary",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Existing ButtonLink primary variant.",
+      "html": "<button type=\"button\" class=\"ds-btn-primary\">View Projects</button>",
+      "css": ".ds-btn-primary{font-family:var(--font-geist-sans,Geist),Arial,sans-serif;display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:48px;padding:12px 20px;border-radius:6px;border:1px solid;font-size:14px;font-weight:500;line-height:20px;cursor:pointer;text-decoration:none;transition:background .2s,border-color .2s,box-shadow .2s;color:white;border-color:oklch(70.7% 0.165 254.624 / .6);background:linear-gradient(oklch(62.3% .214 259.815),oklch(54.6% .245 262.881));box-shadow:inset 0 1px 0 rgba(255,255,255,.22),0 8px 28px rgba(37,99,235,.32);}.ds-btn-primary:hover{border-color:oklch(80.9% .105 251.813);background:linear-gradient(oklch(70.7% .165 254.624),oklch(62.3% .214 259.815));}.ds-btn-primary:focus-visible{outline:2px solid oklch(80.9% 0.105 251.813);outline-offset:4px}"
+    },
+    {
+      "name": "Button secondary",
+      "kind": "button",
+      "refersTo": "button-secondary",
+      "description": "Existing ButtonLink secondary variant.",
+      "html": "<button type=\"button\" class=\"ds-btn-secondary\">View Resume</button>",
+      "css": ".ds-btn-secondary{font-family:var(--font-geist-sans,Geist),Arial,sans-serif;display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:48px;padding:12px 20px;border-radius:6px;border:1px solid;font-size:14px;font-weight:500;line-height:20px;cursor:pointer;text-decoration:none;transition:background .2s,border-color .2s,box-shadow .2s;color:white;border-color:rgba(255,255,255,.15);background:rgba(255,255,255,.05);box-shadow:inset 0 1px 0 rgba(255,255,255,.09);}.ds-btn-secondary:hover{border-color:oklch(80.9% .105 251.813 / .5);background:oklch(62.3% .214 259.815 / .1);}.ds-btn-secondary:focus-visible{outline:2px solid oklch(80.9% 0.105 251.813);outline-offset:4px}"
+    },
+    {
+      "name": "Button ghost",
+      "kind": "button",
+      "refersTo": "button-ghost",
+      "description": "Existing ButtonLink ghost variant.",
+      "html": "<button type=\"button\" class=\"ds-btn-ghost\">Resume</button>",
+      "css": ".ds-btn-ghost{font-family:var(--font-geist-sans,Geist),Arial,sans-serif;display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:48px;padding:12px 20px;border-radius:6px;border:1px solid;font-size:14px;font-weight:500;line-height:20px;cursor:pointer;text-decoration:none;transition:background .2s,border-color .2s,box-shadow .2s;color:oklch(70.4% .04 256.788);border-color:transparent;background:transparent;}.ds-btn-ghost:hover{color:white;border-color:rgba(255,255,255,.1);background:rgba(255,255,255,.05);}.ds-btn-ghost:focus-visible{outline:2px solid oklch(80.9% 0.105 251.813);outline-offset:4px}"
+    },
+    {
+      "name": "Glass card",
+      "kind": "card",
+      "refersTo": "glass-card",
+      "description": "Shared technical card with inset highlights and frosted fallback. Document-level SVG refraction is implemented in the site.",
+      "html": "<article class=\"ds-card\"><h3>Computer Science</h3><p>Software engineering, web development, and programming experience.</p></article>",
+      "css": ".ds-card{font-family:var(--font-geist-sans,Geist),Arial,sans-serif;padding:24px;color:#f8fafc;background:rgba(8,12,22,.2);border:1px solid rgba(226,232,240,.14);border-radius:8px;backdrop-filter:blur(11px) saturate(185%);box-shadow:inset 0 1px 0 rgba(255,255,255,.18),inset 0 0 0 1px rgba(255,255,255,.04),0 22px 70px rgba(0,0,0,.2);transition:border-color .3s,background .3s}.ds-card:hover{border-color:rgba(123,163,255,.38);background:rgba(8,12,22,.26)}.ds-card h3{margin:0 0 12px;font-size:20px;font-weight:600}.ds-card p{margin:0;color:oklch(70.4% .04 256.788);font-size:16px;line-height:28px}"
+    },
+    {
+      "name": "Skill badge",
+      "kind": "chip",
+      "refersTo": "skill-badge",
+      "description": "Compact mono technology label.",
+      "html": "<span class=\"ds-badge\">TypeScript</span>",
+      "css": ".ds-badge{display:inline-flex;align-items:center;padding:4px 10px;font-family:var(--font-geist-mono,Geist Mono),monospace;font-size:11px;font-weight:500;letter-spacing:.025em;border:1px solid oklch(80.9% .105 251.813 / .2);border-radius:6px;background:oklch(62.3% .214 259.815 / .08);color:oklch(93.2% .032 255.585 / .9);box-shadow:inset 0 1px 0 rgba(255,255,255,.06)}"
+    },
+    {
+      "name": "Navigation links",
+      "kind": "nav",
+      "refersTo": "navigation",
+      "description": "Desktop route links inside the glass navigation bar.",
+      "html": "<nav class=\"ds-nav\" aria-label=\"Portfolio\"><a href=\"/\" aria-current=\"page\">Home</a><a href=\"/projects\">Projects</a><a href=\"/music\">Music</a><a href=\"/resume\">Resume</a></nav>",
+      "css": ".ds-nav{font-family:var(--font-geist-sans,Geist),Arial,sans-serif;display:flex;align-items:center;gap:4px;padding:16px;border:1px solid rgba(203,213,225,.16);border-radius:8px;background:rgba(8,12,22,.32);backdrop-filter:blur(14px);box-shadow:inset 0 1px 0 rgba(255,255,255,.22),0 18px 56px rgba(0,0,0,.22)}.ds-nav a{position:relative;padding:8px 12px;border-radius:6px;text-decoration:none;font-size:14px;line-height:20px;font-weight:500;color:oklch(70.4% .04 256.788);transition:color .2s,background .2s}.ds-nav a:hover{color:white;background:rgba(255,255,255,.05)}.ds-nav a[aria-current]{color:white}.ds-nav a[aria-current]:after{content:\"\";position:absolute;left:12px;right:12px;bottom:-1px;height:1px;background:linear-gradient(90deg,transparent,oklch(70.7% .165 254.624),transparent)}.ds-nav a:focus-visible{outline:2px solid oklch(80.9% 0.105 251.813);outline-offset:4px}"
+    }
+  ],
+  "narrative": {
+    "overview": "This record documents the current implementation for live iteration. It does not establish a replacement visual direction or a new creative metaphor. Sources are `src/app/globals.css`, the shared UI components, the installed Tailwind theme, and computed styles from the running home page.\n\nThe technical pages use dark backgrounds, blue accents, precise sans-serif headings, monospaced labels, grid textures, and refracting glass surfaces. The music route carries a distinct, existing performance identity through warm paper surfaces, brass and burgundy accents, and serif primary headings. Shared components, navigation, and glass behavior connect the routes.",
+    "keyCharacteristics": [
+      "Dark technical pages and a scoped warm music theme.",
+      "Liquid glass with background refraction, fine grain, edge highlights, and pointer response.",
+      "Large headings, spacious sections, and compact technical labels.",
+      "Scroll-driven reveals and a fixed navigation bar that contracts after scrolling."
+    ],
+    "rules": [],
+    "dos": [
+      "Do preserve the existing dark technical and warm music identities in scoped variations.",
+      "Do keep the real content, projects, media, and accomplishments required by `PRODUCT.md`.",
+      "Do preserve backdrop refraction while keeping foreground text and controls sharp.",
+      "Do retain keyboard focus, responsive navigation, reduced-motion behavior, and readable open-menu tints."
+    ],
+    "donts": [
+      "Don't spread music-specific colors and serif heading overrides to unrelated routes.",
+      "Don't replace the requested glass refraction with blur alone in browsers that support it.",
+      "Don't add permanent opacity-based backdrop boundaries around glass cards.",
+      "Don't assume the user has approved a new aesthetic, metaphor, palette, or typeface during live setup."
+    ]
+  }
+}
