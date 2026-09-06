@@ -160,7 +160,7 @@ export function LiquidGlassFilters() {
           id="liquid-glass-nav-refraction"
           edgeMap={navEdgeMap}
           edgeScale={-20}
-          noiseScale={6}
+          noiseScale={10}
         />
       </defs>
     </svg>

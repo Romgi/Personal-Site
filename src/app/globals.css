@@ -299,10 +299,17 @@ input {
   border-radius: 12px;
   padding: 0 32px;
   height: 64px;
-  display: flex;
+  display: grid;
+  grid-template-columns: minmax(54px, 1fr) auto minmax(100px, 1fr);
+  column-gap: 20px;
   align-items: center;
   position: relative;
-  transition: background 0.3s;
+}
+.site-nav--solid {
+  background: #0b111c;
+  border-color: var(--hairline);
+  -webkit-backdrop-filter: none;
+  backdrop-filter: none;
 }
 .site-nav .brand {
   width: 54px;
@@ -316,11 +323,9 @@ input {
   filter: grayscale(1) brightness(2.6) sepia(0.35);
 }
 .desktop-navigation {
-  position: absolute;
-  left: 34.4%;
   display: flex;
   align-items: center;
-  gap: 64px;
+  gap: clamp(24px, 4.8vw, 70px);
   height: 100%;
 }
 .desktop-navigation a {
@@ -347,9 +352,62 @@ input {
   height: 3px;
   background: var(--accent);
 }
+.nav-actions {
+  display: flex;
+  align-items: center;
+  justify-self: end;
+  gap: 12px;
+}
+.nav-glass-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  min-height: 44px;
+  padding: 0 8px;
+  border-radius: 6px;
+  color: var(--foreground);
+  font:
+    500 16px/1 var(--font-condensed),
+    sans-serif;
+  transition: background-color 0.2s;
+}
+.nav-glass-toggle:hover {
+  background: #7dbbff14;
+}
+.nav-glass-toggle:focus-visible {
+  outline-offset: 1px;
+}
+.nav-glass-track {
+  display: flex;
+  align-items: center;
+  width: 32px;
+  height: 18px;
+  padding: 3px;
+  border: 1px solid var(--muted);
+  border-radius: 10px;
+  background: #172334;
+  transition:
+    background-color 0.2s,
+    border-color 0.2s;
+}
+.nav-glass-thumb {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--foreground);
+  transition: transform 0.2s;
+}
+.nav-glass-toggle[aria-checked="true"] .nav-glass-track {
+  background: var(--accent);
+  border-color: var(--accent);
+}
+.nav-glass-toggle[aria-checked="true"] .nav-glass-thumb {
+  background: var(--background);
+  transform: translateX(14px);
+}
 .nav-toggle {
   display: none;
-  margin-left: auto;
   width: 44px;
   height: 44px;
   align-items: center;
@@ -569,9 +627,6 @@ input {
   max-width: none;
   filter: brightness(0) saturate(100%) invert(91%) sepia(15%) saturate(560%)
     hue-rotate(24deg);
-}
-.desktop-navigation {
-  gap: 70px;
 }
 .flight-preview-media img {
   object-fit: contain;
@@ -1062,10 +1117,6 @@ input {
   }
 }
 @media (max-width: 1200px) {
-  .desktop-navigation {
-    left: 31%;
-    gap: 40px;
-  }
   .flight-hero {
     min-height: 800px;
   }
@@ -1109,6 +1160,7 @@ input {
   .site-nav {
     height: 60px;
     padding: 0 16px;
+    grid-template-columns: 1fr auto;
   }
   .site-nav .brand {
     width: 46px;
