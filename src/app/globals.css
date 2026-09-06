@@ -119,7 +119,7 @@ input {
 
 .liquid-glass-nav {
   --glass-blur: 14px;
-  --glass-optical-blur: 0.45px;
+  --glass-optical-blur: 0.3px;
   --glass-saturation: 155%;
   --glass-contrast: 1.04;
   --glass-brightness: 1.08;
@@ -1679,84 +1679,6 @@ input {
 .computation-field[data-ready="true"] .computation-fallback {
   opacity: 0;
 }
-.computation-console {
-  position: absolute;
-  z-index: 3;
-  top: 68%;
-  left: 55%;
-  right: 4%;
-  display: flex;
-  align-items: flex-end;
-  justify-content: space-between;
-  gap: 16px;
-  pointer-events: auto;
-}
-.computation-console[hidden] {
-  display: none;
-}
-.computation-caption {
-  display: grid;
-  grid-template-columns: 6px 1fr;
-  align-items: center;
-  gap: 6px 9px;
-  color: var(--foreground);
-  font:
-    16px/1.2 var(--font-condensed),
-    sans-serif;
-}
-.computation-indicator {
-  width: 5px;
-  height: 5px;
-  background: var(--accent);
-  border-radius: 50%;
-}
-.computation-instruction {
-  grid-column: 2;
-  font:
-    11px/1.5 var(--font-geist-sans),
-    sans-serif;
-  color: var(--muted);
-}
-.computation-controls {
-  display: flex;
-  gap: 8px;
-  flex-shrink: 0;
-}
-.computation-controls button {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 7px;
-  min-height: 44px;
-  padding: 8px 12px;
-  border: 1px solid #526e91;
-  border-radius: 4px;
-  background: #05070bcc;
-  color: var(--accent);
-  font:
-    15px/1 var(--font-condensed),
-    sans-serif;
-  cursor: pointer;
-  transition:
-    background 0.2s,
-    border-color 0.2s;
-}
-.computation-controls button:hover {
-  background: #122844;
-  border-color: var(--accent);
-}
-.computation-console[data-paused="true"] .computation-indicator {
-  background: var(--muted);
-}
-@media (min-width: 1101px) and (max-width: 1350px) {
-  .computation-console {
-    left: 57%;
-    right: 3%;
-  }
-  .computation-instruction {
-    max-width: 150px;
-  }
-}
 @media (max-width: 1100px) {
   .computation-field {
     inset: 84px 0 auto;
@@ -1767,14 +1689,6 @@ input {
   }
   .computation-visual {
     opacity: 0.7;
-  }
-  .computation-console {
-    position: relative;
-    top: auto;
-    bottom: auto;
-    left: auto;
-    right: auto;
-    margin-top: 28px;
   }
 }
 @media (min-width: 768px) and (max-width: 1100px) {
@@ -1790,26 +1704,13 @@ input {
   .computation-visual {
     opacity: 0.52;
   }
-  .computation-caption {
-    font-size: 15px;
-  }
-  .computation-instruction {
-    display: none;
-  }
-  .computation-controls button {
-    padding: 8px 10px;
-  }
-  .computation-controls {
-    gap: 6px;
-  }
   .computation-fallback {
     width: 110%;
     left: 4%;
   }
 }
 @media print {
-  .computation-field,
-  .computation-console {
+  .computation-field {
     display: none;
   }
 }
@@ -1920,9 +1821,6 @@ input {
   margin-top: 28px;
   gap: 16px;
 }
-.title-card .computation-console {
-  display: none;
-}
 .title-card-scroll {
   position: relative;
   z-index: 4;
@@ -1939,17 +1837,6 @@ input {
   display: flex;
   align-items: center;
   gap: 12px;
-}
-.title-card-scroll > a {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  min-height: 44px;
-  margin-left: auto;
-  color: var(--foreground);
-}
-.title-card-scroll > a:hover {
-  color: var(--accent);
 }
 .title-card-track {
   width: 140px;
@@ -1991,19 +1878,6 @@ input {
   right: 5%;
   margin: 0;
 }
-.is-scroll-scene .computation-console {
-  display: flex;
-  position: absolute;
-  top: auto;
-  bottom: 102px;
-  left: auto;
-  right: 5%;
-  max-width: 46%;
-  margin: 0;
-}
-.is-scroll-scene .computation-console[hidden] {
-  display: none;
-}
 .home-entry {
   position: relative;
   padding: 32px 10px 0;
@@ -2032,12 +1906,6 @@ input {
   }
   .title-card .flight-name {
     font-size: 20vw;
-  }
-  .is-scroll-scene .computation-console {
-    max-width: none;
-  }
-  .is-scroll-scene .computation-caption {
-    display: none;
   }
   .home-entry {
     padding: 24px 20px 0;
@@ -2088,10 +1956,6 @@ input {
   .is-scroll-scene .title-card-bridge {
     inset: 100px 24px 185px;
     width: auto;
-  }
-  .is-scroll-scene .computation-console {
-    right: 24px;
-    bottom: 100px;
   }
   .is-scroll-scene .title-card-scroll {
     left: 24px;
@@ -2146,19 +2010,12 @@ input {
   .title-card.is-scroll-scene .flight-actions {
     margin-top: 16px;
   }
-  .is-scroll-scene .computation-console {
-    bottom: 70px;
-  }
-  .is-scroll-scene .computation-caption {
-    display: none;
-  }
   .is-scroll-scene .title-card-scroll {
     bottom: 8px;
   }
 }
 @media (prefers-reduced-motion: reduce) {
-  .title-card-cue,
-  .title-card-track {
+  .title-card-scroll {
     display: none;
   }
 }
@@ -2184,27 +2041,4 @@ input {
   transform: scaleX(var(--section-progress, 0));
   transform-origin: left;
   pointer-events: none;
-}
-
-/* The unpinned and reduced-motion versions retain the network controls. */
-.title-card:not(.is-scroll-scene) .computation-console {
-  display: flex;
-  position: absolute;
-  top: auto;
-  bottom: 125px;
-  left: auto;
-  right: 6%;
-  max-width: none;
-  margin: 0;
-}
-.title-card:not(.is-scroll-scene) .computation-console[hidden] {
-  display: none;
-}
-.title-card:not(.is-scroll-scene) .title-card-scroll {
-  margin-top: 110px;
-}
-@media (max-width: 767px) {
-  .title-card:not(.is-scroll-scene) .computation-caption {
-    display: none;
-  }
 }

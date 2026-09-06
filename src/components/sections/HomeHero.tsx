@@ -59,9 +59,6 @@ export function HomeHero({ name, title, tagline }: HomeHeroProps) {
           <div className="title-card-track" aria-hidden="true">
             <span className="title-card-progress" />
           </div>
-          <a href="#home-content">
-            Skip intro <ArrowRight size={14} aria-hidden="true" />
-          </a>
         </div>
       </section>
       <div className="home-entry" id="home-content">

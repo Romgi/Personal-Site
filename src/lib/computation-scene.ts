@@ -32,7 +32,6 @@ void main() {
 }`;
 
 export type ComputationScene = {
-  pulse: () => void;
   setPaused: (paused: boolean) => void;
   setScrollProgress: (progress: number) => void;
   destroy: () => void;
@@ -303,7 +302,7 @@ export function createComputationScene(
     target instanceof Element &&
     Boolean(
       target.closest(
-        "a,button,input,textarea,select,summary,[role=button],.flight-work,.computation-controls",
+        "a,button,input,textarea,select,summary,[role=button],.flight-work",
       ),
     );
   const coordinates = (event: PointerEvent) => {
@@ -394,7 +393,6 @@ export function createComputationScene(
   if (!paused)
     signals.push({ distances: signalDistances(graph, nearest), start: 0.25 });
   return {
-    pulse: sendSignal,
     setScrollProgress(value) {
       if (!Number.isFinite(value) || disposed) return;
       scrollProgress = Math.max(0, Math.min(1, value));

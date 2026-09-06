@@ -1,6 +1,5 @@
 "use client";
 
-import { Pause, Play, Radio } from "lucide-react";
 import { useEffect, useRef, useState, useSyncExternalStore } from "react";
 import { createComputationGraph } from "@/lib/computation-graph";
 import {
@@ -32,13 +31,11 @@ export function ComputationField() {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const sceneRef = useRef<ComputationScene | null>(null);
   const [ready, setReady] = useState(false);
-  const [motionOverride, setMotionOverride] = useState<boolean | null>(null);
-  const reducedMotion = useSyncExternalStore(
+  const paused = useSyncExternalStore(
     subscribeMotion,
     () => matchMedia(preference).matches,
     () => true,
   );
-  const paused = motionOverride === null ? reducedMotion : !motionOverride;
   const pausedRef = useRef(paused);
 
   useEffect(() => {
@@ -74,64 +71,23 @@ export function ComputationField() {
   }, [paused]);
 
   return (
-    <>
-      <div
-        className="computation-field"
-        data-ready={ready}
-        data-paused={paused}
-      >
-        <div className="computation-visual" aria-hidden="true">
-          <svg
-            className="computation-fallback"
-            viewBox="0 0 1000 650"
-            fill="none"
-          >
-            <path d={fallbackPath} stroke="#3b82f6" strokeOpacity=".38" />
-            {fallback.nodes.map((node, index) => {
-              const [cx, cy] = project(node);
-              return (
-                <circle key={index} cx={cx} cy={cy} r={2.2} fill="#93c5fd" />
-              );
-            })}
-          </svg>
-          <canvas ref={canvasRef} />
-        </div>
+    <div className="computation-field" data-ready={ready} data-paused={paused}>
+      <div className="computation-visual" aria-hidden="true">
+        <svg
+          className="computation-fallback"
+          viewBox="0 0 1000 650"
+          fill="none"
+        >
+          <path d={fallbackPath} stroke="#3b82f6" strokeOpacity=".38" />
+          {fallback.nodes.map((node, index) => {
+            const [cx, cy] = project(node);
+            return (
+              <circle key={index} cx={cx} cy={cy} r={2.2} fill="#93c5fd" />
+            );
+          })}
+        </svg>
+        <canvas ref={canvasRef} />
       </div>
-      <div className="computation-console" data-paused={paused} hidden={!ready}>
-        <div className="computation-caption">
-          <span className="computation-indicator" aria-hidden="true" />
-          <span>Interactive network</span>
-          <span className="computation-instruction">
-            Drag to rotate · click a node to send a signal
-          </span>
-        </div>
-        <div className="computation-controls">
-          <button
-            type="button"
-            onClick={() => sceneRef.current?.pulse()}
-            aria-label="Send signal through the background network"
-          >
-            <Radio size={15} aria-hidden="true" />
-            Send signal
-          </button>
-          <button
-            type="button"
-            onClick={() => setMotionOverride(paused)}
-            aria-label={
-              paused
-                ? "Play background animation"
-                : "Pause background animation"
-            }
-          >
-            {paused ? (
-              <Play size={15} aria-hidden="true" />
-            ) : (
-              <Pause size={15} aria-hidden="true" />
-            )}
-            {paused ? "Play" : "Pause"}
-          </button>
-        </div>
-      </div>
-    </>
+    </div>
   );
 }
