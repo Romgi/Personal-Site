@@ -123,7 +123,7 @@ export const projects: Project[] = [
     image: "/images/projects/mcmaster.jpg",
     imageAlt:
       "McMaster University logo for Computer Science coursework projects",
-    githubUrl: safeHref("https://github.com/Romgi/COMPSCI-YEAR-1"),
+    githubUrl: safeHref("https://github.com/Romgi/McMaster-Computer-Science"),
     status: "In Progress",
     featured: false,
     tags: ["Algorithms", "Coursework", "OOP", "Linux"],
