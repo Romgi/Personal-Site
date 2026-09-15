@@ -195,7 +195,7 @@ export const musicAccomplishments = [
 export const ensembles = [
   {
     name: "McMaster Concert Band",
-    role: "Trumpet Section",
+    role: "Principal Trumpet",
     period: "2025-Present",
     notes:
       "Performs with a 70+ member university wind, brass, and percussion ensemble made up of students from multiple disciplines and degree programs.",
@@ -209,8 +209,8 @@ export const ensembles = [
   },
   {
     name: "McMaster Symphony Orchestra",
-    role: "Trumpet Section",
-    period: "2026",
+    role: "1st Trumpet",
+    period: "2026-Present",
     notes:
       "Performed as a guest musician in The Music of John Williams concert featuring selections from Harry Potter, Star Wars, Superman, and more.",
   },
