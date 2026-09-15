@@ -201,18 +201,18 @@ export const ensembles = [
       "Performs with a 70+ member university wind, brass, and percussion ensemble made up of students from multiple disciplines and degree programs.",
   },
   {
-    name: "Jack Long National Honour Band",
-    role: "First Trumpet",
-    period: "2025-2026",
-    notes:
-      "Nationally auditioned honour band featuring high-level Canadian musicians aged 16 to 24.",
-  },
-  {
     name: "McMaster Symphony Orchestra",
     role: "1st Trumpet",
     period: "2026-Present",
     notes:
       "Performed as a guest musician in The Music of John Williams concert featuring selections from Harry Potter, Star Wars, Superman, and more.",
+  },
+  {
+    name: "Jack Long National Honour Band",
+    role: "First Trumpet",
+    period: "2025-2026",
+    notes:
+      "Nationally auditioned honour band featuring high-level Canadian musicians aged 16 to 24.",
   },
   {
     name: "York Symphony Orchestra",
