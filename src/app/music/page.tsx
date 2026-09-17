@@ -100,25 +100,23 @@ export default function MusicPage() {
 
       <section data-music-contexts className="music-section py-20 sm:py-24">
         <Container>
-          <div className="grid gap-10 lg:grid-cols-[0.9fr_1.1fr]">
-            <div className="self-start lg:sticky lg:top-28">
-              <SectionHeading
-                title="Ensemble experience"
-                description="University, honour band, jazz, orchestral, school, and community ensembles."
-              />
-            </div>
-            <div className="grid gap-5">
-              {ensembles.map((ensemble) => (
-                <AnimatedSection key={ensemble.name}>
-                  <ExperienceCard
-                    title={ensemble.name}
-                    meta={ensemble.period}
-                    description={ensemble.notes}
-                    bullets={[ensemble.role]}
-                  />
-                </AnimatedSection>
-              ))}
-            </div>
+          <SectionHeading
+            title="Ensemble experience"
+            description="University, honour band, jazz, orchestral, school, and community ensembles."
+          />
+          <div className="ensemble-grid">
+            {ensembles.map((ensemble) => (
+              <AnimatedSection key={ensemble.name}>
+                <article className="ensemble-entry">
+                  <h3 className="ensemble-name">{ensemble.name}</h3>
+                  <div className="ensemble-details">
+                    <p className="ensemble-role">{ensemble.role}</p>
+                    <p className="ensemble-period">{ensemble.period}</p>
+                  </div>
+                  <p className="ensemble-notes">{ensemble.notes}</p>
+                </article>
+              </AnimatedSection>
+            ))}
           </div>
         </Container>
       </section>
