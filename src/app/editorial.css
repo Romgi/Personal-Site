@@ -1,0 +1,583 @@
+/* Evidence-led compositions extending the portfolio's flight-deck system. */
+:root {
+  --surface: #0b111c;
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.section-heading h2,
+.page-hero h1,
+.footer-name {
+  text-wrap: balance;
+}
+
+.button-primary {
+  background: var(--accent);
+  color: var(--background);
+}
+
+.button-primary:hover {
+  background: var(--foreground);
+  border-color: var(--foreground);
+}
+
+.button svg {
+  transition: transform 220ms var(--ease-out);
+}
+
+.button:hover svg,
+.button:focus-visible svg {
+  transform: translateX(3px);
+}
+
+.chapter-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 32px;
+  margin-top: 32px;
+  padding-top: 24px;
+  border-top: 1px solid var(--hairline);
+}
+
+.chapter-links a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  min-height: 44px;
+  color: var(--foreground);
+  font-size: 14px;
+  transition: color 180ms ease;
+}
+
+.chapter-links svg {
+  color: var(--accent);
+  transition: transform 220ms var(--ease-out);
+}
+
+.chapter-links a:hover,
+.chapter-links a:focus-visible {
+  color: var(--accent);
+}
+
+.chapter-links a:hover svg {
+  transform: translate(3px, 3px);
+}
+
+.home-about .about-layout {
+  display: block;
+}
+
+.about-introduction {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8%;
+  align-items: start;
+}
+
+.about-introduction > .mt-8 {
+  margin-top: 0;
+}
+
+.home-about .home-highlights {
+  margin-top: 64px;
+  border-top: 1px solid var(--hairline);
+}
+
+.home-about .highlight-link {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8%;
+  align-items: center;
+  padding: 32px 0;
+  transition: border-color 250ms ease;
+}
+
+.highlight-title {
+  display: flex;
+  align-items: baseline;
+  gap: 20px;
+}
+
+.home-about .highlight-link h3 {
+  margin: 0;
+  font-family: var(--font-display), sans-serif;
+  font-size: clamp(36px, 4.3vw, 66px);
+  line-height: 1.06;
+  font-weight: 550;
+  letter-spacing: -0.025em;
+  transition:
+    color 200ms ease,
+    transform 350ms var(--ease-out);
+}
+
+.home-about .highlight-link .font-mono {
+  margin: 0;
+  flex-shrink: 0;
+  color: var(--muted);
+  font-size: 10px;
+  letter-spacing: 0.06em;
+}
+
+.highlight-description > p {
+  margin-top: 0;
+}
+
+.highlight-description > span {
+  margin-top: 12px;
+}
+
+.home-about .highlight-link::after {
+  position: absolute;
+  content: "";
+  inset: auto 0 -1px;
+  height: 1px;
+  background: var(--accent);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 450ms var(--ease-out);
+}
+
+.home-about .highlight-link:is(:hover, :focus-visible)::after {
+  transform: scaleX(1);
+}
+
+.home-about .highlight-link:is(:hover, :focus-visible) h3 {
+  transform: translateX(6px);
+  color: var(--accent);
+}
+
+.home-robotics-heading {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 48px;
+  margin-bottom: 40px;
+}
+
+.robotics-partner {
+  width: min(24%, 230px);
+  height: auto;
+  opacity: 0.85;
+}
+
+.robotics-feature-media {
+  position: relative;
+}
+
+.robotics-feature-media .portfolio-image {
+  aspect-ratio: 21 / 10;
+  border-radius: 12px;
+}
+
+.robotics-feature-media img {
+  object-position: center 48%;
+}
+
+.robotics-feature-media figcaption {
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 16px 0;
+  border-bottom: 1px solid var(--hairline);
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.robotics-feature-media figcaption span:last-child {
+  color: var(--accent);
+  flex-shrink: 0;
+}
+
+.home-robotics .experience-entry {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 8%;
+  border: 0;
+  padding-top: 32px;
+}
+
+.home-robotics .experience-entry > div:first-child {
+  display: block;
+}
+
+.home-robotics .experience-entry > div:first-child p {
+  margin-top: 12px;
+}
+
+.home-robotics .experience-entry > p {
+  margin-top: 0;
+}
+
+.home-robotics .experience-entry ul {
+  grid-column: 2;
+}
+
+.home-robotics .experience-entry > div:last-child {
+  grid-column: 2;
+}
+
+.home-music-layout {
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  align-items: center;
+  gap: 8%;
+}
+
+.home-music-photo .portfolio-image {
+  aspect-ratio: 4 / 5;
+  max-height: 760px;
+}
+
+.media-caption {
+  margin-top: 14px;
+  font-size: 12px;
+  line-height: 1.65;
+  color: var(--muted);
+}
+
+.home-music-record {
+  padding-top: 24px;
+  margin-top: 28px;
+  border-top: 1px solid var(--hairline);
+}
+
+.home-music-record h3 {
+  margin: 0;
+  font-family: var(--font-condensed), sans-serif;
+  font-size: 30px;
+  font-weight: 500;
+  line-height: 1.15;
+}
+
+.home-music-record p.font-mono {
+  margin-top: 10px;
+  font-family: var(--font-geist-sans), sans-serif;
+  font-size: 12px;
+  text-transform: none;
+  letter-spacing: 0;
+}
+
+.music-hero.page-hero {
+  padding-top: 130px;
+  padding-bottom: 30px;
+}
+
+.music-hero .page-hero-grid {
+  grid-template-columns: 1fr 0.9fr;
+  grid-template-rows: auto 1fr;
+  column-gap: 9%;
+  row-gap: 36px;
+  align-items: start;
+}
+
+.music-hero.page-hero h1 {
+  font-size: clamp(100px, 14vw, 210px);
+  margin-top: 32px;
+  grid-area: 1 / 1;
+}
+
+.music-hero .page-hero-description {
+  grid-area: 2 / 1;
+  max-width: 470px;
+}
+
+.music-hero .page-hero-description h2 {
+  font-size: clamp(30px, 3.3vw, 46px);
+  max-width: 15ch;
+}
+
+.music-hero .page-hero-media {
+  grid-area: 1 / 2 / 3 / 3;
+  min-width: 0;
+}
+
+.music-hero .portfolio-image {
+  max-height: 630px;
+  border-radius: 12px 12px 0 0;
+}
+
+.music-hero .page-hero-actions {
+  margin-top: 28px;
+}
+
+.performance-section .music-image {
+  max-height: 660px;
+}
+
+.performance-record {
+  margin-top: 32px;
+  padding-top: 24px;
+  border-top: 1px solid var(--hairline);
+}
+
+.performance-record > p {
+  font-family: var(--font-condensed), sans-serif;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 1.2;
+}
+
+.featured-repertoire {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 8%;
+  margin-top: 44px;
+}
+
+.repertoire-feature {
+  position: relative;
+  padding: 30px 0 36px;
+  border-top: 1px solid var(--hairline);
+}
+
+.repertoire-feature h3 {
+  max-width: 23ch;
+  font-family: var(--font-display), sans-serif;
+  font-size: clamp(30px, 3vw, 44px);
+  line-height: 1.1;
+  font-weight: 500;
+  text-wrap: balance;
+}
+
+.repertoire-feature .repertoire-composer {
+  margin-top: 16px;
+  color: var(--accent);
+  font-size: 14px;
+}
+
+.repertoire-feature > p:last-child {
+  margin-top: 8px;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.music-page .accomplishment-entry {
+  grid-template-columns: 140px 1fr 1.1fr;
+  padding-block: 32px;
+}
+
+.music-page .accomplishment-entry > p:first-child {
+  font-family: var(--font-condensed), sans-serif;
+  font-size: 22px;
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+.music-page .ensemble-name {
+  max-width: 23ch;
+  text-wrap: balance;
+}
+
+.music-gallery {
+  gap: 48px 32px;
+}
+
+.music-gallery > :nth-child(3) .portfolio-image {
+  aspect-ratio: 3 / 4;
+}
+
+.music-gallery > :nth-child(4) {
+  align-self: center;
+}
+
+.resume-page .page-hero {
+  background: var(--surface);
+}
+
+.resume-section > h2 {
+  align-self: start;
+  position: sticky;
+  top: 112px;
+}
+
+.resume-section-body h3 {
+  font-family: var(--font-condensed), sans-serif;
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+.resume-section#technical-skills .resume-section-body > .grid {
+  grid-template-columns: 1fr 1fr;
+  gap: 28px;
+}
+
+.site-footer {
+  padding-top: 50px;
+}
+
+.site-footer .footer-name {
+  color: var(--accent);
+}
+
+@media (min-width: 768px) and (prefers-reduced-motion: no-preference) {
+  .music-hero .page-hero-media {
+    animation: stage-aperture 800ms var(--ease-out) both;
+  }
+  @keyframes stage-aperture {
+    from {
+      clip-path: inset(0 0 12% 0);
+      transform: translateY(16px);
+    }
+    to {
+      clip-path: inset(0);
+      transform: translateY(0);
+    }
+  }
+}
+
+@media (max-width: 1000px) {
+  .highlight-title {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .home-music-layout {
+    gap: 40px;
+  }
+  .music-page .accomplishment-entry {
+    grid-template-columns: 110px 1fr;
+    gap: 12px 28px;
+  }
+  .music-page .accomplishment-entry > p:last-child {
+    grid-column: 2;
+  }
+}
+
+@media (max-width: 767px) {
+  .about-introduction,
+  .home-about .highlight-link,
+  .home-music-layout,
+  .home-robotics .experience-entry,
+  .featured-repertoire {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 24px;
+  }
+  .home-about .home-highlights {
+    margin-top: 40px;
+  }
+  .home-about .highlight-link {
+    padding-block: 28px;
+    gap: 16px;
+  }
+  .highlight-title {
+    flex-direction: row;
+    align-items: baseline;
+    gap: 14px;
+  }
+  .home-about .highlight-link h3 {
+    font-size: clamp(34px, 8.5vw, 50px);
+  }
+  .home-robotics-heading {
+    flex-direction: column;
+    align-items: start;
+    gap: 28px;
+  }
+  .robotics-partner {
+    width: 170px;
+  }
+  .robotics-feature-media .portfolio-image {
+    aspect-ratio: 4 / 3;
+  }
+  .robotics-feature-media figcaption {
+    flex-direction: column;
+    gap: 4px;
+  }
+  .home-robotics .experience-entry ul,
+  .home-robotics .experience-entry > div:last-child {
+    grid-column: auto;
+    margin-top: 0;
+  }
+  .home-music-layout {
+    gap: 40px;
+  }
+  .home-music-photo .portfolio-image {
+    aspect-ratio: 4 / 3;
+  }
+  .music-hero.page-hero {
+    padding-top: 118px;
+  }
+  .music-hero .page-hero-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 28px;
+  }
+  .music-hero.page-hero h1 {
+    margin-top: 0;
+    font-size: clamp(90px, 28vw, 170px);
+  }
+  .music-hero .page-hero-description {
+    grid-area: auto;
+  }
+  .music-hero .page-hero-description h2 {
+    max-width: none;
+    font-size: 32px;
+  }
+  .music-hero .page-hero-media {
+    grid-area: auto;
+  }
+  .music-hero .portfolio-image {
+    aspect-ratio: 4 / 3;
+  }
+  .music-hero .portfolio-image img {
+    object-position: center 39%;
+  }
+  .music-hero .page-hero-actions {
+    margin-top: 24px;
+  }
+  .chapter-links {
+    gap: 4px;
+    flex-direction: column;
+    margin-top: 24px;
+    padding-top: 16px;
+  }
+  .chapter-links a {
+    border-bottom: 1px solid var(--hairline);
+    padding: 10px 0;
+  }
+  .performance-section .music-image {
+    max-height: none;
+    aspect-ratio: 4 / 5;
+  }
+  .featured-repertoire {
+    gap: 0;
+  }
+  .music-page .accomplishment-entry {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  .music-page .accomplishment-entry > p:last-child {
+    grid-column: auto;
+  }
+  .music-gallery {
+    gap: 32px;
+  }
+  .resume-section > h2 {
+    position: static;
+  }
+  .resume-section#technical-skills .resume-section-body > .grid {
+    grid-template-columns: 1fr;
+  }
+  .site-footer {
+    padding-top: 20px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .home-about .highlight-link:is(:hover, :focus-visible) h3,
+  .button:is(:hover, :focus-visible) svg,
+  .chapter-links a:hover svg {
+    transform: none;
+  }
+}
+
+@media print {
+  .chapter-links {
+    display: none;
+  }
+  .resume-page .page-hero {
+    background: none;
+  }
+  .resume-section > h2 {
+    position: static;
+  }
+}

@@ -1,6 +1,6 @@
 import { PerformanceVideo } from "@/components/sections/PerformanceVideo";
 import { AccomplishmentCard } from "@/components/sections/AccomplishmentCard";
-import { ExperienceCard } from "@/components/sections/ExperienceCard";
+import { ArrowDownRight } from "lucide-react";
 import { RepertoireList } from "@/components/sections/RepertoireList";
 import { AnimatedSection } from "@/components/ui/AnimatedSection";
 import { Container } from "@/components/ui/Container";
@@ -33,9 +33,38 @@ export default function MusicPage() {
         title="Music"
         subtitle="Trumpet performance and repertoire"
         description={musicOverview.description}
-      />
+        media={
+          <figure>
+            <PortfolioImage
+              src={musicGallery[2].src}
+              alt={musicGallery[2].alt}
+              aspect="aspect-[3/4]"
+              preload
+            />
+            <figcaption className="media-caption">
+              Trumpet, beyond the stage.
+            </figcaption>
+          </figure>
+        }
+      >
+        <nav className="chapter-links" aria-label="Music sections">
+          {[
+            ["performance", "Watch a performance"],
+            ["repertoire", "Explore repertoire"],
+            ["music-gallery", "View gallery"],
+          ].map(([id, label]) => (
+            <a key={id} href={`#${id}`}>
+              {label}
+              <ArrowDownRight size={18} aria-hidden="true" />
+            </a>
+          ))}
+        </nav>
+      </PageHero>
 
-      <section className="music-section py-20 sm:py-24">
+      <section
+        id="performance"
+        className="music-section performance-section py-20 sm:py-24"
+      >
         <Container>
           <div
             data-music-scene
@@ -46,7 +75,7 @@ export default function MusicPage() {
                 src={musicOverview.image}
                 alt={musicOverview.imageAlt}
                 className="music-image"
-                aspect="aspect-[4/3]"
+                aspect="aspect-[3/4]"
               />
             </div>
             <AnimatedSection>
@@ -54,7 +83,7 @@ export default function MusicPage() {
                 title="Trumpet performance"
                 description="Jonathan's trumpet work spans solo repertoire, honour bands, ensemble leadership, festival awards, and ongoing university performances."
               />
-              <div className="liquid-glass-surface music-media-card mt-8 rounded-lg border p-5">
+              <div className="performance-record">
                 <p className="text-sm font-semibold text-white">
                   Bugler&apos;s Holiday with McMaster Concert Band
                 </p>
@@ -68,14 +97,14 @@ export default function MusicPage() {
       <section className="music-section music-section-alt border-y py-20 sm:py-24">
         <Container>
           <SectionHeading title="Featured repertoire" />
-          <div className="mt-10 grid gap-5 md:grid-cols-2">
+          <div className="featured-repertoire">
             {featuredRepertoire.map((item) => (
               <AnimatedSection key={item.id}>
-                <ExperienceCard
-                  title={item.composer}
-                  meta={item.title}
-                  description={item.description}
-                />
+                <article className="repertoire-feature">
+                  <h3>{item.title}</h3>
+                  <p className="repertoire-composer">{item.composer}</p>
+                  <p>{item.description}</p>
+                </article>
               </AnimatedSection>
             ))}
           </div>
@@ -121,7 +150,7 @@ export default function MusicPage() {
         </Container>
       </section>
 
-      <section className="music-section py-20 sm:py-24">
+      <section id="repertoire" className="music-section py-20 sm:py-24">
         <Container>
           <AnimatedSection>
             <SectionHeading
@@ -135,7 +164,10 @@ export default function MusicPage() {
         </Container>
       </section>
 
-      <section className="music-section music-gallery-section border-t py-20 sm:py-24">
+      <section
+        id="music-gallery"
+        className="music-section music-gallery-section border-t py-20 sm:py-24"
+      >
         <Container>
           <SectionHeading
             title="Music gallery"
@@ -144,11 +176,14 @@ export default function MusicPage() {
           <div className="music-gallery">
             {musicGallery.map((image) => (
               <AnimatedSection key={image.alt}>
-                <PortfolioImage
-                  src={image.src}
-                  alt={image.alt}
-                  className="music-image"
-                />
+                <figure>
+                  <PortfolioImage
+                    src={image.src}
+                    alt={image.alt}
+                    className="music-image"
+                  />
+                  <figcaption className="media-caption">{image.alt}</figcaption>
+                </figure>
               </AnimatedSection>
             ))}
           </div>

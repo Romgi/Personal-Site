@@ -19,6 +19,7 @@ import { ScrollProgress } from "@/components/ui/ScrollProgress";
 import { profile, site } from "@/data/profile";
 
 import "./globals.css";
+import "./editorial.css";
 
 const heroDisplay = Bebas_Neue({
   variable: "--font-hero",
@@ -142,6 +143,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
+      data-scroll-behavior="smooth"
       className={`${geistSans.variable} ${geistMono.variable} ${display.variable} ${condensed.variable} ${heroDisplay.variable} h-full antialiased`}
     >
       <body className="flex min-h-full flex-col">

@@ -1,0 +1,216 @@
+.repertoire-browser {
+  min-width: 0;
+}
+
+.repertoire-toolbar {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 20px 32px;
+  margin-bottom: 32px;
+}
+
+.repertoire-search {
+  display: block;
+  flex: 1;
+  max-width: 560px;
+  min-width: 0;
+}
+
+.repertoire-search label {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--foreground);
+}
+
+.repertoire-search-field {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-height: 52px;
+  padding-left: 16px;
+  border: 1px solid var(--hairline);
+  border-radius: 4px;
+  background: #0b111c;
+  color: var(--accent);
+}
+
+.repertoire-search-field:focus-within {
+  border-color: var(--accent);
+}
+
+.repertoire-search-field > svg {
+  flex-shrink: 0;
+}
+
+.repertoire-search-field input {
+  flex: 1;
+  min-width: 0;
+  min-height: 50px;
+  padding-right: 12px;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  color: var(--foreground);
+  font-size: 16px;
+  caret-color: var(--accent);
+}
+
+.repertoire-search-field input::placeholder {
+  color: var(--muted);
+  opacity: 1;
+}
+
+.repertoire-search-field input::-webkit-search-cancel-button {
+  display: none;
+}
+
+.repertoire-search-field button {
+  display: grid;
+  flex-shrink: 0;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  margin-right: 3px;
+  border-radius: 3px;
+  color: var(--muted);
+  cursor: pointer;
+}
+
+.repertoire-search-field button:hover {
+  background: #7dbbff12;
+  color: var(--foreground);
+}
+
+.repertoire-count {
+  flex-shrink: 0;
+  padding-bottom: 12px;
+  color: var(--muted);
+  font-size: 14px;
+  font-variant-numeric: tabular-nums;
+}
+
+.repertoire-count-value {
+  display: inline-block;
+}
+
+.repertoire-count strong {
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.repertoire-browser .repertoire-table tbody tr:hover {
+  background: #7dbbff0a;
+}
+
+.repertoire-empty {
+  padding: 40px 0;
+  border-block: 1px solid var(--hairline);
+}
+
+.repertoire-empty h3 {
+  font-family: var(--font-condensed), sans-serif;
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+.repertoire-empty p {
+  max-width: 60ch;
+  margin-top: 12px;
+  overflow-wrap: anywhere;
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+.repertoire-empty button {
+  min-height: 44px;
+  margin-top: 20px;
+  padding: 8px 16px;
+  border: 1px solid var(--accent);
+  border-radius: 4px;
+  color: var(--accent);
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.repertoire-empty button:hover {
+  background: var(--accent);
+  color: var(--background);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .repertoire-count-value {
+    animation: repertoire-count-update 220ms cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .repertoire-search-field,
+  .repertoire-search-field button,
+  .repertoire-empty button,
+  .repertoire-browser .repertoire-table tbody tr {
+    transition:
+      color 180ms,
+      background-color 180ms,
+      border-color 180ms;
+  }
+}
+
+@keyframes repertoire-count-update {
+  from {
+    opacity: 0.65;
+    transform: translateY(2px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 767px) {
+  .repertoire-toolbar {
+    align-items: stretch;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 8px;
+  }
+
+  .repertoire-search {
+    max-width: none;
+  }
+
+  .repertoire-count {
+    padding-bottom: 8px;
+  }
+
+  /* Keep column headings available to assistive technology in the stacked view. */
+  .repertoire-browser .repertoire-table thead {
+    display: table-header-group;
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
+  }
+
+  .repertoire-browser .repertoire-table tbody tr {
+    padding-inline: 0;
+  }
+
+  .repertoire-browser .repertoire-table td,
+  .repertoire-browser .repertoire-table tbody th {
+    width: 100%;
+    overflow-wrap: anywhere;
+  }
+}
+
+@media print {
+  .repertoire-toolbar {
+    display: none;
+  }
+}

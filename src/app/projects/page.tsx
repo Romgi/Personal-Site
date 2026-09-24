@@ -1,4 +1,4 @@
-import { ArrowRight, Trophy } from "lucide-react";
+import { ArrowDownRight, ArrowRight, Trophy } from "lucide-react";
 import Image from "next/image";
 
 import { ProjectCard } from "@/components/sections/ProjectCard";
@@ -54,9 +54,23 @@ export default function ProjectsPage() {
             <p className="mt-1 text-sm text-slate-400">Project categories</p>
           </div>
         </div>
+        <nav className="chapter-links" aria-label="Project sections">
+          <a href="#featured-projects">
+            Featured work
+            <ArrowDownRight size={18} aria-hidden="true" />
+          </a>
+          <a href="#all-projects">
+            Explore all projects
+            <ArrowDownRight size={18} aria-hidden="true" />
+          </a>
+          <a href="#robotics">
+            Robotics experience
+            <ArrowDownRight size={18} aria-hidden="true" />
+          </a>
+        </nav>
       </PageHero>
 
-      <section className="py-20 sm:py-24">
+      <section id="featured-projects" className="py-20 sm:py-24">
         <Container>
           <div className="flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between">
             <SectionHeading title="Featured projects" />
@@ -75,7 +89,10 @@ export default function ProjectsPage() {
         </Container>
       </section>
 
-      <section className="border-t border-white/10 bg-white/[0.025] py-20 sm:py-24">
+      <section
+        id="all-projects"
+        className="border-t border-white/10 bg-white/[0.025] py-20 sm:py-24"
+      >
         <Container>
           <AnimatedSection>
             <SectionHeading

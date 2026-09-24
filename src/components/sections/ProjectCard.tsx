@@ -1,9 +1,19 @@
-import { ArrowUpRight, Code2, Download, Lock } from "lucide-react";
+import {
+  ArrowUpRight,
+  CircleCheck,
+  CircleDashed,
+  Clock3,
+  Code2,
+  Download,
+  Lock,
+} from "lucide-react";
 
 import { ButtonLink } from "@/components/ui/ButtonLink";
 import { PortfolioImage } from "@/components/ui/PortfolioImage";
 import { SkillBadge } from "@/components/ui/SkillBadge";
 import type { Project } from "@/data/projects";
+
+import "./projects.css";
 
 type ProjectCardProps = {
   project: Project;
@@ -23,57 +33,68 @@ export function ProjectCard({
       project.liveDemoUrl ||
       project.downloadUrl),
   );
+  const StatusIcon =
+    project.status === "Completed"
+      ? CircleCheck
+      : project.status === "In Progress"
+        ? CircleDashed
+        : Clock3;
 
   return (
     <article
       id={id}
       className={`project-card group ${featured ? "project-card-featured" : ""}`}
     >
-      <PortfolioImage
-        src={project.image}
-        alt={project.imageAlt}
-        className="rounded-none border-x-0 border-t-0"
-        sizes={
-          featured
-            ? "(max-width: 768px) 100vw, 45vw"
-            : "(max-width: 768px) 100vw, 35vw"
-        }
-      />
+      <div className="project-media">
+        <PortfolioImage
+          src={project.image}
+          alt={project.imageAlt}
+          className="project-artwork"
+          imageClassName="project-artwork-image"
+          sizes={
+            featured
+              ? "(max-width: 767px) 90vw, (max-width: 1440px) 48vw, 660px"
+              : "(max-width: 767px) 90vw, (max-width: 1200px) 65vw, 35vw"
+          }
+        />
+      </div>
       <div className="project-card-body">
-        <div className="flex items-start justify-between gap-4">
+        <div className="project-card-heading">
           <h3 className="project-title">{project.title}</h3>
-          <span className="shrink-0 rounded-md border border-blue-300/20 bg-blue-500/10 px-2.5 py-1 font-mono text-[11px] font-medium tracking-wide text-blue-100">
+          <span className="project-status" data-status={project.status}>
+            <StatusIcon aria-hidden="true" size={14} />
             {project.status}
           </span>
         </div>
-        <p className="mt-3 text-sm leading-6 text-slate-300">
-          {project.shortDescription}
-        </p>
+        <p className="project-description">{project.shortDescription}</p>
 
-        <div className="mt-4 flex flex-wrap gap-2">
+        <div className="project-technologies">
           {project.techStack.map((tech) => (
-            <SkillBadge key={tech}>{tech}</SkillBadge>
+            <SkillBadge key={tech} className="project-technology">
+              {tech}
+            </SkillBadge>
           ))}
         </div>
 
         <details className="project-details">
-          <summary className="cursor-pointer font-medium text-slate-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-blue-300">
-            Technical details
-            <span className="sr-only"> for {project.title}</span>
+          <summary>
+            <span>
+              Technical details
+              <span className="sr-only"> for {project.title}</span>
+            </span>
+            <span className="project-details-icon" aria-hidden="true" />
           </summary>
-          <p className="mt-3 leading-6 text-slate-400">
-            {project.longDescription}
-          </p>
-          <div className="mt-3 flex flex-wrap gap-2">
-            {project.tags.map((tag) => (
-              <span key={tag} className="font-mono text-xs text-blue-200/80">
-                #{tag}
-              </span>
-            ))}
+          <div className="project-details-content">
+            <p>{project.longDescription}</p>
+            <div className="project-tags">
+              {project.tags.map((tag) => (
+                <span key={tag}>#{tag}</span>
+              ))}
+            </div>
           </div>
         </details>
 
-        <div className="mt-auto flex flex-wrap gap-3 pt-5">
+        <div className="project-actions">
           {project.private ? (
             <span className="inline-flex min-h-10 items-center gap-2 rounded-md border border-white/10 bg-white/[0.035] px-4 py-2 text-sm font-medium text-slate-400">
               <Lock aria-hidden="true" size={16} />

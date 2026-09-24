@@ -1,5 +1,5 @@
 "use client";
-import { useId, useMemo, useState } from "react";
+import { useId, useMemo, useRef, useState } from "react";
 import { Search, X } from "lucide-react";
 import { ProjectCard } from "@/components/sections/ProjectCard";
 import type { Project } from "@/data/projects";
@@ -13,6 +13,8 @@ export function ProjectsExplorer({
   const [activeTag, setActiveTag] = useState("All");
   const [query, setQuery] = useState("");
   const searchId = useId();
+  const resultsId = useId();
+  const searchRef = useRef<HTMLInputElement>(null);
   const filtered = useMemo(
     () =>
       projects.filter(
@@ -42,7 +44,10 @@ export function ProjectsExplorer({
       : `${resultCount} in ${activeTag}`;
 
   return (
-    <div className="project-explorer">
+    <div
+      className="project-explorer"
+      data-filtered={activeTag !== "All" || Boolean(query.trim())}
+    >
       <aside className="project-filters">
         <div>
           <label
@@ -54,12 +59,27 @@ export function ProjectsExplorer({
           <div className="project-search">
             <Search size={18} aria-hidden />
             <input
+              ref={searchRef}
               id={searchId}
+              aria-controls={resultsId}
               type="search"
               value={query}
               onChange={(event) => setQuery(event.target.value)}
               placeholder="e.g. Java or RouteLab"
             />
+            {query ? (
+              <button
+                type="button"
+                className="project-search-clear"
+                aria-label="Clear search"
+                onClick={() => {
+                  setQuery("");
+                  searchRef.current?.focus();
+                }}
+              >
+                <X size={16} aria-hidden="true" />
+              </button>
+            ) : null}
           </div>
         </div>
         <div
@@ -80,17 +100,18 @@ export function ProjectsExplorer({
                 key={tag}
                 type="button"
                 aria-pressed={activeTag === tag}
+                aria-controls={resultsId}
                 aria-label={`${label}: ${count} ${count === 1 ? "project" : "projects"}`}
                 onClick={() => setActiveTag(tag)}
               >
-                {label}
-                <span>{count}</span>
+                <span className="filter-tag-label">{label}</span>
+                <span className="filter-tag-count">{count}</span>
               </button>
             );
           })}
         </div>
       </aside>
-      <div className="project-results">
+      <div className="project-results" id={resultsId}>
         <div className="results-status flex-wrap">
           <p
             role="status"

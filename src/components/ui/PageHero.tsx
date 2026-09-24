@@ -8,6 +8,7 @@ type PageHeroProps = {
   description: string;
   children?: ReactNode;
   className?: string;
+  media?: ReactNode;
 };
 export function PageHero({
   title,
@@ -15,6 +16,7 @@ export function PageHero({
   description,
   children,
   className,
+  media,
 }: PageHeroProps) {
   return (
     <section className={cn("page-hero", className)}>
@@ -25,6 +27,7 @@ export function PageHero({
             <h2>{subtitle}</h2>
             <p>{description}</p>
           </div>
+          {media ? <div className="page-hero-media">{media}</div> : null}
         </div>
         {children ? <div className="page-hero-actions">{children}</div> : null}
       </Container>
