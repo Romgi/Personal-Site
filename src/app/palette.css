@@ -132,7 +132,7 @@
 }
 
 @media print {
-  .resume-page #contact .glass-card :is(span, svg) {
+  .resume-page #contact .contact-card :is(span, svg) {
     color: #111;
   }
 

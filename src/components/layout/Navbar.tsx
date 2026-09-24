@@ -1,24 +1,18 @@
 "use client";
 
-import { Menu, X, ArrowUpRight } from "lucide-react";
+import { ArrowRight, ArrowUpRight, Menu, X } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
-import { navItems } from "@/data/profile";
-import { observeNavRefraction } from "@/lib/nav-refraction";
-import { setNavigationGlass, useNavigationGlass } from "@/lib/navigation-glass";
+import { navItems, profile } from "@/data/profile";
 
 export function Navbar() {
   const pathname = usePathname();
-  const glassEnabled = useNavigationGlass();
   const [openPath, setOpenPath] = useState<string | null>(null);
   const isOpen = openPath === pathname;
   const toggle = useRef<HTMLButtonElement>(null);
-  const bar = useRef<HTMLDivElement>(null);
-  useEffect(() => {
-    if (glassEnabled) return observeNavRefraction(bar.current);
-  }, [glassEnabled]);
+  const header = useRef<HTMLElement>(null);
   useEffect(() => {
     if (!isOpen) return;
     const close = (event: KeyboardEvent) => {
@@ -27,18 +21,41 @@ export function Navbar() {
         toggle.current?.focus();
       }
     };
+    const closeOutside = (event: PointerEvent) => {
+      if (
+        event.target instanceof Node &&
+        !header.current?.contains(event.target)
+      ) {
+        setOpenPath(null);
+      }
+    };
+    const desktop = window.matchMedia("(min-width: 900px)");
+    const closeOnDesktop = () => {
+      if (desktop.matches) setOpenPath(null);
+    };
     document.addEventListener("keydown", close);
-    return () => document.removeEventListener("keydown", close);
+    document.addEventListener("pointerdown", closeOutside);
+    desktop.addEventListener("change", closeOnDesktop);
+    return () => {
+      document.removeEventListener("keydown", close);
+      document.removeEventListener("pointerdown", closeOutside);
+      desktop.removeEventListener("change", closeOnDesktop);
+    };
   }, [isOpen]);
   return (
-    <header className="site-header">
+    <header
+      ref={header}
+      className="site-header"
+      onBlur={(event) => {
+        if (!event.currentTarget.contains(event.relatedTarget)) {
+          setOpenPath(null);
+        }
+      }}
+    >
       <a href="#main-content" className="skip-link">
         Skip to main content
       </a>
-      <div
-        ref={bar}
-        className={`site-nav ${glassEnabled ? "liquid-glass-nav" : "site-nav--solid"}`}
-      >
+      <div className="site-nav">
         <Link
           href="/"
           className="brand"
@@ -47,11 +64,12 @@ export function Navbar() {
         >
           <Image
             src="/images/JGLogo.png"
-            width={54}
+            width={44}
             height={44}
             alt=""
             preload
           />
+          <span className="brand-name">{profile.name}</span>
         </Link>
         <nav className="desktop-navigation" aria-label="Primary navigation">
           {navItems.map((item) => (
@@ -59,25 +77,20 @@ export function Navbar() {
               href={item.href}
               key={item.href}
               aria-current={pathname === item.href ? "page" : undefined}
+              onClick={() => setOpenPath(null)}
             >
               {item.label}
             </Link>
           ))}
         </nav>
         <div className="nav-actions">
-          <button
-            type="button"
-            role="switch"
-            aria-checked={glassEnabled}
-            aria-label="Liquid glass navigation"
-            className="nav-glass-toggle"
-            onClick={() => setNavigationGlass(!glassEnabled)}
+          <Link
+            href="/resume#contact"
+            className="nav-contact"
+            onClick={() => setOpenPath(null)}
           >
-            <span>Glass</span>
-            <span className="nav-glass-track" aria-hidden="true">
-              <span className="nav-glass-thumb" />
-            </span>
-          </button>
+            Contact <ArrowUpRight size={17} aria-hidden="true" />
+          </Link>
           <button
             ref={toggle}
             type="button"
@@ -89,6 +102,7 @@ export function Navbar() {
             aria-controls="mobile-navigation"
             onClick={() => setOpenPath(isOpen ? null : pathname)}
           >
+            <span>{isOpen ? "Close" : "Menu"}</span>
             {isOpen ? (
               <X aria-hidden size={22} />
             ) : (
@@ -103,17 +117,26 @@ export function Navbar() {
         aria-label="Mobile navigation"
         hidden={!isOpen}
       >
-        {navItems.map((item) => (
-          <Link
-            href={item.href}
-            key={item.href}
-            aria-current={pathname === item.href ? "page" : undefined}
-            onClick={() => setOpenPath(null)}
-          >
-            {item.label}
-            <ArrowUpRight size={24} aria-hidden />
-          </Link>
-        ))}
+        <div className="mobile-navigation-links">
+          {navItems.map((item) => (
+            <Link
+              href={item.href}
+              key={item.href}
+              aria-current={pathname === item.href ? "page" : undefined}
+              onClick={() => setOpenPath(null)}
+            >
+              {item.label}
+              <ArrowRight size={22} aria-hidden="true" />
+            </Link>
+          ))}
+        </div>
+        <Link
+          href="/resume#contact"
+          className="mobile-contact"
+          onClick={() => setOpenPath(null)}
+        >
+          Get in touch <ArrowUpRight size={20} aria-hidden="true" />
+        </Link>
       </nav>
     </header>
   );

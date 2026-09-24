@@ -31,7 +31,7 @@ export function ContactCard({
       target={isExternal ? "_blank" : undefined}
       rel={isExternal ? "noopener noreferrer" : undefined}
       data-tilt
-      className="liquid-glass-surface glass-card group block h-full rounded-lg border border-white/10 p-5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-blue-300"
+      className="contact-card group block h-full rounded-lg border border-white/10 p-5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-blue-300"
     >
       <span className="font-mono text-[11px] font-medium uppercase tracking-[0.24em] text-blue-300">
         {label}

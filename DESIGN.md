@@ -1,6 +1,6 @@
 ---
 name: Jonathan Graydon Portfolio
-description: Flight deck — white and blue surfaces, near-black text, content tiles, cinematic openings and refracting navigation.
+description: Flight deck — white and blue surfaces, near-black text, content tiles, cinematic openings and solid navigation.
 colors:
   background: "#ffffff"
   foreground: "#11151c"
@@ -16,7 +16,6 @@ colors:
   tile-surface-raised: "#deebff"
   tile-surface-hover: "#dce8f8"
   cobalt: "#164bd6"
-  glass: "rgba(255, 255, 255, 0.82)"
   control-border: "#71859f"
   chip-ink: "#173f86"
   chip-surface: "#dce8fa"
@@ -49,9 +48,10 @@ typography:
     fontWeight: 400
     lineHeight: 1.8
   navigation:
-    fontFamily: "Barlow Condensed, sans-serif"
-    fontSize: "18px"
-    letterSpacing: "0.13em"
+    fontFamily: "Geist, sans-serif"
+    fontSize: "14px"
+    fontWeight: 500
+    letterSpacing: "0"
   control:
     fontFamily: "Barlow Condensed, sans-serif"
     fontSize: "18px"
@@ -130,7 +130,7 @@ components:
 
 **Creative North Star: "Flight deck"**
 
-White grounds, blue controls, pale-blue tiles, near-black text and translucent white refracting glass connect Home, Projects, Music and Resume. This light palette extends through every hero and the footer. Oversized condensed typography establishes identity; real project images, performance photographs and grouped content tiles carry the evidence. Home, Projects and Music have distinct full-viewport scroll openings; Resume opens with an immediately readable static introduction. The interface is spacious around introductions and denser around project details, repertoire and resume entries.
+White grounds, blue controls, pale-blue tiles, near-black text and a solid white header connect Home, Projects, Music and Resume. This light palette extends through every hero and the footer. Oversized condensed typography establishes identity; real project images, performance photographs and grouped content tiles carry the evidence. Home, Projects and Music have distinct full-viewport scroll openings; Resume opens with an immediately readable static introduction. The interface is spacious around introductions and denser around project details, repertoire and resume entries.
 
 Music shares the white-and-blue foundation and condensed typography. The existing JG identity and portfolio media remain binding assets under `PRODUCT.md`. Original project screenshots, factual photographs and the physical brass trumpet retain their source colors without redefining the interface palette. The user's subsequent request for tiles replaces the former ruled records; white and pale-blue surfaces distinguish the complete content groups.
 
@@ -140,7 +140,7 @@ This record describes the current implemented CSS and components. The user-autho
 
 - Condensed display typography with readable sans-serif evidence text.
 - White and pale-blue content tiles, near-black reading text, generous gutters and clear blue interaction states.
-- Refracting navigation and distinct scroll-held openings: computation, screenshot assembly and a polished 3D trumpet.
+- Clear fixed navigation and distinct scroll-held openings: computation, screenshot assembly and a polished 3D trumpet.
 - Original project media and complete content across all four routes.
 
 ## Colors
@@ -170,7 +170,7 @@ Pale blue creates separation between tiles and chapters, while subdued blue-gray
 
 Home opens on white with a blue computation network; Projects opens on white with pale screenshot plates. Music places its natural brass trumpet against a white and pale-blue radial studio. Home's discipline tiles, featured projects, Music records and Resume subjects use white and pale-blue groupings with dark text. Resume's static introduction and the shared footer use pale blue. Featured projects use pale-blue tiles. Education, Work experience and standalone Music records use the softer blue surface, so each tile remains distinct on the white page. The Music performance section retains its near-white paper ground.
 
-Space and surface contrast separate collections and chapters; horizontal rules no longer carry the primary grouping. Text, inputs, disclosures, badges and hover states use semantic tokens so they remain legible in each region. Tone overrides apply on screen and leave the existing dark-on-white print treatment intact. Navigation uses translucent white glass with near-black text.
+Space and surface contrast separate collections and chapters; horizontal rules no longer carry the primary grouping. Text, inputs, disclosures, badges and hover states use semantic tokens so they remain legible in each region. Tone overrides apply on screen and leave the existing dark-on-white print treatment intact. Navigation uses opaque white with near-black text and pale-blue current-route tiles.
 
 **The Evidence Color Rule.** Preserve the colors of existing portfolio media; interface tokens govern controls and typography, not the factual images.
 
@@ -178,7 +178,7 @@ Image delivery uses Next.js quality 100 throughout the site. Responsive size hin
 
 ## Typography
 
-Big Shoulders supplies page titles, section headings, resume headings and the footer identity. Barlow Condensed supplies project titles, navigation, actions, several supporting headings and Home introduction text. Geist supplies reading text and search/filter controls; Geist Mono supplies compact technology badges and counts. All are loaded through `next/font` in the root layout.
+Big Shoulders supplies page titles, section headings, resume headings and the footer identity. Barlow Condensed supplies project titles, actions, several supporting headings and Home introduction text. Geist supplies reading text, navigation and search/filter controls; desktop navigation uses 14px title-case labels. Geist Mono supplies compact technology badges and counts. All are loaded through `next/font` in the root layout.
 
 The Home name is a deliberate signature exception: Bebas Neue at weight 400, centered in two stacked uppercase lines without the former horizontal scaling. The title card uses clamp(96px, 15vw, 230px) with 0.83 leading and −0.015em tracking; below 1101px the name becomes 20vw, and below 768px it becomes 29vw with 0.88 leading. Its following Software / Robotics / Music heading uses Big Shoulders at weight 550. In pinned viewports 540–679px high, the name uses min(29vw, 29svh), the bridge heading uses clamp(40px, 8svh, 54px), and introduction text becomes 16px with tighter spacing. These sizes belong to this composition and do not extend the reusable type scale.
 
@@ -216,21 +216,21 @@ The Projects Robotics composition retains its media reveal at every width. The w
 
 ## Elevation & Depth
 
-Content tiles separate through tonal contrast and gutters, without outlining or shadowing every record. Glass remains reserved for navigation and selected supporting containers, with inset highlights, diffuse shadows and pointer-tracked sheen. Navigation layers a diagonal white/blue highlight over translucent white glass, with near-black text, inset highlights and a diffuse drop shadow. Project images sit within their tile padding without a separate shadow. The cinematic project plates use soft downward shadows to make their assembly legible. Contact tiles use opaque surfaces without glass refraction or decorative sheen. The system uses diffuse depth rather than hard offset shadows.
+Content tiles separate through tonal contrast and gutters, without outlining or shadowing every record. The fixed header uses an opaque white surface and a fine lower border. Project images sit within their tile padding without a separate shadow. The cinematic project plates use soft downward shadows to make their assembly legible. Contact tiles use opaque surfaces. The system uses diffuse depth rather than hard offset shadows.
 
-SVG backdrop displacement preserves the requested background refraction in supported engines. Navigation uses edge displacement scale −20, warp-noise scale 24, optical blur 0.2px, saturation 155%, contrast 1.04 and brightness 1.08; its fine static grain remains unchanged. The surface filter remains unchanged with 0.65px optical blur. WebKit and Gecko retain frosted blur fallbacks of 11px for surfaces and 14px for navigation. Text remains outside the displaced pixels. Do not document the unused legacy light-music navigation modifier as a live theme.
+Jonathan's latest explicit request removes liquid glass throughout the interface and supersedes the earlier refraction commitment. The header and mobile menu have no transparency, backdrop filters or pointer-tracked sheen. The Glass switch, persisted glass preference, SVG displacement filters, refraction observers and shared glass-effects infrastructure are removed. The independent computation and trumpet renderers remain part of their existing hero compositions.
 
-Hover transitions generally last 200–300ms; glass sheen uses 400ms. The computation background renders live blue points, links and traveling signals through WebGL. Perspective, depth fading and spring deformation give the network volume. Normal alpha compositing keeps royal-blue links and dark-blue nodes and signals visible on white; the renderer does not sample a raster image. Animation pauses offscreen and in hidden tabs. The scene follows the operating-system reduced-motion preference directly, with no on-page override; a deterministic SVG network remains available before WebGL initializes or when it is unavailable. Global reduced-motion CSS removes smooth scrolling and nearly eliminates transitions.
+Hover transitions generally last 200–300ms. The computation background renders live blue points, links and traveling signals through WebGL. Perspective, depth fading and spring deformation give the network volume. Normal alpha compositing keeps royal-blue links and dark-blue nodes and signals visible on white; the renderer does not sample a raster image. Animation pauses offscreen and in hidden tabs. The scene follows the operating-system reduced-motion preference directly, with no on-page override; a deterministic SVG network remains available before WebGL initializes or when it is unavailable. Global reduced-motion CSS removes smooth scrolling and nearly eliminates transitions.
 
 Project hover and keyboard focus retain the inner image's 4px lift over 550ms with exponential ease-out, without adding a shadow. Native Technical details summaries animate their plus into a minus inside a filled control; all disclosure content remains browser-managed. About highlight links respond through a 220ms surface-color transition, with no extending rule or heading shift. Music's opening uses the instrument's scroll-linked turn and reframing. Repertoire result counts give a brief 220ms update response. These enhancements begin with visible content and honor reduced motion.
 
 The Home sequence follows scroll position with 0.35-second smoothing; reversing scroll reverses the title separation, graph-camera journey and bridge reveal. Projects assembles screenshots, and Music turns its 3D trumpet toward the viewer before the camera travels into the bell and reveals the introduction. Both directions of scroll use the same continuous camera path and projected opening. In Projects, the assembled objects rise and soften before the summary appears. The operating-system reduced-motion preference stops continuous network animation and disables the scroll choreography altogether. The supporting Robotics reveal uses 0.45-second smoothing, opens horizontally with a brief scan across the photograph, and eases image scale from 1.12 to 1. The Music performance photograph, copy and video remain static in normal document flow.
 
-**The Sharp Foreground Rule.** Refract the background while keeping text, focus and controls legible.
+**The Clear Navigation Rule.** Keep the header opaque, route labels readable and keyboard focus visible over every page composition.
 
 ## Shapes
 
-Controls use nearly square corners, with slightly softer badges and rounded media frames. Navigation and the work tray retain 12px corners and fine borders. Content tiles use 16px corners; project images and filled Technical details controls use 8px corners. Cinematic screenshot plates use 12px corners. Desktop repertoire rows use 12px end corners, while mobile repertoire tiles use the shared 16px radius. A dimensional, triangulated network of blue points and fine connections is the Home signature.
+Controls use nearly square corners, with slightly softer badges and rounded media frames. The header spans the viewport with a straight lower edge; its current-route state is a pale-blue tile. The work tray retains 12px corners and fine borders. Content tiles use 16px corners; project images and filled Technical details controls use 8px corners. Cinematic screenshot plates use 12px corners. Desktop repertoire rows use 12px end corners, while mobile repertoire tiles use the shared 16px radius. A dimensional, triangulated network of blue points and fine connections is the Home signature.
 
 ## Components
 
@@ -250,7 +250,7 @@ Visible actions stay concise. Project links and Technical details disclosures in
 
 ### Buttons
 
-Primary actions use a solid accent fill and on-accent text, changing to the local foreground fill and background text on hover. Secondary actions remain outlined with foreground text and a control-border edge, filling with accent and on-accent text on hover. Both have a minimum height of 48px. Small buttons use 40px minimum height and 8px/12px padding; project actions increase that minimum to 44px. Ghost actions omit the visible border and fill, and turn accent on hover. Shared visible focus is a 2px accent outline with 5px offset. Button icons shift 3px on hover or keyboard focus when motion is permitted. Pointer response retains glass sheen without magnetic transforms.
+Primary actions use a solid accent fill and on-accent text, changing to the local foreground fill and background text on hover. Secondary actions remain outlined with foreground text and a control-border edge, filling with accent and on-accent text on hover. Both have a minimum height of 48px. Small buttons use 40px minimum height and 8px/12px padding; project actions increase that minimum to 44px. Ghost actions omit the visible border and fill, and turn accent on hover. Shared visible focus is a 2px accent outline with 5px offset. Button icons shift 3px on hover or keyboard focus when motion is permitted. Controls have no shared pointer-tracked glass sheen or magnetic transforms.
 
 ### Inputs and filters
 
@@ -266,9 +266,9 @@ Shared technology badges use semantic chip surfaces and ink, transparent borders
 
 Projects and Music place chapter-link tiles after their cinematic introductions in normal flow. These remain ordinary anchors with a directional arrow, 20px by 24px padding, the shared tile radius and clear hover/focus treatment. They wrap across a row on desktop and stack on narrow screens. The existing global scroll padding keeps anchor destinations below the fixed navigation. The independent Skip intro anchors lead to featured Projects and Music performance content. Resume does not acquire a new section index.
 
-A fixed bar sits 10px from viewport edges. It contains the original JG mark and condensed uppercase route links; the current link has accent text and a bottom underline. Desktop links are centered in a three-column grid, with an always-visible Glass switch at the right. The switch uses a 44px target, `role="switch"`, the accessible name Liquid glass navigation, and `aria-checked` for its state. Glass is on by default; the browser saves the visitor’s choice across routes and reloads. When storage is unavailable, the choice remains usable for the current page session. Turning Glass off gives the same navigation an opaque pale-blue surface, a hairline border and 12px corners, with no backdrop effect, shadow or sheen. Content, route links and menu behavior stay the same.
+A fixed, full-width white header sits flush with the top and sides of the viewport. Its inner content caps at 1440px with 6% horizontal padding on desktop and 24px on mobile. The original black JG mark and Jonathan Graydon name sit at the left. Desktop route links use title-case Geist at 14px; the current route has blue text on a pale-blue tile and retains `aria-current="page"`. A cobalt Contact action sits at the right and leads to the existing contact section. The desktop header is 88px high, reducing to 72px on mobile.
 
-The desktop bar is 64px high; below 768px it is 60px, with the Glass switch beside the 44px menu target. The mobile menu is a near-opaque white panel with large route links, visible current state, Escape dismissal and focus return. When Glass is on, the header retains its layered glass material while scrolling. In engines using SVG backdrop refraction, a static PNG normal map is derived from the bar’s current dimensions and rounded corners, with a 16px rim that flattens toward the center. ResizeObserver and a scheduled animation frame update the map only when dimensions change; scrolling does not regenerate it. The observer runs only while Glass is on. The original static SVG map remains the initial fallback.
+The mobile header retains the identity and a 44px menu button. At widths of 359px and below, the button is icon-only with a 44px square target and its accessible label preserved, maintaining the 24px side gutters. Opening it reveals an opaque white panel with large route tiles, a blue current-route highlight and a Contact link. The button exposes its expanded state and controlled panel. Escape dismisses the panel and returns focus to the menu button; choosing a route or contact destination closes it. Moving keyboard focus outside the header, clicking outside it or resizing to desktop also closes the panel. Header and menu remain solid white while scrolling, with no Glass toggle, transparency, refraction, backdrop effect or supporting glass-effects infrastructure. The latest explicit removal request supersedes all earlier glass-navigation preferences.
 
 ### Cinematic Home opening
 
@@ -302,12 +302,13 @@ The Music performance section keeps its photograph, introduction and video in no
 - Do use the condensed hierarchy and retain comfortable reading measures for evidence text.
 - Do use direct sentence-case headings, factual descriptions and action labels that state their destination or outcome.
 - Do keep the entire interface white and blue with near-black text and accents, including heroes and the footer.
-- Do preserve real background refraction, static fallbacks, keyboard focus and reduced-motion behavior.
+- Do keep navigation opaque and preserve static hero fallbacks, keyboard focus and reduced-motion behavior.
 - Do allow responsive content to flow rather than clipping text to the desktop composition.
 
 ### Don't:
 
 - Don't reintroduce dark stages, solid cobalt page regions, white body text on blue, or brass interface accents.
+- Don't restore liquid glass, a Glass toggle, transparent navigation or refraction infrastructure.
 - Don't recolor original portfolio media to force palette uniformity.
 - Don't present the interactive graph as real performance data or a measured system.
 - Don't promote leftover uppercase supporting labels into a required eyebrow or kicker system.

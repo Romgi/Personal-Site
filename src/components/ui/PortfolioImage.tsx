@@ -24,7 +24,7 @@ export function PortfolioImage({
   return (
     <div
       className={cn(
-        "portfolio-image glass-media-frame relative overflow-hidden rounded-xl",
+        "portfolio-image relative overflow-hidden rounded-xl",
         aspect,
         className,
       )}

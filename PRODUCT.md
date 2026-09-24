@@ -39,7 +39,9 @@ The portfolio brings together Jonathan's software development, McMaster Universi
 
 - Preserve the Jonathan Graydon identity and its association with software, robotics, and trumpet performance.
 - Use the existing name, JG logo, project images, robotics media, and music media as established assets.
-- Jonathan explicitly requested liquid glass that distorts background pixels using SVG displacement and subtle noise. Preserve actual refraction where supported, with a usable fallback in other browsers.
+- Jonathan's latest explicit request removes liquid glass and replaces the top navigation. This supersedes the earlier refraction commitment: remove the Glass toggle, transparency, refraction and supporting glass-effects infrastructure.
+- Keep a fixed, full-width, solid-white header with the black JG mark and Jonathan Graydon name at the left, title-case Geist route links at 14px on desktop, a pale-blue current-route tile with blue text, and a cobalt Contact action at the right. The header is 88px high on desktop and 72px on mobile; its content caps at 1440px with 6% desktop and 24px mobile horizontal padding.
+- Mobile navigation uses an opaque white panel with large route tiles, a blue current-route highlight and a Contact link. Its 44px menu button retains expanded-state semantics and becomes icon-only at widths of 359px and below, preserving its accessible label and the side gutters. The panel closes on Escape with focus return, route selection, keyboard focus leaving the header, outside clicks and resizing to desktop.
 - Frontend sophistication is an explicit product priority. Future work should make that sophistication evident while preserving access to the portfolio's content.
 
 ## Evidence on Hand
@@ -62,4 +64,4 @@ The portfolio brings together Jonathan's software development, McMaster Universi
 
 ## Accessibility & Inclusion
 
-Preserve the existing keyboard navigation, visible focus states, skip link, image descriptions, semantic controls, and reduced-motion handling. Important content and actions must remain available on touch devices and when decorative motion or refraction is unavailable. No additional product-specific accessibility standard has been specified.
+Preserve the existing keyboard navigation, visible focus states, skip link, image descriptions, semantic controls, and reduced-motion handling. Important content and actions must remain available on touch devices and when decorative motion is unavailable. The solid header and mobile menu preserve current-route indication, Escape dismissal, focus return and closing after navigation. No additional product-specific accessibility standard has been specified.

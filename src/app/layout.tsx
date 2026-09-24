@@ -13,8 +13,6 @@ import { Footer } from "@/components/layout/Footer";
 import { Navbar } from "@/components/layout/Navbar";
 import { RouteScrollReset } from "@/components/layout/RouteScrollReset";
 import { GsapScrollEffects } from "@/components/ui/GsapScrollEffects";
-import { LiquidGlassFilters } from "@/components/ui/LiquidGlassFilters";
-import { PointerEffects } from "@/components/ui/PointerEffects";
 import { ScrollProgress } from "@/components/ui/ScrollProgress";
 import { profile, site } from "@/data/profile";
 
@@ -152,9 +150,7 @@ export default function RootLayout({
         <script type="application/ld+json">
           {JSON.stringify(personJsonLd).replace(/</g, "\\u003c")}
         </script>
-        <LiquidGlassFilters />
         <ScrollProgress />
-        <PointerEffects />
         <Navbar />
         <RouteScrollReset />
         <main id="main-content" className="flex-1">

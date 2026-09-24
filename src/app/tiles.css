@@ -513,7 +513,7 @@
   padding-top: 0;
 }
 
-.resume-page #contact .glass-card {
+.resume-page #contact .contact-card {
   padding: 28px;
   border: 0;
   border-radius: var(--tile-radius);
@@ -523,12 +523,12 @@
   -webkit-backdrop-filter: none;
 }
 
-.resume-page #contact .glass-card::before,
-.resume-page #contact .glass-card::after {
+.resume-page #contact .contact-card::before,
+.resume-page #contact .contact-card::after {
   content: none;
 }
 
-.resume-page #contact .glass-card:is(:hover, :focus-visible) {
+.resume-page #contact .contact-card:is(:hover, :focus-visible) {
   background: var(--tile-surface-hover);
   box-shadow: none;
 }
@@ -679,7 +679,7 @@
     gap: 32px;
   }
 
-  .resume-page #contact .glass-card {
+  .resume-page #contact .contact-card {
     padding: 24px;
   }
 }
@@ -721,7 +721,7 @@
     font-size: 28px;
   }
 
-  .resume-page #contact .glass-card {
+  .resume-page #contact .contact-card {
     padding: 0;
     color: #111;
     background: transparent;
