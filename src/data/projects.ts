@@ -53,15 +53,12 @@ export const projects: Project[] = [
       "TypeScript",
       "Tailwind CSS",
       "Zod",
-      "Vite",
-      "Cloudflare Workers",
+      "Vercel",
     ],
     image: "/images/projects/routelab.png",
     imageAlt:
       "RouteLab interface visualizing a pathfinding algorithm across a weighted graph",
-    liveDemoUrl: safeHref(
-      "https://routelab-algorithm-studio.jonathangraydon22.chatgpt.site",
-    ),
+    liveDemoUrl: safeHref("https://routelab-phi.vercel.app"),
     githubUrl: safeHref("https://github.com/Romgi/RouteLab"),
     status: "In Progress",
     featured: true,
