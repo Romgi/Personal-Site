@@ -1,9 +1,6 @@
-import { ArrowDown, ArrowRight, Cpu } from "lucide-react";
-import Image from "next/image";
-import Link from "next/link";
+import { ArrowDown, ArrowRight } from "lucide-react";
 import { ComputationField } from "@/components/ui/ComputationField";
 import { ButtonLink } from "@/components/ui/ButtonLink";
-import { homeFeaturedProjects } from "@/data/projects";
 
 type HomeHeroProps = {
   name: string;
@@ -61,41 +58,6 @@ export function HomeHero({ name, title, tagline }: HomeHeroProps) {
           </div>
         </div>
       </section>
-      <div className="home-entry" id="home-content">
-        <div className="flight-work">
-          <nav
-            className="flight-disciplines"
-            aria-label="Portfolio disciplines"
-          >
-            <Link href="/projects#robotics">
-              <Cpu size={20} aria-hidden />
-              Software &amp; Robotics
-            </Link>
-          </nav>
-          <div className="flight-previews">
-            {homeFeaturedProjects.map((project) => (
-              <Link
-                className="flight-preview"
-                href={`/projects#${project.id}`}
-                key={project.id}
-              >
-                <div className="flight-preview-media">
-                  <Image
-                    src={project.image}
-                    alt={project.imageAlt}
-                    fill
-                    sizes="(max-width: 767px) 50vw, 30vw"
-                  />
-                </div>
-                <div className="flight-preview-copy">
-                  <h2>{project.title}</h2>
-                  <p>{project.shortDescription}</p>
-                </div>
-              </Link>
-            ))}
-          </div>
-        </div>
-      </div>
     </div>
   );
 }

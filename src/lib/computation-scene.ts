@@ -308,9 +308,7 @@ export function createComputationScene(
   const excluded = (target: EventTarget | null) =>
     target instanceof Element &&
     Boolean(
-      target.closest(
-        "a,button,input,textarea,select,summary,[role=button],.flight-work",
-      ),
+      target.closest("a,button,input,textarea,select,summary,[role=button]"),
     );
   const coordinates = (event: PointerEvent) => {
     const box = canvas.getBoundingClientRect();

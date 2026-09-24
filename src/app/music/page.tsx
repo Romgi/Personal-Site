@@ -25,8 +25,6 @@ export const metadata = createPageMetadata({
 });
 
 export default function MusicPage() {
-  const featuredRepertoire = repertoire.filter((item) => item.featured);
-
   return (
     <div className="music-page">
       <CinematicHero
@@ -85,26 +83,6 @@ export default function MusicPage() {
                 <PerformanceVideo />
               </div>
             </div>
-          </div>
-        </Container>
-      </section>
-
-      <section className="music-section music-section-alt border-y py-20 sm:py-24">
-        <Container>
-          <SectionHeading title="Featured repertoire" />
-          <div className="featured-repertoire">
-            {featuredRepertoire.map((item, index) => (
-              <AnimatedSection key={item.id}>
-                <article
-                  className="repertoire-feature"
-                  data-tone={index === 0 ? "blue" : "paper"}
-                >
-                  <h3>{item.title}</h3>
-                  <p className="repertoire-composer">{item.composer}</p>
-                  <p>{item.description}</p>
-                </article>
-              </AnimatedSection>
-            ))}
           </div>
         </Container>
       </section>

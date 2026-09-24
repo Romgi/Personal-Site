@@ -43,7 +43,11 @@ export default function Home() {
         image={profile.profileImage}
       />
 
-      <section className="home-about section-block" data-tone="paper">
+      <section
+        id="home-content"
+        className="home-about section-block"
+        data-tone="paper"
+      >
         <Container>
           <div className="about-layout">
             <AnimatedSection className="about-introduction">

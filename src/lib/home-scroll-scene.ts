@@ -97,19 +97,6 @@ export function setupHomeScrollScene(
         0.61,
       );
   }
-  const entry = root.querySelector(".home-entry");
-  if (entry)
-    gsap.from(entry, {
-      y: 52,
-      clipPath: "inset(0% 2% 0% 2% round 18px)",
-      ease: "none",
-      scrollTrigger: {
-        trigger: entry,
-        start: "top bottom",
-        end: "top 55%",
-        scrub: true,
-      },
-    });
   return () => {
     hero.classList.remove("is-scroll-scene");
     bridge.inert = false;
