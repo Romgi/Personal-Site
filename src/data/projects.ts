@@ -22,6 +22,25 @@ export type Project = {
 
 export const projects: Project[] = [
   {
+    id: "apriltag-studio",
+    title: "AprilTag Studio",
+    shortDescription:
+      "A local Windows vision tool for live AprilTag detection, camera calibration, and interactive 3D pose visualization.",
+    longDescription:
+      "A Python desktop application that detects AprilTags in USB webcam video using native CPU detection and OpenCV. The PySide6 interface combines live overlays, adjustable camera and detector settings, performance readouts, and a tag inspector. Checkerboard calibration and a measured tag size enable camera-relative or selected-tag-relative 3D pose views with orbit, pan, and zoom controls. Annotated snapshots, scene JSON, and CSV detection logs support inspection and analysis. Camera frames stay on the computer, and the application works offline after installation.",
+    techStack: ["Python", "PySide6", "OpenCV", "AprilTag", "NumPy"],
+    image: "/images/projects/apriltag-studio.png",
+    imageAlt:
+      "AprilTag Studio detecting 24 tags in a webcam feed, with camera controls, performance readouts, and a tag inspector",
+    githubUrl: safeHref("https://github.com/Romgi/apriltag-studio"),
+    downloadUrl: safeHref(
+      "https://github.com/Romgi/apriltag-studio/releases/latest",
+    ),
+    status: "Completed",
+    featured: true,
+    tags: ["Computer Vision", "Robotics", "Desktop", "Data Visualization"],
+  },
+  {
     id: "RouteLab",
     title: "RouteLab",
     shortDescription:
