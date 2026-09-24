@@ -55,14 +55,14 @@
   margin: 0;
   overflow: hidden;
   border-radius: 12px;
-  background: #111c2b;
-  box-shadow: 0 24px 58px #0008;
+  background: var(--tile-surface);
+  box-shadow: 0 24px 58px rgb(22 48 87 / 14%);
 }
 
 .cinematic-hero .scene-project-image {
   position: relative;
   aspect-ratio: 16 / 10;
-  background: #070b12;
+  background: #ffffff;
 }
 
 .cinematic-hero .scene-project-image img {
@@ -90,9 +90,9 @@
 .cinematic-hero[data-page-scene="music"] {
   background: radial-gradient(
     ellipse at 58% 51%,
-    #1a273b 0%,
-    #101924 22%,
-    #05070b 66%
+    #dceaff 0%,
+    #eef5ff 30%,
+    #ffffff 70%
   );
 }
 
@@ -228,7 +228,7 @@
   padding: 12px 20px;
   border-radius: 4px;
   background: var(--accent);
-  color: var(--background);
+  color: var(--on-accent);
   font:
     600 18px/1.2 var(--font-condensed),
     sans-serif;
@@ -238,6 +238,7 @@
 
 .cinematic-hero .scene-explore-link:hover {
   background: var(--foreground);
+  color: #ffffff;
 }
 
 .cinematic-hero .scene-cue {

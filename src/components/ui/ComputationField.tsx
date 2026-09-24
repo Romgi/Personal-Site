@@ -78,11 +78,11 @@ export function ComputationField() {
           viewBox="0 0 1000 650"
           fill="none"
         >
-          <path d={fallbackPath} stroke="#3b82f6" strokeOpacity=".38" />
+          <path d={fallbackPath} stroke="#164bd6" strokeOpacity=".38" />
           {fallback.nodes.map((node, index) => {
             const [cx, cy] = project(node);
             return (
-              <circle key={index} cx={cx} cy={cy} r={2.2} fill="#93c5fd" />
+              <circle key={index} cx={cx} cy={cy} r={2.2} fill="#123bb0" />
             );
           })}
         </svg>

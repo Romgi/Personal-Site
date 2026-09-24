@@ -1,25 +1,30 @@
 ---
 name: Jonathan Graydon Portfolio
-description: Flight deck — black, ice-white, blue, content tiles, cinematic openings and refracting navigation.
+description: Flight deck — white and blue surfaces, near-black text, content tiles, cinematic openings and refracting navigation.
 colors:
-  background: "#05070b"
-  foreground: "#eef4ff"
-  accent: "#7dbbff"
-  muted: "#a5b5cc"
-  hairline: "#2b3b52"
-  surface: "#0b111c"
-  tile-surface: "#0e1725"
-  tile-surface-raised: "#142237"
-  tile-surface-hover: "#182b43"
-  glass: "rgba(5, 7, 11, 0.2)"
-  control-border: "#6989ae"
-  badge-ink: "#dbeaff"
-  badge-tint: "#3b82f6"
-  badge-border: "#93c5fd"
-  music-background: "#05070b"
-  music-accent: "#7dbbff"
-  music-muted: "#a5b5cc"
-  music-hairline: "#2b3b52"
+  background: "#ffffff"
+  foreground: "#11151c"
+  accent: "#164bd6"
+  on-accent: "#ffffff"
+  muted: "#4c5c70"
+  text-secondary: "#334155"
+  hairline: "#cbd6e5"
+  surface: "#edf3fb"
+  surface-hover: "#dce8f8"
+  accent-soft: "#dce8ff"
+  tile-surface: "#edf3fb"
+  tile-surface-raised: "#deebff"
+  tile-surface-hover: "#dce8f8"
+  cobalt: "#164bd6"
+  glass: "rgba(255, 255, 255, 0.82)"
+  control-border: "#71859f"
+  chip-ink: "#173f86"
+  chip-surface: "#dce8fa"
+  badge-border: "transparent"
+  music-background: "#ffffff"
+  music-accent: "#164bd6"
+  music-muted: "#4c5c70"
+  music-hairline: "#cbd6e5"
 typography:
   display:
     fontFamily: "Big Shoulders, sans-serif"
@@ -85,7 +90,7 @@ components:
     padding: "{spacing.tile-inset}"
   button-primary:
     backgroundColor: "{colors.accent}"
-    textColor: "{colors.background}"
+    textColor: "{colors.on-accent}"
     typography: "{typography.control}"
     rounded: "{rounded.control}"
     padding: "12px 22px"
@@ -97,7 +102,7 @@ components:
     padding: "12px 22px"
   button-hover:
     backgroundColor: "{colors.accent}"
-    textColor: "{colors.background}"
+    textColor: "{colors.on-accent}"
   button-ghost:
     backgroundColor: "transparent"
     textColor: "{colors.foreground}"
@@ -110,7 +115,7 @@ components:
     padding: "12px"
   filter-selected:
     backgroundColor: "{colors.accent}"
-    textColor: "{colors.background}"
+    textColor: "{colors.on-accent}"
     rounded: "{rounded.control}"
     padding: "10px"
   skill-badge:
@@ -125,34 +130,47 @@ components:
 
 **Creative North Star: "Flight deck"**
 
-Black grounds, ice-white lettering, blue controls and smoked refracting glass connect Home, Projects, Music and Resume. Oversized condensed typography establishes identity; real project images, performance photographs and grouped content tiles carry the evidence. Home, Projects and Music have distinct full-viewport scroll openings; Resume opens with an immediately readable static introduction. The interface is spacious around introductions and denser around project details, repertoire and resume entries.
+White grounds, blue controls, pale-blue tiles, near-black text and translucent white refracting glass connect Home, Projects, Music and Resume. This light palette extends through every hero and the footer. Oversized condensed typography establishes identity; real project images, performance photographs and grouped content tiles carry the evidence. Home, Projects and Music have distinct full-viewport scroll openings; Resume opens with an immediately readable static introduction. The interface is spacious around introductions and denser around project details, repertoire and resume entries.
 
-Music shares the blue-and-black palette and condensed typography. The existing JG identity and portfolio media remain binding assets under `PRODUCT.md`. Original project screenshots and factual photographs retain their source colors without redefining the interface palette. The user's subsequent request for tiles replaces the former ruled records: Computer Science, Robotics and Music are distinct dark-blue surfaces, with a slightly lighter Computer Science tile within the shared palette.
+Music shares the white-and-blue foundation and condensed typography. The existing JG identity and portfolio media remain binding assets under `PRODUCT.md`. Original project screenshots, factual photographs and the physical brass trumpet retain their source colors without redefining the interface palette. The user's subsequent request for tiles replaces the former ruled records; white and pale-blue surfaces distinguish the complete content groups.
 
 This record describes the current implemented CSS and components. The user-authorized cinematic Home opening supersedes layout A’s first viewport; the subsequent tile and fullscreen-hero request extends the visual language across the remaining routes. Earlier layout A captures and the forced hero/responsive gates in `.impeccable/build/state.json` remain historical records of that earlier composition, including its original-content exceptions and typography drift. They are not reference captures or approval for the current interface; this document is not a shipping verdict.
 
 **Key Characteristics:**
 
 - Condensed display typography with readable sans-serif evidence text.
-- Dark content tiles, generous gutters and restrained blue interaction states.
+- White and pale-blue content tiles, near-black reading text, generous gutters and clear blue interaction states.
 - Refracting navigation and distinct scroll-held openings: computation, screenshot assembly and a polished 3D trumpet.
 - Original project media and complete content across all four routes.
 
 ## Colors
 
-The palette combines black, ice-white and clear blue, shared across every route.
+The entire interface uses white and blue, with near-black text and accents. `globals.css` and `tiles.css` establish the white default; `palette.css` supplies screen-only `data-tone="paper"` and `data-tone="blue"` scopes. Paper uses a near-white #f6f9fd ground with white tiles. Blue uses a pale #deebff ground with near-black text. The nearest scope supplies the complete reading and control palette, including nested tiles.
 
 ### Primary
 
-Accent blue marks actions, current navigation, selected filters and focus. The legacy Tailwind blue utility names resolve to blue values in the current theme; they now supply the blue interface system.
+Royal blue #164bd6 marks actions, current navigation, selected filters and focus. Primary fills and selected filters pair `--accent` with white `--on-accent` text. Large surfaces remain white or pale blue; near-black #11151c supplies primary reading contrast. Existing text utilities follow the foreground, secondary, muted and accent tokens.
+
+| Default semantic token    | Value                       |
+| ------------------------- | --------------------------- |
+| Background / foreground   | #ffffff / #11151c           |
+| Muted / secondary text    | #4c5c70 / #334155           |
+| Accent / on-accent        | #164bd6 / #ffffff           |
+| Surface / hover           | #edf3fb / #dce8f8           |
+| Tile / raised / hover     | #edf3fb / #deebff / #dce8f8 |
+| Hairline / control border | #cbd6e5 / #71859f           |
+| Accent soft               | #dce8ff                     |
+| Chip surface / ink        | #dce8fa / #173f86           |
 
 ### Secondary
 
-Music uses the shared blue accent, cool secondary text and black surfaces. Subtle surface elevation distinguishes its sections.
+Pale blue creates separation between tiles and chapters, while subdued blue-gray supports secondary text. Music metadata uses the shared blue accent. Brass and silver belong to the real instrument's material appearance, with no gold or brass interface theme.
 
 ### Neutral
 
-Graphite is the page ground; ice-white is the main text color. Muted blue-gray supports secondary prose and metadata. Tiles use #0e1725, selected leading tiles use #142237, and interactive tiles respond with #182b43. Space separates collections and chapters; horizontal rules no longer carry the primary grouping. Transparent navigation glass allows background pixels to contribute to depth.
+Home opens on white with a blue computation network; Projects opens on white with pale screenshot plates. Music places its natural brass trumpet against a white and pale-blue radial studio. Home's discipline tiles, featured projects, Music records and Resume subjects use white and pale-blue groupings with dark text. Resume's static introduction and the shared footer use pale blue. Featured projects use pale-blue tiles. Education, Work experience and standalone Music records use the softer blue surface, so each tile remains distinct on the white page. The Music performance section retains its near-white paper ground.
+
+Space and surface contrast separate collections and chapters; horizontal rules no longer carry the primary grouping. Text, inputs, disclosures, badges and hover states use semantic tokens so they remain legible in each region. Tone overrides apply on screen and leave the existing dark-on-white print treatment intact. Navigation uses translucent white glass with near-black text.
 
 **The Evidence Color Rule.** Preserve the colors of existing portfolio media; interface tokens govern controls and typography, not the factual images.
 
@@ -174,17 +192,17 @@ The Projects cinematic title uses Big Shoulders at clamp(88px, 17vw, 252px), 0.8
 
 The shared container caps at 1536px with 6% horizontal padding, switching to 24px below 768px. Major sections use 110px vertical padding on desktop and 72px on mobile. Content tiles use 24px gutters, reducing to 16px below 768px, with clamp(24px, 2.5vw, 40px) internal padding. Each tile groups one coherent subject; entries within a Resume subject remain open instead of becoming nested cards. Open space separates major chapters.
 
-Home opens with a centered, full-viewport title card over the live computation network. Edge fading and a dark radial shade keep the identity legible. Scrolling separates the two name lines in opposing directions and moves the real graph camera through the network. The pinned version also opens the scene’s clipping frame. A Software / Robotics / Music bridge then introduces the original tagline and View projects / View resume actions. The opening releases into the work preview tray in normal flow, with two columns on larger screens and stacked previews on mobile. Home’s preview tray and Featured projects section both select RouteLab and PC Turf. Portfolio content and accomplishments remain intact.
+Home opens with a centered, full-viewport title card over the live computation network. Edge fading and a white radial wash keep the identity legible against the blue network. Scrolling separates the two name lines in opposing directions and moves the real graph camera through the network. The pinned version also opens the scene’s clipping frame. A Software / Robotics / Music bridge then introduces the original tagline and View projects / View resume actions. The opening releases into the work preview tray in normal flow, with two columns on larger screens and stacked previews on mobile. Home’s preview tray and Featured projects section both select RouteLab and PC Turf. Portfolio content and accomplishments remain intact.
 
 With motion permitted, the Home scroll scene runs at every width. At viewport heights of at least 540px, the title card pins for additional scroll travel equal to 1.85 viewport heights at widths of 900px and above, or 1.15 viewport heights below 900px. Between 540px and 679px high, compact typography and spacing reserve room for the bridge actions and scroll cue. Below 540px high, the title separation and network camera still scrub over 0.85 viewport heights while the readable bridge and actions stay in normal document flow. Reduced motion disables this choreography at every size and keeps all introduction content visible in the unpinned layout.
 
 Below the Home opening, About separates its introduction and expanded biography into two columns, followed by three discipline tiles in a 1.2fr / 1fr / 1fr grid. Each tile pairs its large title and existing abbreviation with descriptive copy and a destination. At 1100px and below, Computer Science spans two columns above Robotics and Music; below 768px all three stack. The Robotics section groups its original robot photograph, title/season caption and technical record into one continuous tile. Its photograph uses a wide 21:10 crop on desktop and 4:3 on mobile. The Home Music section pairs a 4:5 performance photograph and caption with separate repertoire and accomplishment tiles; the image becomes 4:3 and the composition stacks on mobile.
 
-Projects opens with three original screenshot plates assembling from scattered positions beneath the departing title: RouteLab, PC Turf and Personal Portfolio Website. Wide screens resolve into three columns; narrow screens form an overlapping fan. The final description and Explore the projects action appear as the artwork recedes. Project counts and chapter links sit in ordinary flow after the hero.
+Projects opens on white with three original screenshots in pale plates assembling from scattered positions beneath the departing title: RouteLab, PC Turf and Personal Portfolio Website. Wide screens resolve into three columns; narrow screens form an overlapping fan. The final description and Explore the projects action appear as the artwork recedes. Project counts and chapter links sit in ordinary flow after the hero.
 
 The Projects explorer retains its sticky filter sidebar and responsive result grid; below 768px filters move into normal flow as a horizontally scrollable row. Both featured and ordinary project tiles place imagery above title, description and technical evidence. Featured projects use two columns, reducing to one below 960px. Original images use object-contain within a 16:10 frame so their full content remains visible, with an inset of 24px on desktop and 16px on mobile. The tile body contains every existing technology, disclosure and destination.
 
-Music opens on a dark studio stage with a live, polished brass trumpet. Warm key light, room reflections and a blue rim light reveal its hollow bell, curved tubing, nickel details and pearl valve buttons. Scrolling rotates the instrument around its bell, then moves the camera toward the opening. The introduction appears through a circular aperture projected from the actual bell rim; as the rim passes beyond the viewport, the aperture becomes the ordinary page background. The Performance & repertoire heading and Watch a performance action are revealed inside that opening. Chapter-link tiles in normal flow lead to the performance, repertoire and gallery. Featured repertoire uses a two-column tile grid with the work title above composer and description. Accomplishments use three columns, two at 1100px and below, and one on mobile. Featured repertoire also stacks below 768px.
+Music opens on a white studio stage with a pale-blue radial backdrop and a live, polished brass trumpet. Warm key light, room reflections and a blue rim light reveal its hollow bell, curved tubing, nickel details and pearl valve buttons. Scrolling rotates the instrument around its bell, then moves the camera toward the opening. The introduction appears through a circular aperture projected from the actual bell rim; as the rim passes beyond the viewport, the aperture becomes the ordinary page background. The Performance & repertoire heading and Watch a performance action are revealed inside that opening. Chapter-link tiles in normal flow lead to the performance, repertoire and gallery. Featured repertoire uses a two-column tile grid with the work title above composer and description. Accomplishments use three columns, two at 1100px and below, and one on mobile. Featured repertoire also stacks below 768px.
 
 The full repertoire remains searchable by composer, piece or descriptive text and retains its semantic table structure. Desktop rows are separate tonal surfaces with 12px vertical spacing; on mobile each record becomes one padded tile while column headings remain available to assistive technology. Gallery figures group original imagery and existing captions into tiles; the lead image spans both desktop columns, the third is portrait-oriented and the fourth centers vertically in its grid row. The gallery becomes one column on mobile.
 
@@ -198,11 +216,11 @@ The Projects Robotics composition retains its media reveal at every width. The w
 
 ## Elevation & Depth
 
-Content tiles separate through tonal contrast and gutters, without outlining or shadowing every record. Glass remains reserved for navigation and selected supporting containers, with inset highlights, diffuse shadows and pointer-tracked sheen. Navigation layers a diagonal white/blue highlight over a black tint at 0.24 opacity, with inset upper, perimeter and lower highlights plus a diffuse drop shadow. Project images sit within their tile padding without a separate shadow. The cinematic project plates use soft downward shadows to make their assembly legible. Contact tiles use opaque surfaces without glass refraction or decorative sheen. The system uses diffuse depth rather than hard offset shadows.
+Content tiles separate through tonal contrast and gutters, without outlining or shadowing every record. Glass remains reserved for navigation and selected supporting containers, with inset highlights, diffuse shadows and pointer-tracked sheen. Navigation layers a diagonal white/blue highlight over translucent white glass, with near-black text, inset highlights and a diffuse drop shadow. Project images sit within their tile padding without a separate shadow. The cinematic project plates use soft downward shadows to make their assembly legible. Contact tiles use opaque surfaces without glass refraction or decorative sheen. The system uses diffuse depth rather than hard offset shadows.
 
 SVG backdrop displacement preserves the requested background refraction in supported engines. Navigation uses edge displacement scale −20, warp-noise scale 24, optical blur 0.2px, saturation 155%, contrast 1.04 and brightness 1.08; its fine static grain remains unchanged. The surface filter remains unchanged with 0.65px optical blur. WebKit and Gecko retain frosted blur fallbacks of 11px for surfaces and 14px for navigation. Text remains outside the displaced pixels. Do not document the unused legacy light-music navigation modifier as a live theme.
 
-Hover transitions generally last 200–300ms; glass sheen uses 400ms. The computation background renders live blue points, links and traveling signals through WebGL. Perspective, depth fading, additive light and spring deformation give the network volume; it does not sample a raster image. Animation pauses offscreen and in hidden tabs. The scene follows the operating-system reduced-motion preference directly, with no on-page override; a deterministic SVG network remains available before WebGL initializes or when it is unavailable. Global reduced-motion CSS removes smooth scrolling and nearly eliminates transitions.
+Hover transitions generally last 200–300ms; glass sheen uses 400ms. The computation background renders live blue points, links and traveling signals through WebGL. Perspective, depth fading and spring deformation give the network volume. Normal alpha compositing keeps royal-blue links and dark-blue nodes and signals visible on white; the renderer does not sample a raster image. Animation pauses offscreen and in hidden tabs. The scene follows the operating-system reduced-motion preference directly, with no on-page override; a deterministic SVG network remains available before WebGL initializes or when it is unavailable. Global reduced-motion CSS removes smooth scrolling and nearly eliminates transitions.
 
 Project hover and keyboard focus retain the inner image's 4px lift over 550ms with exponential ease-out, without adding a shadow. Native Technical details summaries animate their plus into a minus inside a filled control; all disclosure content remains browser-managed. About highlight links respond through a 220ms surface-color transition, with no extending rule or heading shift. Music's opening uses the instrument's scroll-linked turn and reframing. Repertoire result counts give a brief 220ms update response. These enhancements begin with visible content and honor reduced motion.
 
@@ -212,7 +230,7 @@ The Home sequence follows scroll position with 0.35-second smoothing; reversing 
 
 ## Shapes
 
-Controls use nearly square corners, with slightly softer badges and rounded media frames. Navigation and the work tray retain 12px corners and fine borders. Content tiles use 16px corners; project images and filled Technical details controls use 8px corners. Cinematic screenshot plates use 12px corners. Desktop repertoire rows use 12px end corners, while mobile repertoire tiles use the shared 16px radius. A dimensional, triangulated network of luminous points and fine connections is the Home signature.
+Controls use nearly square corners, with slightly softer badges and rounded media frames. Navigation and the work tray retain 12px corners and fine borders. Content tiles use 16px corners; project images and filled Technical details controls use 8px corners. Cinematic screenshot plates use 12px corners. Desktop repertoire rows use 12px end corners, while mobile repertoire tiles use the shared 16px radius. A dimensional, triangulated network of blue points and fine connections is the Home signature.
 
 ## Components
 
@@ -232,25 +250,25 @@ Visible actions stay concise. Project links and Technical details disclosures in
 
 ### Buttons
 
-Primary actions use a solid accent fill and dark text, changing to an ice-white fill on hover. Secondary actions remain outlined with ice-white text and a muted blue border, filling with accent and dark text on hover. Both have a minimum height of 48px. Small buttons use 40px minimum height and 8px/12px padding; project actions increase that minimum to 44px. Ghost actions omit the visible border and fill, and turn accent on hover. Shared visible focus is a 2px accent outline with 5px offset. Button icons shift 3px on hover or keyboard focus when motion is permitted. Pointer response retains glass sheen without magnetic transforms.
+Primary actions use a solid accent fill and on-accent text, changing to the local foreground fill and background text on hover. Secondary actions remain outlined with foreground text and a control-border edge, filling with accent and on-accent text on hover. Both have a minimum height of 48px. Small buttons use 40px minimum height and 8px/12px padding; project actions increase that minimum to 44px. Ghost actions omit the visible border and fill, and turn accent on hover. Shared visible focus is a 2px accent outline with 5px offset. Button icons shift 3px on hover or keyboard focus when motion is permitted. Pointer response retains glass sheen without magnetic transforms.
 
 ### Inputs and filters
 
-Project search uses a dark surface, a visible blue border and an accent outline on focus. Its input uses 14px type on desktop and 16px on mobile. An inline Clear search button returns focus to the field. Category filters are semantic buttons with `aria-pressed` and `aria-controls`; selected buttons fill with blue and dark text. Counts use compact mono type and tabular numerals. Mobile filters form a bordered, horizontally scrollable row with 44px targets. The live result status stays above the list, and empty results retain explanatory text and a clear-filter action.
+Project search uses the local surface, a visible control border and an accent outline on focus. Its input uses 14px type on desktop and 16px on mobile. An inline Clear search button returns focus to the field. Category filters are semantic buttons with `aria-pressed` and `aria-controls`; selected buttons use accent fill and on-accent text. Counts use compact mono type and tabular numerals. Mobile filters form a bordered, horizontally scrollable row with 44px targets. The live result status stays above the list, and empty results retain explanatory text and a clear-filter action.
 
 Repertoire search uses a labeled 16px field, a clear action that returns input focus, and a polite live result count. Search matches every entered word across composer, title and description, without changing the stored order. The initial view includes all pieces. Empty results explain the query and offer Show all pieces. Mobile table headings are visually clipped rather than removed from assistive technology; row headers and cell roles remain explicit in the stacked view.
 
 ### Badges and records
 
-Shared technology badges retain a faint blue tint, blue border, light ink, mono type and a subtle inset highlight. Within project tiles they use a #20324b fill, muted light ink and transparent borders. Project tiles combine original media, title/status, description, every technology badge, expandable technical details and existing links. Status pairs a small icon with text; In Progress uses the accent. Detail disclosures use native summaries, a plus/minus indicator and an accent open state within a filled #1a2a40 control. Experience and accomplishment tiles each group one record; Resume tiles group an entire subject with open entries inside. Home's Computer Science, Robotics and Music highlights form complete navigation tiles with no separate image background.
+Shared technology badges use semantic chip surfaces and ink, transparent borders, mono type and their existing subtle inset highlight. The same tokens govern badges inside project tiles, pairing dark-blue ink with pale-blue fills across white and paper cards. Project tiles combine original media, title/status, description, every technology badge, expandable technical details and existing links. Status pairs a small icon with text; In Progress uses the accent. Detail disclosures use native summaries, a plus/minus indicator and an accent open state within a filled surface control. Experience and accomplishment tiles each group one record; Resume tiles group an entire subject with open entries inside. Home's Computer Science, Robotics and Music highlights form complete navigation tiles with no separate image background.
 
 ### Navigation
 
 Projects and Music place chapter-link tiles after their cinematic introductions in normal flow. These remain ordinary anchors with a directional arrow, 20px by 24px padding, the shared tile radius and clear hover/focus treatment. They wrap across a row on desktop and stack on narrow screens. The existing global scroll padding keeps anchor destinations below the fixed navigation. The independent Skip intro anchors lead to featured Projects and Music performance content. Resume does not acquire a new section index.
 
-A fixed bar sits 10px from viewport edges. It contains the original JG mark and condensed uppercase route links; the current link has accent text and a bottom underline. Desktop links are centered in a three-column grid, with an always-visible Glass switch at the right. The switch uses a 44px target, `role="switch"`, the accessible name Liquid glass navigation, and `aria-checked` for its state. Glass is on by default; the browser saves the visitor’s choice across routes and reloads. When storage is unavailable, the choice remains usable for the current page session. Turning Glass off gives the same navigation an opaque #0b111c surface, a hairline border and 12px corners, with no backdrop effect, shadow or sheen. Content, route links and menu behavior stay the same.
+A fixed bar sits 10px from viewport edges. It contains the original JG mark and condensed uppercase route links; the current link has accent text and a bottom underline. Desktop links are centered in a three-column grid, with an always-visible Glass switch at the right. The switch uses a 44px target, `role="switch"`, the accessible name Liquid glass navigation, and `aria-checked` for its state. Glass is on by default; the browser saves the visitor’s choice across routes and reloads. When storage is unavailable, the choice remains usable for the current page session. Turning Glass off gives the same navigation an opaque pale-blue surface, a hairline border and 12px corners, with no backdrop effect, shadow or sheen. Content, route links and menu behavior stay the same.
 
-The desktop bar is 64px high; below 768px it is 60px, with the Glass switch beside the 44px menu target. The mobile menu is an opaque dark panel with large route links, visible current state, Escape dismissal and focus return. When Glass is on, the header retains its layered glass material while scrolling. In engines using SVG backdrop refraction, a static PNG normal map is derived from the bar’s current dimensions and rounded corners, with a 16px rim that flattens toward the center. ResizeObserver and a scheduled animation frame update the map only when dimensions change; scrolling does not regenerate it. The observer runs only while Glass is on. The original static SVG map remains the initial fallback.
+The desktop bar is 64px high; below 768px it is 60px, with the Glass switch beside the 44px menu target. The mobile menu is a near-opaque white panel with large route links, visible current state, Escape dismissal and focus return. When Glass is on, the header retains its layered glass material while scrolling. In engines using SVG backdrop refraction, a static PNG normal map is derived from the bar’s current dimensions and rounded corners, with a 16px rim that flattens toward the center. ResizeObserver and a scheduled animation frame update the map only when dimensions change; scrolling does not regenerate it. The observer runs only while Glass is on. The original static SVG map remains the initial fallback.
 
 ### Cinematic Home opening
 
@@ -258,11 +276,11 @@ The opening pairs a centered identity with the Scroll to explore cue and a fine 
 
 ### Cinematic route openings
 
-The Projects and Music openings each give their subject one distinct scroll sequence, then release into the ordinary page. Projects uses uncropped screenshots; Music uses a lit 3D brass trumpet on a dark stage. Title, artwork and summary are separate layers, while Skip intro remains outside the animated layers. The summary's controls become interactive only after it is visible. Without enhancement, title, summary and actions remain visible in normal flow; no script is required to reach the content.
+The Projects and Music openings each give their subject one distinct scroll sequence, then release into the ordinary page. Projects uses uncropped screenshots; Music uses a lit 3D brass trumpet on a white and pale-blue studio backdrop. Title, artwork and summary are separate layers, while Skip intro remains outside the animated layers. The summary's controls become interactive only after it is visible. Without enhancement, title, summary and actions remain visible in normal flow; no script is required to reach the content.
 
 ### Live trumpet stage
 
-The Music instrument uses Kagelok's licensed CC BY 4.0 trumpet, stored locally as glTF and binary geometry (884 KB total). The original 28,076 triangles, normals, valve arrangement, tuning slides, braces and finger rings are retained. Runtime adaptation resets the presentation pose, centers the instrument, scales it uniformly, and adjusts material roughness. Asset provenance and license are in `public/models/trumpet/README.md`; visible attribution appears below the Music gallery. Room reflections, warm light and a cool blue rim give the brass its form against the dark stage. The initial view settles for four seconds, then updates on scroll or input. Mouse movement adds a slight response; touch retains ordinary scrolling, and the scene produces no audio.
+The Music instrument uses Kagelok's licensed CC BY 4.0 trumpet, stored locally as glTF and binary geometry (884 KB total). The original 28,076 triangles, normals, valve arrangement, tuning slides, braces and finger rings are retained. Runtime adaptation resets the presentation pose, centers the instrument, scales it uniformly, and adjusts material roughness. Asset provenance and license are in `public/models/trumpet/README.md`; visible attribution appears below the Music gallery. Room reflections, warm light and a cool blue rim give the natural brass its form against the white and pale-blue studio. The initial view settles for four seconds, then updates on scroll or input. Mouse movement adds a slight response; touch retains ordinary scrolling, and the scene produces no audio.
 
 Reduced motion keeps a static 3D view and visible introduction in normal flow. A transparent 2880 by 2000 render of the same instrument appears before loading, when WebGL is unavailable, or after context loss. Rendering pauses offscreen and in hidden tabs, and pixel density is capped at 2. Both the canvas and its fallback are decorative and hidden from assistive technology.
 
@@ -283,13 +301,13 @@ The Music performance section keeps its photograph, introduction and video in no
 - Do preserve the existing identity, media, content and accomplishments required by PRODUCT.md.
 - Do use the condensed hierarchy and retain comfortable reading measures for evidence text.
 - Do use direct sentence-case headings, factual descriptions and action labels that state their destination or outcome.
-- Do keep music in the shared blue-and-black palette.
+- Do keep the entire interface white and blue with near-black text and accents, including heroes and the footer.
 - Do preserve real background refraction, static fallbacks, keyboard focus and reduced-motion behavior.
 - Do allow responsive content to flow rather than clipping text to the desktop composition.
 
 ### Don't:
 
-- Don't reintroduce the obsolete old green interface or light paper music theme.
+- Don't reintroduce dark stages, solid cobalt page regions, white body text on blue, or brass interface accents.
 - Don't recolor original portfolio media to force palette uniformity.
 - Don't present the interactive graph as real performance data or a measured system.
 - Don't promote leftover uppercase supporting labels into a required eyebrow or kicker system.

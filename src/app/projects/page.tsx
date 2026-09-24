@@ -181,10 +181,7 @@ export default function ProjectsPage() {
                         alt=""
                         fill
                         sizes="(max-width: 1024px) 0px, 40vw"
-                        className={cn(
-                          "object-contain drop-shadow-[0_0_28px_rgba(47,95,224,0.25)]",
-                          experience.gameLogoInvert && "invert",
-                        )}
+                        className="object-contain"
                       />
                     </div>
                   ))}
@@ -192,7 +189,7 @@ export default function ProjectsPage() {
                     data-robotics-scanline
                     className="absolute inset-x-0 top-0 h-10 -translate-y-1/2 bg-[linear-gradient(180deg,transparent,rgba(96,141,255,0.4),transparent)] opacity-0"
                   />
-                  <div className="absolute inset-x-0 bottom-0 grid bg-gradient-to-t from-slate-950/85 via-slate-950/40 to-transparent p-5 pt-16">
+                  <div className="robotics-caption-panel absolute inset-x-0 bottom-0 grid p-5 pt-16">
                     {roboticsExperiences.map((experience, index) => (
                       <div
                         key={experience.id}
@@ -232,11 +229,7 @@ export default function ProjectsPage() {
                           sizes="(max-width: 1024px) 100vw, 55vw"
                           className="object-cover"
                         />
-                        <div
-                          aria-hidden="true"
-                          className="absolute inset-0 bg-[linear-gradient(180deg,transparent_55%,rgba(16,18,21,0.6)_100%)]"
-                        />
-                        <span className="absolute left-4 top-4 rounded-md border border-blue-300/25 bg-slate-950/60 px-2.5 py-1 font-mono text-[11px] font-medium tracking-wide text-blue-100 backdrop-blur">
+                        <span className="absolute left-4 top-4 rounded-md bg-white/95 px-2.5 py-1 font-mono text-[11px] font-medium tracking-wide text-blue-100 backdrop-blur">
                           {experience.year} - {experience.seasonName}
                         </span>
                       </div>

@@ -1,0 +1,495 @@
+[
+  {
+    "low": [],
+    "min": 5.78,
+    "overflow": 0,
+    "privateBadges": 0,
+    "samples": [
+      {
+        "bg": [
+          255,
+          255,
+          255
+        ],
+        "class": "project-title",
+        "color": "rgb(16, 34, 59)",
+        "ratio": 15.98,
+        "size": "47.52px",
+        "text": "RouteLab",
+        "weight": "600"
+      },
+      {
+        "bg": [
+          225,
+          235,
+          250
+        ],
+        "class": "skill-badge inline-flex items-center rounded-md border px-2.5 py-1 font-mono text-[11px] font-medium tracking-wide project-technology",
+        "color": "rgb(28, 67, 127)",
+        "ratio": 8.09,
+        "size": "11px",
+        "text": "Next.js",
+        "weight": "500"
+      },
+      {
+        "bg": [
+          229,
+          237,
+          247
+        ],
+        "class": "",
+        "color": "rgb(22, 75, 214)",
+        "ratio": 5.91,
+        "size": "13px",
+        "text": "Technical details for RouteLab",
+        "weight": "500"
+      },
+      {
+        "bg": [
+          229,
+          237,
+          247
+        ],
+        "class": "sr-only",
+        "color": "rgb(22, 75, 214)",
+        "ratio": 5.91,
+        "size": "13px",
+        "text": "for RouteLab",
+        "weight": "500"
+      },
+      {
+        "bg": [
+          255,
+          255,
+          255
+        ],
+        "class": "",
+        "color": "rgb(72, 92, 117)",
+        "ratio": 6.86,
+        "size": "14px",
+        "text": "RouteLab transforms real graph-search executions into deterministic, i",
+        "weight": "400"
+      },
+      {
+        "bg": [
+          255,
+          255,
+          255
+        ],
+        "class": "project-description",
+        "color": "rgb(51, 73, 97)",
+        "ratio": 9.27,
+        "size": "16px",
+        "text": "A production-ready Next.js portfolio for projects, robotics, music, an",
+        "weight": "400"
+      },
+      {
+        "bg": [
+          225,
+          235,
+          250
+        ],
+        "class": "skill-badge inline-flex items-center rounded-md border px-2.5 py-1 font-mono text-[11px] font-medium tracking-wide project-technology",
+        "color": "rgb(28, 67, 127)",
+        "ratio": 8.09,
+        "size": "11px",
+        "text": "Next.js",
+        "weight": "500"
+      },
+      {
+        "bg": [
+          229,
+          237,
+          247
+        ],
+        "class": "",
+        "color": "rgb(16, 34, 59)",
+        "ratio": 13.54,
+        "size": "13px",
+        "text": "Technical details for Personal Portfolio Website",
+        "weight": "500"
+      },
+      {
+        "bg": [
+          225,
+          235,
+          250
+        ],
+        "class": "skill-badge inline-flex items-center rounded-md border px-2.5 py-1 font-mono text-[11px] font-medium tracking-wide project-technology",
+        "color": "rgb(28, 67, 127)",
+        "ratio": 8.09,
+        "size": "11px",
+        "text": "Next.js",
+        "weight": "500"
+      },
+      {
+        "bg": [
+          229,
+          237,
+          247
+        ],
+        "class": "",
+        "color": "rgb(16, 34, 59)",
+        "ratio": 13.54,
+        "size": "13px",
+        "text": "Technical details for PC Turf",
+        "weight": "500"
+      },
+      {
+        "bg": [
+          5,
+          7,
+          11
+        ],
+        "class": "mb-3 block text-sm font-medium text-slate-100",
+        "color": "rgb(238, 244, 255)",
+        "ratio": 18.26,
+        "size": "14px",
+        "text": "Search projects",
+        "weight": "500"
+      },
+      {
+        "bg": [
+          16,
+          31,
+          53
+        ],
+        "class": "project-title",
+        "color": "rgb(245, 248, 252)",
+        "ratio": 15.53,
+        "size": "38px",
+        "text": "RouteLab",
+        "weight": "600"
+      },
+      {
+        "bg": [
+          30,
+          52,
+          81
+        ],
+        "class": "skill-badge inline-flex items-center rounded-md border px-2.5 py-1 font-mono text-[11px] font-medium tracking-wide project-technology",
+        "color": "rgb(214, 230, 251)",
+        "ratio": 9.95,
+        "size": "11px",
+        "text": "Next.js",
+        "weight": "500"
+      },
+      {
+        "bg": [
+          14,
+          26,
+          44
+        ],
+        "class": "",
+        "color": "rgb(245, 248, 252)",
+        "ratio": 16.39,
+        "size": "13px",
+        "text": "Technical details for RouteLab",
+        "weight": "500"
+      },
+      {
+        "bg": [
+          14,
+          26,
+          44
+        ],
+        "class": "sr-only",
+        "color": "rgb(245, 248, 252)",
+        "ratio": 16.39,
+        "size": "13px",
+        "text": "for RouteLab",
+        "weight": "500"
+      }
+    ],
+    "type": "projects-desktop"
+  },
+  {
+    "count": "0 projects matching “RouteLab” in AIClear search and filters",
+    "empty": "No matching projectsTry a different search or category, or show all projects to reset both.Show all projects",
+    "input": "rgb(245, 248, 252)",
+    "low": [],
+    "min": 9.07,
+    "overflow": 0,
+    "placeholder": "rgb(180, 193, 212)",
+    "samples": [
+      {
+        "bg": [
+          5,
+          7,
+          11
+        ],
+        "class": "mb-3 block text-sm font-medium text-slate-100",
+        "color": "rgb(238, 244, 255)",
+        "ratio": 18.26,
+        "size": "14px",
+        "text": "Search projects",
+        "weight": "500"
+      },
+      {
+        "bg": [
+          5,
+          7,
+          11
+        ],
+        "class": "filter-tag-label",
+        "color": "rgb(180, 193, 212)",
+        "ratio": 11.06,
+        "size": "14px",
+        "text": "All projects",
+        "weight": "400"
+      },
+      {
+        "bg": [
+          5,
+          7,
+          11
+        ],
+        "class": "min-w-0 [overflow-wrap:anywhere]",
+        "color": "rgb(245, 248, 252)",
+        "ratio": 18.93,
+        "size": "13px",
+        "text": "0 projects matching “RouteLab” in AI",
+        "weight": "400"
+      }
+    ],
+    "searchBg": "rgb(14, 26, 44)",
+    "type": "projects-filter-combined"
+  },
+  {
+    "low": [],
+    "min": 5.91,
+    "overflow": 0,
+    "samples": [
+      {
+        "bg": [
+          255,
+          255,
+          255
+        ],
+        "class": "project-title",
+        "color": "rgb(16, 34, 59)",
+        "ratio": 15.98,
+        "size": "40px",
+        "text": "RouteLab",
+        "weight": "600"
+      },
+      {
+        "bg": [
+          225,
+          235,
+          250
+        ],
+        "class": "skill-badge inline-flex items-center rounded-md border px-2.5 py-1 font-mono text-[11px] font-medium tracking-wide project-technology",
+        "color": "rgb(28, 67, 127)",
+        "ratio": 8.09,
+        "size": "11px",
+        "text": "Next.js",
+        "weight": "500"
+      },
+      {
+        "bg": [
+          229,
+          237,
+          247
+        ],
+        "class": "",
+        "color": "rgb(22, 75, 214)",
+        "ratio": 5.91,
+        "size": "13px",
+        "text": "Technical details for RouteLab",
+        "weight": "500"
+      },
+      {
+        "bg": [
+          229,
+          237,
+          247
+        ],
+        "class": "sr-only",
+        "color": "rgb(22, 75, 214)",
+        "ratio": 5.91,
+        "size": "13px",
+        "text": "for RouteLab",
+        "weight": "500"
+      },
+      {
+        "bg": [
+          255,
+          255,
+          255
+        ],
+        "class": "",
+        "color": "rgb(72, 92, 117)",
+        "ratio": 6.86,
+        "size": "14px",
+        "text": "RouteLab transforms real graph-search executions into deterministic, i",
+        "weight": "400"
+      },
+      {
+        "bg": [
+          255,
+          255,
+          255
+        ],
+        "class": "project-description",
+        "color": "rgb(51, 73, 97)",
+        "ratio": 9.27,
+        "size": "16px",
+        "text": "A production-ready Next.js portfolio for projects, robotics, music, an",
+        "weight": "400"
+      },
+      {
+        "bg": [
+          225,
+          235,
+          250
+        ],
+        "class": "skill-badge inline-flex items-center rounded-md border px-2.5 py-1 font-mono text-[11px] font-medium tracking-wide project-technology",
+        "color": "rgb(28, 67, 127)",
+        "ratio": 8.09,
+        "size": "11px",
+        "text": "Next.js",
+        "weight": "500"
+      },
+      {
+        "bg": [
+          229,
+          237,
+          247
+        ],
+        "class": "",
+        "color": "rgb(16, 34, 59)",
+        "ratio": 13.54,
+        "size": "13px",
+        "text": "Technical details for Personal Portfolio Website",
+        "weight": "500"
+      },
+      {
+        "bg": [
+          225,
+          235,
+          250
+        ],
+        "class": "skill-badge inline-flex items-center rounded-md border px-2.5 py-1 font-mono text-[11px] font-medium tracking-wide project-technology",
+        "color": "rgb(28, 67, 127)",
+        "ratio": 8.09,
+        "size": "11px",
+        "text": "Next.js",
+        "weight": "500"
+      },
+      {
+        "bg": [
+          229,
+          237,
+          247
+        ],
+        "class": "",
+        "color": "rgb(16, 34, 59)",
+        "ratio": 13.54,
+        "size": "13px",
+        "text": "Technical details for PC Turf",
+        "weight": "500"
+      }
+    ],
+    "type": "projects-mobile"
+  },
+  {
+    "low": [],
+    "min": 5.78,
+    "overflow": 0,
+    "samples": [
+      {
+        "bg": [
+          22,
+          75,
+          214
+        ],
+        "class": "",
+        "color": "rgb(225, 234, 255)",
+        "ratio": 5.78,
+        "size": "12px",
+        "text": "Copyright 2026 Jonathan Graydon. Built with Next.js.",
+        "weight": "400"
+      }
+    ],
+    "tones": [
+      {
+        "bg": "rgb(237, 242, 247)",
+        "cls": "music-section performance-section py-20 sm:py-24",
+        "tone": "paper"
+      },
+      {
+        "bg": "rgb(16, 31, 53)",
+        "cls": "performance-record",
+        "tone": "ink"
+      },
+      {
+        "bg": "rgb(22, 75, 214)",
+        "cls": "repertoire-feature",
+        "tone": "cobalt"
+      },
+      {
+        "bg": "rgb(255, 255, 255)",
+        "cls": "repertoire-feature",
+        "tone": "paper"
+      },
+      {
+        "bg": "rgb(255, 255, 255)",
+        "cls": "repertoire-feature",
+        "tone": "paper"
+      },
+      {
+        "bg": "rgb(255, 255, 255)",
+        "cls": "repertoire-feature",
+        "tone": "paper"
+      },
+      {
+        "bg": "rgb(22, 75, 214)",
+        "cls": "site-footer",
+        "tone": "cobalt"
+      }
+    ],
+    "type": "music-desktop"
+  },
+  {
+    "low": [],
+    "min": 5.78,
+    "overflow": 0,
+    "pinsInsidePerformance": 0,
+    "samples": [
+      {
+        "bg": [
+          22,
+          75,
+          214
+        ],
+        "class": "",
+        "color": "rgb(225, 234, 255)",
+        "ratio": 5.78,
+        "size": "12px",
+        "text": "Copyright 2026 Jonathan Graydon. Built with Next.js.",
+        "weight": "400"
+      }
+    ],
+    "type": "music-mobile",
+    "videoBounds": {
+      "bottom": 1072.484375,
+      "height": 165.375,
+      "left": 48,
+      "right": 342,
+      "top": 907.109375,
+      "width": 294,
+      "x": 48,
+      "y": 907.109375
+    }
+  },
+  {
+    "count": "1 of 23 pieces",
+    "low": [],
+    "min": 9,
+    "overflow": 0,
+    "rows": 1,
+    "samples": [],
+    "type": "repertoire-mobile-search"
+  }
+]

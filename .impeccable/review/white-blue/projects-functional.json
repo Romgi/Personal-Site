@@ -1,0 +1,53 @@
+[
+  {
+    "height": 1000,
+    "low": [],
+    "min": 5.6,
+    "nav": "rgba(255, 255, 255, 0.82)",
+    "overflow": 0,
+    "pins": 2,
+    "spacerHeight": 2500,
+    "type": "/projects-desktop-initial"
+  },
+  {
+    "count": "0 projects matching “RouteLab” in AIClear search and filters",
+    "empty": true,
+    "low": [],
+    "min": 6.12,
+    "overflow": 0,
+    "type": "projects-search-desktop"
+  },
+  {
+    "low": [],
+    "min": 5.6,
+    "overflow": 0,
+    "type": "projects-mobile"
+  },
+  {
+    "bg": "rgb(237, 243, 251)",
+    "page": "/projects",
+    "placeholder": "rgb(76, 92, 112)",
+    "placeholderRatio": 6.12,
+    "text": "rgb(17, 21, 28)",
+    "textRatio": 16.39,
+    "type": "input-contrast"
+  },
+  {
+    "emptyPadding": "24px",
+    "low": [],
+    "min": 5.35,
+    "overflow": 0,
+    "tileBg": "rgb(222, 235, 255)",
+    "tone": "blue",
+    "type": "projects-final-mobile"
+  },
+  {
+    "emptyPadding": "36px",
+    "low": [],
+    "min": 5.35,
+    "overflow": 0,
+    "tileBg": "rgb(222, 235, 255)",
+    "tone": "blue",
+    "type": "projects-final-desktop"
+  }
+]

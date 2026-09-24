@@ -14,7 +14,7 @@
   overflow: hidden;
   border: 1px solid var(--hairline);
   border-radius: 12px;
-  background: #0b111c;
+  background: var(--surface);
   transition:
     border-color 250ms ease-out,
     background-color 250ms ease-out;
@@ -24,7 +24,7 @@
   width: 100%;
   border: 0;
   border-radius: 4px;
-  background: var(--background);
+  background: var(--surface);
   box-shadow: 0 14px 28px rgb(0 0 0 / 20%);
   transition:
     transform 550ms cubic-bezier(0.16, 1, 0.3, 1),
@@ -75,7 +75,7 @@
 .project-card .project-description {
   max-width: 64ch;
   margin-top: 18px;
-  color: #bdcde3;
+  color: var(--text-secondary);
   font-size: 14px;
   line-height: 1.8;
 }
@@ -218,8 +218,8 @@
   position: relative;
   padding: 0 40px 0 12px;
   min-height: 48px;
-  border-color: #6989ae;
-  background: #0b111c;
+  border-color: var(--control-border);
+  background: var(--surface);
   color: var(--muted);
   transition:
     background-color 200ms ease-out,
@@ -232,7 +232,7 @@
 
 .project-explorer .project-search:focus-within {
   border-color: var(--accent);
-  background: #101c2c;
+  background: var(--surface-hover);
   outline: 2px solid var(--accent);
   outline-offset: 3px;
   color: var(--accent);
@@ -261,7 +261,7 @@
 
 .project-explorer .project-search-clear:hover {
   color: var(--foreground);
-  background: rgb(125 187 255 / 12%);
+  background: var(--accent-soft);
 }
 
 .project-explorer .filter-tags {
@@ -274,6 +274,12 @@
     color 200ms ease-out,
     background-color 200ms ease-out,
     border-color 200ms ease-out;
+}
+
+.project-explorer .filter-tags button[aria-pressed="true"] {
+  border-color: var(--accent);
+  background: var(--accent);
+  color: var(--on-accent);
 }
 
 .project-explorer .filter-tag-label {
@@ -309,7 +315,7 @@
 }
 
 .project-explorer .project-empty {
-  padding: 48px 0;
+  padding: var(--tile-inset);
   border-top: 0;
 }
 
@@ -320,7 +326,7 @@
 }
 
 .project-explorer .project-empty .button {
-  border: 1px solid #6989ae;
+  border: 1px solid var(--control-border);
   padding: 12px 20px;
 }
 
@@ -335,7 +341,7 @@
 }
 
 .project-card:focus-within .project-media {
-  border-color: #6989ae;
+  border-color: var(--control-border);
 }
 
 .project-card:focus-within .project-artwork {
@@ -345,8 +351,8 @@
 
 @media (hover: hover) and (pointer: fine) {
   .project-card:hover .project-media {
-    border-color: #6989ae;
-    background: #101c2c;
+    border-color: var(--control-border);
+    background: var(--surface-hover);
   }
 
   .project-card:hover .project-artwork {

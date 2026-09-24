@@ -19,16 +19,16 @@ uniform float points;
 varying float light;
 varying float distanceFade;
 void main() {
-  vec3 blue = mix(vec3(.16,.44,.88), vec3(.62,.86,1.), min(light, 1.));
+  vec3 blue = mix(vec3(.086,.294,.839), vec3(.035,.12,.38), min(light, 1.));
   float alpha = (.26 + light * .72) * distanceFade;
   if (points > .5) {
     float r = length(gl_PointCoord - .5) * 2.;
     float core = 1. - smoothstep(.08, .33, r);
     float halo = pow(max(0., 1. - r), 2.5);
     alpha = (core * .85 + halo * (.3 + light)) * distanceFade;
-    blue = mix(blue, vec3(.88,.96,1.), core * min(.4 + light, 1.));
+    blue = mix(blue, vec3(.018,.07,.22), core * min(.4 + light, 1.));
   }
-  gl_FragColor = vec4(blue, alpha);
+  gl_FragColor = vec4(blue, clamp(alpha, 0., 1.));
 }`;
 
 export type ComputationScene = {
@@ -85,7 +85,14 @@ export function createComputationScene(
   }
   gl.useProgram(program);
   gl.enable(gl.BLEND);
-  gl.blendFuncSeparate(gl.SRC_ALPHA, gl.ONE, gl.ONE, gl.ONE_MINUS_SRC_ALPHA);
+  // Source-over keeps blue marks legible on white and produces the
+  // premultiplied framebuffer expected by the transparent canvas compositor.
+  gl.blendFuncSeparate(
+    gl.SRC_ALPHA,
+    gl.ONE_MINUS_SRC_ALPHA,
+    gl.ONE,
+    gl.ONE_MINUS_SRC_ALPHA,
+  );
   const position = gl.getAttribLocation(program, "position");
   const energy = gl.getAttribLocation(program, "energy");
   const depth = gl.getAttribLocation(program, "depth");

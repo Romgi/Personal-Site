@@ -59,6 +59,7 @@ export default function MusicPage() {
 
       <section
         id="performance"
+        data-tone="paper"
         className="music-section performance-section py-20 sm:py-24"
       >
         <Container>
@@ -77,7 +78,7 @@ export default function MusicPage() {
                 title="Trumpet performance"
                 description="Jonathan's trumpet work spans solo repertoire, honour bands, ensemble leadership, festival awards, and ongoing university performances."
               />
-              <div className="performance-record">
+              <div className="performance-record" data-tone="blue">
                 <p className="text-sm font-semibold text-white">
                   Bugler&apos;s Holiday with McMaster Concert Band
                 </p>
@@ -92,9 +93,12 @@ export default function MusicPage() {
         <Container>
           <SectionHeading title="Featured repertoire" />
           <div className="featured-repertoire">
-            {featuredRepertoire.map((item) => (
+            {featuredRepertoire.map((item, index) => (
               <AnimatedSection key={item.id}>
-                <article className="repertoire-feature">
+                <article
+                  className="repertoire-feature"
+                  data-tone={index === 0 ? "blue" : "paper"}
+                >
                   <h3>{item.title}</h3>
                   <p className="repertoire-composer">{item.composer}</p>
                   <p>{item.description}</p>

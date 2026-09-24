@@ -50,6 +50,7 @@ export default function ResumePage() {
     <div className="resume-page">
       <PageHero
         animate={false}
+        tone="blue"
         title="Resume & contact"
         subtitle="Education, experience, and accomplishments"
         description="Read my resume below or use the contact links to get in touch."
@@ -93,7 +94,7 @@ export default function ResumePage() {
         <Container>
           <div className="resume-group">
             <AnimatedSection>
-              <ResumeSection title="Education">
+              <ResumeSection title="Education" tone="paper">
                 <div className="space-y-6">
                   {education.map((item) => (
                     <article key={item.institution}>
@@ -123,7 +124,7 @@ export default function ResumePage() {
             </AnimatedSection>
 
             <AnimatedSection>
-              <ResumeSection title="Technical skills">
+              <ResumeSection title="Technical skills" tone="blue">
                 <div className="grid gap-5 sm:grid-cols-2">
                   {technicalSkillGroups.map((group) => (
                     <div key={group.title}>
@@ -147,7 +148,7 @@ export default function ResumePage() {
       <section className="py-20 sm:py-24">
         <Container>
           <AnimatedSection>
-            <ResumeSection title="Work experience">
+            <ResumeSection title="Work experience" tone="paper">
               <div className="grid gap-8 sm:grid-cols-2">
                 {workExperience.map((job) => (
                   <article key={job.title}>

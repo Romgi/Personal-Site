@@ -31,9 +31,9 @@
   gap: 12px;
   min-height: 52px;
   padding-left: 16px;
-  border: 1px solid var(--hairline);
+  border: 1px solid var(--control-border);
   border-radius: 4px;
-  background: #0b111c;
+  background: var(--surface);
   color: var(--accent);
 }
 
@@ -80,7 +80,7 @@
 }
 
 .repertoire-search-field button:hover {
-  background: #7dbbff12;
+  background: var(--accent-soft);
   color: var(--foreground);
 }
 
@@ -102,7 +102,7 @@
 }
 
 .repertoire-browser .repertoire-table tbody tr:hover {
-  background: #7dbbff0a;
+  background: var(--surface-hover);
 }
 
 .repertoire-empty {
@@ -140,7 +140,7 @@
 
 .repertoire-empty button:hover {
   background: var(--accent);
-  color: var(--background);
+  color: var(--on-accent);
 }
 
 @media (prefers-reduced-motion: no-preference) {

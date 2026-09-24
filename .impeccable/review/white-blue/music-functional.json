@@ -1,0 +1,60 @@
+[
+  {
+    "height": 1000,
+    "low": [],
+    "min": 5.67,
+    "nav": "rgba(255, 255, 255, 0.82)",
+    "overflow": 0,
+    "pins": 1,
+    "ready": "true",
+    "spacerHeight": 2800,
+    "type": "/music-desktop-initial"
+  },
+  {
+    "clip": "circle(899.98px at 720px 500px)",
+    "progress": "0.78",
+    "ready": "true",
+    "reveal": "1",
+    "summaryInert": false,
+    "type": "music-transition-desktop"
+  },
+  {
+    "clip": "circle(214.618px at 720px 500px)",
+    "progress": "0.52",
+    "reveal": "0.5",
+    "type": "music-bell-desktop"
+  },
+  {
+    "low": [],
+    "min": 6.07,
+    "overflow": 0,
+    "pins": 1,
+    "ready": "true",
+    "type": "music-mobile-initial"
+  },
+  {
+    "clip": "circle(70.715px at 195px 422px)",
+    "progress": "0.520079",
+    "type": "music-bell-mobile"
+  },
+  {
+    "count": "1 of 23 pieces",
+    "imageClip": "none",
+    "imageTransform": "none",
+    "low": [],
+    "min": 6.12,
+    "overflow": 0,
+    "performancePin": false,
+    "rows": 1,
+    "type": "music-mobile-controls"
+  },
+  {
+    "bg": "rgb(237, 243, 251)",
+    "page": "/music",
+    "placeholder": "rgb(76, 92, 112)",
+    "placeholderRatio": 6.12,
+    "text": "rgb(17, 21, 28)",
+    "textRatio": 16.39,
+    "type": "input-contrast"
+  }
+]

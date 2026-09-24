@@ -1,0 +1,74 @@
+[
+  {
+    "bg": "rgb(255, 255, 255)",
+    "contrast": 6.97,
+    "fg": "rgb(22, 75, 214)",
+    "selector": "#education h2"
+  },
+  {
+    "bg": "rgb(255, 255, 255)",
+    "contrast": 15.98,
+    "fg": "rgb(16, 34, 59)",
+    "selector": "#education h3"
+  },
+  {
+    "bg": "rgb(255, 255, 255)",
+    "contrast": 6.86,
+    "fg": "rgb(72, 92, 117)",
+    "selector": "#education .text-slate-400"
+  },
+  {
+    "bg": "rgb(255, 255, 255)",
+    "contrast": 6.86,
+    "fg": "rgb(72, 92, 117)",
+    "selector": "#education .text-slate-500"
+  },
+  {
+    "bg": "rgb(255, 255, 255)",
+    "contrast": 6.97,
+    "fg": "rgb(22, 75, 214)",
+    "selector": "#education .text-blue-200"
+  },
+  {
+    "bg": "rgb(22, 75, 214)",
+    "contrast": 6.97,
+    "fg": "rgb(255, 255, 255)",
+    "selector": "#technical-skills h2"
+  },
+  {
+    "bg": "rgb(16, 58, 167)",
+    "contrast": 9.61,
+    "fg": "rgb(255, 255, 255)",
+    "selector": "#technical-skills .skill-badge"
+  },
+  {
+    "bg": "rgb(255, 255, 255)",
+    "contrast": 6.86,
+    "fg": "rgb(72, 92, 117)",
+    "selector": "#work-experience li"
+  },
+  {
+    "bg": "rgb(22, 75, 214)",
+    "contrast": 6.97,
+    "fg": "rgb(255, 255, 255)",
+    "selector": ".site-footer p"
+  },
+  {
+    "bg": "rgb(18, 63, 181)",
+    "contrast": 8.74,
+    "fg": "rgb(255, 255, 255)",
+    "selector": ".site-footer a"
+  },
+  {
+    "bg": "rgb(255, 255, 255)",
+    "contrast": 9.22,
+    "fg": "rgb(18, 59, 176)",
+    "selector": ".page-hero .button-primary"
+  },
+  {
+    "bg": "rgb(22, 75, 214)",
+    "contrast": 6.97,
+    "fg": "rgb(255, 255, 255)",
+    "selector": ".page-hero .button-secondary"
+  }
+]

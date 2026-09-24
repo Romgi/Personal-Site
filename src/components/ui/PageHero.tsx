@@ -10,6 +10,7 @@ type PageHeroProps = {
   className?: string;
   media?: ReactNode;
   animate?: boolean;
+  tone?: "paper" | "blue";
 };
 export function PageHero({
   title,
@@ -19,11 +20,13 @@ export function PageHero({
   className,
   media,
   animate = true,
+  tone,
 }: PageHeroProps) {
   return (
     <section
       className={cn("page-hero", className)}
       data-static-hero={!animate || undefined}
+      data-tone={tone}
     >
       <Container>
         <div className="page-hero-grid">

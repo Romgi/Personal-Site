@@ -43,7 +43,7 @@ export default function Home() {
         image={profile.profileImage}
       />
 
-      <section className="home-about section-block">
+      <section className="home-about section-block" data-tone="paper">
         <Container>
           <div className="about-layout">
             <AnimatedSection className="about-introduction">
@@ -61,7 +61,17 @@ export default function Home() {
             <div className="home-highlights">
               {profile.highlights.map((item) => (
                 <AnimatedSection key={item.title}>
-                  <Link href={item.href} className="highlight-link group">
+                  <Link
+                    href={item.href}
+                    className="highlight-link group"
+                    data-tone={
+                      item.href === "/projects"
+                        ? "blue"
+                        : item.href === "/music"
+                          ? "paper"
+                          : "blue"
+                    }
+                  >
                     <div className="highlight-title">
                       <h3 className="mt-4 text-xl font-semibold text-white">
                         {item.title}
@@ -176,7 +186,7 @@ export default function Home() {
                 title="Trumpet performance"
                 description="Solo repertoire, honour bands, university ensembles, lead trumpet in jazz, and festival awards."
               />
-              <div className="home-music-record">
+              <div className="home-music-record" data-tone="paper">
                 <h3 className="mt-3 text-xl font-semibold text-white">
                   {featuredMusic.title}
                 </h3>

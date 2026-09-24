@@ -43,6 +43,7 @@ export function ProjectCard({
   return (
     <article
       id={id}
+      data-tone={featured ? "blue" : undefined}
       className={`project-card group ${featured ? "project-card-featured" : ""}`}
     >
       <div className="project-media">

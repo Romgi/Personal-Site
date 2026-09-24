@@ -21,6 +21,7 @@ import { profile, site } from "@/data/profile";
 import "./globals.css";
 import "./editorial.css";
 import "./tiles.css";
+import "./palette.css";
 
 const heroDisplay = Bebas_Neue({
   variable: "--font-hero",
@@ -117,8 +118,8 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  themeColor: "#05070b",
-  colorScheme: "dark",
+  themeColor: "#ffffff",
+  colorScheme: "light",
 };
 
 const personJsonLd = {

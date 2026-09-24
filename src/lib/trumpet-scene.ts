@@ -32,7 +32,7 @@ export function createTrumpetScene(
   } catch {
     return null;
   }
-  renderer.setClearColor(0x05070b, 0);
+  renderer.setClearColor(0xffffff, 0);
   renderer.outputColorSpace = THREE.SRGBColorSpace;
   renderer.toneMapping = THREE.ACESFilmicToneMapping;
   renderer.toneMappingExposure = 1.05;

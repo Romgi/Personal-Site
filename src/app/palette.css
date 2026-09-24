@@ -1,0 +1,144 @@
+/* White pages, blue surfaces and near-black reading text throughout the site. */
+.skill-badge {
+  border-color: transparent;
+  background: var(--chip-surface);
+  color: var(--chip-ink);
+}
+
+@media screen {
+  [data-tone="paper"] {
+    --background: #f6f9fd;
+    --surface: #edf3fb;
+    --surface-hover: #e1ebf9;
+    --tile-surface: #ffffff;
+    --tile-surface-raised: #edf3fb;
+    --tile-surface-hover: #e7effb;
+  }
+
+  [data-tone="blue"] {
+    --background: #deebff;
+    --surface: #d2e3fb;
+    --surface-hover: #c4d9f8;
+    --hairline: #b3c9e8;
+    --control-border: #677f9f;
+    --accent-soft: #c9dcff;
+    --chip-surface: #c7dbfa;
+    --chip-ink: #173f86;
+    --tile-surface: #deebff;
+    --tile-surface-raised: #eaf2ff;
+    --tile-surface-hover: #cdddf8;
+  }
+
+  [data-tone] {
+    color: var(--foreground);
+    background-color: var(--background);
+  }
+
+  /* Standalone tiles need their own fill against a white page. */
+  :is(
+    .home-music-record,
+    .repertoire-feature,
+    .resume-section
+  )[data-tone="paper"] {
+    --tile-surface: var(--surface);
+  }
+
+  /* Legacy content utilities share the same accessible light reading palette. */
+  :is(.text-white, .text-slate-100, .text-slate-200) {
+    color: var(--foreground);
+  }
+
+  .text-slate-300 {
+    color: var(--text-secondary);
+  }
+
+  :is(.text-slate-400, .text-slate-500) {
+    color: var(--muted);
+  }
+
+  :is(.text-blue-100, .text-blue-200, .text-blue-300) {
+    color: var(--accent);
+  }
+
+  [class~="border-white/10"] {
+    border-color: var(--hairline);
+  }
+
+  [class~="bg-white/[0.035]"] {
+    background-color: var(--surface);
+  }
+
+  .home-about[data-tone],
+  .home-page .home-music,
+  .music-page .performance-section[data-tone] {
+    background: var(--background);
+  }
+
+  .home-about .highlight-link[data-tone] {
+    background: var(--tile-surface);
+  }
+
+  .home-about .highlight-link[data-tone]:is(:hover, :focus-visible) {
+    background: var(--tile-surface-hover);
+  }
+
+  .home-about .section-heading h2,
+  .music-page .performance-section > .site-container .section-heading h2,
+  .title-card .flight-name span:last-child,
+  .cinematic-hero[data-page-scene="projects"] .scene-title h1 {
+    color: var(--accent);
+  }
+
+  .home-music-record .font-mono,
+  .music-page .accomplishment-entry > p:first-child {
+    color: var(--accent);
+  }
+
+  .page-intro-tools .chapter-links a:first-child {
+    background: var(--accent);
+    color: var(--on-accent);
+  }
+
+  .page-intro-tools .chapter-links a:first-child svg {
+    color: var(--on-accent);
+  }
+
+  .page-intro-tools .chapter-links a:first-child:hover {
+    background: var(--foreground);
+  }
+
+  .robotics-caption-panel {
+    background: linear-gradient(to top, var(--tile-surface) 65%, transparent);
+  }
+
+  .resume-page .page-hero[data-tone],
+  .site-footer[data-tone] {
+    background: var(--background);
+  }
+
+  .site-footer .footer-name {
+    color: var(--foreground);
+  }
+
+  .site-footer[data-tone] a {
+    color: var(--foreground);
+    border-color: transparent;
+  }
+
+  .site-footer[data-tone] a:is(:hover, :focus-visible) {
+    color: var(--on-accent);
+    background: var(--accent);
+  }
+}
+
+@media print {
+  .resume-page #contact .glass-card :is(span, svg) {
+    color: #111;
+  }
+
+  .skill-badge {
+    color: #111;
+    background: transparent;
+    border-color: #ccc;
+  }
+}

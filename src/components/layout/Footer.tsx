@@ -32,7 +32,7 @@ const footerContactLinks: Array<{
 
 export function Footer() {
   return (
-    <footer className="site-footer">
+    <footer className="site-footer" data-tone="blue">
       <Container className="py-12">
         <div className="grid gap-8 md:grid-cols-[1.3fr_0.7fr] md:items-start">
           <div>
