@@ -9,6 +9,7 @@ type PageHeroProps = {
   children?: ReactNode;
   className?: string;
   media?: ReactNode;
+  animate?: boolean;
 };
 export function PageHero({
   title,
@@ -17,9 +18,13 @@ export function PageHero({
   children,
   className,
   media,
+  animate = true,
 }: PageHeroProps) {
   return (
-    <section className={cn("page-hero", className)}>
+    <section
+      className={cn("page-hero", className)}
+      data-static-hero={!animate || undefined}
+    >
       <Container>
         <div className="page-hero-grid">
           <h1>{title}</h1>

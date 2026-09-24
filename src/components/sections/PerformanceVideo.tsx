@@ -30,10 +30,10 @@ export function PerformanceVideo() {
           onClick={() => setPlaying(true)}
         >
           <Image
-            src="/images/music/buglers-holiday-video.jpg"
+            src="/images/music/buglers-holiday-video-hd.jpg"
             alt=""
             fill
-            sizes="(max-width: 768px) 90vw, 40vw"
+            sizes="(max-width: 1023px) 100vw, 50vw"
           />
           <span className="performance-play">
             <Play size={22} fill="currentColor" aria-hidden />

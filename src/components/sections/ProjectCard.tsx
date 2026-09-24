@@ -53,7 +53,7 @@ export function ProjectCard({
           imageClassName="project-artwork-image"
           sizes={
             featured
-              ? "(max-width: 767px) 90vw, (max-width: 1440px) 48vw, 660px"
+              ? "(max-width: 959px) 90vw, (max-width: 1440px) 48vw, 660px"
               : "(max-width: 767px) 90vw, (max-width: 1200px) 65vw, 35vw"
           }
         />

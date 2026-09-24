@@ -1,0 +1,729 @@
+/* Content is grouped into quiet blue surfaces; space separates the chapters. */
+:root {
+  --tile-surface: #0e1725;
+  --tile-surface-raised: #142237;
+  --tile-surface-hover: #182b43;
+  --tile-radius: 16px;
+  --tile-gap: 24px;
+  --tile-inset: clamp(24px, 2.5vw, 40px);
+}
+
+.home-page > section:has(.featured-projects),
+.home-page .home-music,
+.projects-page #all-projects,
+.projects-page #robotics,
+.music-page .music-section {
+  border: 0;
+  background: transparent;
+}
+
+.page-intro-tools {
+  padding-top: 40px;
+}
+
+.page-intro-tools .chapter-links {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  gap: 16px;
+  padding: 0;
+  border: 0;
+}
+
+.page-intro-tools .chapter-links a {
+  flex: 1 1 220px;
+  padding: 20px 24px;
+  border: 0;
+  border-radius: var(--tile-radius);
+  background: var(--tile-surface);
+}
+
+.page-intro-tools .chapter-links a:hover {
+  background: var(--tile-surface-hover);
+}
+
+.site-footer,
+.site-footer .site-container > div:last-child {
+  border: 0;
+}
+
+/* Three disciplines, each with a complete reading and navigation surface. */
+.home-about .home-highlights {
+  grid-template-columns: 1.2fr 1fr 1fr;
+  gap: var(--tile-gap);
+  margin-top: 48px;
+  border: 0;
+}
+
+.home-about .home-highlights > * {
+  min-width: 0;
+}
+
+.home-about .highlight-link {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: space-between;
+  gap: 40px;
+  min-height: 360px;
+  height: 100%;
+  padding: var(--tile-inset);
+  border: 0;
+  border-radius: var(--tile-radius);
+  background: var(--tile-surface);
+  transition: background-color 220ms var(--ease-out);
+}
+
+.home-about .home-highlights > :first-child .highlight-link {
+  background: var(--tile-surface-raised);
+}
+
+.home-about .highlight-title {
+  flex-direction: column;
+  align-items: start;
+  gap: 16px;
+}
+
+.home-about .highlight-link h3 {
+  max-width: 12ch;
+  font-size: clamp(36px, 3.9vw, 56px);
+  text-wrap: balance;
+}
+
+.home-about .highlight-link .font-mono {
+  color: var(--accent);
+}
+
+.home-about .highlight-link::after {
+  content: none;
+}
+
+.home-about .highlight-link:is(:hover, :focus-visible) {
+  background: var(--tile-surface-hover);
+}
+
+.home-about .highlight-link:is(:hover, :focus-visible) h3 {
+  transform: none;
+}
+
+.home-about .highlight-description > span {
+  margin-top: 24px;
+}
+
+/* Project artwork and its explanation now belong to the same tile. */
+:is(.home-page, .projects-page) .featured-projects:has(.project-card) {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--tile-gap);
+}
+
+.featured-projects > *,
+.project-explorer .project-grid > * {
+  min-width: 0;
+}
+
+.project-card.project-card,
+.featured-projects > :nth-child(n) .project-card.project-card-featured {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 0;
+  padding: 0;
+  border: 0;
+  border-radius: var(--tile-radius);
+  background: var(--tile-surface);
+}
+
+.project-card.project-card .project-media {
+  grid-column: auto;
+  grid-row: auto;
+  width: 100%;
+  min-height: 0;
+  padding: 24px 24px 0;
+  border: 0;
+  border-radius: var(--tile-radius) var(--tile-radius) 0 0;
+  background: transparent;
+}
+
+.project-card.project-card .project-artwork {
+  aspect-ratio: 16 / 10;
+  border-radius: 8px;
+  box-shadow: none;
+}
+
+.project-card.project-card .project-card-body {
+  grid-column: auto;
+  grid-row: auto;
+  padding: 28px 24px 24px;
+}
+
+.project-card.project-card-featured .project-card-body {
+  padding: 32px;
+}
+
+.project-card.project-card-featured .project-media {
+  padding: 24px 24px 0;
+}
+
+.project-card.project-card-featured .project-title {
+  font-size: clamp(38px, 3.3vw, 52px);
+}
+
+.project-card.project-card .project-technology {
+  border-color: transparent;
+  background: #20324b;
+  color: #bdcde3;
+}
+
+.project-card.project-card .project-details {
+  border: 0;
+  margin-top: 24px;
+}
+
+.project-card.project-card .project-details summary {
+  min-height: 48px;
+  padding: 12px 16px;
+  border-radius: 8px;
+  background: #1a2a40;
+}
+
+.project-card.project-card .project-details summary:hover {
+  background: #243a55;
+}
+
+.project-card.project-card .project-details-content {
+  padding: 20px 0 8px;
+}
+
+.project-card.project-card .project-actions {
+  gap: 8px 20px;
+  padding-top: 24px;
+}
+
+.project-card.project-card:is(:hover, :focus-within) .project-artwork {
+  box-shadow: none;
+}
+
+.project-explorer .project-grid {
+  gap: var(--tile-gap);
+  align-items: stretch;
+}
+
+.projects-page .project-explorer .results-status {
+  border: 0;
+  padding-bottom: 8px;
+}
+
+.project-explorer .project-filters,
+.project-explorer .project-results {
+  min-width: 0;
+}
+
+.project-explorer .project-search {
+  border-radius: 12px;
+}
+
+.project-explorer .project-empty {
+  padding: var(--tile-inset);
+  border-radius: var(--tile-radius);
+  background: var(--tile-surface);
+}
+
+/* A photograph and the experience it documents share the same footprint. */
+.home-robotics .robotics-feature-media {
+  overflow: hidden;
+  border-radius: var(--tile-radius) var(--tile-radius) 0 0;
+  background: var(--tile-surface);
+}
+
+.home-robotics .robotics-feature-media .portfolio-image {
+  border: 0;
+  border-radius: 0;
+}
+
+.home-robotics .robotics-feature-media figcaption {
+  border: 0;
+  padding: 20px var(--tile-inset) 0;
+}
+
+.home-robotics .experience-entry {
+  padding: var(--tile-inset);
+  border-radius: 0 0 var(--tile-radius) var(--tile-radius);
+  background: var(--tile-surface);
+}
+
+.projects-page .robotics-entry {
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  border-radius: var(--tile-radius);
+  background: var(--tile-surface);
+}
+
+.projects-page .robotics-entry > div:first-child {
+  border-radius: 0;
+}
+
+.projects-page .robotics-entry > div:last-child {
+  padding: var(--tile-inset);
+}
+
+.projects-page .robotics-entry h3 {
+  font-family: var(--font-condensed), sans-serif;
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 1.15;
+}
+
+.projects-page .robotics-instrument {
+  border: 0;
+  border-radius: var(--tile-radius);
+  background: var(--tile-surface);
+}
+
+/* Music collections are browsable objects, grouped by what they contain. */
+.home-music .home-music-record,
+.music-page .performance-record {
+  padding: 28px;
+  margin-top: 24px;
+  border: 0;
+  border-radius: var(--tile-radius);
+  background: var(--tile-surface);
+}
+
+.home-music .home-music-record + .home-music-record {
+  margin-top: 16px;
+}
+
+.music-page .featured-repertoire {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--tile-gap);
+}
+
+.music-page .repertoire-feature {
+  display: flex;
+  flex-direction: column;
+  min-height: 280px;
+  height: 100%;
+  padding: var(--tile-inset);
+  border: 0;
+  border-radius: var(--tile-radius);
+  background: var(--tile-surface);
+}
+
+.music-page .featured-repertoire > :first-child .repertoire-feature {
+  background: var(--tile-surface-raised);
+}
+
+.music-page .repertoire-feature h3 {
+  margin-bottom: 24px;
+}
+
+.music-page .repertoire-feature .repertoire-composer {
+  margin-top: auto;
+}
+
+.music-page .accomplishment-list {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--tile-gap);
+}
+
+.music-page .accomplishment-entry {
+  grid-template-columns: minmax(0, 1fr);
+  grid-template-rows: auto auto 1fr;
+  align-items: start;
+  gap: 16px;
+  height: 100%;
+  padding: 28px;
+  border: 0;
+  border-radius: var(--tile-radius);
+  background: var(--tile-surface);
+}
+
+.music-page .accomplishment-entry > p:last-child {
+  grid-column: auto;
+}
+
+.music-page .accomplishment-entry h3 {
+  font-size: 30px;
+  text-wrap: balance;
+}
+
+.music-page .ensemble-grid {
+  gap: var(--tile-gap);
+}
+
+.music-page .ensemble-entry {
+  height: 100%;
+  padding: var(--tile-inset);
+  border: 0;
+  border-radius: var(--tile-radius);
+  background: var(--tile-surface);
+}
+
+.music-page .ensemble-details {
+  gap: 8px 24px;
+  margin-top: 24px;
+}
+
+.music-page .ensemble-period {
+  white-space: normal;
+}
+
+.music-page .repertoire-search-field {
+  border-radius: 12px;
+  background: var(--tile-surface);
+}
+
+.music-page .repertoire-browser .repertoire-table {
+  border-collapse: separate;
+  border-spacing: 0 12px;
+}
+
+.music-page .repertoire-browser .repertoire-table th,
+.music-page .repertoire-browser .repertoire-table td {
+  padding: 24px;
+  border: 0;
+}
+
+.music-page .repertoire-browser .repertoire-table thead th {
+  padding-block: 0 8px;
+}
+
+.music-page .repertoire-browser .repertoire-table tbody tr {
+  background: transparent;
+}
+
+.music-page .repertoire-browser .repertoire-table tbody :is(th, td) {
+  background: var(--tile-surface);
+}
+
+.music-page .repertoire-browser .repertoire-table tbody tr:hover :is(th, td) {
+  background: var(--tile-surface-raised);
+}
+
+.music-page .repertoire-browser .repertoire-table tbody td:first-child {
+  border-radius: 12px 0 0 12px;
+}
+
+.music-page .repertoire-browser .repertoire-table tbody td:last-child {
+  border-radius: 0 12px 12px 0;
+}
+
+.music-page .repertoire-empty {
+  border: 0;
+  padding: var(--tile-inset);
+  border-radius: var(--tile-radius);
+  background: var(--tile-surface);
+}
+
+.music-page .music-gallery {
+  gap: var(--tile-gap);
+  align-items: start;
+}
+
+.music-page .music-gallery figure {
+  overflow: hidden;
+  border-radius: var(--tile-radius);
+  background: var(--tile-surface);
+}
+
+.music-page .music-gallery .portfolio-image {
+  border: 0;
+  border-radius: 0;
+}
+
+.music-page .music-gallery .media-caption {
+  margin: 0;
+  padding: 20px 24px;
+}
+
+/* A resume tile owns a whole subject; entries inside stay open and readable. */
+.resume-page .page-hero {
+  border: 0;
+}
+
+.resume-page > section:has(.resume-section) {
+  padding-block: 12px;
+}
+
+.resume-page > section:has(.resume-section):last-child {
+  padding-bottom: 80px;
+}
+
+.resume-page #contact {
+  padding-block: 64px 36px;
+}
+
+.resume-page .resume-group {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--tile-gap);
+}
+
+.resume-page .resume-group > * {
+  min-width: 0;
+}
+
+.resume-page .resume-section {
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+  height: 100%;
+  padding: var(--tile-inset);
+  border: 0;
+  border-radius: var(--tile-radius);
+  background: var(--tile-surface);
+}
+
+.resume-page .resume-section::before {
+  content: none;
+}
+
+.resume-page .resume-section > h2 {
+  position: static;
+  color: var(--accent);
+  font-size: clamp(36px, 3.4vw, 48px);
+  text-wrap: balance;
+}
+
+.resume-page .resume-section-body article + article {
+  border: 0;
+  padding-top: 16px;
+}
+
+.resume-page .resume-section-body article > div:first-child {
+  flex-wrap: wrap;
+}
+
+.resume-page .resume-section#technical-skills .resume-section-body > .grid {
+  gap: 32px 24px;
+}
+
+.resume-page .resume-section#work-experience .resume-section-body > .grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 48px;
+}
+
+.resume-page
+  .resume-section#work-experience
+  .resume-section-body
+  article
+  + article {
+  padding-top: 0;
+}
+
+.resume-page #contact .glass-card {
+  padding: 28px;
+  border: 0;
+  border-radius: var(--tile-radius);
+  background: var(--tile-surface);
+  box-shadow: none;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+}
+
+.resume-page #contact .glass-card::before,
+.resume-page #contact .glass-card::after {
+  content: none;
+}
+
+.resume-page #contact .glass-card:is(:hover, :focus-visible) {
+  background: var(--tile-surface-hover);
+  box-shadow: none;
+}
+
+@media (max-width: 1100px) {
+  .project-explorer .project-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .home-about .home-highlights {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .home-about .home-highlights > :first-child {
+    grid-column: 1 / -1;
+  }
+
+  .home-about .home-highlights > :first-child .highlight-link {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    min-height: 240px;
+  }
+
+  .home-about .highlight-link {
+    min-height: 300px;
+  }
+
+  .music-page .accomplishment-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 959px) {
+  :is(.home-page, .projects-page) .featured-projects:has(.project-card) {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .resume-page .resume-group {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .resume-page .resume-section {
+    gap: 28px;
+  }
+}
+
+@media (max-width: 767px) {
+  :root {
+    --tile-gap: 16px;
+    --tile-inset: 24px;
+  }
+
+  .home-about .home-highlights,
+  .music-page .featured-repertoire,
+  .music-page .accomplishment-list {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .home-about .home-highlights > :first-child .highlight-link {
+    display: flex;
+    min-height: 0;
+  }
+
+  .home-about .highlight-link {
+    min-height: 0;
+    gap: 28px;
+  }
+
+  .home-about .highlight-title {
+    gap: 12px;
+  }
+
+  .home-about .highlight-link h3 {
+    max-width: none;
+    font-size: clamp(36px, 10vw, 46px);
+  }
+
+  .home-about .highlight-description > span {
+    margin-top: 16px;
+  }
+
+  .project-card.project-card .project-media {
+    padding: 16px 16px 0;
+  }
+
+  .project-card.project-card .project-card-body {
+    padding: 24px;
+  }
+
+  .project-card.project-card-featured .project-title {
+    font-size: 40px;
+  }
+
+  .project-explorer {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .home-robotics .experience-entry {
+    gap: 24px;
+  }
+
+  .home-music .home-music-record,
+  .music-page .performance-record,
+  .music-page .accomplishment-entry {
+    padding: 24px;
+  }
+
+  .music-page .repertoire-feature {
+    min-height: 240px;
+  }
+
+  .music-page .repertoire-browser .repertoire-table {
+    border-spacing: 0;
+  }
+
+  .music-page .repertoire-browser .repertoire-table tbody tr {
+    padding: 24px;
+    margin-bottom: 16px;
+    border: 0;
+    border-radius: var(--tile-radius);
+    background: var(--tile-surface);
+  }
+
+  .music-page .repertoire-browser .repertoire-table tbody :is(th, td),
+  .music-page .repertoire-browser .repertoire-table tbody tr:hover :is(th, td) {
+    width: 100%;
+    padding: 0;
+    border-radius: 0;
+    background: transparent;
+  }
+
+  .music-page .repertoire-browser .repertoire-table tbody tr:hover {
+    background: var(--tile-surface-raised);
+  }
+
+  .music-page .music-gallery > :nth-child(3) .portfolio-image {
+    aspect-ratio: 4 / 5;
+  }
+
+  .resume-page #contact {
+    padding-block: 40px 24px;
+  }
+
+  .resume-page .resume-section#technical-skills .resume-section-body > .grid,
+  .resume-page .resume-section#work-experience .resume-section-body > .grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 32px;
+  }
+
+  .resume-page #contact .glass-card {
+    padding: 24px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .home-about .highlight-link {
+    transition: none;
+  }
+}
+
+@media print {
+  .resume-page .page-hero {
+    padding-block: 24px;
+  }
+
+  .resume-page .page-hero h1 {
+    font-size: 44px;
+  }
+
+  .resume-page > section:has(.resume-section),
+  .resume-page #contact {
+    padding-block: 12px;
+  }
+
+  .resume-page .resume-group {
+    display: block;
+  }
+
+  .resume-page .resume-section {
+    height: auto;
+    padding: 20px 0;
+    border-radius: 0;
+    background: transparent;
+    break-inside: avoid;
+  }
+
+  .resume-page .resume-section > h2 {
+    color: #111;
+    font-size: 28px;
+  }
+
+  .resume-page #contact .glass-card {
+    padding: 0;
+    color: #111;
+    background: transparent;
+  }
+}

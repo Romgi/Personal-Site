@@ -6,7 +6,7 @@ import { ProjectsExplorer } from "@/components/sections/ProjectsExplorer";
 import { AnimatedSection } from "@/components/ui/AnimatedSection";
 import { ButtonLink } from "@/components/ui/ButtonLink";
 import { Container } from "@/components/ui/Container";
-import { PageHero } from "@/components/ui/PageHero";
+import { CinematicHero } from "@/components/sections/CinematicHero";
 import { PortfolioImage } from "@/components/ui/PortfolioImage";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { SkillBadge } from "@/components/ui/SkillBadge";
@@ -29,46 +29,55 @@ export const metadata = createPageMetadata({
 export default function ProjectsPage() {
   return (
     <div className="projects-page">
-      <PageHero
+      <CinematicHero
+        variant="projects"
         title="Projects"
         subtitle="Software & robotics"
         description="Web applications, robot software, games, coursework, and tools. Explore the technical details, technologies, and available code or demos for each project."
+        contentHref="#featured-projects"
       >
-        <div className="project-census">
-          <div className="census-item">
-            <p className="text-2xl font-semibold tracking-tight text-white">
-              {projects.length}
-            </p>
-            <p className="mt-1 text-sm text-slate-400">Projects</p>
+        <ButtonLink href="/projects#featured-projects" variant="primary">
+          Explore the projects <ArrowRight size={18} aria-hidden="true" />
+        </ButtonLink>
+      </CinematicHero>
+      <div className="page-intro-tools">
+        <Container>
+          <div className="project-census">
+            <div className="census-item">
+              <p className="text-2xl font-semibold tracking-tight text-white">
+                {projects.length}
+              </p>
+              <p className="mt-1 text-sm text-slate-400">Projects</p>
+            </div>
+            <div className="census-item">
+              <p className="text-2xl font-semibold tracking-tight text-white">
+                {featuredProjects.length}
+              </p>
+              <p className="mt-1 text-sm text-slate-400">Featured projects</p>
+            </div>
+            <div className="census-item">
+              <p className="text-2xl font-semibold tracking-tight text-white">
+                {projectTags.length}
+              </p>
+              <p className="mt-1 text-sm text-slate-400">Project categories</p>
+            </div>
           </div>
-          <div className="census-item">
-            <p className="text-2xl font-semibold tracking-tight text-white">
-              {featuredProjects.length}
-            </p>
-            <p className="mt-1 text-sm text-slate-400">Featured projects</p>
-          </div>
-          <div className="census-item">
-            <p className="text-2xl font-semibold tracking-tight text-white">
-              {projectTags.length}
-            </p>
-            <p className="mt-1 text-sm text-slate-400">Project categories</p>
-          </div>
-        </div>
-        <nav className="chapter-links" aria-label="Project sections">
-          <a href="#featured-projects">
-            Featured work
-            <ArrowDownRight size={18} aria-hidden="true" />
-          </a>
-          <a href="#all-projects">
-            Explore all projects
-            <ArrowDownRight size={18} aria-hidden="true" />
-          </a>
-          <a href="#robotics">
-            Robotics experience
-            <ArrowDownRight size={18} aria-hidden="true" />
-          </a>
-        </nav>
-      </PageHero>
+          <nav className="chapter-links" aria-label="Project sections">
+            <a href="#featured-projects">
+              Featured work
+              <ArrowDownRight size={18} aria-hidden="true" />
+            </a>
+            <a href="#all-projects">
+              Explore all projects
+              <ArrowDownRight size={18} aria-hidden="true" />
+            </a>
+            <a href="#robotics">
+              Robotics experience
+              <ArrowDownRight size={18} aria-hidden="true" />
+            </a>
+          </nav>
+        </Container>
+      </div>
 
       <section id="featured-projects" className="py-20 sm:py-24">
         <Container>
@@ -131,6 +140,7 @@ export default function ProjectsPage() {
                 src={roboticsOverview.image}
                 alt={roboticsOverview.imageAlt}
                 aspect="aspect-[4/3]"
+                sizes="(max-width: 1023px) 100vw, 50vw"
               />
               <span
                 data-robotics-field-scan

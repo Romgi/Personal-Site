@@ -7,6 +7,7 @@ import { usePathname } from "next/navigation";
 import { useRef, type ReactNode } from "react";
 import { setupHomeScrollScene } from "@/lib/home-scroll-scene";
 import { setupSectionScrollScenes } from "@/lib/section-scroll-scenes";
+import { setupPageScrollScene } from "@/lib/page-scroll-scenes";
 
 gsap.registerPlugin(useGSAP, ScrollTrigger);
 
@@ -25,13 +26,19 @@ export function GsapScrollEffects({ children }: { children: ReactNode }) {
           motion: "screen and (prefers-reduced-motion: no-preference)",
           desktop: "(min-width: 900px)",
           tall: "(min-height: 540px)",
+          sceneWide: "(min-width: 768px)",
+          sceneTall: "(min-height: 600px)",
         },
         (context) => {
-          const { motion, desktop, tall } = context.conditions!;
+          const { motion, desktop, tall, sceneWide, sceneTall } =
+            context.conditions!;
           if (!motion) return;
           const cleanHome = setupHomeScrollScene(root, desktop, tall);
+          const cleanPage = setupPageScrollScene(root, sceneWide, sceneTall);
           setupSectionScrollScenes(root);
-          const pageTitle = root.querySelector(".page-hero h1");
+          const pageTitle = root.querySelector(
+            ".page-hero:not(.cinematic-hero):not([data-static-hero]) h1",
+          );
           if (pageTitle)
             gsap.from(pageTitle, {
               y: 42,
@@ -44,7 +51,7 @@ export function GsapScrollEffects({ children }: { children: ReactNode }) {
             .forEach((element) => {
               if (
                 element.closest(
-                  "[data-robotics-scene], [data-music-scene], .resume-section",
+                  "[data-robotics-scene], .resume-section, .cinematic-hero",
                 )
               )
                 return;
@@ -59,7 +66,10 @@ export function GsapScrollEffects({ children }: { children: ReactNode }) {
                 },
               });
             });
-          return () => cleanHome?.();
+          return () => {
+            cleanHome?.();
+            cleanPage?.();
+          };
         },
       );
       const refresh = () => {

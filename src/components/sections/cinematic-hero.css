@@ -1,0 +1,497 @@
+.cinematic-hero.page-hero {
+  position: relative;
+  isolation: isolate;
+  min-height: 100svh;
+  padding: 140px 6% 24px;
+  overflow: clip;
+  background: var(--background);
+  border: 0;
+}
+
+.cinematic-hero .scene-title {
+  position: relative;
+  z-index: 3;
+  text-align: center;
+}
+
+.cinematic-hero .scene-title h1 {
+  margin: 0;
+  color: var(--foreground);
+  font:
+    600 clamp(88px, 17vw, 252px)/0.87 var(--font-display),
+    sans-serif;
+  letter-spacing: -0.025em;
+  text-transform: uppercase;
+  text-wrap: balance;
+}
+
+.cinematic-hero .scene-title h2 {
+  max-width: 620px;
+  margin: 28px auto 0;
+  color: var(--muted);
+  font:
+    400 clamp(16px, 1.6vw, 22px)/1.45 var(--font-geist-sans),
+    sans-serif;
+  letter-spacing: -0.015em;
+  text-wrap: balance;
+}
+
+.cinematic-hero .scene-visual {
+  position: relative;
+  z-index: 1;
+  margin: 48px 0;
+  pointer-events: none;
+}
+
+.cinematic-hero .scene-project-stack {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  align-items: center;
+  gap: 20px;
+}
+
+.cinematic-hero .scene-project-plate {
+  min-width: 0;
+  margin: 0;
+  overflow: hidden;
+  border-radius: 12px;
+  background: #111c2b;
+  box-shadow: 0 24px 58px #0008;
+}
+
+.cinematic-hero .scene-project-image {
+  position: relative;
+  aspect-ratio: 16 / 10;
+  background: #070b12;
+}
+
+.cinematic-hero .scene-project-image img {
+  object-fit: contain;
+}
+
+.cinematic-hero .scene-project-plate figcaption {
+  padding: 14px 18px;
+  color: var(--foreground);
+  font:
+    500 17px/1.25 var(--font-condensed),
+    sans-serif;
+}
+
+.cinematic-hero[data-page-scene="music"] .scene-visual {
+  height: min(62svh, 620px);
+  overflow: hidden;
+}
+
+.trumpet-stage {
+  position: absolute;
+  inset: 0;
+}
+
+.cinematic-hero[data-page-scene="music"] {
+  background: radial-gradient(
+    ellipse at 58% 51%,
+    #1a273b 0%,
+    #101924 22%,
+    #05070b 66%
+  );
+}
+
+.trumpet-canvas {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 350ms ease;
+}
+
+.trumpet-poster {
+  object-fit: contain;
+}
+
+.trumpet-stage[data-ready="true"] .trumpet-poster {
+  visibility: hidden;
+}
+
+.trumpet-stage[data-ready="true"] .trumpet-canvas {
+  opacity: 1;
+}
+
+.cinematic-hero.is-cinematic[data-page-scene="music"] .scene-title {
+  inset: 130px 6% auto;
+  display: block;
+  text-align: left;
+  z-index: 0;
+}
+
+.cinematic-hero[data-page-scene="music"] .scene-title h1 {
+  font-size: clamp(110px, 22vw, 340px);
+  letter-spacing: -0.035em;
+}
+
+.cinematic-hero.is-cinematic[data-page-scene="music"] .scene-title h2 {
+  max-width: none;
+  margin: 20px 0 0;
+}
+
+.cinematic-hero.is-cinematic[data-page-scene="music"] .scene-visual {
+  z-index: 1;
+}
+
+.cinematic-hero .scene-summary {
+  position: relative;
+  z-index: 4;
+  max-width: 760px;
+  margin-top: 48px;
+}
+
+.cinematic-hero .scene-summary-copy > p {
+  max-width: 62ch;
+  margin: 0;
+  color: var(--foreground);
+  font-size: clamp(18px, 1.7vw, 23px);
+  line-height: 1.5;
+  text-wrap: pretty;
+}
+
+.scene-arrival-title {
+  margin: 0 0 32px;
+  color: var(--foreground);
+  font:
+    600 clamp(48px, 6.8vw, 96px)/0.95 var(--font-display),
+    sans-serif;
+  letter-spacing: -0.025em;
+}
+
+.cinematic-hero.is-cinematic .scene-arrival {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  display: grid;
+  align-items: center;
+  padding: 120px 6% 100px;
+  background: var(--background);
+  opacity: var(--portal-reveal, 0);
+  clip-path: circle(
+    var(--bell-radius, var(--fallback-aperture, 0px)) at var(--bell-x, 50%)
+      var(--bell-y, 50%)
+  );
+}
+
+.cinematic-hero.is-cinematic[data-page-scene="music"] .scene-summary {
+  position: relative;
+  inset: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: clamp(32px, 5vw, 80px);
+  width: 100%;
+  max-width: 1240px;
+  margin: 0 auto;
+}
+
+.cinematic-hero.is-cinematic .scene-arrival-title {
+  margin: 0;
+}
+
+.music-model-credit {
+  margin: 0;
+  padding: 0 0 40px;
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.7;
+}
+
+.music-model-credit a {
+  color: inherit;
+  text-underline-offset: 3px;
+}
+
+.music-model-credit a:hover {
+  color: var(--foreground);
+}
+
+.cinematic-hero .scene-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.cinematic-hero .scene-explore-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 24px;
+  min-height: 48px;
+  padding: 12px 20px;
+  border-radius: 4px;
+  background: var(--accent);
+  color: var(--background);
+  font:
+    600 18px/1.2 var(--font-condensed),
+    sans-serif;
+  text-decoration: none;
+  transition: background-color 180ms ease;
+}
+
+.cinematic-hero .scene-explore-link:hover {
+  background: var(--foreground);
+}
+
+.cinematic-hero .scene-cue {
+  position: relative;
+  z-index: 5;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-top: 40px;
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.4;
+}
+
+.cinematic-hero .scene-cue-label,
+.cinematic-hero .scene-skip {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.cinematic-hero .scene-track {
+  width: 140px;
+  height: 2px;
+  overflow: hidden;
+  background: var(--hairline);
+}
+
+.cinematic-hero .scene-progress {
+  display: block;
+  height: 100%;
+  background: var(--accent);
+  transform: scaleX(0);
+  transform-origin: left;
+}
+
+.cinematic-hero .scene-skip {
+  min-height: 44px;
+  margin-left: auto;
+  color: var(--foreground);
+  text-decoration: none;
+}
+
+.cinematic-hero .scene-skip:hover {
+  color: var(--accent);
+}
+
+/* The enhanced layout is applied only when the complete scene fits on screen. */
+.cinematic-hero.page-hero.is-cinematic {
+  height: 100svh;
+  min-height: 0;
+  padding: 0;
+}
+
+.cinematic-hero.is-cinematic .scene-project-plate:nth-child(2) {
+  z-index: 2;
+}
+
+.cinematic-hero:not(.is-cinematic) .scene-cue-label,
+.cinematic-hero:not(.is-cinematic) .scene-track {
+  display: none;
+}
+
+.cinematic-hero.is-cinematic .scene-title {
+  position: absolute;
+  inset: 100px 6% 110px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.cinematic-hero.is-cinematic .scene-visual {
+  position: absolute;
+  inset: 0;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  border-radius: 0;
+}
+
+.cinematic-hero.is-cinematic .scene-project-stack {
+  position: absolute;
+  inset: 22% 6% 30%;
+}
+
+.cinematic-hero.is-cinematic .scene-summary {
+  position: absolute;
+  bottom: 92px;
+  left: 6%;
+  right: 6%;
+  margin: 0;
+}
+
+.cinematic-hero.is-cinematic .scene-cue {
+  position: absolute;
+  left: 6%;
+  right: 6%;
+  bottom: 24px;
+  margin: 0;
+}
+
+@media (max-width: 767px) {
+  .cinematic-hero.is-cinematic[data-page-scene="music"] .scene-title {
+    inset: 132px 24px auto;
+  }
+
+  .cinematic-hero[data-page-scene="music"] .scene-title h1 {
+    font-size: 29vw;
+  }
+
+  .cinematic-hero.is-cinematic[data-page-scene="music"] .scene-title h2 {
+    max-width: 24ch;
+    margin-top: 18px;
+  }
+
+  .cinematic-hero.page-hero {
+    padding: 120px 24px 24px;
+  }
+
+  .cinematic-hero .scene-title h1 {
+    font-size: clamp(80px, 21vw, 155px);
+  }
+
+  .cinematic-hero .scene-title h2 {
+    max-width: 30ch;
+    margin-top: 24px;
+    font-size: 16px;
+  }
+
+  .cinematic-hero .scene-project-stack {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .cinematic-hero:not(.is-cinematic) .scene-project-plate:not(:first-child) {
+    display: none;
+  }
+
+  .cinematic-hero .scene-cue {
+    gap: 12px;
+    font-size: 11px;
+  }
+
+  .cinematic-hero .scene-track {
+    width: 36px;
+  }
+
+  .cinematic-hero.is-cinematic .scene-title {
+    inset: 100px 24px 100px;
+  }
+
+  .cinematic-hero.is-cinematic .scene-project-stack {
+    left: 0;
+    right: 0;
+    justify-items: center;
+    align-content: center;
+    gap: 0;
+  }
+
+  .cinematic-hero.is-cinematic .scene-project-plate {
+    grid-area: 1 / 1;
+    width: min(72vw, 360px);
+  }
+
+  .cinematic-hero.is-cinematic .scene-summary {
+    left: 24px;
+    right: 24px;
+    bottom: 88px;
+  }
+
+  .cinematic-hero.is-cinematic .scene-summary-copy > p {
+    font-size: 18px;
+  }
+
+  .cinematic-hero.is-cinematic .scene-arrival {
+    padding: 100px 24px 96px;
+  }
+
+  .cinematic-hero.is-cinematic[data-page-scene="music"] .scene-summary {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .scene-arrival-title {
+    font-size: clamp(48px, 12vw, 72px);
+  }
+
+  .cinematic-hero.is-cinematic .scene-cue {
+    left: 24px;
+    right: 24px;
+    bottom: 20px;
+  }
+}
+
+@media (max-height: 720px) and (min-height: 600px) {
+  .cinematic-hero.is-cinematic .scene-title h1 {
+    font-size: min(19vw, 26svh);
+  }
+
+  .cinematic-hero.is-cinematic .scene-title h2 {
+    margin-top: 18px;
+  }
+
+  .cinematic-hero.is-cinematic .scene-summary-copy > p {
+    font-size: 16px;
+  }
+
+  .cinematic-hero.is-cinematic .scene-actions {
+    margin-top: 16px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cinematic-hero .scene-cue-label,
+  .cinematic-hero .scene-track {
+    display: none;
+  }
+}
+
+@media print {
+  .cinematic-hero.page-hero {
+    min-height: 0;
+    padding: 24px 0;
+    color: #000;
+    background: #fff;
+  }
+
+  .cinematic-hero .scene-title {
+    text-align: left;
+  }
+
+  .cinematic-hero.page-hero[data-page-scene] .scene-title h1 {
+    max-width: none;
+    margin: 0;
+    color: #111;
+    font-size: 44px;
+  }
+
+  .cinematic-hero .scene-title h2 {
+    margin-left: 0;
+    color: #111;
+  }
+
+  .cinematic-hero .scene-summary-copy > p {
+    color: #111;
+  }
+
+  .cinematic-hero .scene-arrival-title {
+    color: #111;
+  }
+
+  .cinematic-hero .scene-visual,
+  .cinematic-hero .scene-cue,
+  .cinematic-hero .scene-actions {
+    display: none;
+  }
+}

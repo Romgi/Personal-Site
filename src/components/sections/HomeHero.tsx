@@ -84,7 +84,7 @@ export function HomeHero({ name, title, tagline }: HomeHeroProps) {
                     src={project.image}
                     alt={project.imageAlt}
                     fill
-                    sizes="(max-width: 768px) 50vw, 28vw"
+                    sizes="(max-width: 767px) 50vw, 30vw"
                   />
                 </div>
                 <div className="flight-preview-copy">

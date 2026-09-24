@@ -1,0 +1,9 @@
+# Image quality correction
+
+- Set the Next.js image quality allowlist to `[100]`. The installed Next.js 16.2.9 loader selects this quality even when an Image omits the quality prop; verified generated URLs use `q=100`.
+- Corrected featured project size hints to keep full-width sources through the 959px breakpoint, and corrected the full-width gallery lead, tablet performance/robotics media, video poster, and desktop Home previews.
+- Verified 820px tablet at 2x density requests 1920px project candidates for 674px artwork containers. Verified 1440px desktop at 2x density requests a 3840px candidate for the 1267px-wide gallery lead and 1920px candidates for remaining gallery tiles. Actual output is capped by each source's intrinsic dimensions.
+- Replaced the performance poster reference with the same official thumbnail at 1280 by 720 instead of 480 by 360. Source: https://i.ytimg.com/vi/f8E05xtGEq4/maxresdefault.jpg . Saved under a new public filename to avoid existing optimizer caches. Browser confirmed HTTP 200 and decoded dimensions of 1280 by 720.
+- Production build, TypeScript, ESLint and changed-file formatting passed. Browser checks confirmed image loading, maximum quality URLs, and no runtime errors. The final poster path was additionally checked in the browser after the build.
+
+Original photographs were not resized or recompressed on disk. Several sources already have limited resolution, most visibly `trumpetlake.jpg` at 750 by 1000 in the fullscreen Music hero and `elcamino.png` at 905 by 938 in the lead gallery tile. Other smaller sources include `hero-stage.png` at 848 by 1171, `conn-selmer.jpg` at 1024 by 768 and the McMaster project image at 900 by 900. No larger matching local or historical copies were found. Current and original lakeside source pixels are identical: the earlier design change did not reduce its source resolution. Larger originals are needed to improve those assets beyond their existing detail.

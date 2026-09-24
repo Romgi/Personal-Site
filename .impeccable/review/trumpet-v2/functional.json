@@ -1,0 +1,75 @@
+﻿{
+  "contextLoss": {
+    "arrivalClip": "circle(1392.61px at 50% 50%)",
+    "arrivalOpacity": "1",
+    "bellRadius": "",
+    "canvasOpacity": "0",
+    "fallbackAperture": "96.7089vmax",
+    "posterComplete": true,
+    "posterOpacity": "0",
+    "posterVisibility": "visible",
+    "progress": 0.805556,
+    "ready": "false",
+    "scroll": 1450,
+    "skipVisible": "visible",
+    "summaryInert": false,
+    "summaryOpacity": "1"
+  },
+  "endRefresh": {
+    "after": 0.988888895061725,
+    "before": 0.988889,
+    "events": 15,
+    "expected": 0.9888888888888888,
+    "frameSamples": {
+      "maxAtAnimationFrame": 0.988888895061725,
+      "minAtAnimationFrame": 0.988888895061725,
+      "samples": 102
+    },
+    "maxEvent": 0.988889,
+    "minEvent": 0,
+    "scroll": 1780,
+    "summaryInert": false,
+    "summaryOpacity": "1"
+  },
+  "midRefresh": {
+    "after": 0.5000002777776235,
+    "before": 0.5,
+    "events": 15,
+    "expected": 0.5,
+    "maxEvent": 0.5000002777776235,
+    "minEvent": 0,
+    "scroll": 900
+  },
+  "performancePins": 0,
+  "ready": "true",
+  "reducedMotion": {
+    "arrivalClip": "none",
+    "arrivalOpacity": "1",
+    "arrivalPosition": "static",
+    "cinematic": false,
+    "pins": 0,
+    "reduced": true,
+    "summaryInert": false,
+    "summaryOpacity": "1",
+    "summaryVisibility": "visible"
+  },
+  "routeToResume": {
+    "canvas": 0,
+    "cinematicHeroes": 0,
+    "pins": 0,
+    "route": "/resume",
+    "scroll": 0
+  },
+  "skipAfterContextLoss": {
+    "clip": "none",
+    "hash": "#performance",
+    "imageTransform": "none",
+    "performancePins": 0,
+    "pinAncestor": false,
+    "targetTop": 110
+  },
+  "viewport": [
+    1440,
+    1000
+  ]
+}

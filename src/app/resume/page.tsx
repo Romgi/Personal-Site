@@ -49,6 +49,7 @@ export default function ResumePage() {
   return (
     <div className="resume-page">
       <PageHero
+        animate={false}
         title="Resume & contact"
         subtitle="Education, experience, and accomplishments"
         description="Read my resume below or use the contact links to get in touch."

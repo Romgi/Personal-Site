@@ -1,0 +1,14 @@
+﻿{
+  "desktop": {
+    "viewport": [1440, 1000],
+    "resume": { "cinematicHeroes": 0, "pinSpacers": 0, "titleTransform": "none", "titleClip": "none", "titleOpacity": "1", "actionsVisible": true, "actionsInert": false },
+    "musicPerformance": { "totalPinSpacers": ["pin-spacer-page-hero-music"], "performancePinSpacers": 0, "pinAncestor": false, "imageTransform": "none", "imageClip": "none", "revealWrappers": 0, "scrollBefore": 2523, "topBefore": 110, "scrollAfter": 2873, "topAfter": -240 },
+    "videoAction": { "iframeSrc": "https://www.youtube-nocookie.com/embed/f8E05xtGEq4?autoplay=1" },
+    "musicMidHeroToResume": { "route": "/resume", "scroll": 0, "cinematicHeroes": 0, "pinSpacers": 0, "titleTransform": "none" }
+  },
+  "mobile": {
+    "viewport": [390, 844],
+    "resume": { "cinematicHeroes": 0, "pinSpacers": 0, "titleTransform": "none", "titleClip": "none", "actionsVisible": true, "actionsInert": false, "lastActionBottom": 615.53125 },
+    "musicPerformance": { "totalPinSpacers": ["pin-spacer-page-hero-music"], "performancePinSpacers": 0, "pinAncestor": false, "imageTransform": "none", "imageClip": "none", "revealWrappers": 0, "videoButtonPresent": true, "scrollBefore": 2026, "topBefore": 110, "scrollAfter": 2376, "topAfter": -240 }
+  }
+}

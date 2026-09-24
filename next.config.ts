@@ -25,6 +25,9 @@ const contentSecurityPolicy = [
 const nextConfig: NextConfig = {
   poweredByHeader: false,
   images: {
+    // Keep every next/image render at maximum quality, including images that
+    // omit the quality prop. Responsive widths still avoid oversized downloads.
+    qualities: [100],
     // Local SVG logos (e.g. FRC game marks) are served through next/image;
     // the sandboxed CSP keeps SVG handling safe.
     dangerouslyAllowSVG: true,

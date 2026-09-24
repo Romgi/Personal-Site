@@ -20,6 +20,7 @@ import { profile, site } from "@/data/profile";
 
 import "./globals.css";
 import "./editorial.css";
+import "./tiles.css";
 
 const heroDisplay = Bebas_Neue({
   variable: "--font-hero",

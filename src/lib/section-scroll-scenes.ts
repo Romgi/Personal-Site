@@ -22,11 +22,9 @@ function mediaScene(
   travel: number,
 ) {
   const stacked = window.innerWidth < 1024;
-  const media = scene.querySelector<HTMLElement>(
-    "[data-robotics-scene-media], [data-music-scene-media]",
-  );
+  const media = scene.querySelector<HTMLElement>("[data-robotics-scene-media]");
   // A stacked story is often taller than a phone. Hold just its photograph in
-  // that case; the following copy and video retain their natural document flow.
+  // that case; the following copy retains its natural document flow.
   const pinTarget = fitsViewport(scene)
     ? scene
     : stacked && media && fitsViewport(media)
@@ -133,17 +131,6 @@ function setupRobotics(root: HTMLElement) {
   activate(current ?? entries[0]);
 }
 
-function setupMusic(root: HTMLElement) {
-  const scene = root.querySelector<HTMLElement>("[data-music-scene]");
-  const frame = scene?.querySelector<HTMLElement>(".portfolio-image");
-  const image = frame?.querySelector("img");
-  if (!scene || !frame || !image) return;
-
-  // The photograph opens like a stage aperture. Text and the video controls
-  // stay fully visible and interactive throughout the brief hold.
-  mediaScene(scene, frame, image, "inset(27% 0% 27% 0%)", 0.52);
-}
-
 function setupResume(root: HTMLElement) {
   root.querySelectorAll<HTMLElement>(".resume-section").forEach((section) => {
     gsap.fromTo(
@@ -190,7 +177,6 @@ export function setupSectionScrollScenes(root: HTMLElement): void {
     },
     () => {
       setupRobotics(root);
-      setupMusic(root);
       setupResume(root);
     },
   );

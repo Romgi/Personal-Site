@@ -1,0 +1,100 @@
+﻿{
+    "desktop":  {
+                    "viewport":  [
+                                     1440,
+                                     1000
+                                 ],
+                    "ready":  true,
+                    "canvasCSS":  [
+                                      1440,
+                                      1000
+                                  ],
+                    "canvasBuffer":  [
+                                         1440,
+                                         1000
+                                     ],
+                    "dpr":  1,
+                    "heroPins":  1,
+                    "entrySummary":  {
+                                         "inert":  true,
+                                         "opacity":  0
+                                     },
+                    "revealedSummary":  {
+                                            "scroll":  1430,
+                                            "progress":  0.953333,
+                                            "inert":  false,
+                                            "opacity":  1
+                                        },
+                    "performancePins":  0
+                },
+    "mobile":  {
+                   "viewport":  [
+                                    390,
+                                    844
+                                ],
+                   "ready":  true,
+                   "canvasCSS":  [
+                                     390,
+                                     844
+                                 ],
+                   "canvasBuffer":  [
+                                        780,
+                                        1688
+                                    ],
+                   "dpr":  2,
+                   "heroPins":  1,
+                   "entrySummary":  {
+                                        "inert":  true,
+                                        "opacity":  0
+                                    },
+                   "revealedSummary":  {
+                                           "scroll":  990,
+                                           "progress":  0.977295,
+                                           "inert":  false,
+                                           "opacity":  1,
+                                           "bottom":  756
+                                       },
+                   "performancePins":  0
+               },
+    "renderSampling":  {
+                           "method":  "Count canvas WebGL2 clear calls over 800ms; browser-only sample",
+                           "idleAfterSettling":  0,
+                           "offscreen":  0,
+                           "reducedMotion":  0
+                       },
+    "reducedMotion":  {
+                          "pins":  0,
+                          "summaryInert":  false,
+                          "summaryOpacity":  1,
+                          "ready":  true
+                      },
+    "midHeroMusicToResume":  {
+                                 "pins":  0,
+                                 "canvas":  0,
+                                 "cinematicHero":  0,
+                                 "scroll":  0
+                             },
+    "runtimeErrors":  [
+
+                      ],
+    "contextLoss":  {
+                        "scroll":  1430,
+                        "progress":  0.953333,
+                        "ready":  false,
+                        "posterComplete":  true,
+                        "posterNaturalSize":  [
+                                                  1440,
+                                                  999
+                                              ],
+                        "posterOpacity":  0.5,
+                        "posterVisibility":  "visible",
+                        "canvasOpacity":  0,
+                        "summaryInert":  false,
+                        "summaryOpacity":  1,
+                        "controlsVisible":  true,
+                        "skipVisible":  true,
+                        "skipNavigatesTo":  "#performance",
+                        "targetTop":  110,
+                        "performancePins":  0
+                    }
+}

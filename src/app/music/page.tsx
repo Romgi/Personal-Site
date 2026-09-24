@@ -4,7 +4,8 @@ import { ArrowDownRight } from "lucide-react";
 import { RepertoireList } from "@/components/sections/RepertoireList";
 import { AnimatedSection } from "@/components/ui/AnimatedSection";
 import { Container } from "@/components/ui/Container";
-import { PageHero } from "@/components/ui/PageHero";
+import { CinematicHero } from "@/components/sections/CinematicHero";
+import { ButtonLink } from "@/components/ui/ButtonLink";
 import { PortfolioImage } from "@/components/ui/PortfolioImage";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import {
@@ -28,57 +29,50 @@ export default function MusicPage() {
 
   return (
     <div className="music-page">
-      <PageHero
-        className="music-hero"
+      <CinematicHero
+        variant="music"
         title="Music"
         subtitle="Trumpet performance and repertoire"
         description={musicOverview.description}
-        media={
-          <figure>
-            <PortfolioImage
-              src={musicGallery[2].src}
-              alt={musicGallery[2].alt}
-              aspect="aspect-[3/4]"
-              preload
-            />
-            <figcaption className="media-caption">
-              Trumpet, beyond the stage.
-            </figcaption>
-          </figure>
-        }
+        contentHref="#performance"
       >
-        <nav className="chapter-links" aria-label="Music sections">
-          {[
-            ["performance", "Watch a performance"],
-            ["repertoire", "Explore repertoire"],
-            ["music-gallery", "View gallery"],
-          ].map(([id, label]) => (
-            <a key={id} href={`#${id}`}>
-              {label}
-              <ArrowDownRight size={18} aria-hidden="true" />
-            </a>
-          ))}
-        </nav>
-      </PageHero>
+        <ButtonLink href="/music#performance" variant="primary">
+          Watch a performance <ArrowDownRight size={18} aria-hidden="true" />
+        </ButtonLink>
+      </CinematicHero>
+      <div className="page-intro-tools">
+        <Container>
+          <nav className="chapter-links" aria-label="Music sections">
+            {[
+              ["performance", "Watch a performance"],
+              ["repertoire", "Explore repertoire"],
+              ["music-gallery", "View gallery"],
+            ].map(([id, label]) => (
+              <a key={id} href={`#${id}`}>
+                {label}
+                <ArrowDownRight size={18} aria-hidden="true" />
+              </a>
+            ))}
+          </nav>
+        </Container>
+      </div>
 
       <section
         id="performance"
         className="music-section performance-section py-20 sm:py-24"
       >
         <Container>
-          <div
-            data-music-scene
-            className="grid gap-10 lg:grid-cols-[0.95fr_1.05fr] lg:items-center"
-          >
-            <div data-music-scene-media>
+          <div className="grid gap-10 lg:grid-cols-[0.95fr_1.05fr] lg:items-center">
+            <div>
               <PortfolioImage
                 src={musicOverview.image}
                 alt={musicOverview.imageAlt}
                 className="music-image"
                 aspect="aspect-[3/4]"
+                sizes="(max-width: 1023px) 100vw, 50vw"
               />
             </div>
-            <AnimatedSection>
+            <div>
               <SectionHeading
                 title="Trumpet performance"
                 description="Jonathan's trumpet work spans solo repertoire, honour bands, ensemble leadership, festival awards, and ongoing university performances."
@@ -89,7 +83,7 @@ export default function MusicPage() {
                 </p>
                 <PerformanceVideo />
               </div>
-            </AnimatedSection>
+            </div>
           </div>
         </Container>
       </section>
@@ -174,13 +168,18 @@ export default function MusicPage() {
             description="Selected concert, ensemble, and trumpet photos from Jonathan's music portfolio."
           />
           <div className="music-gallery">
-            {musicGallery.map((image) => (
+            {musicGallery.map((image, index) => (
               <AnimatedSection key={image.alt}>
                 <figure>
                   <PortfolioImage
                     src={image.src}
                     alt={image.alt}
                     className="music-image"
+                    sizes={
+                      index === 0
+                        ? "(max-width: 767px) 100vw, 88vw"
+                        : "(max-width: 767px) 100vw, 50vw"
+                    }
                   />
                   <figcaption className="media-caption">{image.alt}</figcaption>
                 </figure>
@@ -189,6 +188,17 @@ export default function MusicPage() {
           </div>
         </Container>
       </section>
+      <Container>
+        <p className="music-model-credit">
+          3D trumpet by{" "}
+          <a href="https://sketchfab.com/3d-models/trumpet-1dc9efd37bf14d1b9d1e3de0ca90435c">
+            Kagelok
+          </a>
+          {" · "}
+          <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>
+          {" · Materials and presentation adapted for this site."}
+        </p>
+      </Container>
     </div>
   );
 }
