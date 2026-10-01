@@ -205,7 +205,7 @@ export const ensembles = [
     role: "1st Trumpet",
     period: "2026-Present",
     notes:
-      "Performed as a guest musician in The Music of John Williams concert featuring selections from Harry Potter, Star Wars, Superman, and more.",
+      "Performed as a guest musician in The Music of John Williams concert featuring selections from Harry Potter, Star Wars, Superman, and more. Now holds a full time position.",
   },
   {
     name: "Jack Long National Honour Band",
