@@ -14,7 +14,7 @@ import { PortfolioImage } from "@/components/ui/PortfolioImage";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { profile } from "@/data/profile";
 import { homeFeaturedProjects } from "@/data/projects";
-import { robotProjects } from "@/data/robotics";
+import { macRi3dExperience, robotProjects } from "@/data/robotics";
 import { musicAccomplishments, repertoire } from "@/data/music";
 
 export const metadata: Metadata = {
@@ -133,7 +133,7 @@ export default function Home() {
             <AnimatedSection>
               <SectionHeading
                 title="FRC robotics software"
-                description="Robot programming, autonomous path planning, vision, controls, and mentoring with FIRST Robotics Competition (FRC) Teams 854 and 9062."
+                description="Programming Lead for MAC Ri3D at McMaster University, alongside robot programming, autonomous path planning, vision, controls, and mentoring with FRC Teams 854 and 9062."
               />
               <div className="mt-8">
                 <ButtonLink href="/projects#robotics" variant="secondary">
@@ -150,6 +150,37 @@ export default function Home() {
               className="robotics-partner"
             />
           </div>
+          <AnimatedSection>
+            <article className="home-robotics-current">
+              <Image
+                src={macRi3dExperience.gameLogo}
+                alt="MAC Ri3D — Robot in 3 Days"
+                width={631}
+                height={350}
+                sizes="(max-width: 767px) 88vw, 320px"
+                className="h-auto w-full rounded-lg"
+              />
+              <div>
+                <h3 className="experience-title">
+                  {macRi3dExperience.role} · MAC Ri3D
+                </h3>
+                <p className="mt-2 text-sm text-blue-200">
+                  McMaster University · {macRi3dExperience.year}
+                </p>
+                <p className="mt-3 text-sm leading-6 text-slate-300">
+                  {macRi3dExperience.summary}
+                </p>
+                <ButtonLink
+                  href="/projects#mac-ri3d"
+                  variant="ghost"
+                  className="mt-4"
+                >
+                  View MAC Ri3D experience
+                  <ArrowRight aria-hidden="true" size={16} />
+                </ButtonLink>
+              </div>
+            </article>
+          </AnimatedSection>
           <figure className="robotics-feature-media">
             <PortfolioImage
               src={featuredRobot.image}

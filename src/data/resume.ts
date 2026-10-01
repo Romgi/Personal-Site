@@ -143,6 +143,15 @@ export const workExperience = [
 
 export const resumeExperience = [
   {
+    title: "Programming Lead",
+    organization: "MAC Ri3D, McMaster University",
+    period: "2026 - Present",
+    details: [
+      "Lead programming for MAC Ri3D, McMaster University's Robot in 3 Days club.",
+      "Work with the team to build an FRC robot in three days.",
+    ],
+  },
+  {
     title: "Software Lead",
     organization: "FRC Team 854, Iron Bears",
     period: "Current",
@@ -187,6 +196,7 @@ export const musicExperience = [
 ];
 
 export const awards = [
+  "Programming Lead for MAC Ri3D, McMaster University.",
   "Software Lead for FRC Team 854, Iron Bears.",
   "Software Mentor for FRC Team 9062, Critical Circuits.",
   "2025 MusicFest Canada Honour Award recipient.",

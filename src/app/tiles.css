@@ -229,6 +229,23 @@
 }
 
 /* A photograph and the experience it documents share the same footprint. */
+.home-robotics-current {
+  display: grid;
+  grid-template-columns: minmax(0, 320px) minmax(0, 1fr);
+  align-items: center;
+  gap: var(--tile-inset);
+  margin-bottom: var(--tile-gap);
+  padding: var(--tile-inset);
+  border-radius: var(--tile-radius);
+  background: var(--tile-surface);
+}
+
+@media (max-width: 767px) {
+  .home-robotics-current {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
 .home-robotics .robotics-feature-media {
   overflow: hidden;
   border-radius: var(--tile-radius) var(--tile-radius) 0 0;

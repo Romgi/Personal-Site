@@ -10,6 +10,7 @@ export type RoboticsExperience = {
   achievements?: string[];
   image: string;
   imageAlt: string;
+  imageFit?: "cover" | "contain";
   gameLogo: string;
   /** Logo artwork is black; render it inverted so it reads on dark panels. */
   gameLogoInvert?: boolean;
@@ -27,7 +28,7 @@ export type RobotProject = {
 export const roboticsOverview = {
   title: "FIRST Robotics Competition Experience",
   description:
-    "Three seasons of FRC software work across two teams: programming subteam member and Software Lead with Team 854, the Iron Bears, and Software Mentor with Team 9062, Critical Circuits. Focused on command-based Java robot code, reliable controls, autonomous routines, and competition-ready engineering.",
+    "FRC software experience as a programming subteam member and Software Lead with Team 854, the Iron Bears, and Software Mentor with Team 9062, Critical Circuits. Now also Programming Lead for MAC Ri3D, McMaster University's Robot in 3 Days club, where the team builds an FRC robot in three days. My competition software work focuses on command-based Java, reliable controls, and autonomous routines.",
   image: "/images/robotics/Robotics-main-reefscape.JPG",
   imageAlt: "Team 854 robot competing in the 2025 REEFSCAPE season",
 };
@@ -44,6 +45,25 @@ export const roboticsSkills = [
   "Autonomous routines",
   "Controls tuning",
 ];
+
+export const macRi3dExperience: RoboticsExperience = {
+  id: "mac-ri3d",
+  teamName: "MAC Ri3D, McMaster University",
+  role: "Programming Lead",
+  year: "2026 - Present",
+  seasonName: "Robot in 3 Days",
+  summary:
+    "Programming Lead for MAC Ri3D, McMaster University's Robot in 3 Days club, where the team builds an FRC robot in just three days.",
+  technologies: ["FRC", "Robot programming", "Programming leadership"],
+  responsibilities: [
+    "Lead the programming side of MAC Ri3D's three-day FRC robot build.",
+    "Collaborate with the McMaster University club on robot software within the three-day build window.",
+  ],
+  image: "/images/robotics/mac-ri3d-poster.png",
+  imageAlt: "MAC Ri3D Robot in 3 Days artwork with an illustrated FRC robot",
+  imageFit: "contain",
+  gameLogo: "/images/robotics/mac-ri3d-logo.png",
+};
 
 export const roboticsExperiences: RoboticsExperience[] = [
   {
@@ -121,6 +141,7 @@ export const roboticsExperiences: RoboticsExperience[] = [
     gameLogo: "/images/robotics/REBUILT.png",
     gameLogoInvert: true,
   },
+  macRi3dExperience,
 ];
 
 export const robotProjects: RobotProject[] = [

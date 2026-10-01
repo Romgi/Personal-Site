@@ -75,6 +75,7 @@ export const profile = {
       "I am a Computer Science student at McMaster University and software engineer focused on reliable, well-designed technical work across software, AI, robotics, and creative performance.",
     expanded: [
       "My technical interests sit at the intersection of software engineering, robotics systems, and polished web experiences. I care about writing code that is understandable, testable, and useful beyond a demo.",
+      "I am the Programming Lead for MAC Ri3D, McMaster University's Robot in 3 Days club, where we build an FRC robot in three days.",
       "My experience leading and mentoring FRC teams, as well as my involvement in software and game design, has shaped how I approach engineering problems: start with the real constraints, communicate clearly with the team, iterate quickly, and keep reliability in view.",
       "That engineering mindset carries into the projects I build for school, personal learning, websites, robot code, and portfolio work.",
       "Outside of computer science, trumpet performance gives me a different kind of discipline: preparation, tone, listening, and precision under pressure. I enjoy the challenge of performing music in ensembles and solo, and I bring that same focus to my technical work.",
@@ -91,7 +92,7 @@ export const profile = {
     {
       title: "Robotics Software",
       description:
-        "Robotics programming, controls, and competition engineering with Java, WPILib, and robot systems design using Onshape.",
+        "Programming Lead for MAC Ri3D at McMaster University. Robotics programming, controls, and competition engineering with Java, WPILib, and robot systems design using Onshape.",
       href: safeHref("/projects#robotics"),
       metric: "FRC",
     },

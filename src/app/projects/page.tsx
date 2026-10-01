@@ -154,8 +154,8 @@ export default function ProjectsPage() {
             <div className="grid gap-10 lg:grid-cols-[0.9fr_1.1fr]">
               <div className="self-start lg:sticky lg:top-28">
                 <SectionHeading
-                  title="Three seasons, two teams"
-                  description="From programming subteam member to Software Lead with the Iron Bears, to mentoring the next generation of programmers with Critical Circuits."
+                  title="Programming, leadership & mentoring"
+                  description="From programming with the Iron Bears and mentoring Critical Circuits to leading programming for MAC Ri3D at McMaster University."
                 />
                 <div
                   data-robotics-visual
@@ -216,10 +216,11 @@ export default function ProjectsPage() {
                 {roboticsExperiences.map((experience) => (
                   <AnimatedSection key={experience.id}>
                     <article
+                      id={experience.id}
                       data-robotics-entry
                       data-hud-year={experience.year}
                       data-hud-label={`${experience.teamName} - ${experience.role}`}
-                      className="robotics-entry"
+                      className="robotics-entry scroll-mt-28"
                     >
                       <div className="relative aspect-[3/2]">
                         <Image
@@ -227,18 +228,29 @@ export default function ProjectsPage() {
                           alt={experience.imageAlt}
                           fill
                           sizes="(max-width: 1024px) 100vw, 55vw"
-                          className="object-cover"
+                          className={
+                            experience.imageFit === "contain"
+                              ? "object-contain"
+                              : "object-cover"
+                          }
                         />
-                        <span className="absolute left-4 top-4 rounded-md bg-white/95 px-2.5 py-1 font-mono text-[11px] font-medium tracking-wide text-blue-100 backdrop-blur">
-                          {experience.year} - {experience.seasonName}
-                        </span>
+                        {experience.imageFit !== "contain" && (
+                          <span className="absolute left-4 top-4 rounded-md bg-white/95 px-2.5 py-1 font-mono text-[11px] font-medium tracking-wide text-blue-100 backdrop-blur">
+                            {experience.year} - {experience.seasonName}
+                          </span>
+                        )}
                       </div>
                       <div className="p-5 sm:p-6">
-                        <div className="flex flex-col gap-1 sm:flex-row sm:items-start sm:justify-between sm:gap-4">
+                        {experience.imageFit === "contain" && (
+                          <p className="mb-3 text-sm text-blue-200">
+                            {experience.year} · {experience.seasonName}
+                          </p>
+                        )}
+                        <div className="flex flex-col gap-1 sm:flex-row sm:flex-wrap sm:items-start sm:justify-between sm:gap-4">
                           <h3 className="text-lg font-semibold text-white">
                             {experience.role}
                           </h3>
-                          <p className="shrink-0 font-mono text-xs font-medium tracking-wide text-blue-200">
+                          <p className="font-mono text-xs font-medium tracking-wide text-blue-200">
                             {experience.teamName}
                           </p>
                         </div>
